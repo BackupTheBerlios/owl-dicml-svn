@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : install.xml
+    Created on : 24. Juli 2005, 09:24
+    Author     : thomas
+    Description:
+        This is the install-script for use with IzPack
+-->
+
+<installation version="1.0">
+    
+    <!-- for shortcuts under win32 -->
+    <native type="izpack" name="ShellLink.dll"/>
+    
+    <info>
+        <appname>owl</appname>
+        <appversion>0.10 BETA</appversion>
+        <url>http://owl.gidoo.de</url>
+        <authors><author name="Thomas Krause" email="thomas.krause@gidoo.de"></author></authors>
+        <javaversion>1.5</javaversion>
+    </info>
+
+    <locale>
+        <langpack iso3="eng"/>
+        <langpack iso3="deu"/>
+        <langpack iso3="fra"/>
+        <langpack iso3="nor"/>
+    </locale>
+    
+    <guiprefs resizable="yes" width="640" height="480"/>
+        
+    <resources>
+        <res id="HTMLLicencePanel.licence" src="LICENCE.html"/>
+        <res src="install/shortcutSpec.xml" id="shortcutSpec.xml"/>
+        <res src="install/Unix_shortcutSpec.xml" id="Unix_shortcutSpec.xml"/>
+    </resources>
+    
+    <panels>
+        <panel classname="HelloPanel" />
+        <panel classname="HTMLLicencePanel"/>
+        <panel classname="PacksPanel" />
+        <panel classname="TargetPanel"/>
+        <panel classname="InstallPanel"/>
+        <panel classname="ShortcutPanel"/>
+        <panel classname="SimpleFinishPanel"/>
+    </panels>
+    
+    <packs>
+        <pack name="owl" required="yes" preselected="yes" id="owl-core">
+            <description>owl</description>
+            <!-- bin -->
+            <file src="dist/owl.jar" targetdir="$INSTALL_PATH/bin/"/>
+            
+            <!-- app-dir -->
+            <file src="owl.bat" targetdir="$INSTALL_PATH" os="windows" />
+            <file src="owl.sh" targetdir="$INSTALL_PATH" os="unix"/>
+            <file src="owl.sh" targetdir="$INSTALL_PATH" os="mac"/>
+            <file src="LICENCE.txt" targetdir="$INSTALL_PATH" os="windows" />
+            <file src="LICENCE" targetdir="$INSTALL_PATH" os="unix" />
+            <file src="LICENCE" targetdir="$INSTALL_PATH" os="mac" />
+            
+            <!-- etc -->
+            <file src="etc/css.css" targetdir="$INSTALL_PATH/etc" />
+            <file src="etc/entry.html" targetdir="$INSTALL_PATH/etc" />
+                        
+            <!-- res -->
+            <file src="res/empty.html" targetdir="$INSTALL_PATH/res"/>
+            <file src="res/de.order.xml" targetdir="$INSTALL_PATH/res" />
+            <file src="res/en.order.xml" targetdir="$INSTALL_PATH/res" />
+            <file src="res/fr.order.xml" targetdir="$INSTALL_PATH/res" />
+            <file src="res/no.order.xml" targetdir="$INSTALL_PATH/res" />
+            <file src="res/Information16.gif" targetdir="$INSTALL_PATH/res" />
+            <file src="res/Open16.gif" targetdir="$INSTALL_PATH/res" />
+            <file src="res/Print16.gif" targetdir="$INSTALL_PATH/res" />
+            <file src="res/Stop16.gif" targetdir="$INSTALL_PATH/res" />
+            <file src="res/icon16.png" targetdir="$INSTALL_PATH/res" />
+            <file src="res/icon32.png" targetdir="$INSTALL_PATH/res" />
+            <file src="res/icon48.png" targetdir="$INSTALL_PATH/res" />
+            <file src="res/icon.ico" targetdir="$INSTALL_PATH/res" os="windows" />
+            <file src="res/owl.png" targetdir="$INSTALL_PATH/res" />
+                        
+            <!-- xsl -->
+            <file src="xsl/style_de.xsl" targetdir="$INSTALL_PATH/xsl" />
+            <file src="xsl/style_en.xsl" targetdir="$INSTALL_PATH/xsl" />
+            <file src="xsl/style_no.xsl" targetdir="$INSTALL_PATH/xsl" />
+            <file src="xsl/style_fr.xsl" targetdir="$INSTALL_PATH/xsl" />
+            
+            <!-- legal -->
+            <file src="legal/ExampleFileFilter-licence.txt" targetdir="$INSTALL_PATH/legal" />
+            <file src="legal/JDOM-licence.txt" targetdir="$INSTALL_PATH/legal" />
+            <file src="legal/SUN-icons-licence.txt" targetdir="$INSTALL_PATH/legal" />
+                 
+            <!-- lib -->
+            <file src="lib/jdom.jar" targetdir="$INSTALL_PATH/lib" />
+            
+            <!-- home-dir -->
+            <file src="etc/owl-reader.config" targetdir="$USER_HOME/.owl" />
+
+            <!-- parseables -->
+            <parsable targetfile="$USER_HOME/.owl/owl-reader.config" type="javaprop" />
+            <parsable targetfile="$INSTALL_PATH/owl.bat" type="plain" os="windows" />
+            <parsable targetfile="$INSTALL_PATH/owl.sh" type="plain" os="unix" />
+            <parsable targetfile="$INSTALL_PATH/owl.sh" type="plain" os="mac" />
+            <parsable targetfile="$INSTALL_PATH/res/empty.html" type="xml"/>
+            
+            <!-- executeables -->
+            <executable targetfile="$INSTALL_PATH/owl.bat" os="windows" stage="never"/>
+            <executable  targetfile="$INSTALL_PATH/owl.sh" os="unix" stage="never"/>
+            <executable  targetfile="$INSTALL_PATH/owl.sh" os="mac" stage="never"/>
+        </pack>
+    </packs>
+    
+</installation>

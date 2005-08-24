@@ -1,0 +1,165 @@
+   /* + Noch zu bearbeiten: link, info, dom, gram, */
+
+body {
+   font-family:Verdana;
+   font-size:12pt;
+   margin:0px;
+   padding:0px;
+   }
+
+div {
+   margin:0px;
+   padding:0px;
+   }
+
+
+/* + BLOECKE ++++++++++++++++++++++++++++++++++++++++ */
+
+div.lemma-gr {
+   padding-top:5px;
+   padding-bottom:0px;
+   font-size:14pt;
+   font-weight:bold;
+   width:100%;
+   border-bottom:1px #CCCCCC solid;
+   }
+
+div.sense-gr {
+   padding-top:10px;
+   }
+
+div.idiom-gr {
+   padding-top:10px;
+   }
+
+div.info {
+   background-color:#DDDDDD;
+   }
+
+table.block {
+   border:0px;
+   }
+
+td.block-links {
+   padding-left:5px;
+   width:25px;
+   text-align:top;
+   }
+
+td.block-rechts {
+   text-align:top;
+   }
+
+
+
+/* + ABSAETZE +++++++++++++++++++++++++++++++++++++++ */
+
+p {margin:0px;}
+
+div.lemma-gr p {
+   padding-left:5px;
+   }
+
+td.block-links p {
+   font-weight:bold;
+   }
+
+td.block-rechts p {
+   margin-left:10px;
+   text-indent:-10px;
+   padding-right:5px;
+   }
+
+p.ex {
+   color:#999999;
+   margin-left:-5px;
+   text-indent:-5px;
+   padding-right:5px;
+   }
+
+div.info {
+   padding:5px;
+   }
+
+
+
+
+div.lemma-gr span.lemma {
+   font-weight:bold;
+   margin-right:5px;
+   color:#0000FF;
+   }
+
+div.lemma-gr span.num {
+   font-size:8pt;
+   vertical-align:super;
+   }
+
+div.lemma-gr span.phon {
+   font-family:Gentium;
+   }
+
+span.pos {
+   font-family:Times New Roman;
+   font-style:italic;
+   color:#FF0000;}
+/*
+span.pos:before {
+   content:" ";
+   }
+*/
+span.niv {
+   font-family:Times New Roman;
+   font-style:italic;
+   }
+/*
+span.niv:after {
+   content:" ";
+   }
+*/
+span.n {
+   font-family:Times New Roman;
+   font-style:italic;
+   }
+/*
+span.n:before {
+   content:" (";
+   }
+
+span.n:after {
+   content:") ";
+   }
+*/
+
+span.s {
+   font-weight:bold;
+   }
+/*
+span.s + span.t:before {
+   content:" ";
+   }
+
+span.t + span.t:before {
+   content:", ";
+   }
+*/
+span.or {font-family:Times New Roman;
+   font-style:italic;
+   font-weight:normal;
+   }
+
+/*
+span.or:before {
+   content:" ";
+   }
+
+span.or:after {
+   content:" ";
+   }
+*/
+
+/* von Thomas */
+a.abbr-pos {font-family:Times New Roman;
+            font-style:italic;
+            color:#FF0000;
+            text-decoration:none;}

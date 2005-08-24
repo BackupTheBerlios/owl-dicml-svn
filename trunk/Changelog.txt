@@ -1,0 +1,9 @@
++---------------------+
+| changelog for owl   |
+| http://owl.gidoo.de |
++---------------------+
+
+0.10
+----
+
+* begin of the changelog

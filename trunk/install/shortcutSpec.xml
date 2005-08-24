@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<shortcuts>
+    <skipIfNotSupported/>
+    <programGroup defaultName="gidoo"
+                    location="applications"/>
+<shortcut
+    name="owl"
+    target="$INSTALL_PATH\owl.bat"
+    workingDirectory="$INSTALL_PATH"
+    description="This starts owl"
+    iconFile="$INSTALL_PATH\res\icon.ico"
+    initialState="normal"
+    programGroup="yes"
+    desktop="yes"
+    applications="no"
+    startMenu="no"
+    startup="no"
+    />
+
+</shortcuts>
