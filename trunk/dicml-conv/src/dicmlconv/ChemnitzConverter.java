@@ -31,10 +31,63 @@ public class ChemnitzConverter {
     
   TranslationDirection direction;
   
+  /** dom */
+  Hashtable rplDom;
+  /** pos */
+  Hashtable rplPos;
+  /** niv */
+  Hashtable rplNiv;
+  
   /** Creates a new instance of DicmlConverter */
   public ChemnitzConverter() 
   {
     _tickState = 0;
+    
+    rplNiv = new Hashtable(12);
+    rplNiv.put("Am.", "en-US");
+    rplNiv.put("Br.", "en-UK");
+    rplNiv.put("Ös.", "de-AT");
+    rplNiv.put("Schw.", "de-CH");
+    rplNiv.put("ugs.", "fam");
+    rplNiv.put("coll.", "fam");
+    rplNiv.put("übtr.", "fig");
+    rplNiv.put("fig.", "fig");
+    rplNiv.put("pej.", "contp");
+    rplNiv.put("vulg.", "vulg");
+    rplNiv.put("slang", "fam");
+    rplNiv.put("Schw.", "de-CH");
+    
+    rplDom = new Hashtable();
+    rplDom.put("anat.", "anat");
+    rplDom.put("arch.", "arch");
+    rplDom.put("astron.", "astr");
+    rplDom.put("auto", "moto");
+    rplDom.put("biol.", "bio");
+    rplDom.put("bot.", "bot");
+    rplDom.put("chem.", "chem");
+    rplDom.put("comp.", "comp");
+    rplDom.put("econ.", "comm");
+    rplDom.put("electr.", "elet");
+    rplDom.put("cook.", "cuis");
+    rplDom.put("geogr.", "geog");
+    rplDom.put("geol.", "geol");
+    rplDom.put("gramm.", "ling");
+    rplDom.put("jur.", "lega");
+    rplDom.put("math.", "math");
+    rplDom.put("med.", "medec");
+    rplDom.put("mil.", "mili");
+    rplDom.put("min.", "mine");
+    rplDom.put("mus.", "musi");
+    rplDom.put("naut.", "naut");
+    rplDom.put("ornith.", "orni");
+    rplDom.put("pharm.", "phar");
+    rplDom.put("phil.", "phil");
+    rplDom.put("phys.", "phys");
+    rplDom.put("pol.", "poli");
+    rplDom.put("relig.", "eccl");
+    rplDom.put("techn.", "tech");
+    rplDom.put("zool.", "zool");
+    
   }
   
   void convertChemnitz(String In, String Out, String config, TranslationDirection dir)
@@ -195,14 +248,14 @@ public class ChemnitzConverter {
     }
     
    void writeSenseGroup(String sense) throws IOException
-  {
+   {
       // split it
       String[] s = sense.split(";");
       
       for(int x = 0; x < s.length; x++)
       {
         write("<sense.gr>\n");
-        String[] gram = grammarHint(s[x].trim());
+        /*String[] gram = grammarHint(s[x].trim());
         if(!gram[0].equals(""))
         {
           write("<p><t><w pos=\"" + gram[0] + "\">" + gram[1] + "</w></t></p>");
@@ -211,6 +264,10 @@ public class ChemnitzConverter {
         {
           write("<p><t>" + s[x].trim() + "</t></p>\n");
         }
+         */
+        write("<p><t>");
+        write(replaceGrammarHint(s[x].trim()));
+        write("</t></p>");
         write("</sense.gr>\n");
       }
       
@@ -244,7 +301,61 @@ public class ChemnitzConverter {
     
     return result;
   }
-   
+  
+  String replaceGrammarHint(String str)
+  {
+    String result = "";
+    
+    String[] split = str.split("[ \t]");
+    int i=0;
+    String lastDom = "";
+    String lastNiv = "";
+    String lastPos = "";
+    String lastWord = "";
+    
+    while(i <= split.length)
+    {
+      if(i < split.length && split[i].startsWith("{"))
+      {
+        lastPos = split[i].trim();
+        lastPos = lastPos.substring(1, lastPos.length() - 1);
+      }
+      else if(i < split.length && split[i].startsWith("["))
+      {
+        
+      }
+      else
+      {
+        // save the last one
+        if(!lastWord.equals(""))
+        {
+          if(lastPos.equals(""))
+          {
+            result = result + lastWord + " ";
+          }
+          else
+          {
+            result = result + "<w pos=\"" + lastPos + "\">" + lastWord + "</w> ";
+          }
+        }
+        // clear
+        if(i < split.length)
+        {
+          lastWord = split[i].trim();
+          lastDom = "";
+          lastPos = "";
+          lastNiv = "";
+        }
+      }
+      
+      i++;
+    }
+    
+    return result;
+  }
+  
+  
+  
   void writeHeader(String conf) throws IOException
   {
       String buffer = "";
