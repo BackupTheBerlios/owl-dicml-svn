@@ -32,18 +32,18 @@ public class ChemnitzConverter {
   TranslationDirection direction;
   
   /** dom */
-  Hashtable rplDom;
+  Hashtable<String, String> rplDom;
   /** pos */
-  Hashtable rplPos;
+  Hashtable<String, String> rplPos;
   /** niv */
-  Hashtable rplNiv;
+  Hashtable<String, String> rplNiv;
   
   /** Creates a new instance of DicmlConverter */
   public ChemnitzConverter() 
   {
     _tickState = 0;
     
-    rplNiv = new Hashtable(12);
+    rplNiv = new Hashtable<String, String>(12);
     rplNiv.put("Am.", "en-US");
     rplNiv.put("Br.", "en-UK");
     rplNiv.put("Ös.", "de-AT");
@@ -57,7 +57,7 @@ public class ChemnitzConverter {
     rplNiv.put("slang", "fam");
     rplNiv.put("Schw.", "de-CH");
     
-    rplDom = new Hashtable();
+    rplDom = new Hashtable<String, String>();
     rplDom.put("anat.", "anat");
     rplDom.put("arch.", "arch");
     rplDom.put("astron.", "astr");
@@ -210,10 +210,21 @@ public class ChemnitzConverter {
   
   void writeLemmaGroup(String lemma) throws IOException
   {
-      write("<lemma.gr>\n");
+      String[] editDom = getDom(lemma);
+      String[] editNiv = getNiv(editDom[1]);
       
-      String result = writeLemma(lemma);
+      write("<lemma.gr");
       
+      if(!editDom[0].equals(""))
+      {
+        write(" dom=\"" + editDom[0] + "\"");
+      }
+      if(!editNiv[0].equals(""))
+      {
+        write(" niv=\"" + editNiv[0] + "\"");
+      }
+      write(">\n");
+      String result = writeLemma(editNiv[1]);
       
       write("</lemma.gr>\n");
     }
@@ -238,7 +249,7 @@ public class ChemnitzConverter {
         }
       }
       */
-      String[] gram = grammarHint(l.trim());
+      String[] gram = insideBrake(l.trim(), '{', '}');
       write("<l>" + gram[1] + "</l>\n");
       if(!gram[0].equals(""))
       {
@@ -251,22 +262,27 @@ public class ChemnitzConverter {
    {
       // split it
       String[] s = sense.split(";");
+      String[] editDom;
+      String[] editNiv;
       
       for(int x = 0; x < s.length; x++)
       {
-        write("<sense.gr>\n");
-        /*String[] gram = grammarHint(s[x].trim());
-        if(!gram[0].equals(""))
+        editDom = getDom(s[x].trim());
+        editNiv = getNiv(editDom[1]);
+        
+        write("<sense.gr");
+        
+        if(!editDom[0].equals(""))
         {
-          write("<p><t><w pos=\"" + gram[0] + "\">" + gram[1] + "</w></t></p>");
+          write(" dom=\"" + editDom[0] + "\"");
         }
-        else
+        if(!editNiv[0].equals(""))
         {
-          write("<p><t>" + s[x].trim() + "</t></p>\n");
+          write(" niv=\"" + editNiv[0] + "\"");
         }
-         */
+        write(">\n");
         write("<p><t>");
-        write(replaceGrammarHint(s[x].trim()));
+        write(replaceGrammarHint(editNiv[1]));
         write("</t></p>");
         write("</sense.gr>\n");
       }
@@ -274,24 +290,24 @@ public class ChemnitzConverter {
     }
    
   /** 
-   * Search for grammatical hint inside { }.
-   * Will cut out this hint from the original string.
-   * @return empty string if not existing or the grammatical hint
+   * Search for text inside some brakes.
+   * Will cut out this text from the original string.
+   * @return empty string if not existing or the inside-text
    *  at index 0 and the rest-string at index 1
    */
-  String[] grammarHint(String str)
+  String[] insideBrake(String str, char beginBrake, char endBrake)
   {
     String insideBrake = "";
     String[] result = new String[2];
     result[0] = "";
     result[1] = str;
     
-    int foundBrakeS = str.indexOf("{");
+    int foundBrakeS = str.indexOf("" + beginBrake);
     int foundBrakeE = -1;
       
     if(foundBrakeS > -1)
     {
-      foundBrakeE = str.indexOf("}", foundBrakeS);
+      foundBrakeE = str.indexOf("" + endBrake, foundBrakeS);
       if(foundBrakeE > -1)
       {
         result[0] = str.substring(foundBrakeS + 1, foundBrakeE);
@@ -302,14 +318,56 @@ public class ChemnitzConverter {
     return result;
   }
   
+  String[] getDom(String str)
+  {
+    String[] result = new String[2];
+    String inside;
+    
+    result[0] = "";
+    result[1] = str;
+    
+    String[] dom = insideBrake(str, '[', ']');
+    if(!dom[0].equals(""))
+    {
+      inside = rplDom.get(dom[0]);
+      if(inside != null)
+      {
+        result[0] = inside;
+        result[1] = dom[1];
+      }
+    }
+    
+    return result;
+  }
+  
+  String[] getNiv(String str)
+  {
+    String[] result = new String[2];
+    String inside;
+   
+    result[0] = "";
+    result[1] = str;
+    
+    String[] niv = insideBrake(str, '[', ']');
+    
+    if(!niv[0].equals(""))
+    {
+      inside = rplNiv.get(niv[0]);
+      if(inside != null)
+      {
+        result[0] = inside;
+        result[1] = niv[1];
+      }
+    }  
+    return result;
+  }
+  
   String replaceGrammarHint(String str)
   {
     String result = "";
     
     String[] split = str.split("[ \t]");
     int i=0;
-    String lastDom = "";
-    String lastNiv = "";
     String lastPos = "";
     String lastWord = "";
     
@@ -319,10 +377,6 @@ public class ChemnitzConverter {
       {
         lastPos = split[i].trim();
         lastPos = lastPos.substring(1, lastPos.length() - 1);
-      }
-      else if(i < split.length && split[i].startsWith("["))
-      {
-        
       }
       else
       {
@@ -342,9 +396,7 @@ public class ChemnitzConverter {
         if(i < split.length)
         {
           lastWord = split[i].trim();
-          lastDom = "";
           lastPos = "";
-          lastNiv = "";
         }
       }
       
