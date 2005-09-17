@@ -366,7 +366,8 @@ public class ChemnitzConverter {
   {
     String result = "";
     
-    String[] split = str.split("[ \t]");
+    // split into words
+    String[] split = str.split("[ \t]+");
     int i=0;
     String lastPos = "";
     String lastWord = "";
@@ -377,6 +378,10 @@ public class ChemnitzConverter {
       {
         lastPos = split[i].trim();
         lastPos = lastPos.substring(1, lastPos.length() - 1);
+      }
+      else if(i < split.length && split[i].endsWith("}"))
+      {
+        // do nothing
       }
       else
       {
