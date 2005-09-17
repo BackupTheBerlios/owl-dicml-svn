@@ -481,7 +481,7 @@ public class ChemnitzConverter {
   
   void write(String str) throws IOException
   {
-    writerOut.write(str);
+    writerOut.write(UnicodeHelpers.escapeXML(str));
     writtenBytes += str.getBytes().length;
   }
 }

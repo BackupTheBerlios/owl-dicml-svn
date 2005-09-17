@@ -20,6 +20,7 @@ public class UnicodeHelpers {
                   68719476736l, 1099511627776l, 17592186044416l, 281474976710656l,
                   4503599627370496l, 72057594037927936l, 1152921504606846976l};
   
+  /** replaces all special-characters with masked characters */                
   static String unicodeToGlyph(String text)
   {
     String result = "";
@@ -193,6 +194,15 @@ public class UnicodeHelpers {
       
       result = result + digit;
     }
+    return result;
+  }
+  
+  /** escapes all characters used by XML - ATTENTION: only works for "&" yet */
+  static String escapeXML(String text)
+  {
+    String result = new String(text);
+    result = result.replaceAll("&", "&#x26;");
+    
     return result;
   }
 }
