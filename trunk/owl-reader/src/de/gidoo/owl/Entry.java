@@ -16,8 +16,10 @@ public class Entry {
    public String lemma;
    /** contains the string which is used for a "normal" comparision, for example "dictionary" */
    public String compare;
-   /** contains the string which is uses for a comparision by AlphabetOrderLight */
+   /** contains the string which is used for a comparision by AlphabetOrderLight */
    public String compareProcessed;
+   /** contains a CollectionKey which is used for a comparsion by AlphabetOrderLight */
+   public java.text.CollationKey collationKey;
    /** starting-position of the entry in the dicml-file */
    public long start;
    /** end-position of the entry in the dicml-file */

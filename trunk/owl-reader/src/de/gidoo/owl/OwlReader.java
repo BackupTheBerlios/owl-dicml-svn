@@ -70,8 +70,10 @@ class OwlReader extends JFrame
     private String sourceLanguage;
     /** The AlphabetOrder for the source-language of the current dictionary. */
     private AlphabetOrder alphOrder;
-    /** The dicml-file with the current dictionary. */
+    /** The dicml-file with the current dictionary for random access. */
     private RandomAccessFile dicmlAccess;
+    /** The dicml-file with the current dictionary */
+    private File dicmlFile;
     
     private ClassLoader loader;
     
@@ -336,6 +338,7 @@ class OwlReader extends JFrame
         JMenu menu = new JMenu(i18n.getString("menuOptions"));
         menu.setMnemonic(i18n.getString("menuOptionsChar").charAt(0));
         
+        // the available languages
         JMenu menuLanguage = new JMenu(i18n.getString("menuLanguage"));
         menuLanguage.setMnemonic(i18n.getString("menuLanguageChar").charAt(0));
         
@@ -390,6 +393,14 @@ class OwlReader extends JFrame
         }
         menuLanguage.getMenuComponent(n).setEnabled(false);
         
+        // the "force indexing"
+        JMenuItem mi = new JMenuItem(i18n.getString("menuForceIndex"));
+        mi.setMnemonic(i18n.getString("menuForceIndexChar").charAt(0));
+        mi.addActionListener(this);
+        mi.setActionCommand("forceindex");
+        
+        menu.add(mi);
+        
         return menu;
     }
     
@@ -421,6 +432,7 @@ class OwlReader extends JFrame
             fileId = new File(pathId);
             if(fileId.exists()) {
                 openDicFile(fileDicml);
+                this.dicmlFile = fileDicml;
                 
             } else {
                 //ask the user
@@ -431,6 +443,7 @@ class OwlReader extends JFrame
                     if(!indexDialog.errorOccured)
                     {
                       openDicFile(fileDicml);
+                      this.dicmlFile = fileDicml;
                     }
                 }
             }
@@ -479,8 +492,8 @@ class OwlReader extends JFrame
                           + " | " +f.getName());
             
             // init the alphabetical Order
-            alphOrder = new AlphabetOrder(new File("res/" + sourceLanguage + ".order.xml"));
-           
+            //alphOrder = new AlphabetOrder(new File("res/" + sourceLanguage + ".order.xml"));
+            alphOrder = new AlphabetOrder(new Locale(sourceLanguage));
             //read in the list of entries
             
             //init arrays
@@ -550,6 +563,9 @@ class OwlReader extends JFrame
         }
         else if(cmd.equals("chooseNorwegian")) {
           changeLanguage("no", null, null);
+        }
+        else if(cmd.equals("forceindex")) {
+          forceIndex();
         }
     }
     
@@ -650,6 +666,28 @@ class OwlReader extends JFrame
       }
     }
     
+    /** Will delete an old index-file and re-index the dictionary */
+    private void forceIndex()
+    {
+      if(dicmlFile == null)
+      {
+        // no dictionary is opened
+        JOptionPane.showMessageDialog(this, i18n.getString("errorNotLoadedYet"), i18n.getString("errorTitleWarning"), JOptionPane.WARNING_MESSAGE);
+        return;
+      }
+      // delete old file
+      File idFile = new File(dicmlFile.getAbsolutePath() + ".id");
+      idFile.delete();
+      
+      // index
+      IndexDicml indexDialog = new IndexDicml(dicmlFile.getAbsolutePath() ,this, true, i18n);
+
+      if(!indexDialog.errorOccured)
+      {
+        openDicFile(dicmlFile);
+      }
+    }
+    
     /**
      * Reacts on changes in the search-textfield.
      * Will try to find a matching entry in the list and will select it.
@@ -727,6 +765,11 @@ class OwlReader extends JFrame
         setEntry(callingList.getSelectedIndex(), tDicml);
     }
     
+    /**
+     * Shows a selected entry
+     * @param index the index of the selected entry
+     * @param target the DicmlRead-component which shall be used for rendering
+     */
     private void setEntry(int index, DicmlRead target)
     {
       byte[] stringBuffer;
@@ -749,6 +792,7 @@ class OwlReader extends JFrame
           }
       }
     }
+
     
     /**
      * Events of WindowListener

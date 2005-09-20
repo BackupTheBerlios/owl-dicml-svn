@@ -14,19 +14,49 @@ package de.gidoo.owl;
  * - the strings to compare will not be processed by getCompareable() nor by
  * glyphToUnicode()<br>
  * (this has to be done manually by the calling-procedure)<br>
- * - compare() does not use Entry.compare, but Entry.compareProcessed
+ * - compare() does not use Entry.compare, but Entry.compareProcessed or
+ * Entry.collectionKey (depending which constructor was used)
  *
  * @author Thomas Krause
  */
 public class AlphabetOrderLight extends AlphabetOrder
 {
   /**
-   * Create a new Instance of AlphabetOrderLight
+   * Creates a new instance of AlphabetOrder using an user specified xml-file.
    * @param orderFile the XML-file which contains the information about the order
    */
   public AlphabetOrderLight(java.io.File orderFile) throws java.io.IOException
   {
     super(orderFile);
+  }
+  
+  /**
+    * Creates a new instance of AlphabetOrder using the Java-api
+    * @param locale defines the language to be used
+  */
+  public AlphabetOrderLight(java.util.Locale locale)
+  {
+    super(locale);
+  }
+  
+  /**
+   * Compares two entries which each other using the variable "collationKey" or
+   * "compareProcessed".
+   * @param entry1 entry number one
+   * @param entry2 entry number two
+   * @return -1 if entry1 comes first, 1 if entry2 comes first or 
+   * 0 if both are equal
+   */
+  public int compare(Entry entry1, Entry entry2)
+  {
+    if(coll != null)
+    {
+      return entry1.collationKey.compareTo(entry2.collationKey);
+    }
+    else
+    {
+      return compareManually(entry1, entry2);
+    }
   }
   
   /**
@@ -36,7 +66,7 @@ public class AlphabetOrderLight extends AlphabetOrder
    * @return -1 if entry1 comes first, 1 if entry2 comes first or 
    * 0 if both are equal
    */
-  public int compare(Entry entry1, Entry entry2)
+  private int compareManually(Entry entry1, Entry entry2)
   {      
       // this will become the comparation strings
       String comp1 = UnicodeHelpers.glyphToUnicode(entry1.compareProcessed);

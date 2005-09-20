@@ -6,8 +6,10 @@
 
 package de.gidoo.owl;
 
+import java.text.CollationKey;
 import org.jdom.*;
 import java.util.*;
+import java.text.*;
 
 /**
  * Describes the order of characters of a natural language.<br><br>
@@ -17,10 +19,15 @@ import java.util.*;
  * which string should be replaced by other strings before compararion. E.g. the
  * German umlaut "&uuml;" is treated as "u".
  *
+ * In addition the in-build java-api for comparation of internatioal strings can be used. 
+ *
  * @author Thomas Krause
  */
 public class AlphabetOrder implements java.util.Comparator<Entry> {
-   
+  
+    /** The collator which is used and is instanciated by the given locale */
+    protected Collator coll;
+  
     /** 
      * The xml-document with the information about the order.
      * It's elements are accessable whenever needed.*/
@@ -32,7 +39,7 @@ public class AlphabetOrder implements java.util.Comparator<Entry> {
     private HashMap<Integer, Integer> charOrder;
     
     /**
-     * Creates a new instance of AlphabetOrder.
+     * Creates a new instance of AlphabetOrder using an user specified xml-file.
      * @param orderFile the XML-file which contains the information about the order
      */
     public AlphabetOrder(java.io.File orderFile) throws java.io.IOException
@@ -78,16 +85,62 @@ public class AlphabetOrder implements java.util.Comparator<Entry> {
     }
     
     /**
+     * Creates a new instance of AlphabetOrder using the Java-api
+     * @param locale defines the language to be used
+     */
+    public AlphabetOrder(Locale locale)
+    {
+      coll = Collator.getInstance(locale);
+    }
+    
+    /**
+     * Compares two entries which each other.
+     * If a locale was choosen the Java-api is used, and if not the own algorithm.
+     *
+     * @param entry1 entry number one
+     * @param entry2 entry number two
+     * @return -1 if entry1 comes first, 1 if entry2 comes first or 
+     * 0 if both are equal
+     */
+    public int compare(Entry entry1, Entry entry2)
+    {
+      if(coll != null)
+      {
+        return coll.compare(entry1.compare, entry2.compare);
+      }
+      else
+      {
+        return compareManually(entry1, entry2);
+      }
+    }
+    
+    /**
+     * Get a CollationKey for comparision.
+     * 
+     * @param s the original string
+     * @return a CollationKey which is suitable for comparisions
+     */
+    public CollationKey getCollationKey(String s)
+    {
+      return coll.getCollationKey(s);
+    }
+    
+    /**
      * Get a String for comparision.
-     * This method will perform all necessary replacements.
+     * This method will perform all necessary replacements defined in the given xml-file.
      *
      * @param s the original string
      * @return a string which is suitable for comparisions
      */
     public String getCompareable(String s)
     {
-      String result = new String(s);
+      if(doc == null)
+      {
+        return "";
+      }
       
+      String result = new String(s);
+     
       // make all replacements
       Element repl = doc.getRootElement().getChild("replacement");
             
@@ -106,25 +159,24 @@ public class AlphabetOrder implements java.util.Comparator<Entry> {
         for(int y = 0; y < countTreat; y++)
         {
           Element e2 = (Element) treat.get(y);
-          
+        
           String source = UnicodeHelpers.glyphToUnicode(e2.getTextTrim());
           // change possible regex-characters
           source = java.util.regex.Pattern.quote(source);
           result = result.replaceAll(source, replacement);
         }
       }
-      
-      return result;
+        return result;
     }
     
     /**
-     * Compares two entries which each other using the variable "compare".
+     * Compares two entries which each other by an own algorithm.
      * @param entry1 entry number one
      * @param entry2 entry number two
      * @return -1 if entry1 comes first, 1 if entry2 comes first or 
      * 0 if both are equal
      */
-    public int compare(Entry entry1, Entry entry2)
+    private int compareManually(Entry entry1, Entry entry2)
     {
 
       // this will become the comparation strings
@@ -178,7 +230,7 @@ public class AlphabetOrder implements java.util.Comparator<Entry> {
     }
     
     /**
-     * Compares two chars which each other.
+     * Compares two chars which each other using the xml-file.
      * @param comp1 char number one
      * @param comp2 char number two
      * @return -1 if comp1 comes first, 1 if comp2 comes first or 
@@ -186,6 +238,11 @@ public class AlphabetOrder implements java.util.Comparator<Entry> {
      */
     protected int compareChar(char comp1, char comp2)
     {
+      if(charOrder == null)
+      {
+        return 0;
+      }
+      
       Integer c1 = new Integer((int) comp1);
       Integer c2 = new Integer((int) comp2);
       

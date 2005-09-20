@@ -43,6 +43,7 @@ class IndexDicmlWork extends Thread
     fileDicml = dicmlFile;
     owner = dialog;
   }
+  
   /**
    * Start the thread and begin indexing.
    */
@@ -104,9 +105,11 @@ class IndexDicmlWork extends Thread
         {
           if((char) c == '<')
           {
-            // init the AlphabetOrder
             
+            // init the AlphabetOrder
             order = new AlphabetOrderLight(new File("res/" + sourceLanguage + ".order.xml"));                    
+            //order = new AlphabetOrderLight(new java.util.Locale(sourceLanguage));
+            
             to_do = 0;
           }
           else
@@ -168,8 +171,9 @@ class IndexDicmlWork extends Thread
             curEntry = new Entry();
             curEntry.start = entry_start;
             curEntry.end = entry_end;
-            curEntry.compare = lemma;
+            //curEntry.compare = lemma;
             curEntry.compareProcessed = order.getCompareable(lemma);
+            //curEntry.collationKey = order.getCollationKey(lemma);
             
             //add num to lemma
             if(!num.equals(""))
@@ -233,9 +237,9 @@ class IndexDicmlWork extends Thread
     }
     catch (Exception e)
     {
-      fileId.delete();
       owner.errorDlg.showError(owner.i18n.getString("errorWhenIndexing"), e);
       owner.setStatusBarValue(201);
+      fileId.delete();
     }
     
     return true;

@@ -185,10 +185,10 @@
                 <xsl:when test="pos/@pos='abr'">forkortelse</xsl:when>
                 <xsl:when test="pos/@pos='adj'"><a class="abbr-pos" href="?abbr:adjektiv">adj</a></xsl:when>
                 <xsl:when test="pos/@pos='adv'"><a class="abbr-pos" href="?abbr:adverb">adv</a></xsl:when>
-                <xsl:when test="pos/@pos='conj'">Konjunktion</xsl:when>
+                <xsl:when test="pos/@pos='conj'">konjunksjon</xsl:when>
                 <xsl:when test="pos/@pos='f'"><a class="abbr-pos" href="?abbr:femininum">f</a></xsl:when>
                 <xsl:when test="pos/@pos='fpl'"><a class="abbr-pos" href="?abbr:femininum flertall">f/fl</a></xsl:when>
-                <xsl:when test="pos/@pos='int'">Interjektion</xsl:when>
+                <xsl:when test="pos/@pos='int'">interjeksjon</xsl:when>
                 <xsl:when test="pos/@pos='m'"><a class="abbr-pos" href="?abbr:maskulinum">m</a></xsl:when>
                 <xsl:when test="pos/@pos='mpl'"><a class="abbr-pos" href="?abbr:maskulinum flertall">m/fl</a></xsl:when>
                 <xsl:when test="pos/@pos='n'"><a class="abbr-pos" href="?abbr:intetkjønn">i</a></xsl:when>
@@ -202,7 +202,7 @@
                 <xsl:when test="pos/@pos='pr-int'">interrogativpronomen</xsl:when>
                 <xsl:when test="pos/@pos='prop'">egennavn</xsl:when>
                 <xsl:when test="pos/@pos='pr-per'">personalpronomen</xsl:when>
-                <xsl:when test="pos/@pos='pr-pos'">possessipronomen</xsl:when>
+                <xsl:when test="pos/@pos='pr-pos'">possessipronomen</xsl:when>    
                 <xsl:when test="pos/@pos='pr-rel'">relativpronomen</xsl:when>
                 <xsl:when test="pos/@pos='suff'">suffix</xsl:when>
                 <xsl:when test="pos/@pos='suffid'">som suffix</xsl:when>
