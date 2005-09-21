@@ -126,6 +126,7 @@ public class IndexDicml extends javax.swing.JDialog {
 
   private void btAbortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAbortActionPerformed
     workerThread.abort = true;
+    errorOccured = true;
   }//GEN-LAST:event_btAbortActionPerformed
 
   private void btOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btOkActionPerformed

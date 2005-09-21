@@ -675,16 +675,25 @@ class OwlReader extends JFrame
         JOptionPane.showMessageDialog(this, i18n.getString("errorNotLoadedYet"), i18n.getString("errorTitleWarning"), JOptionPane.WARNING_MESSAGE);
         return;
       }
-      // delete old file
+      // rename old file
       File idFile = new File(dicmlFile.getAbsolutePath() + ".id");
-      idFile.delete();
+      File idBakFile = new File(dicmlFile.getAbsolutePath() + ".id.bak");
+      idFile.renameTo(idBakFile);
       
       // index
       IndexDicml indexDialog = new IndexDicml(dicmlFile.getAbsolutePath() ,this, true, i18n);
 
       if(!indexDialog.errorOccured)
       {
+        // delete backup
+        idBakFile.delete();
+        // open
         openDicFile(dicmlFile);
+      }
+      else
+      {
+        // restore backup
+        idBakFile.renameTo(idFile);
       }
     }
     
