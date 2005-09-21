@@ -197,6 +197,14 @@ class DicmlRead extends JPanel implements HyperlinkListener
             (new javax.xml.transform.stream.StreamSource(new StringReader(text)),
                 new javax.xml.transform.stream.StreamResult
                     (new FileOutputStream(System.getProperty("user.home") + "/.owl/entry.html"))); 
+        // check wether an other owl-instance has deleted the file
+        if(!emptyFile.exists())
+        {
+          File f1 = copyFileToHome("etc/css.css", "css.css");
+          emptyFile = copyFileToHome("res/empty.html", "empty.html");
+          f1.deleteOnExit();
+          emptyFile.deleteOnExit();
+        }
         dicmlView.setPage(emptyFile.toURL());
         dicmlView.setPage(resultFile.toURL());
         parsedText = text;
