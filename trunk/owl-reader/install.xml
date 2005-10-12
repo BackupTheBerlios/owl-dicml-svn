@@ -80,6 +80,9 @@
             <file src="res/icon48.png" targetdir="$INSTALL_PATH/res" />
             <file src="res/icon.ico" targetdir="$INSTALL_PATH/res" os="windows" />
             <file src="res/owl.png" targetdir="$INSTALL_PATH/res" />
+            <file src="res/Back24.gif" targetdir="$INSTALL_PATH/res" />
+            <file src="res/Forward24.gif" targetdir="$INSTALL_PATH/res" />
+            <file src="res/Home24.gif" targetdir="$INSTALL_PATH/res" />
                         
             <!-- xsl -->
             <file src="xsl/style_de.xsl" targetdir="$INSTALL_PATH/xsl" />

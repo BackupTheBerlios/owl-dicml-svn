@@ -66,7 +66,6 @@ public class InfoDialog extends javax.swing.JDialog {
 
     setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
     setTitle(java.util.ResourceBundle.getBundle("de/gidoo/owl/OwlReader").getString("infoTitle"));
-    setFont(new java.awt.Font("Dialog", 0, 12));
     setResizable(false);
     btOk.setFont(new java.awt.Font("Dialog", 0, 12));
     btOk.setMnemonic(i18n.getString("btCloseChar").charAt(0));
@@ -127,7 +126,7 @@ public class InfoDialog extends javax.swing.JDialog {
 
     tabPanel.addTab(i18n.getString("infoTabLicence"), panLicence);
 
-    panUsage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+    panUsage.setLayout(null);
 
     panUsage.addComponentListener(new java.awt.event.ComponentAdapter() {
       public void componentShown(java.awt.event.ComponentEvent evt) {
@@ -145,7 +144,8 @@ public class InfoDialog extends javax.swing.JDialog {
       }
     });
 
-    panUsage.add(btBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 30, 30));
+    panUsage.add(btBack);
+    btBack.setBounds(10, 0, 30, 30);
 
     btForward.setFont(new java.awt.Font("Dialog", 0, 12));
     btForward.setIcon(new javax.swing.ImageIcon("/home/thomas/projekte/owl/trunk/owl-reader/res/Forward24.gif"));
@@ -157,7 +157,8 @@ public class InfoDialog extends javax.swing.JDialog {
       }
     });
 
-    panUsage.add(btForward, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 30, 30));
+    panUsage.add(btForward);
+    btForward.setBounds(50, 0, 30, 30);
 
     btHome.setFont(new java.awt.Font("Dialog", 0, 12));
     btHome.setIcon(new javax.swing.ImageIcon("/home/thomas/projekte/owl/trunk/owl-reader/res/Home24.gif"));
@@ -168,7 +169,8 @@ public class InfoDialog extends javax.swing.JDialog {
       }
     });
 
-    panUsage.add(btHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 30, 30));
+    panUsage.add(btHome);
+    btHome.setBounds(90, 0, 30, 30);
 
     lblUsage.setEditable(false);
     lblUsage.setContentType("text/html");
@@ -180,7 +182,8 @@ public class InfoDialog extends javax.swing.JDialog {
 
     scrollUsage.setViewportView(lblUsage);
 
-    panUsage.add(scrollUsage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 390, 260));
+    panUsage.add(scrollUsage);
+    scrollUsage.setBounds(0, 30, 390, 260);
 
     tabPanel.addTab(i18n.getString("infoTabHelp"), panUsage);
 
