@@ -6,8 +6,9 @@
 0.11
 ----
 
+* improved speed of the search dramatically
 * added "force indexing" function
-* added a online help
+* added an online help
 * new indexing-dialog with a "more stable" appearance
 * repaired some broken text-messages
 

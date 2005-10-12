@@ -59,6 +59,7 @@
             <file src="LICENCE.txt" targetdir="$INSTALL_PATH" os="windows" />
             <file src="LICENCE" targetdir="$INSTALL_PATH" os="unix" />
             <file src="LICENCE" targetdir="$INSTALL_PATH" os="mac" />
+            <file src="Changelog.txt" targetdir="$INSTALL_PATH"/>
             
             <!-- etc -->
             <file src="etc/css.css" targetdir="$INSTALL_PATH/etc" />
@@ -93,6 +94,25 @@
                  
             <!-- lib -->
             <file src="lib/jdom.jar" targetdir="$INSTALL_PATH/lib" />
+            
+            <!-- docs -->
+            <file src="docs/index.html" targetdir="$INSTALL_PATH/docs" />
+            <file src="docs/all.css" targetdir="$INSTALL_PATH/docs" />
+                        
+            <!-- docs/de -->
+            <file src="docs/de/create.html" targetdir="$INSTALL_PATH/docs/de" />
+            <file src="docs/de/index.html" targetdir="$INSTALL_PATH/docs/de" />
+            <file src="docs/de/language.html" targetdir="$INSTALL_PATH/docs/de" />
+            <file src="docs/de/open.html" targetdir="$INSTALL_PATH/docs/de" />
+            <file src="docs/de/print.html" targetdir="$INSTALL_PATH/docs/de" />
+            
+            <!-- docs/en -->
+            <file src="docs/en/create.html" targetdir="$INSTALL_PATH/docs/en" />
+            <file src="docs/en/index.html" targetdir="$INSTALL_PATH/docs/en" />
+            <file src="docs/en/language.html" targetdir="$INSTALL_PATH/docs/en" />
+            <file src="docs/en/open.html" targetdir="$INSTALL_PATH/docs/en" />
+            <file src="docs/en/print.html" targetdir="$INSTALL_PATH/docs/en" />
+            
             
             <!-- home-dir -->
             <file src="etc/owl-reader.config" targetdir="$USER_HOME/.owl" />

@@ -492,8 +492,8 @@ class OwlReader extends JFrame
                           + " | " +f.getName());
             
             // init the alphabetical Order
-            //alphOrder = new AlphabetOrder(new File("res/" + sourceLanguage + ".order.xml"));
-            alphOrder = new AlphabetOrder(new Locale(sourceLanguage));
+            alphOrder = new AlphabetOrder(new File("res/" + sourceLanguage + ".order.xml"));
+            //alphOrder = new AlphabetOrder(new Locale(sourceLanguage));
             //read in the list of entries
             
             //init arrays
@@ -515,18 +515,22 @@ class OwlReader extends JFrame
                 
             }
 
-            // select first entry
-            listView.setListData(lemmaName);
-            
+            // select first entry and delete old text
+            tSearch.setText("");
+            listView.clearSelection();
+            try
+            {
+              listView.setListData(lemmaName);
+            }
+            catch(IndexOutOfBoundsException bE)
+            {
+              //some kind of selection error, just ignore it
+            }
             idReader.close();
             
             listView.setSelectedIndex(0);
         } catch(Exception e) {
-            if(e.getMessage().equals("-1")) {
-                //some kind of selection error, just ignore it
-            } else {
-                errorDlg.showError(i18n.getString("errorLoadWordbook"), e);
-            }
+            errorDlg.showError(i18n.getString("errorLoadWordbook"), e);
         }
     }
     
@@ -703,64 +707,79 @@ class OwlReader extends JFrame
      */
     public void changedUpdate(DocumentEvent event)
     {
-      int curIndex = listView.getSelectedIndex();
-      
-      if(curIndex < 0) {curIndex = 0;}
-      
-      String text = tSearch.getText();
-      
-      int newSel = listView.getNextMatch(text, 0, Position.Bias.Forward);
-      
-      if(newSel >= 0)
-      {
-        listView.setSelectedIndex(newSel);
-        listView.ensureIndexIsVisible(newSel);
-      }           
-     
+      searchForFirstEntry();
     }
     
     /**
      * Reacts when text in the search-textfield is removed.
-     * Calls changedUpdate(DocumentEvent event).
-     * @see #changedUpdate(DocumentEvent event)
      */
     public void removeUpdate(DocumentEvent event)
     {
-      int curIndex = listView.getSelectedIndex();
-      
-      if(curIndex < 0) {curIndex = 0;}
-      
-      String text = tSearch.getText();
-      
-      int newSel = listView.getNextMatch(text, 0, Position.Bias.Forward);
-      
-      if(newSel >= 0)
-      {
-        listView.setSelectedIndex(newSel);
-        listView.ensureIndexIsVisible(newSel);
-      }
+      searchForFirstEntry();      
     }
     
     /**
      * Reacts on insert-actions in the search-textfield.
-     * Calls changedUpdate(DocumentEvent event).
-     * @see #changedUpdate(DocumentEvent event)
      */
     public void insertUpdate(DocumentEvent event)
     {
-      int curIndex = listView.getSelectedIndex();
-      
-      if(curIndex < 0) {curIndex = 0;}
-      
+      searchForFirstEntry();
+    }
+    
+    /**
+     * Searches for the first entry which begins like the searched text.
+     * @return wether a matching entry was found
+     */
+    private boolean searchForFirstEntry()
+    {
       String text = tSearch.getText();
+      Entry e1 = new Entry();
+      Entry e2 = new Entry();
       
-      int newSel = listView.getNextMatch(text, curIndex, Position.Bias.Forward);
+      if(text.equals("")) return false;
       
-      if(newSel >= 0)
-      {
-        listView.setSelectedIndex(newSel);
-        listView.ensureIndexIsVisible(newSel);
+      // binary search - find first matching entry
+      boolean found = false;
+      int pivot = -1;
+      int begin = 0;
+      int end = lemmaName.length - 1;
+      e1.compare = text;
+      int compare;
+      
+      pivot = listView.getSelectedIndex();
+      
+      while(!found && begin >= 0 && end < lemmaName.length && begin <= end)
+      {       
+        e2.compare = lemmaName[pivot];
+        compare = alphOrder.compare(e1, e2);
+        
+        if(compare < 0)
+        {
+          // search at the left side
+          // begin = begin
+          end = pivot-1;
+        }
+        else if(compare > 0)
+        {
+          // search at the right side
+          // end = end
+          begin = pivot + 1;
+        }
+        else
+        {
+          // found
+          found = true;
+        }
+        
+        if(compare != 0)
+        {
+          pivot = begin + ((end - begin) / 2);
+        } 
       }
+
+      listView.setSelectedIndex(pivot);
+      listView.ensureIndexIsVisible(pivot);
+      return found;
     }
     
     /**
@@ -784,7 +803,7 @@ class OwlReader extends JFrame
       byte[] stringBuffer;
       String entryString;
       
-      if(lemmaBegin == null || index > lemmaBegin.length) return;
+      if(lemmaBegin == null || index > lemmaBegin.length || index < 0) return;
         
       long begin = lemmaBegin[index];
       long length = (lemmaEnd[index] - begin) + 1;
