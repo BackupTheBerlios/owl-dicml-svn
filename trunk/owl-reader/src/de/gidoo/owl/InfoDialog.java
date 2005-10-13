@@ -135,7 +135,7 @@ public class InfoDialog extends javax.swing.JDialog {
     });
 
     btBack.setFont(new java.awt.Font("Dialog", 0, 12));
-    btBack.setIcon(new javax.swing.ImageIcon("/home/thomas/projekte/owl/trunk/owl-reader/res/Back24.gif"));
+    btBack.setIcon(new javax.swing.ImageIcon("res/Back24.gif"));
     btBack.setActionCommand("back");
     btBack.setEnabled(false);
     btBack.addActionListener(new java.awt.event.ActionListener() {
@@ -148,7 +148,7 @@ public class InfoDialog extends javax.swing.JDialog {
     btBack.setBounds(10, 0, 30, 30);
 
     btForward.setFont(new java.awt.Font("Dialog", 0, 12));
-    btForward.setIcon(new javax.swing.ImageIcon("/home/thomas/projekte/owl/trunk/owl-reader/res/Forward24.gif"));
+    btForward.setIcon(new javax.swing.ImageIcon("res/Forward24.gif"));
     btForward.setActionCommand("forward");
     btForward.setEnabled(false);
     btForward.addActionListener(new java.awt.event.ActionListener() {
@@ -161,7 +161,7 @@ public class InfoDialog extends javax.swing.JDialog {
     btForward.setBounds(50, 0, 30, 30);
 
     btHome.setFont(new java.awt.Font("Dialog", 0, 12));
-    btHome.setIcon(new javax.swing.ImageIcon("/home/thomas/projekte/owl/trunk/owl-reader/res/Home24.gif"));
+    btHome.setIcon(new javax.swing.ImageIcon("res/Home24.gif"));
     btHome.setActionCommand("home");
     btHome.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {

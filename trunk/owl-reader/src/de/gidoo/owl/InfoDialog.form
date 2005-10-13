@@ -197,7 +197,7 @@
                   <Font name="Dialog" size="12" style="0"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="/home/thomas/projekte/owl/trunk/owl-reader/res/Back24.gif"/>
+                  <Image iconType="2" name="res/Back24.gif"/>
                 </Property>
                 <Property name="actionCommand" type="java.lang.String" value="back"/>
                 <Property name="enabled" type="boolean" value="false"/>
@@ -217,7 +217,7 @@
                   <Font name="Dialog" size="12" style="0"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="/home/thomas/projekte/owl/trunk/owl-reader/res/Forward24.gif"/>
+                  <Image iconType="2" name="res/Forward24.gif"/>
                 </Property>
                 <Property name="actionCommand" type="java.lang.String" value="forward"/>
                 <Property name="enabled" type="boolean" value="false"/>
@@ -237,7 +237,7 @@
                   <Font name="Dialog" size="12" style="0"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="/home/thomas/projekte/owl/trunk/owl-reader/res/Home24.gif"/>
+                  <Image iconType="2" name="res/Home24.gif"/>
                 </Property>
                 <Property name="actionCommand" type="java.lang.String" value="home"/>
               </Properties>

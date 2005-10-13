@@ -68,7 +68,7 @@ class IndexDicmlWork extends Thread
     String lemma, num;
     int c;
     int i=0;
-    int to_do = -2;
+    int to_do = -3;
     double alreadyDone = 0, i_buf;
     long file_size = fileDicml.length();
     long entry_start = -1, entry_end = -1;
@@ -83,9 +83,7 @@ class IndexDicmlWork extends Thread
       
       entryList = new LinkedList<Entry>();
         
-      fileId.createNewFile();
-      //idWriter = new FileWriter(fileId);
-      //dicmlReader = new FileReader(fileDicml);    
+      fileId.createNewFile();   
       idWriter = new OutputStreamWriter(new FileOutputStream(fileId), "UTF-8");
       dicmlReader = new InputStreamReader(new FileInputStream(fileDicml), "UTF-8");
       dic_buf = new String();
@@ -93,17 +91,26 @@ class IndexDicmlWork extends Thread
       while( ((c = dicmlReader.read()) != -1) && abort == false )
       {
         // search for the source-language
-        if(to_do == -2)
+        if(to_do == -3)
         {
           dic_buf += (char) c;
-          if(dic_buf.indexOf("<dic.lang-s>") != -1)
+          if(dic_buf.indexOf("<dic.lang") != -1)
+          {
+            to_do = -2;
+          }
+        }
+        else if(to_do == -2)
+        {
+          dic_buf += (char) c;
+          // compatibility to dicML 0.92 and 1.00
+          if((dic_buf.indexOf("source=\"") != -1) || dic_buf.indexOf("-s>") != -1  )
           {
             to_do = -1;
           }
         }
         else if(to_do == -1)
         {
-          if((char) c == '<')
+          if((char) c == '\"' || (char) c == '<')
           {
             
             // init the AlphabetOrder
