@@ -418,8 +418,16 @@ public class ChemnitzConverter {
       String buffer = "";
       buffer += "<dicml>\n";
       buffer += "<head>\n";
-      buffer += "<dic.lang-s>de</dic.lang-s>\n";
-      // TODO: more infos
+      buffer += "\t<dic.lang source=\"???\" target=\"???\"/>\n";
+      buffer += "\t<dic.creator.gr>\n";
+      buffer += "\t\t<dic.creator>\n";
+      buffer += "\t\t\t<dic.creator.name>???</dic.creator.name>\n";
+      buffer += "\t\t</dic.creator>\n";
+      buffer += "\t</dic.creator.gr>\n";
+      buffer += "\t<dic.licence>\n";
+      buffer += "\t\t<dic.licence.name>???</dic.licence.name>\n";
+      buffer += "\t\t<dic.licence.source>???</dic.licence.name>\n";
+      buffer += "\t</dic.licence>\n";
       buffer += "</head>\n";
       buffer += "<body>\n";
       
