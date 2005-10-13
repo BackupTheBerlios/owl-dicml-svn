@@ -15,7 +15,7 @@
     
     <info>
         <appname>owl</appname>
-        <appversion>0.10 BETA</appversion>
+        <appversion>0.11 BETA</appversion>
         <url>http://owl.gidoo.de</url>
         <authors><author name="Thomas Krause" email="thomas.krause@gidoo.de"></author></authors>
         <javaversion>1.5</javaversion>
