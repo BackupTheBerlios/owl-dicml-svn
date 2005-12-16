@@ -6,6 +6,7 @@
 0.12
 ----
 * support of the final dicML 1.0 standard
+* added "load dictionary at start-up"-feature (actually that are 2 features)
 * Norwegian is not longer UI-language - was too much work :-(
 
 0.11

@@ -60,6 +60,9 @@ class OwlReader extends JFrame
     /** The Locale used for the user interface. */
     private Locale uiLocale;
     
+    /** A menu-item in the options-menu telling wether to load the dictionary at next startup */
+    private JCheckBoxMenuItem miLoadAtStartup;
+    
     /** Will pop up on exceptions. **/
     private ErrorDialog errorDlg;
     
@@ -86,8 +89,11 @@ class OwlReader extends JFrame
     /**
      * Create a new instance of OwlReader
      * @exception java.io.IOException
+     * @param loadDicFile Wether to load a dictionary at start-up
+     * @param pathToDicFile When loadDicFile is true this is the dictionary to load
      */
-    OwlReader() throws java.io.IOException {
+    OwlReader(boolean loadDicFile, String pathToDicFile) throws java.io.IOException 
+    {
      
         loader = this.getClass().getClassLoader();
         //i18n
@@ -241,6 +247,26 @@ class OwlReader extends JFrame
             errorDlg.showError(i18n.getString("errorLoadConf"), e);
         } 
         
+        if(loadDicFile)
+        {
+          // load a dictionary given at the command-line
+          File dicFile = new File(pathToDicFile);
+          openDicFile(dicFile);
+        }
+        else
+        {
+          // check-out wether a dictionary from the last session should be loaded
+          boolean val = Boolean.parseBoolean(props.getProperty("load-at-start-up", "false"));
+          if(val)
+          {
+            File dicFile = new File(props.getProperty("last-dict"), "");
+            if(dicFile.exists())
+            {
+              openDicFile(dicFile);
+            }
+          }
+        }
+        
     }
     
     /**
@@ -265,6 +291,11 @@ class OwlReader extends JFrame
       
       props.setProperty("splitterPos", Integer.toString(splitPaneMain.getDividerLocation()));
       props.setProperty("ui-language", uiLanguage);
+      
+      if(dicmlFile != null)
+      {
+        props.setProperty("last-dict", dicmlFile.getAbsolutePath());
+      }
       
       // store them
       try
@@ -386,8 +417,18 @@ class OwlReader extends JFrame
         mi.setMnemonic(i18n.getString("menuForceIndexChar").charAt(0));
         mi.addActionListener(this);
         mi.setActionCommand("forceindex");
-        
+       
         menu.add(mi);
+        
+        // the "load this dictionary at next start-up"
+        miLoadAtStartup = new JCheckBoxMenuItem(i18n.getString("menuLoadAtStartup"));
+        miLoadAtStartup.setMnemonic(i18n.getString("menuLoadAtStartupChar").charAt(0));
+        miLoadAtStartup.addActionListener(this);
+        miLoadAtStartup.setActionCommand("loadAtStartup");
+        boolean val = Boolean.parseBoolean(props.getProperty("load-at-start-up", "false"));
+        miLoadAtStartup.setSelected(val);
+        
+        menu.add(miLoadAtStartup);
         
         return menu;
     }
@@ -420,7 +461,6 @@ class OwlReader extends JFrame
             fileId = new File(pathId);
             if(fileId.exists()) {
                 openDicFile(fileDicml);
-                this.dicmlFile = fileDicml;
                 
             } else {
                 //ask the user
@@ -431,7 +471,6 @@ class OwlReader extends JFrame
                     if(!indexDialog.errorOccured)
                     {
                       openDicFile(fileDicml);
-                      this.dicmlFile = fileDicml;
                     }
                 }
             }
@@ -517,6 +556,9 @@ class OwlReader extends JFrame
             idReader.close();
             
             listView.setSelectedIndex(0);
+            
+            this.dicmlFile = f;
+                
         } catch(Exception e) {
             errorDlg.showError(i18n.getString("errorLoadWordbook"), e);
         }
@@ -555,6 +597,12 @@ class OwlReader extends JFrame
         }
         else if(cmd.equals("forceindex")) {
           forceIndex();
+        }
+        else if(cmd.equals("loadAtStartup"))
+        {
+          miLoadAtStartup.setSelected(miLoadAtStartup.isSelected());
+          props.setProperty("load-at-start-up", "" + miLoadAtStartup.isSelected());
+          
         }
     }
     
@@ -833,8 +881,18 @@ class OwlReader extends JFrame
     {
         OwlReader window;
         // set fonts to non-bold by standard
-        UIManager.put("swing.boldMetal", Boolean.FALSE); 
-        window = new OwlReader();
+        UIManager.put("swing.boldMetal", Boolean.FALSE);
+        
+        boolean loadDic = false;
+        String pathDic = "";
+        
+        if(args.length >= 1)
+        {
+          loadDic = true;
+          pathDic = args[0];
+        }
+        
+        window = new OwlReader(loadDic, pathDic);
     
     }
 }
