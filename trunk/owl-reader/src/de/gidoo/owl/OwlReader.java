@@ -363,14 +363,6 @@ class OwlReader extends JFrame
         smi.setActionCommand("chooseFrench");
         menuLanguage.add(smi);
         
-        // Norwegian
-        smi = new JMenuItem(i18n.getString("menuChooseNorwegian"));
-        smi.setMnemonic(i18n.getString("menuChooseNorwegianChar").charAt(0));
-        smi.addActionListener(this);
-        smi.setActionCommand("chooseNorwegian");
-        smi.setSelected(true);
-        menuLanguage.add(smi);
-        
         menu.add(menuLanguage);
         
         // mark the current language
@@ -386,10 +378,6 @@ class OwlReader extends JFrame
         else if(uiLanguage.equals("fr"))
         {
           n = 2;
-        }
-        else if(uiLanguage.equals("no"))
-        {
-          n = 3;
         }
         menuLanguage.getMenuComponent(n).setEnabled(false);
         
@@ -564,9 +552,6 @@ class OwlReader extends JFrame
         }        
         else if(cmd.equals("chooseFrench")) {
           changeLanguage("fr", null, null);
-        }
-        else if(cmd.equals("chooseNorwegian")) {
-          changeLanguage("no", null, null);
         }
         else if(cmd.equals("forceindex")) {
           forceIndex();

@@ -97,69 +97,42 @@ div.lemma-gr span.num {
 
 div.lemma-gr span.phon {
    font-family:Gentium;
+   font-weight:normal;
+   margin-left:10px;
    }
 
 span.pos {
    font-family:Times New Roman;
    font-style:italic;
-   color:#FF0000;}
-/*
-span.pos:before {
-   content:" ";
-   }
-*/
-span.niv {
-   font-family:Times New Roman;
-   font-style:italic;
-   }
-/*
-span.niv:after {
-   content:" ";
-   }
-*/
-span.n {
-   font-family:Times New Roman;
-   font-style:italic;
-   }
-/*
-span.n:before {
-   content:" (";
+   font-weight:normal;
+   color:#FF0000;
    }
 
-span.n:after {
-   content:") ";
+span.niv, span.n, span.dom {
+   font-family:Times New Roman;
+   font-style:italic;
    }
-*/
+   
+span.dom {
+   text-transform:uppercase;
+   }
 
 span.s {
    font-weight:bold;
    }
-/*
-span.s + span.t:before {
-   content:" ";
-   }
 
-span.t + span.t:before {
-   content:", ";
-   }
-*/
-span.or {font-family:Times New Roman;
+span.alt {
    font-style:italic;
    font-weight:normal;
    }
 
-/*
-span.or:before {
-   content:" ";
-   }
+span.govern {font-style:italic;}
 
-span.or:after {
-   content:" ";
-   }
-*/
 
-/* von Thomas */
-a.abbr-pos {font-family:Times New Roman;
-            font-style:italic;
-            color:#FF0000;
-            text-decoration:none;}
+a {font-family:Times New Roman;
+   font-style:italic;
+   text-decoration:none;}
+
+a.abbr-pos {color:#FF0000;}
+
+a.abbr-niv {color:#000000;}

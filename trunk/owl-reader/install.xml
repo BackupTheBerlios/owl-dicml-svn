@@ -25,7 +25,6 @@
         <langpack iso3="eng"/>
         <langpack iso3="deu"/>
         <langpack iso3="fra"/>
-        <langpack iso3="nor"/>
     </locale>
     
     <guiprefs resizable="yes" width="640" height="480"/>
@@ -87,7 +86,6 @@
             <!-- xsl -->
             <file src="xsl/style_de.xsl" targetdir="$INSTALL_PATH/xsl" />
             <file src="xsl/style_en.xsl" targetdir="$INSTALL_PATH/xsl" />
-            <file src="xsl/style_no.xsl" targetdir="$INSTALL_PATH/xsl" />
             <file src="xsl/style_fr.xsl" targetdir="$INSTALL_PATH/xsl" />
             
             <!-- legal -->

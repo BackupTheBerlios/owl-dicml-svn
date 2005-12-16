@@ -3,6 +3,11 @@
 | http://owl.gidoo.de |
 +---------------------+
 
+0.12
+----
+* support of the final dicML 1.0 standard
+* Norwegian is not longer UI-language - was too much work :-(
+
 0.11
 ----
 
