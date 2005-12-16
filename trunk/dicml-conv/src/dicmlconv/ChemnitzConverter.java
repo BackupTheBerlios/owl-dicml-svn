@@ -74,7 +74,7 @@ public class ChemnitzConverter {
     rplDom.put("gramm.", "ling");
     rplDom.put("jur.", "lega");
     rplDom.put("math.", "math");
-    rplDom.put("med.", "medec");
+    rplDom.put("med.", "medi");
     rplDom.put("mil.", "mili");
     rplDom.put("min.", "mine");
     rplDom.put("mus.", "musi");
@@ -192,7 +192,7 @@ public class ChemnitzConverter {
               String[] subLemma = splitLemma[i].split(";"); // different lemma with same translation 
               for(int j=0; j < subLemma.length; j++)
               {
-                  write("<entry id=\"" + "noID" + "\">\n");
+                  write("<entry>\n");
                   writeLemmaGroup(subLemma[j].trim());
                   writeSenseGroup(splitSense[i].trim());
                   write("</entry>\n\n");
@@ -213,7 +213,7 @@ public class ChemnitzConverter {
       String[] editDom = getDom(lemma);
       String[] editNiv = getNiv(editDom[1]);
       
-      write("<lemma.gr");
+      write("\t<lemma.gr");
       
       if(!editDom[0].equals(""))
       {
@@ -226,7 +226,7 @@ public class ChemnitzConverter {
       write(">\n");
       String result = writeLemma(editNiv[1]);
       
-      write("</lemma.gr>\n");
+      write("\t</lemma.gr>\n");
     }
     
   String writeLemma(String l) throws IOException
@@ -250,10 +250,10 @@ public class ChemnitzConverter {
       }
       */
       String[] gram = insideBrake(l.trim(), '{', '}');
-      write("<l>" + gram[1] + "</l>\n");
+      write("\t\t<l>" + gram[1] + "</l>\n");
       if(!gram[0].equals(""))
       {
-        write("<pos pos=\"" + gram[0] + "\" />\n");
+        write("\t\t<pos pos=\"" + gram[0] + "\" />\n");
       }
       return l;
     }
@@ -270,8 +270,8 @@ public class ChemnitzConverter {
         editDom = getDom(s[x].trim());
         editNiv = getNiv(editDom[1]);
         
-        write("<sense.gr");
-        
+        write("\t<sense.gr>\n");
+        write("\t\t<p");        
         if(!editDom[0].equals(""))
         {
           write(" dom=\"" + editDom[0] + "\"");
@@ -280,11 +280,10 @@ public class ChemnitzConverter {
         {
           write(" niv=\"" + editNiv[0] + "\"");
         }
-        write(">\n");
-        write("<p><t>");
+        write("><t>");
         write(replaceGrammarHint(editNiv[1]));
-        write("</t></p>");
-        write("</sense.gr>\n");
+        write("</t></p>\n");
+        write("\t</sense.gr>\n");
       }
       
     }
@@ -416,7 +415,9 @@ public class ChemnitzConverter {
   void writeHeader(String conf) throws IOException
   {
       String buffer = "";
-      buffer += "<dicml>\n";
+      buffer += "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
+      buffer += "<!DOCTYPE dicml PUBLIC \"-//gidoo//DTD DICML 1.0 bi//EN\" \"http://www3.gidoo.de/dtd/dicml,1.0,bi.dtd\">\n";
+      buffer += "<dicml xmlns:dicml=\"http://www3.gidoo.de/dtd/dicml/1.0/bi\">\n";
       buffer += "<head>\n";
       buffer += "\t<dic.lang source=\"???\" target=\"???\"/>\n";
       buffer += "\t<dic.creator.gr>\n";
