@@ -94,10 +94,13 @@ class OwlReader extends JFrame
      */
     OwlReader(boolean loadDicFile, String pathToDicFile) throws java.io.IOException 
     {
-     
+        // ugly workaround for problems under Gnome 2.12.0
+        // (seems like a Gnome or JVM problem for me)
+        super("owl");
+      
         loader = this.getClass().getClassLoader();
-        //i18n
         
+        //i18n
         changeLanguage("en", null,  null); // first call - fallback
         
         sourceLanguage = "en"; // English by default
@@ -145,10 +148,6 @@ class OwlReader extends JFrame
           else if(installLang.equals("fra"))
           {
             props.setProperty("ui-language", "fr");
-          }
-          else if(installLang.equals("nor"))
-          {
-            props.setProperty("ui-language", "no");
           }
           
           props.setProperty("ui-install-language", "nothing");
@@ -226,8 +225,7 @@ class OwlReader extends JFrame
         setIconImage(icon);
         
         setVisible(true);
-        
-        
+                
         try 
         {                                 
           // when first use, show info-dialog
@@ -266,7 +264,6 @@ class OwlReader extends JFrame
             }
           }
         }
-        
     }
     
     /**
@@ -515,7 +512,7 @@ class OwlReader extends JFrame
             sourceLanguage = idReader.readLine().trim();
             
             // reset the title
-            this.setTitle(i18n.getString("progName") + " " + i18n.getString("progVers")
+            setTitle(i18n.getString("progName") + " " + i18n.getString("progVers")
                           + " | " +f.getName());
             
             // init the alphabetical Order
@@ -893,7 +890,6 @@ class OwlReader extends JFrame
         }
         
         window = new OwlReader(loadDic, pathDic);
-    
     }
 }
 
