@@ -1,0 +1,2740 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE dicml PUBLIC "-//gidoo//DTD DICML 1.0 bi//EN"
+     "http://www3.gidoo.de/dtd/dicml,1.0,bi.dtd">
+
+<dicml xmlns:dicml="http://www3.gidoo.de/dtd/dicml/1.0/bi">
+
+<head>
+<dic.title>gidoo-Wörterbuch Französisch - Deutsch</dic.title>
+<dic.lang source="fr" target="de"/>
+<dic.source>http://koocachoo.de/</dic.source>
+<dic.date creation="2004-10-10" update="2005-12-18"/>
+<dic.creator.gr><dic.creator><dic.creator.name>Julius Becker</dic.creator.name><dic.creator.e-mail>julius.becker@gidoo.de</dic.creator.e-mail><dic.creator.website>-</dic.creator.website></dic.creator></dic.creator.gr>
+<dic.licence><dic.licence.name>CREATIVE COMMONS PUBLIC LICENSE 2.0</dic.licence.name><dic.licence.source>http://creativecommons.org/licenses/by-nc-nd/2.0/de/</dic.licence.source></dic.licence>
+</head>
+
+<body>
+
+
+
+<entry>
+<lemma.gr><l>abaissant</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t>erniedrigend</t><t>entwürdigend</t></p></sense.gr>
+</entry>
+
+
+
+
+
+<entry>
+<lemma.gr><l>abaisse</l><pos pos="f"/></lemma.gr>
+<sense.gr><p dom="cuis"><t><w pos="m">Teig</w></t><t><w pos="m">Boden</w></t></p></sense.gr>
+</entry>
+
+
+
+
+
+<entry>
+<lemma.gr><l>abaisse-langue</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Zungenspatel</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>abaisser</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p><t>senken</t><t>herablassen</t></p><p n="Augen"><t>niederschlagen</t></p><p n="Preis"><t>herabsetzten</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>abaisser</l><pos pos="v-ref"/></lemma.gr>
+<sense.gr><p.col><s>s'<tilde>abaisser</tilde></s><t>sich demütigen</t></p.col><p.col><s>s'<tilde>abaisser</tilde> à</s><t>sich herablassen zu</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>abandonner</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p><t>verlassen</t><t>aufgeben</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>abandonner</l><pos pos="v-ref"/></lemma.gr>
+<sense.gr><p.col><s>s'<tilde>abandonner</tilde> à</s><t>sich <alt.gr><alt>j-n</alt><alt>einer Sache</alt></alt.gr> hingeben</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>abasourdir</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p><t>verblüffen</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>abjurer</l><pos pos="v"/></lemma.gr>
+<sense.gr><p><t>abschwören</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>abonnement</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Abonnement</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>abonner</l><pos pos="v-ref"/></lemma.gr>
+<sense.gr><p.col><s>s'<tilde>abonner</tilde> à</s><t>abonnieren</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>accusé</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>accusé</tilde> de lecture</s><t><w pos="f">Lesebestätigung</w></t></p.col></sense.gr>
+<sense.gr><p.col><s><tilde>accusé</tilde> de réception</s><t><w pos="f">Empfangsbestätigung</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>achat</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>achat</tilde> en ligne</s><t><w pos="n">Onlineshopping</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>acronyme</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Akronym</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>actualiser</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p><t>aktualisieren</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>adhésion</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Mitgliedschaft</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>administrateur</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>administrateur</tilde> de banque de données</s><t><w pos="m">Datenbankadministrator</w></t></p.col><p.col><s><tilde>administrateur</tilde> de serveur</s><t><w pos="m">Webmaster</w></t></p.col><p.col><s><tilde>administrateur</tilde> de site</s><t><w pos="m">Webmaster</w></t></p.col><p.col><s><tilde>administrateur</tilde> de système</s><t><w pos="m">Systemverwalter</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>adresse</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s><tilde>adresse</tilde> électronique</s><t><w pos="f">E-Mail-Adresse</w></t></p.col><p.col><s><tilde>adresse</tilde> Internet</s><t><w pos="f">Internetadresse</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>agenda</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>agenda</tilde> électronique</s><t><w pos="m">Organizere</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>agent</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>agent</tilde> pathogène</s><t><w pos="m">Erreger</w></t></p.col></sense.gr>
+</entry>
+
+
+<entry>
+<lemma.gr><l>agonie</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Agonie</w></t><t><w pos="m">Todeskampf</w></t></p><p.col><s>être à l'<tilde>agonie</tilde></s><t>im Sterben liegen</t><t>mit dem Tode ringen</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>aide-soignant</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Pflegehelfer</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>aide-soignante</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Schwesternhelferin</w></t></p><p><t><w pos="f">Pflegehelferin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Alabama</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Alabama</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Alaska</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Alaska</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Albanais</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Albaner</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>albanais</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Albanisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>albanais</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t>albanisch</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Albanaise</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Albanerin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Albanie</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t>Albanien</t></p><p.col><s>la République d'<tilde>Albanie</tilde></s><t>die Republik Albanien</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>alias</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Alias</w></t><t><w pos="n">Pseudonym</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Allemand</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Deutscher</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>allemand</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Deutsch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>allemand</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t>deutsch</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Allemande</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Deutsche</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Allemagne</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Deutschland</t></p><p.col><s>la République fédérale d'<tilde>Allemagne</tilde></s><t>die Bundesrepublik Deutschland</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Amsterdam</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Amsterdam</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Andorra-la-Vieille</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Andorra-la-Vella</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Andorran</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Andorraner</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>andorran</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t>andorranisch</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Andorrane</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Andorranerin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Andorre</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t>Andorra</t></p><p.col><s>la Principauté d'<tilde>Andorre</tilde></s><t>das Fürstentum Andorra</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>anneau</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Ring</w></t></p></sense.gr>
+<sense.gr><p.col><s><tilde>anneau</tilde> de sites</s><t><w pos="m">Webring</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>annexe</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Anlage</w></t><t><w pos="n">Attachment</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>annuler</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p><t>abbrechen</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>appel</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>appel</tilde> par <tilde>appel</tilde></s><t><w pos="n">Call-by-Call</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Appenzell</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p.col><s><tilde>Appenzell</tilde> Rhodes-Extérieures</s><t>Appenzell Ausserrhoden</t></p.col><p.col><s><tilde>Appenzell</tilde> Rhodes-Intérieures</s><t>Appenzell Inerrhoden</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>applet</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Applet</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>applicaton</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Anwendung</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>applet</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Applet</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>arbre</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Baum</w></t></p></sense.gr>
+<sense.gr><p.col><s><tilde>arbre de Noël</tilde></s><t><w pos="m">Weihnachtsbaum</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>argent</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>argent</tilde> fou</s><t><w pos="n">Heidengeld</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Argovie</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Aargau</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Arizona</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Arizona</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Arkansas</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Arkansas</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>astérisque</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Asterisk</w></t><t><w pos="m">Asteriskus</w></t><t><w pos="n">Sternchen</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Athènes</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Athen</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>attendre</l><pos pos="v-ref"/></lemma.gr>
+<sense.gr><p.col><s><w govern="sub">s'attendre à ce que</w></s><t>erwarten, dass</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>attention</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Achtung</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>atterrissage</l><pos pos="m"/></lemma.gr>
+<sense.gr><p dom="avia"><t><w pos="f">Landung</w></t></p><p.col><s><tilde>atterrissage</tilde> sans visibilité</s><t><w pos="f">Blindlandung</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>atterrisseur</l><pos pos="m"/></lemma.gr>
+<sense.gr><p n="Flugzeug"><t><w pos="n">Fahrwerk</w></t><t><w pos="n">Fahrgestell</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>aube</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Morgengrauen</w></t><t><w pos="f">Morgendämmerung</w></t></p><p.col><s>à l'<tilde>aube</tilde></s><t>im Morgengrauen</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>automne</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Herbst</w></t></p><p.col><s>en automne</s><t>im Herbst</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>autorépondeur</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Autoresponder</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Autriche</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Österreich</w></t></p><p.col><s>la République d'<tilde>Autriche</tilde></s><t>die Republik Österreich</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Autrichien</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Österreicher</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>autrichien</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">österreichisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Autrichienne</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Österreicherin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Bade-Wurtemberg</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Baden-Württemberg</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>baguette</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Baguette</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Bâle</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Basel</t></p><p.col><s><tilde>Bâle</tilde>-Campagne</s><t>Basel-Landschaft</t></p.col><p.col><s><tilde>Bâle</tilde>-Ville</s><t>Basel-Stadt</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>barre</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col dom="info"><s><tilde>barre</tilde> de défilement</s><t><w pos="m">Scrollbalken</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Basse-Saxe</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t>Niedersachsen</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Bavière</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t>Bayern</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Belge</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Belgier</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Belge</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Belgierin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>belge</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t>belgisch</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Belgique</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t>Belgien</t></p><p.col><s>le Royaume de <tilde>Belgique</tilde></s><t>das Königreich Belgien</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Berlin</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Berlin</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Berne</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Bern</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>billard</l><pos pos="m"/></lemma.gr>
+<sense.gr><p niv="fam" n="table d'opération"><t><w pos="m">Operationstisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>blesser</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p><t><w pos="v-t">verletzten</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>bloc</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>bloc</tilde> opératoire</s><t><w pos="m">Operationssaal</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>bonhomme</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>bonhomme</tilde> de neige</s><t><w pos="m">Schneemann</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Bosnie-Herzégovine</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t>Bosnien und Herzegowina</t></p><p.col><s>de <tilde>Bosnie-Herzégovine</tilde></s><t>bosnisch-herzegowinisch</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>bouche</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Mund</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>bouche-à-bouche</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Mund-zu-Mund-Beatmung</w></t><t><w pos="f">Atemspende</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>braillard</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p.col><s>être <tilde>braillard</tilde></s><t>ein <w pos="m">Schreihals</w> sein</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Brandenbourg</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p n="Stadt"><t>Brandenburg</t></p></sense.gr>
+<sense.gr><p.col n="Bundesland"><s>le <tilde>Brandenbourg</tilde></s><t>Brandenburg</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Brême</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Bremen</t></p><p.col><s>Ville libre hanséatique de <tilde>Brême</tilde></s><t>Freie Hansestadt Bremen</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>bruler</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p><t>abbrennen</t><t>niederbrennen</t><t>verbrennen</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Bruxelles</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Brüssel</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Bulgare</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Bulgare</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>bulgare</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Bulgarisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Bulgare</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Bulgarin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>bulgare</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t>bulgarisch</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Bulgarie</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t>Bulgarien</t></p><p.col><s>la République de <tilde>Bulgarie</tilde></s><t>die Republik Bulgarien</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Bundestag</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Bundestag</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>cabinet</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s>Cabinet fédéral</s><t><w pos="n">Bundeskabinett</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Californie</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Kalifornien</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>capitale</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Hauptstadt</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>capote</l><pos pos="f"/></lemma.gr>
+<sense.gr><p n="Kondom"><t><w pos="m">Pariser</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>carburant</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Krafstoff</w></t><t><w pos="m">Treibstoff</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Caroline</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s><tilde>Caroline</tilde> du Nord</s><t><w pos="prop">North Carolina</w></t></p.col><p.col><s><tilde>Caroline</tilde> du Sud</s><t><w pos="prop">South Carolina</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Catalan</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Katalane</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>catalan</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Katalanisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>catalan</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t>katalanisch</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Catalane</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Katalanin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Catalogne</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Katalonien</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>chancelier</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s>Chancelier fédéral</s><t><w pos="n">Bundeskanzler</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>chancellerie</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s>Chancellerie fédérale</s><t><w pos="n">Bundeskanzleramt</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>chaussure</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Schuh</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>chef</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>chef</tilde> de cabine</s><t><w pos="m">Purser</w></t><t><w pos="f">Purserette</w></t><t><w pos="m">Chefsteward</w></t><t><w pos="f">Chefstewardess</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>chef-lieu</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Hauptort</w></t></p><p.col><s><tilde>chef-lieu</tilde> de département</s><t><w pos="m">Departementhauptort</w></t><t><w pos="f">Departementhauptstadt</w></t></p.col><p.col><s><tilde>chef-lieu</tilde> d'arrondissement</s><t><w pos="m">Arrondissementhauptort</w></t><t><w pos="f">Arrondissementhauptstadt</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>cheval</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col n="nom d'un jeu"><s>les petits chevaux</s><t><w pos="n">Mensch-ärgere-dich-nicht</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>chirurgien</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Chirurg</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Chişinău</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Chişinău</w></t><t><w pos="prop">Kischinau</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>choléra</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Cholera</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>CICR</l><pos pos="m"/></lemma.gr>
+<sense.gr><p n="Comité international de la Croix-Rouge"><t><w pos="n">IKRK</w></t><t>Internationales <w pos="n">Komitee</w> vom Roten Kreuz</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>cité</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s>Cité du Vatican</s><t><w pos="f">Vatikanstadt</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>colonne</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s><tilde>colonne</tilde> de fumée</s><t><w pos="f">Rauchsäule</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Colorado</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Colorado</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>comité</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Komitee</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>compatriote</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Landsmann</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>compatriote</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Landsmännin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Connecticut</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Connecticut</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>consommation</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s><tilde>consommation</tilde> de carburant</s><t><w pos="m">Krafstoffverbrauch</w></t><t><w pos="m">Treibstoffverbrauch</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>contagieux</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">ansteckend</w></t><ex><s>La peste aviaire est une maladie à virus hautement contagieuse pour les volailles et autres oiseaux.</s><t>Die Geflügelpest ist eine für Geflügel und andere Vögel hochgradig ansteckende Viruserkrankung.</t></ex></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Copenhague</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Kopenhagen</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>corps</l><pos pos="m"/></lemma.gr>
+<sense.gr num="1"><p><t><w pos="m">Körper</w></t><t><w pos="m">Leib</w></t><ex><s>à son <tilde>corps</tilde> défendant</s><t>widerwillig</t><t>ungern</t></ex></p></sense.gr>
+<sense.gr num="2"><p n="cadavre"><t><w pos="f">Leiche</w></t><t><w pos="m">Leichnahm</w></t></p><p.idm><s>à passer sur le <tilde>corps</tilde> de qn</s><t>über j-s Leiche gehen</t><t>j-n skrupellos opfern</t><ex><s>il faudra d'abord me passer sur le corps</s><t>nur über meine Leiche</t></ex></p.idm></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>corps à corps</l><pos pos="adv"/></lemma.gr>
+<sense.gr><p><t>Mann gegen Mann</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>corps-à-corps</l><pos pos="m"/></lemma.gr>
+<sense.gr num="1"><p><t><w pos="n">Handgemenge</w></t></p></sense.gr>
+<sense.gr num="2"><p><t><w pos="m">Einzelkampf</w></t><t><w pos="m">Nahkampf</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>courriel</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="f">E-Mail</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>courrier</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>courrier</tilde> électronique</s><t><w pos="f">E-Mail</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Cracovie</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Krakau</t><ex><s><tilde>Cracovie</tilde> est la capitale de la voïvodie de Petite-Pologne.</s><t>Krakau ist die Hauptstadt der Woiwodschaft Kleinpolen.</t></ex></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Croate</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Kroate</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Croate</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Kroatin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>croate</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Kroatisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>croate</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">kroatisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Croatie</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Kroatien</w></t></p><p.col><s>la République de <tilde>Croatie</tilde></s><t>die Republik Kroatien</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Croissant-Rouge</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Roter Halbmond</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Croix-Rouge</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s><tilde>Croix-Rouge</tilde> Française</s><t>Französisches <w pos="n">Rotes Kreuz</w></t></p.col><p.col><s><tilde>Croix-Rouge</tilde> Allemande</s><t>Deutsches <w pos="n">Rotes Kreuz</w></t><t><w pos="n">DRK</w></t></p.col><p.col><s><w pos="m">Comité</w> international de la <tilde>Croix-Rouge</tilde></s><t>Internationales <w pos="n">Komitee</w> vom Roten Kreuz</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>cybernaute</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Internetbenutzer</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Dakota</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>Dakota</tilde> du Nord</s><t><w pos="prop">North Dakota</w></t></p.col><p.col><s><tilde>Dakota</tilde> du Sud</s><t><w pos="prop">South Dakota</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Danemark</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t>Dänemark</t></p><p.col><s>le Royaume du <tilde>Danemark</tilde></s><t>das Königreich Dänemark</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>dangereux</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">gefährlich</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Danois</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Däne</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>danois</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Dänisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>danois</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t>dänisch</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Danoise</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Dänin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>débat</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Debatte</w></t><t><w pos="f">Diskussion</w></t><t><w pos="f">Erörterung</w></t><t><w pos="n">Streitgespräch</w></t></p>
+<p.col><s><tilde>débat</tilde> télévisé</s><t><w pos="f">Fernsehdebatte</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>déclencher</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p.col><s><tilde>déclencher</tilde> <fr.qc/></s><t><de.etw/> auslösen</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>déclencheur</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Auslöser</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>déconnecté</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t>offline</t></p><p.col><s>être <tilde>déconnecté</tilde></s><t>offline sein</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>déflagration</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Explosion</w></t></p></sense.gr>
+<sense.gr dom="chem"><p><t><w pos="f">Deflagration</w></t><t><w pos="n">Verpuffen</w></t><t>explosionsartiges <w pos="n">Verbrennen</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Delaware</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Delaware</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>déluge</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Sintflut</w></t></p><p.idm><s>après nous le <tilde>déluge</tilde>&#160;!</s><t>nach uns die <w pos="f">Sintflut</w></t></p.idm></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>démolir</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p.col><s><tilde>démolir</tilde> <fr.qn/></s><t><de.j-n/> zusammenschlagen</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>denier</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>denier</tilde> de Saint-Pierre</s><t><w pos="m">Peterspfennig</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>dépôt</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>dépot</tilde> de carburant</s><t><w pos="n">Kraftstofflager</w></t><t><w pos="n">Treibstofflager</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>désabonner</l><pos pos="v-ref"/></lemma.gr>
+<sense.gr><p.col><s>se <tilde>désabonner</tilde> de quelque chose</s><t>abbestellen</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>deuil</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Trauer</w></t></p><p.col><s><tilde>deuil</tilde> national</s><t><w pos="f">Staatstrauer</w></t></p.col><p.col><s><w pos="m">jour</w> de <tilde>deuil</tilde></s><t><w pos="m">Trauertag</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>devise</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Wahlspruch</w></t><t><w pos="m">Leitspruch</w></t><ex><s>La <tilde>devise</tilde> de l'Union est «&#160;Unie dans la diversit&#160;»</s><t>Der Leitspruch der Union lautet: »In Vielfalt geeint«.</t></ex></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>dictée</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s><tilde>dictée</tilde> musicale</s><t><w pos="f">Gehörbildung</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>dignité</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Würde</w></t><ex><s>La dignité humaine est inviolable.</s><t>Die Würde des Menschen ist unantastbar.</t></ex></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>diluvien</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t>sintflutartig</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>dimanche</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Sonntag</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>dossier</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>dossier</tilde> médical</s><t><w pos="f">Krankengeschichte</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>droit</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s>avoir <tilde>droit</tilde> à</s><t>Recht auf etwas haben</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Dublin</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Dublin</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>duc</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Herzog</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>duché</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Herzogtum</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>duchesse</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Herzogin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>élection</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Wahl</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>électrocuter</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p><t>durch elektrischen Strom töten</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>électrocuter</l><pos pos="v-ref"/></lemma.gr>
+<sense.gr><p.col><s>s'<tilde>électrocuter</tilde></s><t>einen tödlichen elektrischen Schlag bekommen</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>émeute</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Krawall</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>encéphalopathie</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s><tilde>encéphalopathie</tilde> spongiforme bovine</s><t>bovine spongiforme <w pos="f">Enzephalopathie</w></t><t><w pos="f">BSE</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>endommager</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p><t><w pos="v-t">beschädigen</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>en ligne</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t>online</t></p><p.col><s>être <tilde>en ligne</tilde></s><t>online sein</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>épizootie</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Tierseuche</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>ESB</l><pos pos="f"/></lemma.gr>
+<sense.gr><p n="encéphalopathie spongiforme bovine"><t>bovine spongiforme <w pos="f">Enzephalopathie</w></t><t><w pos="f">BSE</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>esthéticien</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Kosmetiker</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>esthéticienne</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Kosmetikerin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Estonie</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t>Estland</t></p><p.col><s>la République d'<tilde>Estonie</tilde></s><t>die Republik Estland</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Estonien</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Este</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>estonien</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Estnisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>estonien</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t>estnisch</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Estonienne</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Estin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>États-Unis</l><pos pos="mpl"/></lemma.gr>
+<sense.gr><p><t><w pos="mpl">Vereinigte Staaten</w></t></p><p.col><s><tilde>États-Unis</tilde> d'Amérique</s><t>Vereinigte Staaten von Amerika</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>été</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Sommer</w></t><ex><s>en été</s><t>im Sommer</t></ex></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>éteindre</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p><t><w pos="v-t">löschen</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>explosion</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Explosion</w></t></p><p.col><s><tilde>explosion</tilde> au gaz</s><t><w pos="f">Gasexplosion</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>fair-play</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Fairplay</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>fédération</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Föderation</w></t></p>
+<p.col><s>Fédération internationale des Sociétés de la Croix-Rouge et du Croissant-Rouge</s><t>Internationale <w pos="f">Föderation</w> der Rotkreuz- und Rothalbmondgesellschaften</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>feu</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s>mettre le <tilde>feu</tilde> à <fr.qc/></s><t><de.etw/> in Brand stecken</t><t><de.etw/> anzünden</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>fidèle</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t>treu</t></p><p.col><s>rester <tilde>fidèle</tilde></s><t>treu bleiben</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Finlandais</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Finne</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>finlandais</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t>finnisch</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Finlandaise</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Finnin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Finlande</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t>Finnland</t></p><p.col><s>la République de <tilde>Finlande</tilde></s><t>die Republik Finnland</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>finnois</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Finnisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>finnois</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t>finnisch</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Floride</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Florida</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Français</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Franzose</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>français</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t>französisch</t></p><p.col><s>la République <tilde>français</tilde>e</s><t>die französische Republik</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Française</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Französin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>France</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t>Frankreich</t></p><p.col><s>la République française</s><t>die französische Republik</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Fribourg</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Freiburg</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>fuel</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Heizöl</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>fumée</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Rauch</w></t>
+<ex><s>Protégez les enfants: ne leur faites pas respirer votre fumée.</s><t>Schützen Sie Kinder ? Lassen Sie sie nicht Ihren Tabakrauch einatmen!</t></ex>
+<ex><s>La fumée contient du benzène, des nitrosamines, du formaldéhyde et du cyanure d'hydrogène.</s><t>Rauch enthält Benzol, Nitrosamine, Formaldehyd und Blausäure.</t></ex>
+</p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>fumer</l><pos pos="v"/></lemma.gr>
+<sense.gr><p><t>rauchen</t>
+<ex><s>Fumer tue</s><t>Rauchen ist tödlich</t></ex>
+<ex><s>Fumer peut tuer.</s><t>Rauchen kann tödlich sein.</t></ex>
+<ex><s>Fumer nuit gravement à votre santé et à celle de votreentourage.</s><t>Rauchen fügt Ihnen und den Menschen in Ihrer Umgebung erheblichen Schaden zu.</t></ex>
+<ex><s>Fumer bouche les artères et provoque des crises cardiaques et des attaques cérébrales.</s><t>Rauchen führt zur Verstopfung der Arterien und verursacht Herzinfarkte und Schlaganfälle.</t></ex>
+<ex><s>Fumer provoque le cancer mortel du poumon.</s><t>Rauchen verursacht tödlichen Lungenkrebs.</t></ex>
+<ex><s>Fumer pendant la grossesse nuit à la santé de votre enfant.</s><t>Rauchen in der Schwangerschaft schadet Ihrem Kind.</t></ex>
+<ex><s>Votre médecin ou votre pharmacien peuvent vous aider à arrêter de fumer.</s><t>Ihr Arzt oder Apotheker kann Ihnen dabei helfen, das Rauchen aufzugeben.</t></ex>
+<ex><s>Fumer crée une forte dépendance, ne commencez pas.</s><t>Rauchen macht sehr schnell abhängig: Fangen Sie gar nicht erst an!</t></ex>
+<ex><s>Arrêter de fumer réduit les risques de maladies cardiaques et pulmonaires mortelles.</s><t>Wer das Rauchen aufgibt, verringert das Risiko tödlicher Herz- und Lungenerkrankungen.</t></ex>
+<ex><s>Fumer peut entrainer une mort lente et douloureuse.</s><t>Rauchen kann zu einem langsamen und schmerzhaften Tod führen.</t></ex>
+<ex><s>Fumer peut diminuer l'afflux sanguin et provoque l'impuissance.</s><t>Rauchen kann zu Durchblutungsstörungen führen und verursacht Impotenz.</t></ex>
+<ex><s>Fumer provoque un vieillissement de la peau.</s><t>Rauchen lässt Ihre Haut altern.</t></ex>
+<ex><s>Fumer peut nuire aux spermatozoïdes et réduit la fertilité.</s><t>Rauchen kann die Spermatozoen schädigen und schränkt die Fruchtbarkeit ein.</t></ex>
+</p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>fumeur</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Raucher</w></t>
+<ex><s>Les fumeurs meurent prématurément.</s><t>Raucher sterben früher.</t></ex>
+</p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>fusée</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Rakete</w></t></p><p.col><s><tilde>fusée</tilde> éclairante</s><t><w pos="f">Leuchtrakete</w></t></p.col><p.col><s><tilde>fusée</tilde> porteuse</s><t><w pos="f">Trägerrakete</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>génétique</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t>genetisch</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Genève</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Genf</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>géographie</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Geografie</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Géorgie</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Georgia</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Glaris</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Glarus</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>globe</l><pos pos="m"/></lemma.gr>
+<sense.gr num="1"><p><t><w pos="f">Erdkugel</w></t><t><w pos="m">Erdball</w></t></p></sense.gr>
+<sense.gr num="2"><p><t><w pos="m">Globus</w></t></p><p.col><s><tilde>globe</tilde> céleste</s><t><w pos="m">Himmelsglobus</w></t></p.col><p.col><s><tilde>globe</tilde> lumineux</s><t><w pos="m">Leuchtglobus</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Grande-Bretagne</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t>Großbritannien</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Grec</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Grieche</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>grec</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Griechisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>grec</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t>griechisch</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Grèce</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t>Griechenland</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Grecque</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Griechin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>grippe</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s><tilde>grippe</tilde> aviaire</s><t><w pos="f">Vogelgrippe</w></t><t><w pos="f">Geflügelpest</w></t><t>aviäre <w pos="f">Influenza</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Grisons</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Graubünden</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Grisons</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p.col><s><tilde>groupe</tilde> parlementaire</s><t><w pos="f">Fraktion</w></t><ex><s><tilde>groupe</tilde> parlementaire du Bundestag</s><t><w pos="f">Bundestagsfraktion</w></t></ex></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>habiliter</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p.col><s><tilde>habiliter</tilde> à</s><t>ermächtigen zu</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>habiter</l><pos pos="v"/></lemma.gr>
+<sense.gr><p><t>wohnen</t><t>bewohnen</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Hambourg</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Hamburg</t></p><p.col><s>Ville libre et hanséatique de <tilde>Hambourg</tilde></s><t>Freie und Hansestadt Hamburg</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>hameçonner</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p><t>mit einem Angelhaken versehen</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Hawaï</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Hawaii</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Hawaii</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Hawaii</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>hellénique</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t>hellenisch</t></p><p.col><s>la République <tilde>hellénique</tilde></s><t>die Hellenische Republik</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Helsinki</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Helsinki</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Hesse</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Hessen</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>heurter</l><pos pos="v-ref"/></lemma.gr>
+<sense.gr><p.col><s>se <tilde>heurter</tilde> à qn</s><t>mit j-m aneinander geraten</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>hexagone</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Sechseck</w></t><ex><s>La France a la forme d'un <tilde>hexagone</tilde>.</s><t>Frankreich hat die Form eines Sechsecks.</t></ex></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>hiver</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Winter</w></t><ex><s>en hiver</s><t>im Winter</t></ex></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>hôpital</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Krankenhaus</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>hospitaliser</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p.col><s><tilde>hospitaliser</tilde> qn</s><t>j-n ins Krankenhaus <alt.gr><alt>einweisen</alt><alt>einliefern</alt></alt.gr></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>hôtesse</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s><tilde>hôtesse</tilde> de l'air</s><t><w pos="f">Stewardesse</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>humain</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t>menschlich</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>hymne</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Hymne</w></t><ex><s>L'hymne de l'Union est tiré de l'«&#160;Ode à la joie&#160;» de la Neuvième symphonie de Ludwig van Beethoven.</s><t>Die Hymne der Union entstammt der »Ode an die Freude« aus der Neunten Symphonie von Ludwig van Beethoven.</t></ex></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Idaho</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Idaho</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Île-de-France</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Île-de-France</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Illinois</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Illinois</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>immunodéficience</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Immunschwäche</w></t></p><p.col><s><w pos="m">syndrome</w> d'<tilde>immunodéficience</tilde> acquise</s><t>erworbenes <w pos="n">Immunschwächesyndrom</w></t><t><w pos="n">AIDS</w></t></p.col><p.col><s><w pos="m">virus</w> de l'<tilde>immunodéficience</tilde> humaine</s><t><w pos="n">Immunschwächevirus</w></t><t><w pos="n">HIV</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>inauguration</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Einweihung</w></t><t><w pos="f">Eröffnung</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>incendier</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p.col><s><tilde>incendier</tilde> <fr.qc/></s><t><de.etw/> in Brand stecken</t><t><de.etw/> anzünden</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Indiana</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Indiana</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>infection</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Infektion</w></t><t><w pos="f">Infizierung</w></t></p><p.col><s><tilde>infection</tilde> sexuellement transmissible</s><t>sexuell übertragbare <w pos="f">Erkrankung</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>infirmier</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Krankenpfleger</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>infirmière</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Krankenschwester</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>internaute</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Internetbenutzer</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>introduction</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Einführung</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Iowa</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Iowa</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Irlandais</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Ire</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>irlandais</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t>irisch</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Irlandaise</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Irin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Irlande</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t>Irland</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>irréductible</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t>der <w pos="m">Unbezwingbare</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Islandais</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Isländer</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>islandais</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Isländisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>islandais</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t>isländerisch</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Islandaise</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Isländerin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Islande</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t>Island</t></p><p.col><s>la République d'<tilde>Islande</tilde></s><t>die Republik Island</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>IST</l><pos pos="f"/></lemma.gr>
+<sense.gr><p n="infection sexuellement transmissible"><t>sexuell übertragbare <w pos="f">Erkrankung</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Italie</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t>Italien</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Italien</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Italiener</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>italien</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">italienisch</w></t></p><p.col><s>la République <tilde>italien</tilde>ne</s><t>die Italienische Republik</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>italien</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t>italien</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Italienne</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Italienerin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>jeudi</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Donnerstag</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>jour</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s>petit <tilde>jour</tilde></s><t><w pos="n">Morgengrauen</w></t><t><w pos="n">Morgendämmerung</w></t></p.col><p.col><s>au petit <tilde>jour</tilde></s><t>im Morgengrauen</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>journée</l><pos pos="f"/></lemma.gr>
+<sense.gr num="1"><p><t><w pos="m">Tag</w></t></p></sense.gr>
+<sense.gr num="2"><p.col><s><tilde>journée</tilde> de l'Europe</s><t><w pos="m">Europatag</w></t></p.col></sense.gr>
+<sense.gr num="1"><p.col><s><tilde>journée</tilde> mondiale</s><t><w pos="m">Welttag</w></t><t>weltweiter <w pos="m">Gedenktag</w></t></p.col><p.col><s>Journée mondiale du SIDA</s><t><w pos="m">Welt-Aids-Tag</w></t></p.col><p.col><s>Journée mondiale de Lutte contre SIDA</s><t><w pos="m">Welt-Aids-Tag</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Jura</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Jura</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Kansas</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Kansas</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Kentucky</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Kentucky</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>lance-fusée</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Raketenwerfer</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>lancer</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p><t>starten</t></p><p.col><s>lancer une <tilde>application</tilde></s><t>eine <w pos="f">Anwendung</w> starten</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>La Haye</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Den Haag</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>La Valletta</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Valletta</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Letton</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Lette</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>letton</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Lettisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>letton</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">lettisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Lettonie</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Lettland</w></t></p><p.col><s>la République de Lettonie</s><t>die Republik Lettland</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Lettonne</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Lettin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Liechtenstein</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Liechtenstein</w></t></p><p.col><s>le Principauté de <tilde>Liechtenstein</tilde></s><t>das Fürstentum Liechtenstein</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Liechtensteinois</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Liechtensteiner</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>liechtensteinois</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">liechtensteinisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Liechtensteinoise</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Liechtensteinerin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>lien</l><pos pos="m"/></lemma.gr>
+<sense.gr><p dom="info"><t><w pos="m">Verweis</w></t><t><w pos="m">Link</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Lisbonne</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Lissabon</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Lituanie</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Litauen</w></t></p><p.col><s>la République de <tilde>Lituanie</tilde></s><t>die Republik Litauen</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Lituanien</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Litauer</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>lituanien</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Litauisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>lituanien</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">litauisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Lituanienne</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Litauerin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>logiciel</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>logiciel</tilde> de navigation</s><t><w pos="m">Browser</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Louisiane</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Louisian</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>loup-garou</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Werwolf</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Lucerne</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Luzern</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>ludique</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="prefid">Spiel-</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>lundi</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Montag</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Luxembourg</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Luxemburg</w></t></p><p.col><s>le Grand-Duché du <tilde>Luxembourg</tilde></s><t>das Großherzogtum Luxemburg</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Luxembourgois</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Luxemburger</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>luxembourgois</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Luxemburgisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>luxembourgois</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">luxemburgisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Luxembourgoise</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Luxemburgerin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Macédoine</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Maine</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Maine</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Mazedonien</w></t></p><p.col><s>l'ex-République yougoslave de <tilde>Macédoine</tilde></s><t>ehemalige jugoslawische Republik Mazedonien</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>malade</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">krank</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>maladie</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Krankheit</w></t><t><w pos="f">Erkrankung</w></t></p><p.col><s><tilde>maladie</tilde> d'Aujeszky</s><t>aujeszkysche <w pos="f">Krankheit</w></t></p.col><p.col><s><tilde>maladie</tilde> de Creutzfeld-Jakob</s><t>Creutzfeld-Jakob-<w pos="f">Krankheit</w></t></p.col><p.col><s><tilde>maladie</tilde> sexuellement transmissible</s><t>sexuell übertragbare <w pos="f">Erkrankung</w></t></p.col></sense.gr>
+<sense.gr><p.col><s><tilde>maladie</tilde> à virus</s><t><w pos="f">Viruserkrankung</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>malaria</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Malaria</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Maltais</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Malteser</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>maltais</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Maltesisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>maltais</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">maltesisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Maltaise</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Malteserin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Malte</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Malta</w></t></p><p.col><s>la République de <tilde>Malte</tilde></s><t>die Republik Malta</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>marais</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Sumpf</w></t><t><w pos="n">Moor</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>marché</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>marché</tilde> aux volailles</s><t><w pos="m">Geflügelmarkt</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>mardi</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Dienstag</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>marécage</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Sumpf</w></t><t><w pos="n">Moor</w></t></p><p.col><s><tilde>marécage</tilde>s</s><t><w pos="n">Sumpfgebiet</w></t><t><w pos="n">Moorland</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Maryland</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Maryland</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Massachusetts</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Massachusetts</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>maternité</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Entbindungsklinik</w></t><t><w pos="n">Entbindungsheim</w></t><t><w pos="f">Entbindungsstation</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>médcin</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Arzt</w></t><t><w pos="m">Mediziner</w></t></p>
+<p.col><s><tilde>médcin</tilde> anesthéstiste</s><t><w pos="m">Anästhesist</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Mecklemburg-Poméranie occidentale</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Mecklenburg-Vorpommern</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>mercredi</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Mittwoch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>message</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>message</tilde> électronique</s><t><w pos="f">E-Mail</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Michigan</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Michigan</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>milieu</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Mitte</w></t></p><p.col><s>au <tilde>milieu</tilde> de</s><t><w govern="gen">in der Mitte</w></t><t><w govern="gen">inmitten</w></t><t><w govern="dat">mitten <alt.gr><alt>in</alt><alt>auf</alt><alt>unter</alt></alt.gr></w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>ministre</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s>Ministre fédéral</s><t><w pos="m">Bundesminister</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Minnesota</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Minnesota</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Mississippi</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Mississippi</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Missouri</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Missouri</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>modifier</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p><t>verändern</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Moldavie</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p.col><s>la République de <tilde>Moldavie</tilde></s><t>die Republik Moldau</t></p.col><p><t><w pos="prop">Moldawien</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Moldove</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Moldauer</w></t><t><w pos="m">Moldawier</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Moldove</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Moldauerin</w></t><t><w pos="f">Moldawierin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>moldove</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Moldauisch</w></t><t><w pos="n">Moldawisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>moldove</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">moldauisch</w></t><t><w pos="adj">moldawisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Monaco</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Monaco</w></t></p><p.col><s>le Principauté de <tilde>Monaco</tilde></s><t>das Fürstentum Monaco</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Monaco</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Monaco</w></t></p></sense.gr>
+</entry>
+<entry>
+<lemma.gr><l>mondial</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="prefid">Welt-</w></t><t>weltweit</t><t>global</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Monégasque</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Monegasse</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Monégasque</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Monegassin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>monégasque</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Monegassisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>monégasque</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">monegassisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Montana</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Montana</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>mot</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Wort</w></t></p><p.col><s><tilde>mot</tilde> de passe</s><t><w pos="n">Passwort</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>moteur-fusée</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Raketentriebwerk</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>MST</l><pos pos="f"/></lemma.gr>
+<sense.gr><p n="maladie sexuellement transmissible"><t>sexuell übertragbare <w pos="f">Erkrankung</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>navigateur</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Browser</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>naviguern</l><pos pos="v"/></lemma.gr>
+<sense.gr><p><t>navigieren</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Nebraska</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Nebraska</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Néerlandais</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Niederländer</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Néerlandaise</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Niederländerin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>néerlandais</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Niederländisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>néerlandais</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">niederländisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Neuchâtel</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Neuenburg</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Nevada</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Nevada</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>New Hampshire</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">New Hampshire</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>New Jersey</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">New Jersey</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>New York</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">New York</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Nidwald</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Nidwalden</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Noël</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Weihnachten</w></t></p></sense.gr>
+<sense.gr><p.col><s><w pos="m">arbre</w> <tilde>Noël</tilde></s><t><w pos="m">Weihnachtbaum</w></t></p.col><p.col><s><w pos="m">père</w> <tilde>Noël</tilde></s><t><w pos="m">Weihnachtsmann</w></t></p.col><p.col><s><w pos="m">veille</w> de <tilde>Noël</tilde></s><t><w pos="m">Heiligabend</w></t><t><w pos="m">Weihnachtsabend</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Norvège</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Norwegen</w></t></p><p.col><s>le Royaume de <tilde>Norvège</tilde></s><t>das Königreich Norwegen</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Norvégien</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Norweger</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>norvégien</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Norwegisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>norvégien</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">norwegisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Norvégienne</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Norwegerin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Nouveau-Mexique</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">New Mexico</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>obsèques</l><pos pos="fpl"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Trauerfeier</w></t><t><w pos="f">Trauerfeierlichkeiten</w></t><t><w pos="f">Beisetzung</w></t><t><w pos="f">Totenfeier</w></t></p><p.col><s>obsèques nationales</s><t><w pos="n">Staatsbegräbnis</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Obwald</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Obwalden</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>œuf</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Ei</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>office</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>office</tilde> fédéral</s><t><w pos="n">Bundesamt</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>OGM</l><pos pos="m"/></lemma.gr>
+<sense.gr><p n="organisme génétiquement modifié"><t>genetisch veränderter <w pos="m">Organismus</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Ohio</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Ohio</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>oiseau</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Vogel</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Oklahoma</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Oklahoma</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>OMS</l><pos pos="f"/></lemma.gr>
+<sense.gr><p n="Organisation mondiale de la santé"><t><w pos="f">WHO</w></t><t><w pos="f">Weltgesundheitsorganisation</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>ordinateur</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Computer</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Oregon</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Oregon</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>organisation</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Organisation</w></t></p></sense.gr>
+<sense.gr><p.col><s><tilde>organisation</tilde> mondiale</s><t><w pos="f">Weltorganisation</w></t></p.col>
+<p.col><s>Organisation mondiale de la santé</s><t><w pos="f">Weltgesundheitsorganisation</w></t><t><w pos="f">WHO</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>organisme</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Organismus</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Oslo</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Oslo</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>ouverture</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Eröffnung</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>page</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s><tilde>page</tilde> d'accueil</s><t><w pos="f">Startseite</w></t><t><w pos="f">Homepage</w></t></p.col><p.col><s><tilde>page</tilde> internet</s><t><w pos="f">Internetseite</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>paludisme</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Malaria</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>pape</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Papst</w></t></p></sense.gr>
+<sense.gr><p.col><s><tilde>pape</tilde> Jean Paul II</s><t><w pos="m">Papst</w> Johannes Paul II</t></p.col><p.col><s><tilde>pape</tilde> Benoît XVI</s><t><w pos="m">Papst</w> Benedikt XVI</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Paris</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Paris</t><ex><s><tilde>Paris</tilde> est la capitale de la France, la plus grande ville française et le chef-lieu de la région Île-de-France.</s><t>Paris ist die Hauptstadt Frankreichs, die größte französische Stadt und der Hauptort der Region Île-de-France.</t></ex></p>
+<p.col><s>de <tilde>Paris</tilde></s><t><w pos="adj">Pariser</w></t><t><w pos="adj">parisisch</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Parisien</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Pariser</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>parisien</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">Pariser</w></t><t><w pos="adj">parisisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Parisienne</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Pariserin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>parlement</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col n="Allemagne"><s>Parlement fédéral</s><t><w pos="m">Bundestag</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>pathogène</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">krankheitserregend</w></t><t><w pos="adj">pathogen</w></t></p><p.col><s>hautement <tilde>pathogène</tilde></s><t>hochpathogen</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>pays</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>pays</tilde> tiers</s><t><w pos="n">Drittland</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Pays-Bas</l><pos pos="mpl"/></lemma.gr>
+<sense.gr><p.col><s>les <tilde>Pays-Bas</tilde></s><t>die <w pos="npl">Niederlande</w></t></p.col><p.col><s>le Royaume des <tilde>Pays-Bas</tilde></s><t>das Königreich der Niederlande</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Pennsylvanie</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Pennsylvania</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>père</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Vater</w></t></p></sense.gr>
+<sense.gr><p.col><s><tilde>père</tilde> Noël</s><t><w pos="m">Weihnachtsmann</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>pertubation</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Unruhe</w></t><ex><s><tilde>pertubation</tilde>s politiques</s><t>politische Unruhen</t></ex><ex><s><tilde>pertubation</tilde>s sociales</s><t>soziale Unruhen</t></ex></p><p n="Verkehr"><t><w pos="f">Störung</w></t><t><w pos="f">Beeinträchtigung</w></t></p></sense.gr>
+<sense.gr dom="meteo"><p><t><w pos="f">Störung</w></t></p><p.col><s><tilde>perubation</tilde>s atmosphériques</s><t>atomosphärische <w pos="fpl">Störungen</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>pertubateur</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Ruhestörer</w></t><t><w pos="m">Störenfried</w></t><t><w pos="m">Unruhestifter</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>pertubatrice</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Ruhestörerin</w></t><t><w pos="m">Störenfried</w></t><t><w pos="f">Unruhestifterin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>peste</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s><tilde>peste</tilde> aviaire</s><t><w pos="f">Vogelgrippe</w></t><t><w pos="f">Geflügelpest</w></t><t>aviäre <w pos="f">Influenza</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>peur</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Angst</w></t><t><w pos="f">Furcht</w></t></p><p.col><s><tilde>peur</tilde> de</s><t><alt.gr><alt><w pos="f">Angst</w></alt><alt><w pos="f">Furcht</w></alt></alt.gr> vor</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>phrase</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Satz</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>piste</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s><tilde>piste</tilde> d'atterrissage</s><t><w pos="f">Landebahn</w></t></p.col><p.col><s><tilde>piste</tilde> de décollage</s><t><w pos="f">Startbahn</w></t></p.col><p.col><s><tilde>piste</tilde> d'envol</s><t><w pos="f">Startbahn</w></t></p.col><p.col><s><tilde>piste</tilde> de départ</s><t><w pos="f">Startbahn</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>plume</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Feder</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Pologne</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Polen</w></t></p><p.col><s>la République de <tilde>Pologne</tilde></s><t>die Republik Polen</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Polonais</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Pole</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>polonais</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Polnisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>polonais</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">polnisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Polonaise</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Polin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Portugais</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Portugiese</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>portugais</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Portugiesisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>portugais</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">portugiesisch</w></t></p><p.col><s>la République <tilde>portugais</tilde>e</s><t>die Portugiesische Republik</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Portugaise</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Portugiesin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Portugal</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Portugal</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>président</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Präsident</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>principauté</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Fürstentum</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>printemps</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Frühling</w></t><ex><s>au printemps</s><t>im Frühling</t></ex></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>privilégié</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">bevorzug</w></t><t><w pos="adj">privilegiert</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>querelleur</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t>streitlustig</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>racaille</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Gesindel</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>rage</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Tollwut</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>réfugier</l><pos pos="v-ref"/></lemma.gr>
+<sense.gr><p.col><s>se <tilde>réfugier</tilde></s><t>sich flüchten</t><t><alt.gr><alt>Schutz</alt><alt>Zuflucht</alt></alt.gr> suchen</t></p.col>
+<p.col><s>se <tilde>réfugier</tilde> chez <fr.qn/></s><t>sich zu <de.j-m/> flüchten</t><t>bei <de.j-n/> <alt.gr><alt>Schutz</alt><alt>Zuflucht</alt></alt.gr> suchen</t></p.col>
+<p.col><s>se <tilde>réfugier</tilde> auprès de <fr.qn/></s><t>sich zu <de.j-m/> flüchten</t><t>bei <de.j-n/> <alt.gr><alt>Schutz</alt><alt>Zuflucht</alt></alt.gr> suchen</t></p.col>
+<p.col><s>se <tilde>réfugier</tilde> dans <fr.qc/></s><t>sich in <de.etw/> flüchten</t><t>in <de.j-n/> <alt.gr><alt>Schutz</alt><alt>Zuflucht</alt></alt.gr> suchen</t></p.col>
+</sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>région</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Region</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>reine</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Königin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>renoncer</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p.col><s><tilde>renoncer</tilde> à</s><t>verzichten auf</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>résilier</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p.col><s><tilde>résilier</tilde> un abonnement</s><t>ein Abonnement abbestellen</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Reykjavík</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Reykjavik</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Rhénanie</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p.col><s><tilde>Rhénanie</tilde> du Nord/Westphalie</s><t>Nordrhein-Westfalen</t></p.col><p.col><s><tilde>Rhénanie</tilde>-Palatinat</s><t>Rheinland-Pfalz</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Rhode Island</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Rhode Island</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Riga</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Riga</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>rien</l><pos pos="pr-ind"/></lemma.gr>
+<sense.gr><p.col><s>pour à <tilde>rien</tilde></s><t>für nichts</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>risque</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>risque</tilde> d'épizootie</s><t><w pos="f">Tierseuchengefahr</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>roi</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">König</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Rome</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Rom</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>rôtir</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p><t>braten</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>royal</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">königlich</w></t></p><p.col><s><w pos="f">Altesse</w> <tilde>royale</tilde></s><t>königliche <w pos="f">Hoheit</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>ruée</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Ansturm</w></t></p><p.col><s><tilde>ruée</tilde> <alt.gr><alt>sur</alt><alt>vers</alt></alt.gr> <fr.qc/></s><t>Ansturm auf</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>sacrifier</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p><t>opfern</t></p>
+</sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Saint-Gall</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Sankt Gallen</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Saint-Père</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t>Heiliger <w pos="m">Vater</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Saint-Siège</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t>Heiliger <w pos="m">Stuhl</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>salle</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s><tilde>salle</tilde> d'attente</s><t><w pos="m">Wartesaal</w></t></p.col><p.col><s><tilde>salle</tilde> de réanimation</s><t><w pos="f">Intensivstation</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>samedi</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Samstag</w></t><t><w pos="m">Sonnabend</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>SAMU</l><pos pos="m"/></lemma.gr>
+<sense.gr><p n="service d'aide médical d'urgence"><t><w pos="m">Notarzt</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Sarajevo</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Sarajevo</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Sarre</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t>Saarland</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Saxe</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t>Sachsen</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Saxe</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t>Sachsen-Anhalt</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Schaffhouse</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Schaffhausen</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Schleswig-Holstein</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t>Schleswig-Holstein</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Schwyz</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Schwyz</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>semaine</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Woche</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>séronégatif</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t>HIV-negatif</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>séropositif</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t>HIV-positif</t><t>HIV-infiziert</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>service</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>service</tilde> des urgences</s><t><w pos="f">Notfallaufnahme</w></t></p.col><p.col><s><tilde>service</tilde> d'aide médical d'urgence</s><t><w pos="m">Notarzt</w></t></p.col><p.col><s><tilde>service</tilde> d'obstétrique</s><t><w pos="f">Entbindungsstation</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>SIDA</l><pos pos="m"/></lemma.gr>
+<sense.gr><p n="syndrome d'immunodéficience acquise"><t><w pos="n">Aids</w></t><t>erworbenes <w pos="n">Immunschwächesyndrom</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>sinistre</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Katastrophe</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>site</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>site</tilde> internet</s><t><w pos="f">Website</w></t></p.col></sense.gr>
+<sense.gr><p.col><s><w pos="m">anneau</w> de <tilde>site</tilde>s</s><t><w pos="m">Webring</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Skopje</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Skopje</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>slogan</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Slogan</w></t><t><w pos="m">Spruch</w></t></p><p.col><s><tilde>slogan</tilde> publicitaire</s><t><w pos="m">Werbeslogan</w></t><t><w pos="m">Werbespruch</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Sofia</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Sofia</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Soleure</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Solothurn</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>SRAS</l><pos pos="n"/></lemma.gr>
+<sense.gr><p n="syndrome respiratoire aigu sévère"><t><w pos="n">SARS</w></t><t>schweres akutes <w pos="n">Atemwegssyndrom</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>steward</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Steward</w></t><t><w pos="m">Flugbegleiter</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>stewardesse</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Stewardess</w></t><t><w pos="m">Flugbegleiterin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>strip-tease</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Striptease</w></t></p><p.col><s>faire du <tilde>strip-tease</tilde></s><t>strippen</t></p.col></sense.gr>
+<sense.gr><p><t><w pos="n">Stripteaselokal</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>strip-teaseur</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Stripteasetänzer</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>strip-teaseuse</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Stripteasetänzerin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>structure</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Struktur</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>superficie</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Fläche</w></t><t><w pos="f">Oberfläche</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>syndrome</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Syndrom</w></t></p><p.col><s><tilde>syndrome</tilde> d'immunodéficience acquise</s><t><w pos="n">Aids</w></t><t>erworbenes <w pos="n">Immunschwächesyndrom</w></t></p.col><p.col><s><tilde>syndrome</tilde> respiratoire aigu sévère</s><t><w pos="n">SARS</w></t><t>schweres akutes <w pos="n">Atemwegssyndrom</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>table</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Tisch</w></t></p><p.col><s><tilde>table</tilde> d'opération</s><t><w pos="m">Operationstisch</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>tableur</l><pos pos="m"/><phon>tablœr</phon></lemma.gr>
+<sense.gr><p><t><w pos="f">Tabellenkalkulation</w></t><t><w pos="n">Tabellenkalkulationsprogramm</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Tallinn</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Tallinn</t><t>Reval</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Tennessee</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Tennessee</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Tessin</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Tessin</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Texas</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Texa</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Thurgovie</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Thurgau</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Thuringe</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t>Thüringen</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Tirana</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Tirana</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>torrent</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s>à <tilde>torrent</tilde>s</s><t>sinnflutartig</t><ex><s>il pleut à <tilde>torrent</tilde>s</s><t>es regnet in Strömen</t></ex></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>trac</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Lampenfieber</w></t><ex><s>J'ai le <tilde>trac</tilde>.</s><t>Ich habe Lampenfieber.</t></ex></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>transformateur</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Transformator</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>train</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col n="Flugzeug"><s><tilde>train</tilde> d'atterrissage</s><t><w pos="n">Fahrwerk</w></t><t><w pos="n">Fahrgestell</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>traitement</l><pos pos="m"/></lemma.gr>
+<sense.gr num="1"><p><t><w pos="f">Behandlung</w></t></p><p.col><s>mauvais <tilde>traitement</tilde>s</s><t><w pos="f">Misshandlung</w></t><t><w pos="fpl">Misshandlungen</w></t></p.col></sense.gr>
+<sense.gr num="2"><p><t><w pos="f">Aufbereitung</w></t></p><p.col><s><tilde>traitement</tilde> des eaux</s><t><w pos="f">Trinkwasseraufbereitung</w></t></p.col><p.col><s><tilde>traitement</tilde> des eaux usées</s><t><w pos="f">Abwasserwasseraufbereitung</w></t></p.col></sense.gr>
+<sense.gr num="3"><p.col><s><tilde>traitement</tilde> de texte</s><t><w pos="f">Textverarbeitung</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>transmissible</l><pos pos="adv"/></lemma.gr>
+<sense.gr><p><t>übertragbar</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>trophée</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s><tilde>trophée</tilde> de chasse</s><t><w pos="f">Jagdtrophäe</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>tuberculose</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Tuberkulose</w></t><t><w pos="f">TBC</w></t></p><p.col><s><tilde>tuberculose</tilde> cutanée</s><t><w pos="f">Hauttuberkulose</w></t></p.col><p.col><s><tilde>tuberculose</tilde> intestinale</s><t><w pos="f">Darmtuberkulose</w></t></p.col><p.col><s><tilde>tuberculose</tilde> méningée</s><t><w pos="f">Hirnhauttuberkulose</w></t></p.col><p.col><s><tilde>tuberculose</tilde> pulmonaire</s><t><w pos="f">Lungentuberkulose</w></t></p.col><p.col><s><tilde>tuberculose</tilde> rénale</s><t><w pos="f">Nierentuberkulose</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>urgence</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Notfall</w></t></p><p.col><s><w pos="m">service</w> des <tilde>urgence</tilde>s</s><t><w pos="f">Notfallaufnahme</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Uri</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Uri</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Utah</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Utah</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>vacance</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s><tilde>vacance</tilde> du siège apostolique</s><t><w pos="f">Sedisvakanz</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Vaduz</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Vaduz</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Valais</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Wallis</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>vandaliser</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p><t>mutwillig <de.etw/> beschädigen</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Varsovie</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Warschau</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Vaud</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t>Waadt</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>vendredi</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Freitag</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>vérificateur</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>vérificateur</tilde> d'orthographe</s><t><w pos="f">Rechtschreibprüfung</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Vermont</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Vermon</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>vêtements</l><pos pos="mpl"/></lemma.gr>
+<sense.gr><p><t><w pos="mpl">Kleider</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>viande</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>viande</tilde> de volaille</s><t><w pos="m">Geflügelfleisch</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>veille</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Vortag</w></t></p></sense.gr>
+<sense.gr><p.col><s><tilde>veille</tilde> de Noël</s><t><w pos="m">Heiligabend</w></t><t><w pos="m">Weihnachtsabend</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Vienne</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Wien</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>VIH</l><pos pos="m"/></lemma.gr>
+<sense.gr><p n="virus de l'immunodéficience humaine"><t><w pos="n">HIV</w></t><t>menschliches <w pos="n">Immunschwächevirus</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>ville</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Stadt</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Verginie</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Virgnia</w></t></p><p.col><s><tilde>Virginie</tilde>-Occidentale</s><t><w pos="prop">West Virginia</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Vilnius</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Wilna</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>virus</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Virus</w></t></p><p.col><s><tilde>virus</tilde> de l'immunodéficience humaine</s><t><w pos="n">HIV</w></t><t>menschliches <w pos="n">Immunschwächevirus</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>visage</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Gesicht</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>visagiste</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Visagist</w></t><t><w pos="m">Kosmetiker</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>visagiste</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Visagistin</w></t><t><w pos="f">Kosmetikerin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>voïvodie</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Woiwodschaft</w></t></p></sense.gr>
+<sense.gr><p.col><s><tilde>voïvodie</tilde> des Basses-Carpates</s><t><w pos="f">Woiwodschaft</w> Karpatenvorland</t></p.col>
+<p.col><s><tilde>voïvodie</tilde> de Basse-Silésie</s><t><w pos="f">Woiwodschaft</w> Niederschlesien</t></p.col>
+<p.col><s><tilde>voïvodie</tilde> de Cujavie-Poméranie</s><t><w pos="f">Woiwodschaft</w> Kujawien-Pommern</t></p.col>
+<p.col><s><tilde>voïvodie</tilde> de Grande-Pologne</s><t><w pos="f">Woiwodschaft</w> Großpolen</t></p.col>
+<p.col><s><tilde>voïvodie</tilde> de Łódź</s><t><w pos="f">Woiwodschaft</w> Łódź</t></p.col>
+<p.col><s><tilde>voïvodie</tilde> de Lublin</s><t><w pos="f">Woiwodschaft</w> Lublin</t></p.col>
+<p.col><s><tilde>voïvodie</tilde> de Lubusz</s><t><w pos="f">Woiwodschaft</w> Lebus</t></p.col>
+<p.col><s><tilde>voïvodie</tilde> de Mazovie</s><t><w pos="f">Woiwodschaft</w> Masowien</t></p.col>
+<p.col><s><tilde>voïvodie</tilde> d'Opole</s><t><w pos="f">Woiwodschaft</w> Oppeln</t></p.col>
+<p.col><s><tilde>voïvodie</tilde> de Petite-Pologne</s><t><w pos="f">Woiwodschaft</w> Kleinpolen</t></p.col>
+<p.col><s><tilde>voïvodie</tilde> de Podlachie</s><t><w pos="f">Woiwodschaft</w> Podlachien</t></p.col>
+<p.col><s><tilde>voïvodie</tilde> de Poméranie</s><t><w pos="f">Woiwodschaft</w> Pommern</t></p.col>
+<p.col><s><tilde>voïvodie</tilde> de Poméranie Occidentale</s><t><w pos="f">Woiwodschaft</w> Westpommern</t></p.col>
+<p.col><s><tilde>voïvodie</tilde> de Silésie</s><t><w pos="f">Woiwodschaft</w> Schlesien</t></p.col>
+<p.col><s><tilde>voïvodie</tilde> de Varmie-Mazurie</s><t><w pos="f">Woiwodschaft</w> Ermland-Masuren</t></p.col>
+</sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>volaille</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Geflügel</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Washington</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Washington</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>weekend</l><l.alt>week-end</l.alt><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Wochenende</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Wisconsin</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Wisconsin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Wyoming</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Wyoming</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Zagreb</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Zagreb</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Zoug</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Zug</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Zurich</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Zürich</w></t></p></sense.gr>
+</entry>
+
+</body></dicml>
