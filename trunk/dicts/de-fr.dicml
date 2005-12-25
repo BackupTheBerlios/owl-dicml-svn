@@ -16,7 +16,7 @@
 <dic.title>gidoo-Wörterbuch Deutsch - Französisch</dic.title>
 <dic.lang source="de" target="fr"/>
 <dic.source>http://koocachoo.de/</dic.source>
-<dic.date creation="2004-10-10" update="2005-12-18"/>
+<dic.date creation="2004-10-10" update="2005-12-25"/>
 <dic.creator.gr><dic.creator><dic.creator.name>Julius Becker</dic.creator.name><dic.creator.e-mail>julius.becker@gidoo.de</dic.creator.e-mail><dic.creator.website>http://koocachoo.de</dic.creator.website></dic.creator></dic.creator.gr>
 <dic.licence><dic.licence.name>CREATIVE COMMONS PUBLIC LICENSE 2.0</dic.licence.name><dic.licence.source>http://creativecommons.org/licenses/by-nc-nd/2.0/de/</dic.licence.source></dic.licence>
 </head>
@@ -403,6 +403,11 @@
 <entry>
 <lemma.gr><l>BSE</l><pos pos="f"/></lemma.gr>
 <sense.gr><p n="bovine spongiforme Enzephalopathie"><t><w pos="f">encéphalopathie</w> spongiforme bovine</t><t><w pos="f">ESB</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Bukarest</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Bucarest</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1933,6 +1938,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Moskau</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Moscou</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Mund</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="f">bouche</w></t></p></sense.gr>
 </entry>
@@ -2443,6 +2453,56 @@
 <entry>
 <lemma.gr><l>Ruhestörerin</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="f">pertubatrice</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Rumäne</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Roumain</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Rumänien</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Roumanie</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Rumänin</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Roumaine</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Rumänisch</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">roumain</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>rumänisch</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">roumain</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Russe</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Russe</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Russin</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Russe</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Russisch</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">russe</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>russisch</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">russe</w></t></p><p.col><s>Russische <w pos="f">Föderation</w></s><t><w pos="f">Fédération</w> de Russie</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Russland</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Russie</w></t></p></sense.gr>
 </entry>
 
 <entry>

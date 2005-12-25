@@ -16,7 +16,7 @@
 <dic.title>gidoo-Wörterbuch Französisch - Deutsch</dic.title>
 <dic.lang source="fr" target="de"/>
 <dic.source>http://koocachoo.de/</dic.source>
-<dic.date creation="2004-10-10" update="2005-12-18"/>
+<dic.date creation="2004-10-10" update="2005-12-25"/>
 <dic.creator.gr><dic.creator><dic.creator.name>Julius Becker</dic.creator.name><dic.creator.e-mail>julius.becker@gidoo.de</dic.creator.e-mail><dic.creator.website>-</dic.creator.website></dic.creator></dic.creator.gr>
 <dic.licence><dic.licence.name>CREATIVE COMMONS PUBLIC LICENSE 2.0</dic.licence.name><dic.licence.source>http://creativecommons.org/licenses/by-nc-nd/2.0/de/</dic.licence.source></dic.licence>
 </head>
@@ -494,6 +494,11 @@
 <entry>
 <lemma.gr><l>Bruxelles</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t>Brüssel</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Bucarest</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Bucarest</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1830,6 +1835,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Moscou</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Moskau</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>mot</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="n">Wort</w></t></p><p.col><s><tilde>mot</tilde> de passe</s><t><w pos="n">Passwort</w></t></p.col></sense.gr>
 </entry>
@@ -2291,6 +2301,31 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Roumain</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Rumäne</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>roumain</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Rumänisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>roumain</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">rumänisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Roumaine</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Rumänin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Roumanie</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Rumänien</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>royal</l><pos pos="adj"/></lemma.gr>
 <sense.gr><p><t><w pos="adj">königlich</w></t></p><p.col><s><w pos="f">Altesse</w> <tilde>royale</tilde></s><t>königliche <w pos="f">Hoheit</w></t></p.col></sense.gr>
 </entry>
@@ -2298,6 +2333,31 @@
 <entry>
 <lemma.gr><l>ruée</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="m">Ansturm</w></t></p><p.col><s><tilde>ruée</tilde> <alt.gr><alt>sur</alt><alt>vers</alt></alt.gr> <fr.qc/></s><t>Ansturm auf</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Russe</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Russe</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Russe</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Russin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>russe</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Russisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>russe</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">russisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Russie</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Russland</w></t></p><p.col><s>Fédération de <tilde>Russie</tilde></s><t>Russische <w pos="f">Föderation</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
