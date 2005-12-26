@@ -3,62 +3,62 @@
 <!-- begin common templates -->
 <xsl:template name="pos"><xsl:if test="boolean(@pos)">
     <span class="pos">&#160;<xsl:choose>
-                <xsl:when test="@pos='abr'">Abk&#x00FC;rzung</xsl:when>
-                <xsl:when test="@pos='adj'"><a class="abbr-pos" href="?abbr:Adjektiv">adj</a></xsl:when>
-                <xsl:when test="@pos='adv'"><a class="abbr-pos" href="?abbr:Adverb">adv</a></xsl:when>
-                <xsl:when test="@pos='conj'">Konjunktion</xsl:when>
-                <xsl:when test="@pos='f'"><a class="abbr-pos" href="?abbr:Femininum">f</a></xsl:when>
-                <xsl:when test="@pos='fpl'"><a class="abbr-pos" href="?abbr:Femininum Plural">f/pl</a></xsl:when>
-                <xsl:when test="@pos='int'">Interjektion</xsl:when>
-                <xsl:when test="@pos='m'"><a class="abbr-pos" href="?abbr:Maskulinum">m</a></xsl:when>
-                <xsl:when test="@pos='mpl'"><a class="abbr-pos" href="?abbr:Maskulinum Plural">m/pl</a></xsl:when>
-                <xsl:when test="@pos='n'"><a class="abbr-pos" href="?abbr:Neutrum">n</a></xsl:when>
-                <xsl:when test="@pos='npl'"><a class="abbr-pos" href="?abbr:Neutrum Plural">n/pl</a></xsl:when>
-                <xsl:when test="@pos='pr'">Pronomen</xsl:when>
-                <xsl:when test="@pos='pr-dem'">Demonstrativpronomen</xsl:when>
-                <xsl:when test="@pos='pref'">Pr&#x00E4;fix</xsl:when>
-                <xsl:when test="@pos='prefid'">Pr&#x00E4;fixoid</xsl:when>
-                <xsl:when test="@pos='prep'">Pr&#x00E4;position</xsl:when>
-                <xsl:when test="@pos='pr-ind'">Indefinitpronomen</xsl:when>
-                <xsl:when test="@pos='pr-int'">Interrogativpronomen</xsl:when>
-                <xsl:when test="@pos='prop'">Eigenname</xsl:when>
-                <xsl:when test="@pos='pr-per'">Personalpronomen</xsl:when>
-                <xsl:when test="@pos='pr-pos'">Possessipronomen</xsl:when>
-                <xsl:when test="@pos='pr-rel'">Relativpronomen</xsl:when>
-                <xsl:when test="@pos='suff'">Suffix</xsl:when>
-                <xsl:when test="@pos='suffid'">Suffixoid</xsl:when>
-                <xsl:when test="@pos='v'"><a class="abbr-pos" href="?abbr:Verb">V</a></xsl:when>
-                <xsl:when test="@pos='v-aux'">Hilfsverb</xsl:when>
-                <xsl:when test="@pos='v-i'"><a class="abbr-pos" href="?abbr:intransitives Verb">V/intr.</a></xsl:when>
-                <xsl:when test="@pos='v-imp'"><a class="abbr-pos" href="?abbr:unpers&#x00F6;nliches Verb">V/unpers&#x00F6;nlich</a></xsl:when>
-                <xsl:when test="@pos='v-ref'"><a class="abbr-pos" href="?abbr:reflexives Verb">V/ref.</a></xsl:when>
-                <xsl:when test="@pos='v-t'"><a class="abbr-pos" href="?abbr:transitives Verb">V/tr.</a></xsl:when>
+                <xsl:when test="@pos='abr'">abr&#x00E9;viation</xsl:when>
+                <xsl:when test="@pos='adj'"><a class="abbr-pos" href="?abbr:adjectif">adj</a></xsl:when>
+                <xsl:when test="@pos='adv'"><a class="abbr-pos" href="?abbr:adverbe">adv</a></xsl:when>
+                <xsl:when test="@pos='conj'">conjontion</xsl:when>
+                <xsl:when test="@pos='f'"><a class="abbr-pos" href="?abbr:f&#x00E9;minin">f</a></xsl:when>
+                <xsl:when test="@pos='fpl'"><a class="abbr-pos" href="?abbr:f&#x00E9;minin pluriel">f/pl</a></xsl:when>
+                <xsl:when test="@pos='int'">interjection</xsl:when>
+                <xsl:when test="@pos='m'"><a class="abbr-pos" href="?abbr:masculin">m</a></xsl:when>
+                <xsl:when test="@pos='mpl'"><a class="abbr-pos" href="?abbr:masculin pluriel">m/pl</a></xsl:when>
+                <xsl:when test="@pos='n'"><a class="abbr-pos" href="?abbr:neutre">n</a></xsl:when>
+                <xsl:when test="@pos='npl'"><a class="abbr-pos" href="?abbr:neutre pluriel">n/pl</a></xsl:when>
+                <xsl:when test="@pos='pr'">pronom</xsl:when>
+                <xsl:when test="@pos='pr-dem'">pronom d&#x00E9;monstratif</xsl:when>
+                <xsl:when test="@pos='pref'">pr&#x00E9;fix</xsl:when>
+                <xsl:when test="@pos='prefid'">comme un pr&#x00E9;fix</xsl:when>
+                <xsl:when test="@pos='prep'">pr&#x00E9;position</xsl:when>
+                <xsl:when test="@pos='pr-ind'">pronom ind&#x00E9;fini</xsl:when>
+                <xsl:when test="@pos='pr-int'">pronom interrogatif</xsl:when>
+                <xsl:when test="@pos='prop'">nom propre</xsl:when>
+                <xsl:when test="@pos='pr-per'">pronom personnel</xsl:when>
+                <xsl:when test="@pos='pr-pos'">pronom possessif</xsl:when>
+                <xsl:when test="@pos='pr-rel'">pronom relatif</xsl:when>
+                <xsl:when test="@pos='suff'">suffixe</xsl:when>
+                <xsl:when test="@pos='suffid'">comme un suffixe</xsl:when>
+                <xsl:when test="@pos='v'"><a class="abbr-pos" href="?abbr:verbe">V</a></xsl:when>
+                <xsl:when test="@pos='v-aux'">verbe auxiliaire</xsl:when>
+                <xsl:when test="@pos='v-i'"><a class="abbr-pos" href="?abbr:verbe intransitif">V/intr.</a></xsl:when>
+                <xsl:when test="@pos='v-imp'"><a class="abbr-pos" href="?abbr:verbe impersonnel">V/impersonnel</a></xsl:when>
+                <xsl:when test="@pos='v-ref'"><a class="abbr-pos" href="?abbr:verbe r&#x00E9;fl&#x00E9;chi">V/r&#x00E9;fl&#x00E9;chi</a></xsl:when>
+                <xsl:when test="@pos='v-t'"><a class="abbr-pos" href="?abbr:verbe transitif">V/tr.</a></xsl:when>
               <xsl:otherwise></xsl:otherwise></xsl:choose></span></xsl:if>
 </xsl:template>
 
 <xsl:template name="niv">
      <xsl:if test="boolean(@niv)"><span class="niv">&#160;<xsl:choose>
-                <xsl:when test="@niv='arg'">Argot</xsl:when>
-                <xsl:when test="@niv='contp'">verächtlich</xsl:when>
-                <xsl:when test="@niv='de-AT'"><a class="abbr-niv" href="?abbr:Österreichische Deutsch">Österr.</a></xsl:when>
-                <xsl:when test="@niv='de-CH'"><a class="abbr-niv" href="?abbr:Schweizerisches Deutsch">Schweiz</a></xsl:when>
-                <xsl:when test="@niv='en-UK'"><a class="abbr-niv" href="?abbr:Britisches Englisch">BrE</a></xsl:when>
-                <xsl:when test="@niv='en-US'"><a class="abbr-niv" href="?abbr:Nordamerikanisches Englisch">NAm</a></xsl:when>
-                <xsl:when test="@niv='euph'">beschönigend</xsl:when>
-                <xsl:when test="@niv='fam'"><a class="abbr-niv" href="?abbr:familiär, umgangssprachlich">fam</a></xsl:when>
-                <xsl:when test="@niv='fig'"><a class="abbr-niv" href="?abbr:figürlich, im übertragenen Sinne">fig</a></xsl:when>
-                <xsl:when test="@niv='fr-BE'"><a class="abbr-niv" href="?abbr:Belgisches Französisch">Belgien</a></xsl:when>
-                <xsl:when test="@niv='fr-CA'"><a class="abbr-niv" href="?abbr:Kanadisches Französisch">Kanada</a></xsl:when>
-                <xsl:when test="@niv='fr-CH'"><a class="abbr-niv" href="?abbr:Schweizerisches Französisch">Schweiz</a></xsl:when>
-                <xsl:when test="@niv='hum'">scherzhaft</xsl:when>
-                <xsl:when test="@niv='iro'">ironisch</xsl:when>
-                <xsl:when test="@niv='lit'">literarisch</xsl:when>
-                <xsl:when test="@niv='p'">derb</xsl:when>
-                <xsl:when test="@niv='poet'">poetisch</xsl:when>
-                <xsl:when test="@niv='reg'">regional</xsl:when>
-                <xsl:when test="@niv='sc'">wissenschaftlich</xsl:when>
-                <xsl:when test="@niv='st'">gehoben</xsl:when>
-                <xsl:when test="@niv='vulg'">vulgär</xsl:when>
+                <xsl:when test="@niv='arg'">argot</xsl:when>
+                <xsl:when test="@niv='contp'">m&#x00E9;prisant</xsl:when>
+                <xsl:when test="@niv='de-AT'"><a class="abbr-niv" href="?abbr:allemand autrichien">Autriche</a></xsl:when>
+                <xsl:when test="@niv='de-CH'"><a class="abbr-niv" href="?abbr:allemand suisse">Suisse</a></xsl:when>
+                <xsl:when test="@niv='en-UK'"><a class="abbr-niv" href="?abbr:anglais britannique">BrE</a></xsl:when>
+                <xsl:when test="@niv='en-US'"><a class="abbr-niv" href="?abbr:anglais am&#x00E9;ricain">NAm</a></xsl:when>
+                <xsl:when test="@niv='euph'">euph&#x00E9;mique</xsl:when>
+                <xsl:when test="@niv='fam'"><a class="abbr-niv" href="?abbr:familier">fam</a></xsl:when>
+                <xsl:when test="@niv='fig'"><a class="abbr-niv" href="?abbr:sens figur&#x00E9;">fig</a></xsl:when>
+                <xsl:when test="@niv='fr-BE'"><a class="abbr-niv" href="?abbr:français belge">Belgie</a></xsl:when>
+                <xsl:when test="@niv='fr-CA'"><a class="abbr-niv" href="?abbr:français canadien">Canada</a></xsl:when>
+                <xsl:when test="@niv='fr-CH'"><a class="abbr-niv" href="?abbr:français, suiss">Suisse</a></xsl:when>
+                <xsl:when test="@niv='hum'">plaisant</xsl:when>
+                <xsl:when test="@niv='iro'">ironique</xsl:when>
+                <xsl:when test="@niv='lit'">litt&#x00E9;raire</xsl:when>
+                <xsl:when test="@niv='p'">populaire</xsl:when>
+                <xsl:when test="@niv='poet'">po&#x00E9;tique</xsl:when>
+                <xsl:when test="@niv='reg'">r&#x00E9;gional</xsl:when>
+                <xsl:when test="@niv='sc'">scientifique</xsl:when>
+                <xsl:when test="@niv='st'">style soutenu</xsl:when>
+                <xsl:when test="@niv='vulg'">vulgaire</xsl:when>
               <xsl:otherwise></xsl:otherwise></xsl:choose>&#160;</span></xsl:if>
 </xsl:template>
 
@@ -73,64 +73,64 @@
 
  <xsl:if test="boolean(@dom)">
    <span class="dom"><xsl:choose>
-     <xsl:when test="@dom='agri'">Landwirtschaft</xsl:when>
-     <xsl:when test="@dom='anat'">Anatomie</xsl:when>
-     <xsl:when test="@dom='arch'">Architektur</xsl:when>
-     <xsl:when test="@dom='avia'">Luftfahrt</xsl:when>
-     <xsl:when test="@dom='bibl'">biblisch</xsl:when>
-     <xsl:when test="@dom='bio'">Biologie</xsl:when>
-     <xsl:when test="@dom='bot'">Botanik</xsl:when>
-     <xsl:when test="@dom='chem'">Chemie</xsl:when>
-     <xsl:when test="@dom='coll'">Kollektivbegriff</xsl:when>
-     <xsl:when test="@dom='comm'">Wirtschaft, Handel</xsl:when>
-     <xsl:when test="@dom='comp'">Computer</xsl:when>
-     <xsl:when test="@dom='cuis'">Küche</xsl:when>
-     <xsl:when test="@dom='eccl'">kirchlich</xsl:when>
-     <xsl:when test="@dom='elec'">Elektronik</xsl:when>
-     <xsl:when test="@dom='elet'">Elektrotechnik</xsl:when>
-     <xsl:when test="@dom='fenc'">Fechten</xsl:when>
-     <xsl:when test="@dom='gast'">Gastronomie</xsl:when>
-     <xsl:when test="@dom='geog'">Geografie</xsl:when>
-     <xsl:when test="@dom='geol'">Geologie</xsl:when>
-     <xsl:when test="@dom='hera'">Wappenkunde</xsl:when>
-     <xsl:when test="@dom='hist'">historisch</xsl:when>
-     <xsl:when test="@dom='info'">Informatik</xsl:when>
-     <xsl:when test="@dom='lega'">Rechtswesen</xsl:when>
-     <xsl:when test="@dom='ling'">Sprachwissenschaft</xsl:when>
-     <xsl:when test="@dom='math'">Mathematik</xsl:when>
-     <xsl:when test="@dom='medic'">Medizin</xsl:when>
-     <xsl:when test="@dom='metall'">Metallurgie</xsl:when>
-     <xsl:when test="@dom='meteo'">Meteorologie</xsl:when>
-     <xsl:when test="@dom='mili'">militärisch</xsl:when>
-     <xsl:when test="@dom='mine'">Mineralogie</xsl:when>
-     <xsl:when test="@dom='mini'">Bergbau</xsl:when>
-     <xsl:when test="@dom='moto'">Auto, Verkehr</xsl:when>
-     <xsl:when test="@dom='music'">Musik</xsl:when>
-     <xsl:when test="@dom='myth'">Mythologie</xsl:when>
-     <xsl:when test="@dom='naut'">Schifffahrt</xsl:when>
-     <xsl:when test="@dom='optic'">Optik</xsl:when>
-     <xsl:when test="@dom='orni'">Vogelkunde</xsl:when>
-     <xsl:when test="@dom='parl'">Parlament</xsl:when>
-     <xsl:when test="@dom='peda'">Pädagogik</xsl:when>
-     <xsl:when test="@dom='phar'">Pharmazie</xsl:when>
-     <xsl:when test="@dom='phil'">Philosophie</xsl:when>
-     <xsl:when test="@dom='phot'">Fotografie</xsl:when>
-     <xsl:when test="@dom='phyo'">Physiologie</xsl:when>
-     <xsl:when test="@dom='phys'">Physik</xsl:when>
-     <xsl:when test="@dom='poli'">Politik</xsl:when>
-     <xsl:when test="@dom='post'">Post</xsl:when>
-     <xsl:when test="@dom='psyc'">Psychologie</xsl:when>
-     <xsl:when test="@dom='rail'">Eisenbahn</xsl:when>
-     <xsl:when test="@dom='rhet'">Rhetorik</xsl:when>
-     <xsl:when test="@dom='tech'">Technik</xsl:when>
-     <xsl:when test="@dom='tele'">Telefon</xsl:when>
-     <xsl:when test="@dom='thea'">Theater</xsl:when>
-     <xsl:when test="@dom='tv'">Fernsehen</xsl:when>
-     <xsl:when test="@dom='typo'">Buchdruck</xsl:when>
-     <xsl:when test="@dom='univ'">Universität</xsl:when>
-     <xsl:when test="@dom='vete'">Veterinärmedizin</xsl:when>
-     <xsl:when test="@dom='zool'">Zoologie</xsl:when>
-     <xsl:otherwise>unbekannt</xsl:otherwise></xsl:choose>&#160;</span></xsl:if>
+     <xsl:when test="@dom='agri'">agriculture</xsl:when>
+     <xsl:when test="@dom='anat'">anatomie</xsl:when>
+     <xsl:when test="@dom='arch'">architecture</xsl:when>
+     <xsl:when test="@dom='avia'">navigation a&#x00E9;rienne</xsl:when>
+     <xsl:when test="@dom='bibl'">biblique</xsl:when>
+     <xsl:when test="@dom='bio'">biologie</xsl:when>
+     <xsl:when test="@dom='bot'">botanique</xsl:when>
+     <xsl:when test="@dom='chem'">chimie</xsl:when>
+     <xsl:when test="@dom='coll'">terme g&#x00E9;n&#x00E9;rique</xsl:when>
+     <xsl:when test="@dom='comm'">commerce</xsl:when>
+     <xsl:when test="@dom='comp'">ordinateur</xsl:when>
+     <xsl:when test="@dom='cuis'">cuisine</xsl:when>
+     <xsl:when test="@dom='eccl'">eccl&#x00E9;siastique</xsl:when>
+     <xsl:when test="@dom='elec'">&#x00E9;lectronique</xsl:when>
+     <xsl:when test="@dom='elet'">&#x00E9;lectrotechnique</xsl:when>
+     <xsl:when test="@dom='fenc'">escrime</xsl:when>
+     <xsl:when test="@dom='gast'">gastronomie</xsl:when>
+     <xsl:when test="@dom='geog'">g&#x00E9;ographie</xsl:when>
+     <xsl:when test="@dom='geol'">g&#x00E9;ologie</xsl:when>
+     <xsl:when test="@dom='hera'">h&#x00E9;raldique</xsl:when>
+     <xsl:when test="@dom='hist'">historique</xsl:when>
+     <xsl:when test="@dom='info'">informatique</xsl:when>
+     <xsl:when test="@dom='lega'">droit</xsl:when>
+     <xsl:when test="@dom='ling'">linguistique</xsl:when>
+     <xsl:when test="@dom='math'">math&#x00E9;matiques</xsl:when>
+     <xsl:when test="@dom='medic'">m&#x00E9;decine</xsl:when>
+     <xsl:when test="@dom='metall'">m&#x00E9;tallurgie</xsl:when>
+     <xsl:when test="@dom='meteo'">m&#x00E9;t&#x00E9;orologie</xsl:when>
+     <xsl:when test="@dom='mili'">militaire</xsl:when>
+     <xsl:when test="@dom='mine'">min&#x00E9;ralogie</xsl:when>
+     <xsl:when test="@dom='mini'">industrie minière</xsl:when>
+     <xsl:when test="@dom='moto'">circulation</xsl:when>
+     <xsl:when test="@dom='music'">musique</xsl:when>
+     <xsl:when test="@dom='myth'">mythologie</xsl:when>
+     <xsl:when test="@dom='naut'">nautique</xsl:when>
+     <xsl:when test="@dom='optic'">optique</xsl:when>
+     <xsl:when test="@dom='orni'">ornithologie</xsl:when>
+     <xsl:when test="@dom='parl'">parlement</xsl:when>
+     <xsl:when test="@dom='peda'">p&#x00E9;dagogique</xsl:when>
+     <xsl:when test="@dom='phar'">pharmacie</xsl:when>
+     <xsl:when test="@dom='phil'">philosophie</xsl:when>
+     <xsl:when test="@dom='phot'">photographie</xsl:when>
+     <xsl:when test="@dom='phyo'">physiologie</xsl:when>
+     <xsl:when test="@dom='phys'">physique</xsl:when>
+     <xsl:when test="@dom='poli'">politique</xsl:when>
+     <xsl:when test="@dom='post'">postes</xsl:when>
+     <xsl:when test="@dom='psyc'">psychologie</xsl:when>
+     <xsl:when test="@dom='rail'">chemin de fer</xsl:when>
+     <xsl:when test="@dom='rhet'">rh&#x00E9;torique</xsl:when>
+     <xsl:when test="@dom='tech'">technique</xsl:when>
+     <xsl:when test="@dom='tele'">t&#x00E9;l&#x00E9;phone</xsl:when>
+     <xsl:when test="@dom='thea'">th&#x00E9;âtre</xsl:when>
+     <xsl:when test="@dom='tv'">t&#x00E9;l&#x00E9;vision</xsl:when>
+     <xsl:when test="@dom='typo'">imprimerie</xsl:when>
+     <xsl:when test="@dom='univ'">universit&#x00E9;</xsl:when>
+     <xsl:when test="@dom='vete'">m&#x00E9;decine v&#x00E9;t&#x00E9;rinaire</xsl:when>
+     <xsl:when test="@dom='zool'">zoologie</xsl:when>
+     <xsl:otherwise>inconnu</xsl:otherwise></xsl:choose>&#160;</span></xsl:if>
 </xsl:template>
 <!-- end common templates -->
 
@@ -270,27 +270,27 @@
  <!-- -->     <xsl:apply-templates/>
  <!-- pos --> <xsl:call-template name="pos" />
  <!-- govern --><xsl:if test="boolean(@govern)"><span class="govern">&#160;+<xsl:choose>
-                <xsl:when test="@govern='abe'">Abessiv</xsl:when>
-                <xsl:when test="@govern='abl'">Ablativ</xsl:when>
-                <xsl:when test="@govern='abs'">Absolutiv</xsl:when>
-                <xsl:when test="@govern='acc'">Akk.</xsl:when>
-                <xsl:when test="@govern='ade'">Adessiv</xsl:when>
-                <xsl:when test="@govern='dat'">Dat.</xsl:when>
-                <xsl:when test="@govern='ela'">Elativ</xsl:when>
-                <xsl:when test="@govern='erg'">Ergativ</xsl:when>
-                <xsl:when test="@govern='gen'">Genitiv</xsl:when>
-                <xsl:when test="@govern='ger'">Gerundium</xsl:when>
-                <xsl:when test="@govern='ill'">Illativ</xsl:when>
-                <xsl:when test="@govern='ind'">Indikativ</xsl:when>
-                <xsl:when test="@govern='ine'">Inessiv</xsl:when>
-                <xsl:when test="@govern='ins'">Instrumental</xsl:when>
-                <xsl:when test="@govern='kon'">Konjunktiv</xsl:when>
-                <xsl:when test="@govern='loc'">Lokativ</xsl:when>
-                <xsl:when test="@govern='nom'">Nominativ</xsl:when>
-                <xsl:when test="@govern='pro'">Prolativ</xsl:when>
-                <xsl:when test="@govern='sub'">Subj.</xsl:when>
-                <xsl:when test="@govern='ter'">Terminativ</xsl:when>
-                <xsl:when test="@govern='voc'">Vokativ</xsl:when>
+                <xsl:when test="@govern='abe'">abessif</xsl:when>
+                <xsl:when test="@govern='abl'">ablatif</xsl:when>
+                <xsl:when test="@govern='abs'">absolutif</xsl:when>
+                <xsl:when test="@govern='acc'">accusatif</xsl:when>
+                <xsl:when test="@govern='ade'">adessif</xsl:when>
+                <xsl:when test="@govern='dat'">datif</xsl:when>
+                <xsl:when test="@govern='ela'">&#x00E9;latif</xsl:when>
+                <xsl:when test="@govern='erg'">ergatif</xsl:when>
+                <xsl:when test="@govern='gen'">g&#x00E9;nitif</xsl:when>
+                <xsl:when test="@govern='ger'">g&#x00E9;rondif</xsl:when>
+                <xsl:when test="@govern='ill'">illatif</xsl:when>
+                <xsl:when test="@govern='ind'">indikatif</xsl:when>
+                <xsl:when test="@govern='ine'">inessif</xsl:when>
+                <xsl:when test="@govern='ins'">instrumental</xsl:when>
+                <xsl:when test="@govern='kon'">subjonctif</xsl:when>
+                <xsl:when test="@govern='loc'">locatif</xsl:when>
+                <xsl:when test="@govern='nom'">nominatif</xsl:when>
+                <xsl:when test="@govern='pro'">prolatif</xsl:when>
+                <xsl:when test="@govern='sub'">subj.</xsl:when>
+                <xsl:when test="@govern='ter'">terminatif</xsl:when>
+                <xsl:when test="@govern='voc'">vokatif</xsl:when>
                 <xsl:otherwise></xsl:otherwise></xsl:choose></span></xsl:if>
 </xsl:template>
 
