@@ -3,36 +3,36 @@
 <!-- begin common templates -->
 <xsl:template name="pos"><xsl:if test="boolean(@pos)">
     <span class="pos">&#160;<xsl:choose>
-                <xsl:when test="pos/@pos='abr'">abbreviation</xsl:when>
-                <xsl:when test="pos/@pos='adj'"><a class="abbr-pos" href="?abbr:adjective">adj</a></xsl:when>
-                <xsl:when test="pos/@pos='adv'"><a class="abbr-pos" href="?abbr:adverb">adv</a></xsl:when>
-                <xsl:when test="pos/@pos='conj'">Konjunktion</xsl:when>
-                <xsl:when test="pos/@pos='f'"><a class="abbr-pos" href="?abbr:feminine">f</a></xsl:when>
-                <xsl:when test="pos/@pos='fpl'"><a class="abbr-pos" href="?abbr:feminine plural">f/pl</a></xsl:when>
-                <xsl:when test="pos/@pos='int'">Interjektion</xsl:when>
-                <xsl:when test="pos/@pos='m'"><a class="abbr-pos" href="?abbr:masculine">m</a></xsl:when>
-                <xsl:when test="pos/@pos='mpl'"><a class="abbr-pos" href="?abbr:masculine plural">m/pl</a></xsl:when>
-                <xsl:when test="pos/@pos='n'"><a class="abbr-pos" href="?abbr:neuter">n</a></xsl:when>
-                <xsl:when test="pos/@pos='npl'"><a class="abbr-pos" href="?abbr:neuter plural">n/pl</a></xsl:when>
-                <xsl:when test="pos/@pos='pr'">pronoun</xsl:when>
-                <xsl:when test="pos/@pos='pr-dem'">demonstrative pronoun</xsl:when>
-                <xsl:when test="pos/@pos='pref'">prefix</xsl:when>
-                <xsl:when test="pos/@pos='prefid'">like a prefix</xsl:when>
-                <xsl:when test="pos/@pos='prep'">preposition</xsl:when>
-                <xsl:when test="pos/@pos='pr-ind'">indefine pronoun</xsl:when>
-                <xsl:when test="pos/@pos='pr-int'">interrogative pronoun</xsl:when>
-                <xsl:when test="pos/@pos='prop'">proper name</xsl:when>
-                <xsl:when test="pos/@pos='pr-per'">personal pronoun</xsl:when>
-                <xsl:when test="pos/@pos='pr-pos'">possessive pronoun</xsl:when>
-                <xsl:when test="pos/@pos='pr-rel'">relative pronoun</xsl:when>
-                <xsl:when test="pos/@pos='suff'">suffix</xsl:when>
-                <xsl:when test="pos/@pos='suffid'">like a suffix</xsl:when>
-                <xsl:when test="pos/@pos='v'"><a class="abbr-pos" href="?abbr:verb">v</a></xsl:when>
-                <xsl:when test="pos/@pos='v-aux'">auxiliary verb</xsl:when>
-                <xsl:when test="pos/@pos='v-i'"><a class="abbr-pos" href="?abbr:intransitive verb">v/intr.</a></xsl:when>
-                <xsl:when test="pos/@pos='v-imp'"><a class="abbr-pos" href="?abbr:impersonal verb">v/impersonal</a></xsl:when>
-                <xsl:when test="pos/@pos='v-ref'"><a class="abbr-pos" href="?abbr:reflexive verb">v/ref.</a></xsl:when>
-                <xsl:when test="pos/@pos='v-t'"><a class="abbr-pos" href="?abbr:transitive verb">v/tr.</a></xsl:when>
+                <xsl:when test="@pos='abr'">abbreviation</xsl:when>
+                <xsl:when test="@pos='adj'"><a class="abbr-pos" href="?abbr:adjective">adj</a></xsl:when>
+                <xsl:when test="@pos='adv'"><a class="abbr-pos" href="?abbr:adverb">adv</a></xsl:when>
+                <xsl:when test="@pos='conj'">Konjunktion</xsl:when>
+                <xsl:when test="@pos='f'"><a class="abbr-pos" href="?abbr:feminine">f</a></xsl:when>
+                <xsl:when test="@pos='fpl'"><a class="abbr-pos" href="?abbr:feminine plural">f/pl</a></xsl:when>
+                <xsl:when test="@pos='int'">Interjektion</xsl:when>
+                <xsl:when test="@pos='m'"><a class="abbr-pos" href="?abbr:masculine">m</a></xsl:when>
+                <xsl:when test="@pos='mpl'"><a class="abbr-pos" href="?abbr:masculine plural">m/pl</a></xsl:when>
+                <xsl:when test="@pos='n'"><a class="abbr-pos" href="?abbr:neuter">n</a></xsl:when>
+                <xsl:when test="@pos='npl'"><a class="abbr-pos" href="?abbr:neuter plural">n/pl</a></xsl:when>
+                <xsl:when test="@pos='pr'">pronoun</xsl:when>
+                <xsl:when test="@pos='pr-dem'">demonstrative pronoun</xsl:when>
+                <xsl:when test="@pos='pref'">prefix</xsl:when>
+                <xsl:when test="@pos='prefid'">like a prefix</xsl:when>
+                <xsl:when test="@pos='prep'">preposition</xsl:when>
+                <xsl:when test="@pos='pr-ind'">indefine pronoun</xsl:when>
+                <xsl:when test="@pos='pr-int'">interrogative pronoun</xsl:when>
+                <xsl:when test="@pos='prop'">proper name</xsl:when>
+                <xsl:when test="@pos='pr-per'">personal pronoun</xsl:when>
+                <xsl:when test="@pos='pr-pos'">possessive pronoun</xsl:when>
+                <xsl:when test="@pos='pr-rel'">relative pronoun</xsl:when>
+                <xsl:when test="@pos='suff'">suffix</xsl:when>
+                <xsl:when test="@pos='suffid'">like a suffix</xsl:when>
+                <xsl:when test="@pos='v'"><a class="abbr-pos" href="?abbr:verb">v</a></xsl:when>
+                <xsl:when test="@pos='v-aux'">auxiliary verb</xsl:when>
+                <xsl:when test="@pos='v-i'"><a class="abbr-pos" href="?abbr:intransitive verb">v/intr.</a></xsl:when>
+                <xsl:when test="@pos='v-imp'"><a class="abbr-pos" href="?abbr:impersonal verb">v/impersonal</a></xsl:when>
+                <xsl:when test="@pos='v-ref'"><a class="abbr-pos" href="?abbr:reflexive verb">v/ref.</a></xsl:when>
+                <xsl:when test="@pos='v-t'"><a class="abbr-pos" href="?abbr:transitive verb">v/tr.</a></xsl:when>
               <xsl:otherwise></xsl:otherwise></xsl:choose></span></xsl:if>
 </xsl:template>
 
