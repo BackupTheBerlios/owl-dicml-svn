@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
-    Document   : fr.order.xml
-    Updated on : 2006-01-02, 09:20
-    Author     : Thomas Krause, Julius Becker
+    Document   : la.order.xml
+    Created on : 2006-01-02, 09:19
+    Author     : Julius Becker
     Description:
         Purpose of the document follows.
 -->
 
-<alphabet lang="fr">
+<alphabet lang="la">
 <order>
   <char capital="0041" small="0061"/> <!-- A - a -->
   <char capital="0042" small="0062"/> <!-- B - b -->
@@ -24,6 +24,7 @@
   <char capital="004C" small="006C"/> <!-- L - l -->
   <char capital="004D" small="006D"/> <!-- M - m -->
   <char capital="004E" small="006E"/> <!-- N - n -->
+  <char capital="00D1" small="00F1"/> <!-- Ñ - ñ -->
   <char capital="004F" small="006F"/> <!-- O - o -->
   <char capital="0050" small="0070"/> <!-- P - p -->
   <char capital="0051" small="0071"/> <!-- Q - q -->
@@ -35,7 +36,6 @@
   <char capital="0057" small="0077"/> <!-- W - w -->
   <char capital="0058" small="0078"/> <!-- X - x -->
   <char capital="0059" small="0079"/> <!-- Y - y -->
-
   <char capital="005A" small="007A"/> <!-- Z - z -->
 </order>
 <replacement>
@@ -103,10 +103,6 @@
           <treat>&#x00EE;</treat> <!-- î  - LATIN SMALL LETTER I WITH  CIRCUMFLEX -->
           <treat>&#x00EF;</treat> <!-- ï  - LATIN SMALL LETTER I WITH  DIAERESIS -->
           <as>i</as></treat.gr>
-<treat.gr><treat>&#x00D1;</treat> <!-- Ñ - LATIN CAPITAL LETTER N WITH TILDE-->
-          <as>N</as></treat.gr>
-<treat.gr><treat>&#x00F1;</treat> <!-- ñ - LATIN SMALL LETTER N WITH TILDE-->
-          <as>n</as></treat.gr>
 <treat.gr><treat>&#x00D6;</treat> <!-- Ö  - LATIN CAPITAL LETTER O WITH  DIAERESIS -->
           <treat>&#x00D2;</treat> <!-- Ò  - LATIN CAPITAL LETTER O WITH  GRAVE -->
           <treat>&#x00D3;</treat> <!-- Ó  - LATIN CAPITAL LETTER O WITH  ACUTE -->

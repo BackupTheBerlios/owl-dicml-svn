@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
-    Document   : fr.order.xml
-    Updated on : 2006-01-02, 09:20
-    Author     : Thomas Krause, Julius Becker
+    Document   : it.order.xml
+    Created on : 2006-01-02, 09:19
+    Author     : Julius Becker
     Description:
         Purpose of the document follows.
 -->
 
-<alphabet lang="fr">
+<alphabet lang="it">
 <order>
   <char capital="0041" small="0061"/> <!-- A - a -->
   <char capital="0042" small="0062"/> <!-- B - b -->
