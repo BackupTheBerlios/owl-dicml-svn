@@ -16,7 +16,7 @@
 <dic.title>gidoo-Wörterbuch Deutsch - Französisch</dic.title>
 <dic.lang source="de" target="fr"/>
 <dic.source>http://koocachoo.de/</dic.source>
-<dic.date creation="2004-10-10" update="2005-12-25"/>
+<dic.date creation="2004-10-10" update="2006-01-04"/>
 <dic.creator.gr><dic.creator><dic.creator.name>Julius Becker</dic.creator.name><dic.creator.e-mail>julius.becker@gidoo.de</dic.creator.e-mail><dic.creator.website>http://koocachoo.de</dic.creator.website></dic.creator></dic.creator.gr>
 <dic.licence><dic.licence.name>CREATIVE COMMONS PUBLIC LICENSE 2.0</dic.licence.name><dic.licence.source>http://creativecommons.org/licenses/by-nc-nd/2.0/de/</dic.licence.source></dic.licence>
 </head>
@@ -365,6 +365,16 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Booten</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="f">amorce</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>booten</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p><t><w pos="v-t">amorcer</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Bosnien und Herzegowina</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t><w pos="f">Bosnie-Herzégovine</w></t></p></sense.gr>
 </entry>
@@ -502,6 +512,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Byte</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">octet</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Call-by-call</l><pos pos="n"/></lemma.gr>
 <sense.gr><p><t><w pos="m">appel</w> par appel</t></p></sense.gr>
 </entry>
@@ -542,6 +557,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Computernetzwerk</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">réseau</w> informatique</t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Connecticut</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t><w pos="m">Connecticut</w></t></p></sense.gr>
 </entry>
@@ -574,6 +594,11 @@
 <entry>
 <lemma.gr><l>Darmtuberkulose</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="f">tuberculose</w> intestinale</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Datenaustausch</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s>elektronischer <tilde>Datenaustausch</tilde></s><t><w pos="m">échange</w> de données informatisé</t><t><w pos="m">EDI</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -652,6 +677,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>EDI</l><pos pos="m"/></lemma.gr>
+<sense.gr><p n="elektronischer Datenaustausch"><t><w pos="m">EDI</w></t><t><w pos="m">échange</w> de données informatisé</t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Ei</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="m">œuf</w></t></p></sense.gr>
 </entry>
@@ -688,7 +718,7 @@
 
 <entry>
 <lemma.gr><l>E-Mail-Adresse</l><pos pos="f"/></lemma.gr>
-<sense.gr><p><t><w pos="f">adresse</w> électronique</t></p></sense.gr>
+<sense.gr><p><t><w pos="f">adresse</w> électronique</t><t><w pos="f">adresse</w> de courriel</t></p></sense.gr>
 </entry>
 
 <entry>
@@ -944,6 +974,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>GB</l><pos pos="n"/></lemma.gr>
+<sense.gr><p n="Gigabyte"><t><w pos="m">GO</w></t><t><w pos="m">échange</w> de données gigaoctet</t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>gefährlich</l><pos pos="adj"/></lemma.gr>
 <sense.gr><p><t><w pos="adj">dangereux</w></t></p></sense.gr>
 </entry>
@@ -1001,6 +1036,11 @@
 <entry>
 <lemma.gr><l>Gesindel</l><pos pos="n"/></lemma.gr>
 <sense.gr><p><t><w pos="f">racaille</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Gigabyte</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">gigaoctet</w></t><t><w pos="m">Go</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1181,6 +1221,11 @@
 <entry>
 <lemma.gr><l>Hymne</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="m">hymne</w></t><ex><s>Die <tilde>Hymne</tilde> der Union entstammt der »Ode an die Freude« aus der Neunten Symphonie von Ludwig van Beethoven.</s><t>L'hymne de l'Union est tiré de l'«&#160;Ode à la joie&#160;» de la Neuvième symphonie de Ludwig van Beethoven.</t></ex></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Icon</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="f">icône</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1374,8 +1419,18 @@
 </entry>
 
 <entry>
+<lemma.gr><l>KB</l><pos pos="n"/></lemma.gr>
+<sense.gr><p n="Kilobyte"><t><w pos="m">KO</w></t><t><w pos="m">échange</w> de données kilooctet</t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Kentucky</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t><w pos="m">Kentucky</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Kilobyte</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">kilooctet</w></t><t><w pos="m">Ko</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1389,8 +1444,18 @@
 </entry>
 
 <entry>
+<lemma.gr><l>klicken</l><pos pos="v"/></lemma.gr>
+<sense.gr><p><t><w pos="v">cliquer</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Komitee</l><pos pos="n"/></lemma.gr>
 <sense.gr><p><t><w pos="m">comité</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>konfigurieren</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p><t><w pos="v-t">configurer</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1416,6 +1481,11 @@
 <entry>
 <lemma.gr><l>Kopenhagen</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t>Copenhague</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Koprozessor</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">coprocesseur</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1660,6 +1730,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Log-in</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="f">connexion</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>löschen</l><pos pos="v-t"/></lemma.gr>
 <sense.gr><p><t><w pos="v-t">éteindre</w></t></p></sense.gr>
 </entry>
@@ -1765,6 +1840,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>MB</l><pos pos="n"/></lemma.gr>
+<sense.gr><p n="Megabyte"><t><w pos="m">MO</w></t><t><w pos="m">échange</w> de données mégaoctet</t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Mecklenburg-Vorpommern</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t>Mecklembourg-Poméranie occidentale</t></p></sense.gr>
 </entry>
@@ -1777,6 +1857,11 @@
 <entry>
 <lemma.gr><l>Mediziner</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="m">médcin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Megabyte</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">mégaoctet</w></t><t><w pos="m">Mo</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1943,6 +2028,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Multiprozessor</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">multiprocesseur</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Mund</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="f">bouche</w></t></p></sense.gr>
 </entry>
@@ -1951,7 +2041,6 @@
 <lemma.gr><l>Mund-zu-Mund-Beatmung</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="m">bouche-à-bouche</w></t></p></sense.gr>
 </entry>
-
 
 <entry>
 <lemma.gr><l>navigieren</l><pos pos="v"/></lemma.gr>
@@ -2172,7 +2261,7 @@
 
 <entry>
 <lemma.gr><l>Organizer</l><pos pos="m"/></lemma.gr>
-<sense.gr><p><t><w pos="m">agenda</w> �ectronique</t></p></sense.gr>
+<sense.gr><p><t><w pos="m">agenda</w> électronique</t></p></sense.gr>
 </entry>
 
 <entry>
@@ -2546,6 +2635,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Scanner</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">numériseur</w></t><t><w pos="m">scanneur</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Schaffhausen</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t>Schaffhouse</t></p></sense.gr>
 </entry>
@@ -2702,7 +2796,8 @@
 
 <entry>
 <lemma.gr><l>starten</l><pos pos="v-t"/></lemma.gr>
-<sense.gr><p.col><s>eine <w pos="f">Anwendung</w> starten</s><t>lancer une <w pos="f">application</w></t></p.col></sense.gr>
+<sense.gr><p.col><s>eine <w pos="f">Anwendung</w> <tilde>starten</tilde></s><t>lancer une <w pos="f">application</w></t></p.col></sense.gr>
+<sense.gr><p.col><s>neu <tilde>starten</tilde></s><t><w pos="v-t">réamorcer</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -2820,6 +2915,11 @@
 <entry>
 <lemma.gr><l>Tallinn</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t>Tallinn</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Tastenkombination</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">raccourci</w> <alt.gr><alt>clavier</alt><alt>au clavier</alt></alt.gr></t></p></sense.gr>
 </entry>
 
 <entry>

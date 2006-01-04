@@ -16,7 +16,7 @@
 <dic.title>gidoo-Wörterbuch Französisch - Deutsch</dic.title>
 <dic.lang source="fr" target="de"/>
 <dic.source>http://koocachoo.de/</dic.source>
-<dic.date creation="2004-10-10" update="2005-12-25"/>
+<dic.date creation="2004-10-10" update="2006-01-04"/>
 <dic.creator.gr><dic.creator><dic.creator.name>Julius Becker</dic.creator.name><dic.creator.e-mail>julius.becker@gidoo.de</dic.creator.e-mail><dic.creator.website>-</dic.creator.website></dic.creator></dic.creator.gr>
 <dic.licence><dic.licence.name>CREATIVE COMMONS PUBLIC LICENSE 2.0</dic.licence.name><dic.licence.source>http://creativecommons.org/licenses/by-nc-nd/2.0/de/</dic.licence.source></dic.licence>
 </head>
@@ -119,19 +119,18 @@
 
 <entry>
 <lemma.gr><l>adresse</l><pos pos="f"/></lemma.gr>
-<sense.gr><p.col><s><tilde>adresse</tilde> électronique</s><t><w pos="f">E-Mail-Adresse</w></t></p.col><p.col><s><tilde>adresse</tilde> Internet</s><t><w pos="f">Internetadresse</w></t></p.col></sense.gr>
+<sense.gr><p.col><s><tilde>adresse</tilde> de courriel</s><t><w pos="f">E-Mail-Adresse</w></t></p.col><p.col><s><tilde>adresse</tilde> électronique</s><t><w pos="f">E-Mail-Adresse</w></t></p.col><p.col><s><tilde>adresse</tilde> Internet</s><t><w pos="f">Internetadresse</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
 <lemma.gr><l>agenda</l><pos pos="m"/></lemma.gr>
-<sense.gr><p.col><s><tilde>agenda</tilde> électronique</s><t><w pos="m">Organizere</w></t></p.col></sense.gr>
+<sense.gr><p.col><s><tilde>agenda</tilde> électronique</s><t><w pos="m">Organizer</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
 <lemma.gr><l>agent</l><pos pos="m"/></lemma.gr>
 <sense.gr><p.col><s><tilde>agent</tilde> pathogène</s><t><w pos="m">Erreger</w></t></p.col></sense.gr>
 </entry>
-
 
 <entry>
 <lemma.gr><l>agonie</l><pos pos="f"/></lemma.gr>
@@ -211,6 +210,16 @@
 <entry>
 <lemma.gr><l>Allemagne</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t>Deutschland</t></p><p.col><s>la République fédérale d'<tilde>Allemagne</tilde></s><t>die Bundesrepublik Deutschland</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>amorce</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Booten</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>amorcer</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p><t><w pos="v-t">booten</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -637,6 +646,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>cliquer</l><pos pos="v"/></lemma.gr>
+<sense.gr><p><t><w pos="v">klicken</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>cité</l><pos pos="f"/></lemma.gr>
 <sense.gr><p.col><s>Cité du Vatican</s><t><w pos="f">Vatikanstadt</w></t></p.col></sense.gr>
 </entry>
@@ -667,8 +681,18 @@
 </entry>
 
 <entry>
+<lemma.gr><l>configurer</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p><t><w pos="v-t">konfigurieren</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Connecticut</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="prop">Connecticut</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>connexion</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Log-in</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -684,6 +708,11 @@
 <entry>
 <lemma.gr><l>Copenhague</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t><w pos="prop">Kopenhagen</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>coprocesseur</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Koprozessor</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -908,6 +937,16 @@
 <entry>
 <lemma.gr><l>duchesse</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="f">Herzogin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>échange</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>échange</tilde> de données informatisé</s><t>elektronischer <w pos="m">Datenaustausch</w></t><t><w pos="m">EDI</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>EDI</l><pos pos="m"/></lemma.gr>
+<sense.gr><p n="échange de données informatisé"><t><w pos="m">EDI</w></t><t>elektronischer <w pos="m">Datenaustausch</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1156,6 +1195,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>gigaoctet</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Gigabyte</w></t><t><w pos="n">GB</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Glaris</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t>Glarus</t></p></sense.gr>
 </entry>
@@ -1164,6 +1208,11 @@
 <lemma.gr><l>globe</l><pos pos="m"/></lemma.gr>
 <sense.gr num="1"><p><t><w pos="f">Erdkugel</w></t><t><w pos="m">Erdball</w></t></p></sense.gr>
 <sense.gr num="2"><p><t><w pos="m">Globus</w></t></p><p.col><s><tilde>globe</tilde> céleste</s><t><w pos="m">Himmelsglobus</w></t></p.col><p.col><s><tilde>globe</tilde> lumineux</s><t><w pos="m">Leuchtglobus</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>GO</l><pos pos="m"/></lemma.gr>
+<sense.gr><p n="gigaoctet"><t><w pos="n">GB</w></t><t><w pos="n">Gigabyte</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1294,6 +1343,11 @@
 <entry>
 <lemma.gr><l>hymne</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="f">Hymne</w></t><ex><s>L'hymne de l'Union est tiré de l'«&#160;Ode à la joie&#160;» de la Neuvième symphonie de Ludwig van Beethoven.</s><t>Die Hymne der Union entstammt der »Ode an die Freude« aus der Neunten Symphonie von Ludwig van Beethoven.</t></ex></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>icône</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Icon</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1471,6 +1525,16 @@
 <entry>
 <lemma.gr><l>Kentucky</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="prop">Kentucky</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>kilooctet</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Kilobyte</w></t><t><w pos="n">KB</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>KO</l><pos pos="m"/></lemma.gr>
+<sense.gr><p n="kilooctet"><t><w pos="n">KB</w></t><t><w pos="n">Kilobyte</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1726,6 +1790,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>mégaoctet</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Megabyte</w></t><t><w pos="n">KMB</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>mercredi</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="m">Mittwoch</w></t></p></sense.gr>
 </entry>
@@ -1763,6 +1832,11 @@
 <entry>
 <lemma.gr><l>Missouri</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="prop">Missouri</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>MO</l><pos pos="m"/></lemma.gr>
+<sense.gr><p n="mégaoctet"><t><w pos="n">MB</w></t><t><w pos="n">Megabyte</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1852,6 +1926,11 @@
 <entry>
 <lemma.gr><l>MST</l><pos pos="f"/></lemma.gr>
 <sense.gr><p n="maladie sexuellement transmissible"><t>sexuell übertragbare <w pos="f">Erkrankung</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>multiprocesseur</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Multiprozessor</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1956,13 +2035,23 @@
 </entry>
 
 <entry>
+<lemma.gr><l>numériseur</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Scanner</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>obsèques</l><pos pos="fpl"/></lemma.gr>
 <sense.gr><p><t><w pos="f">Trauerfeier</w></t><t><w pos="f">Trauerfeierlichkeiten</w></t><t><w pos="f">Beisetzung</w></t><t><w pos="f">Totenfeier</w></t></p><p.col><s>obsèques nationales</s><t><w pos="n">Staatsbegräbnis</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
 <lemma.gr><l>Obwald</l><pos pos="prop"/></lemma.gr>
-<sense.gr><p><t>Obwalden</t></p></sense.gr>
+<sense.gr><p><t><w pos="prop">Obwalden</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>octet</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Byte</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -2222,8 +2311,18 @@
 </entry>
 
 <entry>
+<lemma.gr><l>raccourci</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>raccourci</tilde> <alt.gr><alt>clavier</alt><alt>au clavier</alt></alt.gr></s><t><w pos="f">Tastenkombination</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>rage</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="f">Tollwut</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>réamorcer</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p><t><w pos="v-t">neu starten</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -2248,6 +2347,11 @@
 <entry>
 <lemma.gr><l>renoncer</l><pos pos="v-t"/></lemma.gr>
 <sense.gr><p.col><s><tilde>renoncer</tilde> à</s><t>verzichten auf</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>réseau</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>réseau</tilde> informatique</s><t><w pos="n">Computernetzwerk</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -2414,6 +2518,11 @@
 <entry>
 <lemma.gr><l>Saxe</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t>Sachsen-Anhalt</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>scanneur</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Scanner</w></t></p></sense.gr>
 </entry>
 
 <entry>
