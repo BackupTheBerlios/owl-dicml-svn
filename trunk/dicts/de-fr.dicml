@@ -975,7 +975,7 @@
 
 <entry>
 <lemma.gr><l>GB</l><pos pos="n"/></lemma.gr>
-<sense.gr><p n="Gigabyte"><t><w pos="m">GO</w></t><t><w pos="m">échange</w> de données gigaoctet</t></p></sense.gr>
+<sense.gr><p n="Gigabyte"><t><w pos="m">GO</w></t><t><w pos="m">gigaoctet</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1420,7 +1420,7 @@
 
 <entry>
 <lemma.gr><l>KB</l><pos pos="n"/></lemma.gr>
-<sense.gr><p n="Kilobyte"><t><w pos="m">KO</w></t><t><w pos="m">échange</w> de données kilooctet</t></p></sense.gr>
+<sense.gr><p n="Kilobyte"><t><w pos="m">KO</w></t><t><w pos="m">kilooctet</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1841,7 +1841,7 @@
 
 <entry>
 <lemma.gr><l>MB</l><pos pos="n"/></lemma.gr>
-<sense.gr><p n="Megabyte"><t><w pos="m">MO</w></t><t><w pos="m">échange</w> de données mégaoctet</t></p></sense.gr>
+<sense.gr><p n="Megabyte"><t><w pos="m">MO</w></t><t><w pos="m">mégaoctet</w></t></p></sense.gr>
 </entry>
 
 <entry>
