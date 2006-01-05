@@ -15,8 +15,8 @@
 <head>
 <dic.title>gidoo-Wörterbuch Deutsch - Französisch</dic.title>
 <dic.lang source="de" target="fr"/>
-<dic.source>http://koocachoo.de/</dic.source>
-<dic.date creation="2004-10-10" update="2006-01-04"/>
+<dic.source>http://svn.berlios.de/svnroot/repos/owl-dicml/trunk/dicts/de-fr.dicml</dic.source>
+<dic.date creation="2004-10-10" update="2006-01-05"/>
 <dic.creator.gr><dic.creator><dic.creator.name>Julius Becker</dic.creator.name><dic.creator.e-mail>julius.becker@gidoo.de</dic.creator.e-mail><dic.creator.website>http://koocachoo.de</dic.creator.website></dic.creator></dic.creator.gr>
 <dic.licence><dic.licence.name>CREATIVE COMMONS PUBLIC LICENSE 2.0</dic.licence.name><dic.licence.source>http://creativecommons.org/licenses/by-nc-nd/2.0/de/</dic.licence.source></dic.licence>
 </head>
@@ -137,6 +137,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Aliasing</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">crènelage</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Amsterdam</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t><w pos="prop">Amsterdam</w></t></p></sense.gr>
 </entry>
@@ -196,6 +201,11 @@
 <entry>
 <lemma.gr><l>Ansturm</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="f">ruée</w></t></p><p.col><s><tilde>Ansturm</tilde> auf</s><t>ruée <alt.gr><alt>sur</alt><alt>vers</alt></alt.gr></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Antialiasing</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">anticrènelage</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -752,6 +762,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Erbse</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="m">pois</w></t></p><p.col><s>gelb <w pos="fpl"><tilde>Erbse</tilde>n</w></s><t><w pos="mpl">pois</w> secs jaunes</t></p.col><p.col><s>grüne <w pos="fpl"><tilde>Erbse</tilde>n</w></s><t>petits <w pos="mpl">pois</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Erdball</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="m">globe</w></t></p></sense.gr>
 </entry>
@@ -1186,6 +1201,11 @@
 <entry>
 <lemma.gr><l>Hessen</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t>Hesse</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Hexe</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">sorcière</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -2645,6 +2665,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Schaukel</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">balançoire</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Schlag</l><pos pos="m"/></lemma.gr>
 <sense.gr><p.col><s>einen tödlichen elektrischen Schlag bekommen</s><t>s'électrocuter</t></p.col></sense.gr>
 </entry>
@@ -3140,6 +3165,16 @@
 <entry>
 <lemma.gr><l>Vermont</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t><w pos="m">Vermon</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Verstecken</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">cache-cache</w></t></p><p.col><s><tilde>Versteck</tilde> spielen</s><t>jouer à <w pos="m">cache-cache</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Versteckspiel</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">cache-cache</w></t></p></sense.gr>
 </entry>
 
 <entry>

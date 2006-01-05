@@ -15,8 +15,8 @@
 <head>
 <dic.title>gidoo-Wörterbuch Französisch - Deutsch</dic.title>
 <dic.lang source="fr" target="de"/>
-<dic.source>http://koocachoo.de/</dic.source>
-<dic.date creation="2004-10-10" update="2006-01-04"/>
+<dic.source>http://svn.berlios.de/svnroot/repos/owl-dicml/trunk/dicts/fr-de.dicml</dic.source>
+<dic.date creation="2004-10-10" update="2006-01-05"/>
 <dic.creator.gr><dic.creator><dic.creator.name>Julius Becker</dic.creator.name><dic.creator.e-mail>julius.becker@gidoo.de</dic.creator.e-mail><dic.creator.website>-</dic.creator.website></dic.creator></dic.creator.gr>
 <dic.licence><dic.licence.name>CREATIVE COMMONS PUBLIC LICENSE 2.0</dic.licence.name><dic.licence.source>http://creativecommons.org/licenses/by-nc-nd/2.0/de/</dic.licence.source></dic.licence>
 </head>
@@ -264,6 +264,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>anticrènelage</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Antialiasing</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>annuler</l><pos pos="v-t"/></lemma.gr>
 <sense.gr><p><t>abbrechen</t></p></sense.gr>
 </entry>
@@ -392,6 +397,11 @@
 <entry>
 <lemma.gr><l>baguette</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="n">Baguette</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>balançoire</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Schaukel</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -543,6 +553,11 @@
 <entry>
 <lemma.gr><l>cabinet</l><pos pos="m"/></lemma.gr>
 <sense.gr><p.col><s>Cabinet fédéral</s><t><w pos="n">Bundeskabinett</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>cache-cache</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Verstecken</w></t><t><w pos="n">Versteckspiel</w></t></p><p.col><s>jouer à <tilde>cache-cache</tilde></s><t><w pos="n">Verstecken</w> spielen</t></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -745,6 +760,11 @@
 <entry>
 <lemma.gr><l>Cracovie</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t>Krakau</t><ex><s><tilde>Cracovie</tilde> est la capitale de la voïvodie de Petite-Pologne.</s><t>Krakau ist die Hauptstadt der Woiwodschaft Kleinpolen.</t></ex></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>crènelage</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Aliasing</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -2231,6 +2251,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>pois</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Erbse</w></t></p><p.col><s>petits <w pos="mpl"><tilde>pois</tilde></w></s><t>grüne <w pos="fpl">Erbsen</w></t></p.col><p.col><s><w pos="mpl"><tilde>pois</tilde></w> secs jaunes</s><t>gelbe <w pos="fpl">Erbsen</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Pologne</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="prop">Polen</w></t></p><p.col><s>la République de <tilde>Pologne</tilde></s><t>die Republik Polen</t></p.col></sense.gr>
 </entry>
@@ -2594,6 +2619,11 @@
 <entry>
 <lemma.gr><l>Soleure</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t>Solothurn</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>sorcière</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Hexe</w></t></p></sense.gr>
 </entry>
 
 <entry>
