@@ -16,7 +16,7 @@
 <dic.title>gidoo-Wörterbuch Deutsch - Französisch</dic.title>
 <dic.lang source="de" target="fr"/>
 <dic.source>http://svn.berlios.de/svnroot/repos/owl-dicml/trunk/dicts/de-fr.dicml</dic.source>
-<dic.date creation="2004-10-10" update="2006-01-05"/>
+<dic.date creation="2004-10-10" update="2006-01-07"/>
 <dic.creator.gr><dic.creator><dic.creator.name>Julius Becker</dic.creator.name><dic.creator.e-mail>julius.becker@gidoo.de</dic.creator.e-mail><dic.creator.website>http://koocachoo.de</dic.creator.website></dic.creator></dic.creator.gr>
 <dic.licence><dic.licence.name>CREATIVE COMMONS PUBLIC LICENSE 2.0</dic.licence.name><dic.licence.source>http://creativecommons.org/licenses/by-nc-nd/2.0/de/</dic.licence.source></dic.licence>
 </head>
@@ -577,6 +577,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Cordon bleu</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">cordon-bleu</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Däne</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="m">Danois</w></t></p></sense.gr>
 </entry>
@@ -657,6 +662,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Diascanner</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">scanner</w> à diapositif</t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Dienstag</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="m">mardi</w></t></p></sense.gr>
 </entry>
@@ -664,6 +674,11 @@
 <entry>
 <lemma.gr><l>Diskussion</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="f">discussion</w></t><t><w pos="m">débat</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Dokumentenscanner</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">scanner</w> à défilement</t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1119,6 +1134,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Handscanner</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">scanner</w> à main</t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Hauptort</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="m">chef-lieu</w></t></p></sense.gr>
 </entry>
@@ -1466,6 +1486,16 @@
 <entry>
 <lemma.gr><l>klicken</l><pos pos="v"/></lemma.gr>
 <sense.gr><p><t><w pos="v">cliquer</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Koch</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><alt.gr><alt>guter</alt><alt>ausgezeichneter</alt></alt.gr> <tilde>Koch</tilde></s><t><w pos="m">cordon-bleu</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Köchin</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s><alt.gr><alt>gute</alt><alt>ausgezeichnete</alt></alt.gr> <tilde>Köchin</tilde></s><t><w pos="m">cordon-bleu</w></t><ex><s>Seine Frau ist eine ausgezeichnete <tilde>Köchin</tilde>.</s><t>Sa femme est un véritable cordon-bleu.</t></ex></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -2656,7 +2686,7 @@
 
 <entry>
 <lemma.gr><l>Scanner</l><pos pos="m"/></lemma.gr>
-<sense.gr><p><t><w pos="m">numériseur</w></t><t><w pos="m">scanneur</w></t></p></sense.gr>
+<sense.gr><p><t><w pos="m">scanner</w></t><t><w pos="m">numériseur</w></t><t><w pos="m">scanneur</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -3070,6 +3100,11 @@
 <entry>
 <lemma.gr><l>treu</l><pos pos="adj"/></lemma.gr>
 <sense.gr><p><t>fidèle</t></p><p.col><s><tilde>treu</tilde> bleiben</s><t>rester fidèle</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Trommelscanner</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">scanner</w> à tambour</t></p></sense.gr>
 </entry>
 
 <entry>

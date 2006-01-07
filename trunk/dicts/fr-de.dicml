@@ -16,7 +16,7 @@
 <dic.title>gidoo-Wörterbuch Französisch - Deutsch</dic.title>
 <dic.lang source="fr" target="de"/>
 <dic.source>http://svn.berlios.de/svnroot/repos/owl-dicml/trunk/dicts/fr-de.dicml</dic.source>
-<dic.date creation="2004-10-10" update="2006-01-05"/>
+<dic.date creation="2004-10-10" update="2006-01-07"/>
 <dic.creator.gr><dic.creator><dic.creator.name>Julius Becker</dic.creator.name><dic.creator.e-mail>julius.becker@gidoo.de</dic.creator.e-mail><dic.creator.website>-</dic.creator.website></dic.creator></dic.creator.gr>
 <dic.licence><dic.licence.name>CREATIVE COMMONS PUBLIC LICENSE 2.0</dic.licence.name><dic.licence.source>http://creativecommons.org/licenses/by-nc-nd/2.0/de/</dic.licence.source></dic.licence>
 </head>
@@ -718,6 +718,13 @@
 <entry>
 <lemma.gr><l>contagieux</l><pos pos="adj"/></lemma.gr>
 <sense.gr><p><t><w pos="adj">ansteckend</w></t><ex><s>La peste aviaire est une maladie à virus hautement contagieuse pour les volailles et autres oiseaux.</s><t>Die Geflügelpest ist eine für Geflügel und andere Vögel hochgradig ansteckende Viruserkrankung.</t></ex></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>cordon-bleu</l><pos pos="m"/></lemma.gr>
+<sense.gr><p n="homme"><t><alt.gr><alt>guter</alt><alt>ausgezeichneter</alt></alt.gr><w pos="m">Koch</w></t></p><p n="femme"><t><alt.gr><alt>gute</alt><alt>ausgezeichnete</alt></alt.gr><w pos="f">Köchin</w></t><ex><s>Sa femme est un véritable <tilde>cordon-bleu</tilde>.</s><t>Seine Frau ist eine ausgezeichnete Köchin.</t></ex></p></sense.gr>
+<sense.gr><p><t><w pos="n">Cordon bleu</w></t></p></sense.gr>
+
 </entry>
 
 <entry>
@@ -2543,6 +2550,11 @@
 <entry>
 <lemma.gr><l>Saxe</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t>Sachsen-Anhalt</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>scanner</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Scanner</w></t></p><p.col><s><tilde>scanner</tilde> à défilement</s><t><w pos="m">Dokumentenscanner</w></t></p.col><p.col><s><tilde>scanner</tilde> à diapositif</s><t><w pos="m">Diascanner</w></t></p.col><p.col><s><tilde>scanner</tilde> à main</s><t><w pos="m">Handscanner</w></t></p.col><p.col><s><tilde>scanner</tilde> à plat</s><t><w pos="m">Flachbettscanner</w></t></p.col><p.col><s><tilde>scanner</tilde> à tambour</s><t><w pos="m">Trommelscanner</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
