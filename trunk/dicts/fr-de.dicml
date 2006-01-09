@@ -16,7 +16,7 @@
 <dic.title>gidoo-Wörterbuch Französisch - Deutsch</dic.title>
 <dic.lang source="fr" target="de"/>
 <dic.source>http://svn.berlios.de/svnroot/repos/owl-dicml/trunk/dicts/fr-de.dicml</dic.source>
-<dic.date creation="2004-10-10" update="2006-01-07"/>
+<dic.date creation="2004-10-10" update="2006-01-09"/>
 <dic.creator.gr><dic.creator><dic.creator.name>Julius Becker</dic.creator.name><dic.creator.e-mail>julius.becker@gidoo.de</dic.creator.e-mail><dic.creator.website>-</dic.creator.website></dic.creator></dic.creator.gr>
 <dic.licence><dic.licence.name>CREATIVE COMMONS PUBLIC LICENSE 2.0</dic.licence.name><dic.licence.source>http://creativecommons.org/licenses/by-nc-nd/2.0/de/</dic.licence.source></dic.licence>
 </head>
@@ -87,6 +87,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>accident</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>accident</tilde> vasculaire cérébral</s><t><w pos="m">Schlaganfall</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>accusé</l><pos pos="m"/></lemma.gr>
 <sense.gr><p.col><s><tilde>accusé</tilde> de lecture</s><t><w pos="f">Lesebestätigung</w></t></p.col></sense.gr>
 <sense.gr><p.col><s><tilde>accusé</tilde> de réception</s><t><w pos="f">Empfangsbestätigung</w></t></p.col></sense.gr>
@@ -129,7 +134,8 @@
 
 <entry>
 <lemma.gr><l>agent</l><pos pos="m"/></lemma.gr>
-<sense.gr><p.col><s><tilde>agent</tilde> pathogène</s><t><w pos="m">Erreger</w></t></p.col></sense.gr>
+<sense.gr num="1"><p.col><s><tilde>agent</tilde> du racket</s><t><w pos="f">Schutzgeld</w></t></p.col></sense.gr>
+<sense.gr num="2"><p.col><s><tilde>agent</tilde> pathogène</s><t><w pos="m">Erreger</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -180,6 +186,11 @@
 <entry>
 <lemma.gr><l>Albanie</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t>Albanien</t></p><p.col><s>la République d'<tilde>Albanie</tilde></s><t>die Republik Albanien</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>alcoolémie</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Blutalkohol</w></t><t><w pos="m">Blutalkoholgehalt</w></t><t><w pos="m">Blutalkoholspiegel</w></t></p><p.col><s><w pos="m">taux</w> légal d'<tilde>alcoolémie</tilde></s><t><w pos="f">Promillegrenze</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -335,6 +346,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>attaque</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s><tilde>attaque</tilde> cérébrale</s><t><w pos="m">Schlaganfall</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>attendre</l><pos pos="v-ref"/></lemma.gr>
 <sense.gr><p.col><s><w govern="sub">s'attendre à ce que</w></s><t>erwarten, dass</t></p.col></sense.gr>
 </entry>
@@ -407,6 +423,11 @@
 <entry>
 <lemma.gr><l>Bâle</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t>Basel</t></p><p.col><s><tilde>Bâle</tilde>-Campagne</s><t>Basel-Landschaft</t></p.col><p.col><s><tilde>Bâle</tilde>-Ville</s><t>Basel-Stadt</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>banque</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s><tilde>banque</tilde> mondiale</s><t><w pos="f">Weltbank</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -1325,6 +1346,11 @@
 <entry>
 <lemma.gr><l>Helsinki</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t><w pos="prop">Helsinki</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>hémorragie</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Blutung</w></t></p><p.col><s><tilde>hémorragie</tilde> cérébrale</s><t><w pos="f">Gehirnblutung</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -2288,6 +2314,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>porte-avion</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Flugzeugträger</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Portugais</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="m">Portugiese</w></t></p></sense.gr>
 </entry>
@@ -2345,6 +2376,18 @@
 <entry>
 <lemma.gr><l>raccourci</l><pos pos="m"/></lemma.gr>
 <sense.gr><p.col><s><tilde>raccourci</tilde> <alt.gr><alt>clavier</alt><alt>au clavier</alt></alt.gr></s><t><w pos="f">Tastenkombination</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>racket</l><pos pos="m"/></lemma.gr>
+<sense.gr num="1"><p><t><w pos="f">Schutzgelderpressung</w></t><t><w pos="f">Erpressung</w></t></p></sense.gr>
+<sense.gr num="2"><p><t><w pos="f">Erpresserbande</w></t></p></sense.gr>
+<sense.gr num="3"><p.col><s><w pos="m">agent</w> du <tilde>racket</tilde></s><t><w pos="n">Schutzgeld</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>racketter</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p.col><s><tilde>racketter</tilde> <fr.qn/></s><t>von <de.j-n/> Geld erpressen</t></p.col></sense.gr>
 </entry>
 
 <entry>
