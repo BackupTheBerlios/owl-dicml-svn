@@ -893,6 +893,31 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Etymologe</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">étymologiste</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Etymologie</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">étymologie</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Etymologin</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">étymologiste</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>etymologisch</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">étymologique</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Etymon</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">étymon</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Europatag</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="f">journée</w> de l'Europe</t></p></sense.gr>
 </entry>
@@ -925,6 +950,11 @@
 <entry>
 <lemma.gr><l>Fernsehdebatte</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="m">débat</w> télévisé</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Fieber</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="f">fièvre</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1196,6 +1226,11 @@
 <entry>
 <lemma.gr><l>Hauptstadt</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="f">capitale</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Hausbesuch</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="f">visite</w> à domicile</t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1845,6 +1880,21 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Lüge</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="m">mensonge</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Lügendetektor</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">détecteur</w> de mensonge</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Lügenmärchen</l><pos pos="n"/></lemma.gr>
+<sense.gr><p.idm><s>Das ist das reinste <tilde>Lügenmärchen</tilde>.</s><t>C'est une histoire à dormir debout.</t></p.idm></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Lungentuberkulose</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="f">tuberculose</w> pulmonaire</t></p></sense.gr>
 </entry>
@@ -2095,6 +2145,11 @@
 <entry>
 <lemma.gr><l>monegassisch</l><pos pos="adj"/></lemma.gr>
 <sense.gr><p><t><w pos="adj">monégasque</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Montag</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">lundi</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -3029,7 +3084,7 @@
 
 <entry>
 <lemma.gr><l>Systemverwalter</l><pos pos="m"/></lemma.gr>
-<sense.gr><p><t><w pos="m">administrateur</w> de syst�e</t></p></sense.gr>
+<sense.gr><p><t><w pos="m">administrateur</w> de système</t></p></sense.gr>
 </entry>
 
 <entry>
@@ -3534,6 +3589,16 @@
 <entry>
 <lemma.gr><l>Wort</l><pos pos="n"/></lemma.gr>
 <sense.gr><p><t><w pos="m">mot</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Wörterbuch</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">dictionnaire</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Worfeld</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">champ</w> sémantique</t></p></sense.gr>
 </entry>
 
 <entry>

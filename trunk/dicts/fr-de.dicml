@@ -632,6 +632,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>champ</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>champ</tilde> sémantique</s><t><w pos="n">Wortfeld</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>chancelier</l><pos pos="m"/></lemma.gr>
 <sense.gr><p.col><s>Chancelier fédéral</s><t><w pos="n">Bundeskanzler</w></t></p.col></sense.gr>
 </entry>
@@ -928,6 +933,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>détecteur</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>détecteur</tilde> de mensonge</s><t><w pos="m">Lügendetektor</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>deuil</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="f">Trauer</w></t></p><p.col><s><tilde>deuil</tilde> national</s><t><w pos="f">Staatstrauer</w></t></p.col><p.col><s><w pos="m">jour</w> de <tilde>deuil</tilde></s><t><w pos="m">Trauertag</w></t></p.col></sense.gr>
 </entry>
@@ -940,6 +950,11 @@
 <entry>
 <lemma.gr><l>dictée</l><pos pos="f"/></lemma.gr>
 <sense.gr><p.col><s><tilde>dictée</tilde> musicale</s><t><w pos="f">Gehörbildung</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>dictionnaire</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Wörterbuch</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1093,6 +1108,31 @@
 </entry>
 
 <entry>
+<lemma.gr><l>étymologie</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Etymologie</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>étymologiste</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Etymologe</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>étymologiste</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Etymologin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>étymologique</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">etymologisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>étymon</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Etymon</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>explosion</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="f">Explosion</w></t></p><p.col><s><tilde>explosion</tilde> au gaz</s><t><w pos="f">Gasexplosion</w></t></p.col></sense.gr>
 </entry>
@@ -1116,6 +1156,11 @@
 <entry>
 <lemma.gr><l>fidèle</l><pos pos="adj"/></lemma.gr>
 <sense.gr><p><t>treu</t></p><p.col><s>rester <tilde>fidèle</tilde></s><t>treu bleiben</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>fièvre</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Fieber</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1366,6 +1411,11 @@
 <entry>
 <lemma.gr><l>hexagone</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="n">Sechseck</w></t><ex><s>La France a la forme d'un <tilde>hexagone</tilde>.</s><t>Frankreich hat die Form eines Sechsecks.</t></ex></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>histoire</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.idm><s>C'est une <tilde>histoire</tilde> à dormir debout.</s><t>Das ist das reinste Lügenmärchen.</t></p.idm></sense.gr>
 </entry>
 
 <entry>
@@ -1845,6 +1895,11 @@
 <entry>
 <lemma.gr><l>mégaoctet</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="n">Megabyte</w></t><t><w pos="n">KMB</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>mensonge</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Lüge</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -2933,6 +2988,11 @@
 <entry>
 <lemma.gr><l>visagiste</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="f">Visagistin</w></t><t><w pos="f">Kosmetikerin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>visite</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s><tilde>visite</tilde> à domicile</s><t><w pos="m">Hausbesuch</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
