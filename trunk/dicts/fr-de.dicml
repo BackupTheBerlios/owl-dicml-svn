@@ -16,7 +16,7 @@
 <dic.title>gidoo-Wörterbuch Französisch - Deutsch</dic.title>
 <dic.lang source="fr" target="de"/>
 <dic.source>http://svn.berlios.de/svnroot/repos/owl-dicml/trunk/dicts/fr-de.dicml</dic.source>
-<dic.date creation="2004-10-10" update="2006-01-09"/>
+<dic.date creation="2004-10-10" update="2006-01-14"/>
 <dic.creator.gr><dic.creator><dic.creator.name>Julius Becker</dic.creator.name><dic.creator.e-mail>julius.becker@gidoo.de</dic.creator.e-mail><dic.creator.website>-</dic.creator.website></dic.creator></dic.creator.gr>
 <dic.licence><dic.licence.name>CREATIVE COMMONS PUBLIC LICENSE 2.0</dic.licence.name><dic.licence.source>http://creativecommons.org/licenses/by-nc-nd/2.0/de/</dic.licence.source></dic.licence>
 </head>
@@ -125,6 +125,11 @@
 <entry>
 <lemma.gr><l>adresse</l><pos pos="f"/></lemma.gr>
 <sense.gr><p.col><s><tilde>adresse</tilde> de courriel</s><t><w pos="f">E-Mail-Adresse</w></t></p.col><p.col><s><tilde>adresse</tilde> électronique</s><t><w pos="f">E-Mail-Adresse</w></t></p.col><p.col><s><tilde>adresse</tilde> Internet</s><t><w pos="f">Internetadresse</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>agence</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s>Agence internationale de l'énergie atomique</s><t>Internationale <w pos="f">Atomenergiebehörde</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -644,6 +649,11 @@
 <entry>
 <lemma.gr><l>chancellerie</l><pos pos="f"/></lemma.gr>
 <sense.gr><p.col><s>Chancellerie fédérale</s><t><w pos="n">Bundeskanzleramt</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>charte</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Charta</w></t></p><p.col><s>Charte des Nations unies</s><t><w pos="f">Charta</w> der Vereinten Nationen</t></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -1898,6 +1908,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>menace</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Drohung</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>mensonge</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="f">Lüge</w></t></p></sense.gr>
 </entry>
@@ -2039,6 +2054,11 @@
 <entry>
 <lemma.gr><l>multiprocesseur</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="m">Multiprozessor</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>nation</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s>Organisations des <w pos="fpl">Nations</w> unies</s><t>Vereinten <w pos="fpl">Nationen</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -2198,6 +2218,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>ONU</l><pos pos="f"/></lemma.gr>
+<sense.gr><p n="Organisation des Nations unies"><t><w pos="fpl">VN</w></t><t>Vereinte <w pos="fpl">Nationen</w></t><t><w pos="f">UNO</w></t><t><w pos="fpl">UN</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>ordinateur</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="m">Computer</w></t></p></sense.gr>
 </entry>
@@ -2212,6 +2237,7 @@
 <sense.gr><p><t><w pos="f">Organisation</w></t></p></sense.gr>
 <sense.gr><p.col><s><tilde>organisation</tilde> mondiale</s><t><w pos="f">Weltorganisation</w></t></p.col>
 <p.col><s>Organisation mondiale de la santé</s><t><w pos="f">Weltgesundheitsorganisation</w></t><t><w pos="f">WHO</w></t></p.col></sense.gr>
+<sense.gr><p.col><s>Organisation internationale du travail</s><t><w pos="f">Internationale Arbeitsorganisation</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -2396,6 +2422,11 @@
 <entry>
 <lemma.gr><l>Portugal</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="prop">Portugal</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>préambule</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Präambel</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -2813,6 +2844,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>texto</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="f">SMS</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Thurgovie</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t>Thurgau</t></p></sense.gr>
 </entry>
@@ -2870,13 +2906,23 @@
 </entry>
 
 <entry>
+<lemma.gr><l>UE</l><pos pos="f"/></lemma.gr>
+<sense.gr><p n="Union Européenne"><t><w pos="f">EU</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>urgence</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="m">Notfall</w></t></p><p.col><s><w pos="m">service</w> des <tilde>urgence</tilde>s</s><t><w pos="f">Notfallaufnahme</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
+<lemma.gr><l>union</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s>Union Européenne</s><t>Europäische <w pos="f">Union</w></t></p.col><p.col><s>Union postale universelle</s><t><w pos="m">Weltpostverein</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Uri</l><pos pos="prop"/></lemma.gr>
-<sense.gr><p><t>Uri</t></p></sense.gr>
+<sense.gr><p><t><w pos="prop">Uri</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -3029,6 +3075,11 @@
 <entry>
 <lemma.gr><l>weekend</l><l.alt>week-end</l.alt><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="n">Wochenende</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Wikipédia</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Wikipedia</w></t></p></sense.gr>
 </entry>
 
 <entry>
