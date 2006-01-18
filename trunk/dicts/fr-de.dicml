@@ -16,7 +16,7 @@
 <dic.title>gidoo-Wörterbuch Französisch - Deutsch</dic.title>
 <dic.lang source="fr" target="de"/>
 <dic.source>http://svn.berlios.de/svnroot/repos/owl-dicml/trunk/dicts/fr-de.dicml</dic.source>
-<dic.date creation="2004-10-10" update="2006-01-14"/>
+<dic.date creation="2004-10-10" update="2006-01-18"/>
 <dic.creator.gr><dic.creator><dic.creator.name>Julius Becker</dic.creator.name><dic.creator.e-mail>julius.becker@gidoo.de</dic.creator.e-mail><dic.creator.website>-</dic.creator.website></dic.creator></dic.creator.gr>
 <dic.licence><dic.licence.name>CREATIVE COMMONS PUBLIC LICENSE 2.0</dic.licence.name><dic.licence.source>http://creativecommons.org/licenses/by-nc-nd/2.0/de/</dic.licence.source></dic.licence>
 </head>
@@ -697,6 +697,16 @@
 </entry>
 
 <entry>
+<lemma.gr><l>clavier</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Tastatur</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>clé</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s><tilde>clé</tilde> USB</s><t><w pos="m">USB-Stick</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>cliquer</l><pos pos="v"/></lemma.gr>
 <sense.gr><p><t><w pos="v">klicken</w></t></p></sense.gr>
 </entry>
@@ -886,6 +896,21 @@
 </entry>
 
 <entry>
+<lemma.gr><l>danse</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Tanz</w></t></p><p.col><s><tilde>danse</tilde> des canards</s><t><w pos="m">Ententanz</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>danseur</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Tänzer</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>danseuse</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Tänzerin</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>débat</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="f">Debatte</w></t><t><w pos="f">Diskussion</w></t><t><w pos="f">Erörterung</w></t><t><w pos="n">Streitgespräch</w></t></p>
 <p.col><s><tilde>débat</tilde> télévisé</s><t><w pos="f">Fernsehdebatte</w></t></p.col></sense.gr>
@@ -1015,6 +1040,11 @@
 <entry>
 <lemma.gr><l>échange</l><pos pos="m"/></lemma.gr>
 <sense.gr><p.col><s><tilde>échange</tilde> de données informatisé</s><t>elektronischer <w pos="m">Datenaustausch</w></t><t><w pos="m">EDI</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>écran</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Bildschirm</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1484,6 +1514,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>imprimante</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Drucker</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>inauguration</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="f">Einweihung</w></t><t><w pos="f">Eröffnung</w></t></p></sense.gr>
 </entry>
@@ -1668,6 +1703,11 @@
 <entry>
 <lemma.gr><l>La Valletta</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t><w pos="prop">Valletta</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>lecteur</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>lecteur</tilde> de cédérom</s><t><w pos="n">CD-ROM-Laufwerk</w></t></p.col><p.col><s><tilde>lecteur</tilde> de disquette</s><t><w pos="n">Diskettenlaufwerk</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -2768,6 +2808,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>souris</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Maus</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>SRAS</l><pos pos="n"/></lemma.gr>
 <sense.gr><p n="syndrome respiratoire aigu sévère"><t><w pos="n">SARS</w></t><t>schweres akutes <w pos="n">Atemwegssyndrom</w></t></p></sense.gr>
 </entry>
@@ -2811,6 +2856,11 @@
 <entry>
 <lemma.gr><l>syndrome</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="n">Syndrom</w></t></p><p.col><s><tilde>syndrome</tilde> d'immunodéficience acquise</s><t><w pos="n">Aids</w></t><t>erworbenes <w pos="n">Immunschwächesyndrom</w></t></p.col><p.col><s><tilde>syndrome</tilde> respiratoire aigu sévère</s><t><w pos="n">SARS</w></t><t>schweres akutes <w pos="n">Atemwegssyndrom</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>système</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>système</tilde> d'exploitation</s><t><w pos="n">Betriebssystem</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
