@@ -182,6 +182,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>angenehm</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p n="beim Vorstellen"><t>enchanté</t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Angst</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="f">peur</w></t></p></sense.gr>
 </entry>
@@ -612,6 +617,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Coming-out</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">coming out</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Computer</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="m">ordinateur</w></t></p></sense.gr>
 </entry>
@@ -674,6 +684,11 @@
 <entry>
 <lemma.gr><l>Delaware</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t><w pos="m">Delaware</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>demolieren</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p><t>vandaliser</t></p></sense.gr>
 </entry>
 
 <entry>
@@ -857,8 +872,18 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Erdbeben</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">tremblement</w> de terre</t><t><w pos="m">séisme</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Erdkugel</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="m">globe</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>erfreut</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p.col n="beim Vorstellen"><s>sehr <tilde>erfreut</tilde></s><t>enchanté</t><ex><s>Sehr erfreut, Sie kennen zu lernen!</s><t>Enchanté de faire votre connaissance.</t></ex></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -1204,6 +1229,16 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Getto</l><l.alt>Ghetto</l.alt><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">ghetto</w></t></p><p.col><s>Warschauer <tilde>Getto</tilde></s><t><w pos="m">ghetto</w> de Varsovie</t></p.col></sense.gr>
+</entry>
+       
+<entry>
+<lemma.gr><l>Gettoisierung</l><l.alt>Ghettoisierung</l.alt><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">gettoïsation</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Gigabyte</l><pos pos="n"/></lemma.gr>
 <sense.gr><p><t><w pos="m">gigaoctet</w></t><t><w pos="m">Go</w></t></p></sense.gr>
 </entry>
@@ -1256,6 +1291,31 @@
 <entry>
 <lemma.gr><l>Großbritannien</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t><w pos="f">Grande-Bretagne</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Guerilla</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">guérillero</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Guerilla</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">guérilla</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Guerillakämpfer</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">guérillero</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Guerillakrieg</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="f">guérilla</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Guerillatruppe</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">guérilla</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -2086,6 +2146,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Mercalliskala</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">échelle</w> de Mercalli</t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Michigan</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t><w pos="m">Michigan</w></t></p></sense.gr>
 </entry>
@@ -2631,6 +2696,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Problemviertel</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">quartier</w> sensible</t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Promillegrenze</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="m">taux</w> légal d'alcoolémie</t></p></sense.gr>
 </entry>
@@ -2663,6 +2733,11 @@
 <entry>
 <lemma.gr><l>Raketenwerfer</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="m">lance-fusées</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Rasen</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">gazon</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -2737,6 +2812,11 @@
 <entry>
 <lemma.gr><l>Rhode Island</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t><w pos="m">Rhode Island</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Richterskala</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">échelle</w> de Richter</t></p></sense.gr>
 </entry>
 
 <entry>
@@ -2960,6 +3040,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Segregation</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">ségrégation</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>senken</l><pos pos="v"/></lemma.gr>
 <sense.gr><p><t>abaisser</t></p></sense.gr>
 </entry>
@@ -3086,6 +3171,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Stich</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s>im <tilde>Stich</tilde> lassen</s><t><w pos="v-t">abandonner</w></t><t><w pos="v-t">laisser</w> à l'abandon</t></p.col></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Störenfried</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="m">pertubateur</w></t><t><w pos="f">pertubatrice</w></t></p></sense.gr>
 </entry>
@@ -3094,6 +3184,16 @@
 <lemma.gr><l>Störung</l><pos pos="f"/></lemma.gr>
 <sense.gr><p n="Verkehr"><t><w pos="f">pertubation</w></t></p></sense.gr>
 <sense.gr dom="meteo"><p><t><w pos="f">pertubation</w></t></p><p.col><s>atmosphärische <tilde>Störung</tilde>en</s><t><w pos="fpl">pertubations</w> atmosphériques</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Straßenbahn</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="m">tramway</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Streetworker</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">animateur</w> de rue</t></p></sense.gr>
 </entry>
 
 <entry>
@@ -3283,6 +3383,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Tram</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="m">tramway</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Transformator</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="m">transformateur</w></t></p></sense.gr>
 </entry>
@@ -3448,6 +3553,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>vernachlässigen</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p><t><w pos="v-t">laisser</w> à l'abandon</t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Verstecken</l><pos pos="n"/></lemma.gr>
 <sense.gr><p><t><w pos="m">cache-cache</w></t></p><p.col><s><tilde>Versteck</tilde> spielen</s><t>jouer à <w pos="m">cache-cache</w></t></p.col></sense.gr>
 </entry>
@@ -3458,6 +3568,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>verwahrlosen</l><pos pos="v-i"/></lemma.gr>
+<sense.gr><p.col><s><tilde>verwahrlosen</tilde> lassen</s><t><w pos="v-t">laisser</w> à l'abandon</t></p.col></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Verweis</l><pos pos="m"/></lemma.gr>
 <sense.gr><p dom="info"><t><w pos="m">lien</w></t></p></sense.gr>
 </entry>
@@ -3465,6 +3580,11 @@
 <entry>
 <lemma.gr><l>verzichten</l><pos pos="v-t"/></lemma.gr>
 <sense.gr><p.col><s><tilde>verzichten</tilde> auf</s><t>renoncer à</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Viertel</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">quartier</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -3510,6 +3630,16 @@
 <entry>
 <lemma.gr><l>Vorabend</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="f">veille</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Vorort</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="f">banlieue</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>vorstellen</l><pos pos="v-t"/></lemma.gr>
+<sense.gr><p.col><s><de.j-m/> <de.j-n/> <tilde>vorstellen</tilde></s><t><w pos="v-t">présenter</w> <fr.qn/> à <fr.qn/></t><ex><s>Ich werde dich Marie <tilde>vorstellen</tilde>.</s><t>Je vais te présenter à Marie.</t></ex><ex><s>Darf ich dir Ludovic <tilde>vorstellen</tilde>.</s><t>Permets-moi de te présenter Ludovic.</t></ex></p.col></sense.gr>
 </entry>
 
 <entry>
