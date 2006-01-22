@@ -66,9 +66,13 @@
                         
             <!-- res -->
             <file src="res/empty.html" targetdir="$INSTALL_PATH/res"/>
+            <file src="res/ca.order.xml" targetdir="$INSTALL_PATH/res" />
             <file src="res/de.order.xml" targetdir="$INSTALL_PATH/res" />
             <file src="res/en.order.xml" targetdir="$INSTALL_PATH/res" />
+            <file src="res/es.order.xml" targetdir="$INSTALL_PATH/res" />
             <file src="res/fr.order.xml" targetdir="$INSTALL_PATH/res" />
+            <file src="res/it.order.xml" targetdir="$INSTALL_PATH/res" />
+            <file src="res/la.order.xml" targetdir="$INSTALL_PATH/res" />
             <file src="res/no.order.xml" targetdir="$INSTALL_PATH/res" />
             <file src="res/Information16.gif" targetdir="$INSTALL_PATH/res" />
             <file src="res/Open16.gif" targetdir="$INSTALL_PATH/res" />
