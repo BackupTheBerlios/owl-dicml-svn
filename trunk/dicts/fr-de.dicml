@@ -1434,7 +1434,7 @@
 </entry>
 
 <entry>
-<lemma.gr><l>Grisons</l><pos pos="prop"/></lemma.gr>
+<lemma.gr><l>groupe</l><pos pos="m"/></lemma.gr>
 <sense.gr><p.col><s><tilde>groupe</tilde> parlementaire</s><t><w pos="f">Fraktion</w></t><ex><s><tilde>groupe</tilde> parlementaire du Bundestag</s><t><w pos="f">Bundestagsfraktion</w></t></ex></p.col></sense.gr>
 </entry>
 
@@ -2573,7 +2573,7 @@
 <lemma.gr><l>racket</l><pos pos="m"/></lemma.gr>
 <sense.gr num="1"><p><t><w pos="f">Schutzgelderpressung</w></t><t><w pos="f">Erpressung</w></t></p></sense.gr>
 <sense.gr num="2"><p><t><w pos="f">Erpresserbande</w></t></p></sense.gr>
-<sense.gr num="3"><p.col><s><w pos="m">agent</w> du <tilde>racket</tilde></s><t><w pos="n">Schutzgeld</w></t></p.col></sense.gr>
+<sense.gr num="3"><p.col><s><w pos="m">argent</w> du <tilde>racket</tilde></s><t><w pos="n">Schutzgeld</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -2778,12 +2778,12 @@
 
 <entry>
 <lemma.gr><l>Saxe</l><pos pos="f"/></lemma.gr>
-<sense.gr><p><t>Sachsen</t></p></sense.gr>
+<sense.gr><p><t><w pos="prop">Sachsen</w></t></p></sense.gr>
 </entry>
 
 <entry>
-<lemma.gr><l>Saxe</l><pos pos="f"/></lemma.gr>
-<sense.gr><p><t>Sachsen-Anhalt</t></p></sense.gr>
+<lemma.gr><l>Saxe-Anhalt</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Sachsen-Anhalt</w></t></p></sense.gr>
 </entry>
 
 <entry>
