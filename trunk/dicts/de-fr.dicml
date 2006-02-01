@@ -142,6 +142,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Alltag</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">quotidien</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Amsterdam</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t><w pos="prop">Amsterdam</w></t></p></sense.gr>
 </entry>
@@ -174,6 +179,16 @@
 <entry>
 <lemma.gr><l>andorranisch</l><pos pos="adj"/></lemma.gr>
 <sense.gr><p><t>andorran</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Angeklagte</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">accusée</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Angeklagter</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">accusé</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1274,6 +1289,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Glücksträger</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">porte-bonheur</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Graubünden</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t>Grisons</t></p></sense.gr>
 </entry>
@@ -1646,6 +1666,26 @@
 <entry>
 <lemma.gr><l>Kansas</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t><w pos="m">Kansas</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Karikatur</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">caricature</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Karikaturist</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">caricaturiste</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Karikaturistin</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">caricaturiste</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>karikaturistisch</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">caricatural</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -2115,6 +2155,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Maskottchen</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="f">mascotte</w></t><t><w pos="m">porte-bonheur</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Massachusetts</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t><w pos="m">Massachusetts</w></t></p></sense.gr>
 </entry>
@@ -2213,6 +2258,12 @@
 <entry>
 <lemma.gr><l>Mittwoch</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="m">mercredi</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Mohammed</l><pos pos="m"/></lemma.gr>
+<sense.gr num="1"><p n="Stifter des Islams"><t><w pos="m">Mahomet</w></t></p></sense.gr>
+<sense.gr num="2"><p n="Vorname"><t><w pos="m">Mohammed</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -3320,6 +3371,11 @@
 <entry>
 <lemma.gr><l>Tagebuch</l><pos pos="n"/></lemma.gr>
 <sense.gr><p><t><w pos="m">journal</w> intime</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Tageszeitung</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="m">quotidien</w></t></p></sense.gr>
 </entry>
 
 <entry>

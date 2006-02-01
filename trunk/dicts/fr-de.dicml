@@ -16,7 +16,7 @@
 <dic.title>gidoo-Wörterbuch Französisch - Deutsch</dic.title>
 <dic.lang source="fr" target="de"/>
 <dic.source>http://svn.berlios.de/svnroot/repos/owl-dicml/trunk/dicts/fr-de.dicml</dic.source>
-<dic.date creation="2004-10-10" update="2006-01-18"/>
+<dic.date creation="2004-10-10" update="2006-02-01"/>
 <dic.creator.gr><dic.creator><dic.creator.name>Julius Becker</dic.creator.name><dic.creator.e-mail>julius.becker@gidoo.de</dic.creator.e-mail><dic.creator.website>-</dic.creator.website></dic.creator></dic.creator.gr>
 <dic.licence><dic.licence.name>CREATIVE COMMONS PUBLIC LICENSE 2.0</dic.licence.name><dic.licence.source>http://creativecommons.org/licenses/by-nc-nd/2.0/de/</dic.licence.source></dic.licence>
 </head>
@@ -98,8 +98,13 @@
 
 <entry>
 <lemma.gr><l>accusé</l><pos pos="m"/></lemma.gr>
-<sense.gr><p.col><s><tilde>accusé</tilde> de lecture</s><t><w pos="f">Lesebestätigung</w></t></p.col></sense.gr>
-<sense.gr><p.col><s><tilde>accusé</tilde> de réception</s><t><w pos="f">Empfangsbestätigung</w></t></p.col></sense.gr>
+<sense.gr><p dom="lega"><t><w pos="m">Angeklagter</w></t></p></sense.gr>
+<sense.gr><p.col><s><tilde>accusé</tilde> de lecture</s><t><w pos="f">Lesebestätigung</w></t></p.col><p.col><s><tilde>accusé</tilde> de réception</s><t><w pos="f">Empfangsbestätigung</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>accusée</l><pos pos="f"/></lemma.gr>
+<sense.gr><p dom="lega"><t><w pos="f">Angeklagte</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -634,6 +639,26 @@
 <entry>
 <lemma.gr><l>carburant</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="m">Krafstoff</w></t><t><w pos="m">Treibstoff</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>caricatural</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">karikaturistisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>caricature</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Karikatur</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>caricaturiste</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Karikaturist</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>caricaturiste</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Karikaturistin</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1951,6 +1976,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Mahomet</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Mohammed</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Maine</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="prop">Mazedonien</w></t></p><p.col><s>l'ex-République yougoslave de <tilde>Macédoine</tilde></s><t>ehemalige jugoslawische Republik Mazedonien</t></p.col></sense.gr>
 </entry>
@@ -2019,6 +2049,11 @@
 <entry>
 <lemma.gr><l>Maryland</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="prop">Maryland</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>mascotte</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Maskottchen</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -2105,6 +2140,11 @@
 <entry>
 <lemma.gr><l>modifier</l><pos pos="v-t"/></lemma.gr>
 <sense.gr><p><t>verändern</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Mohammed</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Mohammed</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -2470,8 +2510,8 @@
 
 <entry>
 <lemma.gr><l>pertubation</l><pos pos="f"/></lemma.gr>
-<sense.gr><p><t><w pos="f">Unruhe</w></t><ex><s><tilde>pertubation</tilde>s politiques</s><t>politische Unruhen</t></ex><ex><s><tilde>pertubation</tilde>s sociales</s><t>soziale Unruhen</t></ex></p><p n="Verkehr"><t><w pos="f">Störung</w></t><t><w pos="f">Beeinträchtigung</w></t></p></sense.gr>
-<sense.gr dom="meteo"><p><t><w pos="f">Störung</w></t></p><p.col><s><tilde>perubation</tilde>s atmosphériques</s><t>atomosphärische <w pos="fpl">Störungen</w></t></p.col></sense.gr>
+<sense.gr num="1"><p><t><w pos="f">Unruhe</w></t><ex><s><tilde>pertubation</tilde>s politiques</s><t>politische Unruhen</t></ex><ex><s><tilde>pertubation</tilde>s sociales</s><t>soziale Unruhen</t></ex></p><p n="Verkehr"><t><w pos="f">Störung</w></t><t><w pos="f">Beeinträchtigung</w></t></p></sense.gr>
+<sense.gr num="2"><p dom="meteo"><t><w pos="f">Störung</w></t></p><p.col><s><tilde>perubation</tilde>s atmosphériques</s><t>atomosphärische <w pos="fpl">Störungen</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -2545,6 +2585,12 @@
 </entry>
 
 <entry>
+<lemma.gr><l>porte-bonheur</l><pos pos="m"/></lemma.gr>
+<sense.gr num="1"><p><t><w pos="m">Glücksbringer</w></t></p></sense.gr>
+<sense.gr num="2"><p n="mascotte"><t><w pos="n">Maskottchen</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Portugais</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="m">Portugiese</w></t></p></sense.gr>
 </entry>
@@ -2607,6 +2653,13 @@
 <entry>
 <lemma.gr><l>querelleur</l><pos pos="adj"/></lemma.gr>
 <sense.gr><p><t><w pos="adj">streitlustig</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>quotidien</l><pos pos="m"/></lemma.gr>
+<sense.gr num="1"><p n="journal"><t><w pos="m">Tageszeitung</w></t></p></sense.gr>
+<sense.gr num="2"><p n="vie quotidienne"><t><w pos="m">Alltag</w></t></p></sense.gr>
+
 </entry>
 
 <entry>
