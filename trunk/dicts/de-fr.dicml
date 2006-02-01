@@ -400,6 +400,16 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Blog</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">blog</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Blogosphäre</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">blogosphère</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Blutalkohol</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="f">alcoolémie</w></t></p></sense.gr>
 </entry>
@@ -634,6 +644,11 @@
 <entry>
 <lemma.gr><l>Connecticut</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t><w pos="m">Connecticut</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Content-Management-System</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">système</w> de gestion de contenu</t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1464,6 +1479,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Hyperlink</l><pos pos="m"/></lemma.gr>
+<sense.gr><p dom="info"><t><w pos="m">hyperlien</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Icon</l><pos pos="n"/></lemma.gr>
 <sense.gr><p><t><w pos="f">icône</w></t></p></sense.gr>
 </entry>
@@ -1666,6 +1686,11 @@
 <entry>
 <lemma.gr><l>Kentucky</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t><w pos="m">Kentucky</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Kettenbrief</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="f">chaine</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -2363,6 +2388,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Newsletter</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="f">infolettre</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>New York</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t><w pos="m">New York</w></t></p></sense.gr>
 </entry>
@@ -2532,6 +2562,11 @@
 <lemma.gr><l>opfern</l><pos pos="v"/></lemma.gr>
 <sense.gr><p><t>sacrifier</t></p><p.col><s>j-n skrupellos <tilde>opfern</tilde></s><t>passer sur le corps de qn</t></p.col>
 </sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Opferung</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">immolation</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -3045,6 +3080,16 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Selbstentzündung</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s>spontane menschliche <tilde>Selbstentzündung</tilde></s><t><w pos="f">autocombustion</w></t><t><w pos="f">combustion</w> spontanée</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Selbstverbrennung</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">immolation</w> par le feu</t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>senken</l><pos pos="v"/></lemma.gr>
 <sense.gr><p><t>abaisser</t></p></sense.gr>
 </entry>
@@ -3273,6 +3318,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Tagebuch</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">journal</w> intime</t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Tallinn</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t>Tallinn</t></p></sense.gr>
 </entry>
@@ -3445,6 +3495,26 @@
 <entry>
 <lemma.gr><l>übertragbar</l><pos pos="adj"/></lemma.gr>
 <sense.gr><p><t>transmissible</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Ufo</l><l.alt>UFO</l.alt><pos pos="n"/></lemma.gr>
+<sense.gr><p n="unbekanntes Flugobjekt"><t><w pos="m">ovni</w></t><t><w pos="m">objet</w> volant non identifié</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Ufologe</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">ufologue</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Ufologie</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">ufologie</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Ufologin</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">ufologue</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -3689,7 +3759,7 @@
 
 <entry>
 <lemma.gr><l>Website</l><pos pos="f"/></lemma.gr>
-<sense.gr><p><t><w pos="m">site</w> internet</t></p></sense.gr>
+<sense.gr><p><t><w pos="m">site</w> web</t></p></sense.gr>
 </entry>
 
 <entry>

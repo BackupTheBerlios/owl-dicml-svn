@@ -396,6 +396,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>autocombustion</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t>spontane menschliche <w pos="f">Selbstentzündung</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>autorépondeur</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="m">Autoresponder</w></t></p></sense.gr>
 </entry>
@@ -508,6 +513,16 @@
 <entry>
 <lemma.gr><l>bloc</l><pos pos="m"/></lemma.gr>
 <sense.gr><p.col><s><tilde>bloc</tilde> opératoire</s><t><w pos="m">Operationssaal</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>blog</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Blog</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>blogosphère</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Blogosphäre</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -652,6 +667,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>chaine</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Kettenbrief</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>champ</l><pos pos="m"/></lemma.gr>
 <sense.gr><p.col><s><tilde>champ</tilde> sémantique</s><t><w pos="n">Wortfeld</w></t></p.col></sense.gr>
 </entry>
@@ -739,6 +759,11 @@
 <entry>
 <lemma.gr><l>Colorado</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="prop">Colorado</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>combustion</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s><tilde>combustion</tilde> spontanée</s><t>spontane menschliche <w pos="f">Selbstentzündung</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -1544,6 +1569,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>hyperlien</l><pos pos="m"/></lemma.gr>
+<sense.gr><p dom="info"><t><w pos="m">Hyperlink</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>icône</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="n">Icon</w></t></p></sense.gr>
 </entry>
@@ -1561,6 +1591,11 @@
 <entry>
 <lemma.gr><l>Illinois</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="prop">Illinois</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>immolation</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Opferung</w></t></p><p.col><s><tilde>immolation</tilde> par le feu</s><t><w pos="f">Selbstverbrennung</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -1601,6 +1636,11 @@
 <entry>
 <lemma.gr><l>infirmière</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="f">Krankenschwester</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>infolettre</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Newsletter</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1706,6 +1746,11 @@
 <entry>
 <lemma.gr><l>jour</l><pos pos="m"/></lemma.gr>
 <sense.gr><p.col><s>petit <tilde>jour</tilde></s><t><w pos="n">Morgengrauen</w></t><t><w pos="n">Morgendämmerung</w></t></p.col><p.col><s>au petit <tilde>jour</tilde></s><t>im Morgengrauen</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>journal</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>journal</tilde> intime</s><t><w pos="n">Tagebuch</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -2351,6 +2396,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>ovni</l><pos pos="m"/></lemma.gr>
+<sense.gr><p n="objet volant non identifié"><t><w pos="n">Ufo</w></t><t>unbekanntes <w pos="n">Flugobjekt</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>page</l><pos pos="f"/></lemma.gr>
 <sense.gr><p.col><s><tilde>page</tilde> d'accueil</s><t><w pos="f">Startseite</w></t><t><w pos="f">Homepage</w></t></p.col><p.col><s><tilde>page</tilde> internet</s><t><w pos="f">Internetseite</w></t></p.col></sense.gr>
 </entry>
@@ -2853,7 +2903,7 @@
 
 <entry>
 <lemma.gr><l>site</l><pos pos="m"/></lemma.gr>
-<sense.gr><p.col><s><tilde>site</tilde> internet</s><t><w pos="f">Website</w></t></p.col></sense.gr>
+<sense.gr><p.col><s><tilde>site</tilde> web</s><t><w pos="f">Website</w></t></p.col></sense.gr>
 <sense.gr><p.col><s><w pos="m">anneau</w> de <tilde>site</tilde>s</s><t><w pos="m">Webring</w></t></p.col></sense.gr>
 </entry>
 
@@ -2935,7 +2985,7 @@
 
 <entry>
 <lemma.gr><l>système</l><pos pos="m"/></lemma.gr>
-<sense.gr><p.col><s><tilde>système</tilde> d'exploitation</s><t><w pos="n">Betriebssystem</w></t></p.col></sense.gr>
+<sense.gr><p.col><s><tilde>système</tilde> d'exploitation</s><t><w pos="n">Betriebssystem</w></t></p.col><p.col><s><tilde>système</tilde> de gestion de contenu</s><t><w pos="n">Content-Management-System</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -3043,6 +3093,21 @@
 <entry>
 <lemma.gr><l>UE</l><pos pos="f"/></lemma.gr>
 <sense.gr><p n="Union Européenne"><t><w pos="f">EU</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>ufologie</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Ufologie</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>ufologue</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Ufologe</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>ufologue</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Ufologin</w></t></p></sense.gr>
 </entry>
 
 <entry>
