@@ -16,7 +16,7 @@
 <dic.title>gidoo-Wörterbuch Französisch - Deutsch</dic.title>
 <dic.lang source="fr" target="de"/>
 <dic.source>http://svn.berlios.de/svnroot/repos/owl-dicml/trunk/dicts/fr-de.dicml</dic.source>
-<dic.date creation="2004-10-10" update="2006-02-01"/>
+<dic.date creation="2004-10-10" update="2006-02-02"/>
 <dic.creator.gr><dic.creator><dic.creator.name>Julius Becker</dic.creator.name><dic.creator.e-mail>julius.becker@gidoo.de</dic.creator.e-mail><dic.creator.website>-</dic.creator.website></dic.creator></dic.creator.gr>
 <dic.licence><dic.licence.name>CREATIVE COMMONS PUBLIC LICENSE 2.0</dic.licence.name><dic.licence.source>http://creativecommons.org/licenses/by-nc-nd/2.0/de/</dic.licence.source></dic.licence>
 </head>
@@ -113,6 +113,16 @@
 </entry>
 
 <entry>
+<lemma.gr><l>acide</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>acide</tilde> citrique</s><t><w pos="f">Zitronensäure</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>acidifiant</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Säuerungsmittel</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>acronyme</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="n">Akronym</w></t></p></sense.gr>
 </entry>
@@ -201,6 +211,11 @@
 <entry>
 <lemma.gr><l>Albanie</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t>Albanien</t></p><p.col><s>la République d'<tilde>Albanie</tilde></s><t>die Republik Albanien</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Alberta</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Alberta</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -531,6 +546,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>bonbon</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>bonbon</tilde> aux herbes</s><t><w pos="m">Kräuterbonbon</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>bonhomme</l><pos pos="m"/></lemma.gr>
 <sense.gr><p.col><s><tilde>bonhomme</tilde> de neige</s><t><w pos="m">Schneemann</w></t></p.col></sense.gr>
 </entry>
@@ -624,6 +644,11 @@
 <entry>
 <lemma.gr><l>Californie</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="prop">Kalifornien</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>canneberge</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Cranberry</w></t></p><p.col><s><w pos="m">concentré</w> de jus de <tilde>canneberge</tilde></s><t><w pos="n">Cranberrysaftkonzentrat</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -774,6 +799,11 @@
 <entry>
 <lemma.gr><l>cité</l><pos pos="f"/></lemma.gr>
 <sense.gr><p.col><s>Cité du Vatican</s><t><w pos="f">Vatikanstadt</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Colombie-Britannique</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Britisch-Kolumbien</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1028,6 +1058,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>departement</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Departement</w></t></p><p.col><s><tilde>département</tilde> d'outre-mer</s><t><w pos="n">Überseedepartement</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>dépôt</l><pos pos="m"/></lemma.gr>
 <sense.gr><p.col><s><tilde>dépot</tilde> de carburant</s><t><w pos="n">Kraftstofflager</w></t><t><w pos="n">Treibstofflager</w></t></p.col></sense.gr>
 </entry>
@@ -1078,6 +1113,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>DOM</l><pos pos="m"/></lemma.gr>
+<sense.gr><p n="département d'outre-mer"><t><w pos="n">Überseedepartement</w></t><ex><s>Dans l'Union Européenne, les <tilde>DOM</tilde> ont un statut de régions ultrapériphériques.</s><t>In der Europäischen Union haben die Überseedepartements den Status einer ultraperiphären Region.</t></ex></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>dossier</l><pos pos="m"/></lemma.gr>
 <sense.gr><p.col><s><tilde>dossier</tilde> médical</s><t><w pos="f">Krankengeschichte</w></t></p.col></sense.gr>
 </entry>
@@ -1125,6 +1165,11 @@
 <entry>
 <lemma.gr><l>EDI</l><pos pos="m"/></lemma.gr>
 <sense.gr><p n="échange de données informatisé"><t><w pos="m">EDI</w></t><t>elektronischer <w pos="m">Datenaustausch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>édulcorant</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Süßungsmittel</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1609,8 +1654,13 @@
 </entry>
 
 <entry>
-<lemma.gr><l>Île-de-France</l><pos pos="prop"/></lemma.gr>
-<sense.gr><p><t>Île-de-France</t></p></sense.gr>
+<lemma.gr><l>Île-de-France</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Île-de-France</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Île-du-Prince-Édouard</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Prinz-Edward-Insel</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1831,6 +1881,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>laxatif</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t>leicht <w pos="adj">abführend</w></t><ex><s>Une consommation excessive peut avoir des effets <tilde>laxatif</tilde>s.</s><t>Kann bei übermäßigen Verzehr abführend wirken.</t></ex></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>lecteur</l><pos pos="m"/></lemma.gr>
 <sense.gr><p.col><s><tilde>lecteur</tilde> de cédérom</s><t><w pos="n">CD-ROM-Laufwerk</w></t></p.col><p.col><s><tilde>lecteur</tilde> de disquette</s><t><w pos="n">Diskettenlaufwerk</w></t></p.col></sense.gr>
 </entry>
@@ -2024,6 +2079,11 @@
 <entry>
 <lemma.gr><l>Malte</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t><w pos="prop">Malta</w></t></p><p.col><s>la République de <tilde>Malte</tilde></s><t>die Republik Malta</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Manitoba</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Manitoba</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -2338,8 +2398,23 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Nouveau-Brunswick</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Neubraunschweig</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Nouveau-Mexique</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="prop">New Mexico</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Nouvelle-Écosee</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Neuschottland</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Nouvelle-Calédonie</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Neukaledonien</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -2400,6 +2475,11 @@
 <entry>
 <lemma.gr><l>ONU</l><pos pos="f"/></lemma.gr>
 <sense.gr><p n="Organisation des Nations unies"><t><w pos="fpl">VN</w></t><t>Vereinte <w pos="fpl">Nationen</w></t><t><w pos="f">UNO</w></t><t><w pos="fpl">UN</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Ontario</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Ontario</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -2535,6 +2615,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>phénylalanine</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Phenylalanin</w></t><ex><s>Contiet une source de <tilde>phénylalanine</tilde>.</s><t>Enthält eine Phenylalaninquelle.</t></ex></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>phrase</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="m">Satz</w></t></p></sense.gr>
 </entry>
@@ -2648,6 +2733,11 @@
 <entry>
 <lemma.gr><l>quartier</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="n">Viertel</w></t></p><p.col><s><tilde>quartier</tilde> sensible</s><t><w pos="n">Problemviertel</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Québec</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Québec</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -2876,7 +2966,12 @@
 
 <entry>
 <lemma.gr><l>Sarre</l><pos pos="f"/></lemma.gr>
-<sense.gr><p><t>Saarland</t></p></sense.gr>
+<sense.gr><p><t><w pos="n">Saarland</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Saskatchewan</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Saskatchewan</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -3062,8 +3157,13 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Terre-Neuve-et-Labrador</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Neufundland und Labrador</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Tessin</l><pos pos="prop"/></lemma.gr>
-<sense.gr><p><t>Tessin</t></p></sense.gr>
+<sense.gr><p><t><w pos="prop">Tessin</w></t></p></sense.gr>
 </entry>
 
 <entry>

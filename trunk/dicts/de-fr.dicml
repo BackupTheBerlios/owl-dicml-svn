@@ -16,7 +16,7 @@
 <dic.title>gidoo-Wörterbuch Deutsch - Französisch</dic.title>
 <dic.lang source="de" target="fr"/>
 <dic.source>http://svn.berlios.de/svnroot/repos/owl-dicml/trunk/dicts/de-fr.dicml</dic.source>
-<dic.date creation="2004-10-10" update="2006-01-18"/>
+<dic.date creation="2004-10-10" update="2006-02-02"/>
 <dic.creator.gr><dic.creator><dic.creator.name>Julius Becker</dic.creator.name><dic.creator.e-mail>julius.becker@gidoo.de</dic.creator.e-mail><dic.creator.website>http://koocachoo.de</dic.creator.website></dic.creator></dic.creator.gr>
 <dic.licence><dic.licence.name>CREATIVE COMMONS PUBLIC LICENSE 2.0</dic.licence.name><dic.licence.source>http://creativecommons.org/licenses/by-nc-nd/2.0/de/</dic.licence.source></dic.licence>
 </head>
@@ -49,6 +49,11 @@
 <entry>
 <lemma.gr><l>abbrennen</l><pos pos="v-t"/></lemma.gr>
 <sense.gr><p><t>bruler</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>abführend</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p.col><s>leicht <tilde>abführend</tilde></s><t><w pos="adj">laxatif</w></t><ex><s>Kann bei übermäßigen Verzehr <tilde>abführend</tilde> wirken.</s><t>Une consommation excessive peut avoir des effets laxatifs.</t></ex></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -129,6 +134,11 @@
 <entry>
 <lemma.gr><l>albanisch</l><pos pos="adj"/></lemma.gr>
 <sense.gr><p><t>albanais</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Alberta</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Alberta</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -481,6 +491,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Britisch-Kolumbien</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Colombie-Britannique</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Browser</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="m">navigateur</w></t><t><w pos="m">logiciel</w> de navigation</t></p></sense.gr>
 </entry>
@@ -672,6 +687,16 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Cranberry</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">canneberge</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Cranberrysaftkonzentrat</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">concentré</w> de jus de canneberge</t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Däne</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="m">Danois</w></t></p></sense.gr>
 </entry>
@@ -729,6 +754,11 @@
 <entry>
 <lemma.gr><l>Den Haag</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t><w pos="prop">La Haye</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Departement</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">département</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1520,7 +1550,7 @@
 
 <entry>
 <lemma.gr><l>Île-de-France</l><pos pos="prop"/></lemma.gr>
-<sense.gr><p><t>Île-de-France</t></p></sense.gr>
+<sense.gr><p><t><w pos="f">Île-de-France</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1875,6 +1905,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Kräuterbonbon</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">bonbon</w> aux herbes</t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Krawall</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="f">émeute</w></t></p></sense.gr>
 </entry>
@@ -2142,6 +2177,11 @@
 <entry>
 <lemma.gr><l>maltesisch</l><pos pos="adj"/></lemma.gr>
 <sense.gr><p><t><w pos="adj">maltais</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Manitoba</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Manitoba</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -2414,8 +2454,28 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Neubraunschweig</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Nouveau-Brunswick</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Neuenburg</l><pos pos="prop"/></lemma.gr>
-<sense.gr><p><t>Neuchâtel</t></p></sense.gr>
+<sense.gr><p><t><w pos="prop">Neuchâtel</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Neufundland</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p.col><s><tilde>Neufundland</tilde> und Labrador</s><t><w pos="prop">Terre-Neuve-et-Labrador</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Neukaledonien</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Nouvelle-Calédonie</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Neuschottland</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Nouvelle-Écosse</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -2600,6 +2660,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Ontario</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Ontario</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Operationssaal</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="m">bloc</w> opératoire</t></p></sense.gr>
 </entry>
@@ -2722,6 +2787,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Phenylalanin</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="f">phénylalanine</w></t><ex><s>Enthält eine <tilde>Phenylalanin</tilde>quelle.</s><t>Contient une source de phénylalanine.</t></ex></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Pole</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="m">Polonais</w></t></p></sense.gr>
 </entry>
@@ -2777,6 +2847,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Prinz-Edward-Insel</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="m">préambule</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>privilegiert</l><pos pos="adj"/></lemma.gr>
 <sense.gr><p><t><w pos="adj">privilégié</w></t></p></sense.gr>
 </entry>
@@ -2804,6 +2879,11 @@
 <entry>
 <lemma.gr><l>Purserette</l><pos pos="f"/></lemma.gr>
 <sense.gr><p dom="avia"><t><w pos="m">chef</w> de cabine</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Québec</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Québec</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -2992,7 +3072,7 @@
 
 <entry>
 <lemma.gr><l>Saarland</l><pos pos="n"/></lemma.gr>
-<sense.gr><p><t>Sarre</t></p></sense.gr>
+<sense.gr><p><t><w pos="f">Sarre</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -3026,8 +3106,18 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Saskatchewan</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Saskatchewan</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Satz</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="f">phrase</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Säuerungsmittel</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">acidifiant</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -3349,6 +3439,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Süßungsmittel</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">édulcorant</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Syndrom</l><pos pos="n"/></lemma.gr>
 <sense.gr><p><t><w pos="m">syndrome</w></t></p></sense.gr>
 </entry>
@@ -3549,8 +3644,13 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Überseedepartement</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">DOM</w></t><t><w pos="m">département</w> d'outre-mer</t><ex><s>In der Europäischen Union haben die <tilde>Überseedepartement</tilde>s den Status einer ultraperiphären Region.</s><t>Dans l'Union Européenne, les DOM ont un statut de régions ultrapériphériques.</t></ex></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>übertragbar</l><pos pos="adj"/></lemma.gr>
-<sense.gr><p><t>transmissible</t></p></sense.gr>
+<sense.gr><p><t><w pos="adj">transmissible</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -4000,6 +4100,11 @@
 <entry>
 <lemma.gr><l>Zagreb</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t><w pos="prop">Zagreb</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Zitronensäure</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="m">acide</w> citrique</t></p></sense.gr>
 </entry>
 
 <entry>
