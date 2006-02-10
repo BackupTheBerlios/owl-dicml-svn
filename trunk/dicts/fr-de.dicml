@@ -382,7 +382,8 @@
 
 <entry>
 <lemma.gr><l>attaque</l><pos pos="f"/></lemma.gr>
-<sense.gr><p.col><s><tilde>attaque</tilde> cérébrale</s><t><w pos="m">Schlaganfall</w></t></p.col></sense.gr>
+<sense.gr num="1"><p><t><w pos="m">Angriff</w></t></p></sense.gr>
+<sense.gr num="2"><p.col><s><tilde>attaque</tilde> cérébrale</s><t><w pos="m">Schlaganfall</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -462,7 +463,7 @@
 
 <entry>
 <lemma.gr><l>Bâle</l><pos pos="prop"/></lemma.gr>
-<sense.gr><p><t>Basel</t></p><p.col><s><tilde>Bâle</tilde>-Campagne</s><t>Basel-Landschaft</t></p.col><p.col><s><tilde>Bâle</tilde>-Ville</s><t>Basel-Stadt</t></p.col></sense.gr>
+<sense.gr><p><t><w pos="prop">Basel</w></t></p><p.col><s><tilde>Bâle</tilde>-Campagne</s><t>Basel-Landschaft</t></p.col><p.col><s><tilde>Bâle</tilde>-Ville</s><t>Basel-Stadt</t></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -512,12 +513,22 @@
 
 <entry>
 <lemma.gr><l>Berlin</l><pos pos="prop"/></lemma.gr>
-<sense.gr><p><t>Berlin</t></p></sense.gr>
+<sense.gr><p><t><w pos="prop">Berlin</w></t></p></sense.gr>
 </entry>
 
 <entry>
 <lemma.gr><l>Berne</l><pos pos="prop"/></lemma.gr>
-<sense.gr><p><t>Bern</t></p></sense.gr>
+<sense.gr><p><t><w pos="prop">Bern</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Beyrouth</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Beirut</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>biathlon</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Biathlon</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -953,6 +964,11 @@
 <entry>
 <lemma.gr><l>Croix-Rouge</l><pos pos="f"/></lemma.gr>
 <sense.gr><p.col><s><tilde>Croix-Rouge</tilde> Française</s><t>Französisches <w pos="n">Rotes Kreuz</w></t></p.col><p.col><s><tilde>Croix-Rouge</tilde> Allemande</s><t>Deutsches <w pos="n">Rotes Kreuz</w></t><t><w pos="n">DRK</w></t></p.col><p.col><s><w pos="m">Comité</w> international de la <tilde>Croix-Rouge</tilde></s><t>Internationales <w pos="n">Komitee</w> vom Roten Kreuz</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>curling</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Curling</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1614,6 +1630,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>hockey</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>hockey</tilde> sur glace</s><t><w pos="n">Eishockey</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>hôpital</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="n">Krankenhaus</w></t></p></sense.gr>
 </entry>
@@ -1734,6 +1755,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>ire</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Zorn</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Irlandais</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="m">Ire</w></t></p></sense.gr>
 </entry>
@@ -1811,6 +1837,12 @@
 <entry>
 <lemma.gr><l>Italienne</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="f">Italienerin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>jeu</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><w pos="mpl">Jeux</w> Olympiques d'été</s><t>Olympische <w pos="m">Sommerspiele</w></t><ex><s>Les XXVIIIes Jeux Olympiques d'été se sont déroulés à Athènes.</s><t>Die XXVIII. Olympischen Sommerspiele fanden in Athen statt.</t></ex></p.col>
+<p.col><s><w pos="mpl">Jeux</w> Olympiques d'hiver</s><t>Olympische <w pos="m">Winterspiele</w></t><ex><s>Les XXes Jeux Olympiques d'hiver se déroulent à Turin, capitale de la région italienne du Piémont.</s><t>Die XX. Olympischen Winterspiele werden in Turin ausgetragen, der Hauptstadt der italienischen Region Piemont.</t></ex></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -2439,7 +2471,7 @@
 
 <entry>
 <lemma.gr><l>œuf</l><pos pos="m"/></lemma.gr>
-<sense.gr><p><t><w pos="m">Ei</w></t></p></sense.gr>
+<sense.gr><p><t><w pos="n">Ei</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -2565,6 +2597,11 @@
 <entry>
 <lemma.gr><l>pathogène</l><pos pos="adj"/></lemma.gr>
 <sense.gr><p><t><w pos="adj">krankheitserregend</w></t><t><w pos="adj">pathogen</w></t></p><p.col><s>hautement <tilde>pathogène</tilde></s><t>hochpathogen</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>patinage</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>patinage</tilde> artistique</s><t><w pos="n">Eiskunstlauf</w></t></p.col><p.col><s><tilde>patinage</tilde> de vitesse</s><t><w pos="n">Eisschnelllauf</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -2819,12 +2856,22 @@
 </entry>
 
 <entry>
-<lemma.gr><l>Reykjavík</l><pos pos="prop"/></lemma.gr>
-<sense.gr><p><t>Reykjavik</t></p></sense.gr>
+<lemma.gr><l>ressortissant</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Staatsangehöriger</w></t></p></sense.gr>
+</entry>
+           
+<entry>
+<lemma.gr><l>ressortissante</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Staatsangehörige</w></t></p></sense.gr>
 </entry>
 
 <entry>
-<lemma.gr><l>Rhénanie</l><pos pos="prop"/></lemma.gr>
+<lemma.gr><l>Reykjavík</l><pos pos="prop"/></lemma.gr>
+<sense.gr><p><t><w pos="prop">Reykjavik</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Rhénanie</l><pos pos="f"/></lemma.gr>
 <sense.gr><p.col><s><tilde>Rhénanie</tilde> du Nord/Westphalie</s><t>Nordrhein-Westfalen</t></p.col><p.col><s><tilde>Rhénanie</tilde>-Palatinat</s><t>Rheinland-Pfalz</t></p.col></sense.gr>
 </entry>
 
@@ -2975,6 +3022,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>saut</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>saut</tilde> à ski</s><t><w pos="n">Skispringen</w></t><t><w pos="n">Schispringen</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Saxe</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="prop">Sachsen</w></t></p></sense.gr>
 </entry>
@@ -3025,18 +3077,29 @@
 </entry>
 
 <entry>
+<lemma.gr><l>serment</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Eid</w></t></p></sense.gr>
+<sense.gr><p.col><s>Serment olympique</s><t>Olympische <w pos="m">Eid</w></t><ex><s>La version actuelle du Serment olympique est : « Au nom de tous les concurrents, je promets que nous prendrons part à ces Jeux olympiques en respectant et suivant les règles qui les régissent, en nous engageant pour un sport sans dopage et sans drogues, dans un esprit de sportivité, pour la gloire du sport et l'honneur de nos équipes. »</s><t>Die aktuelle Fassung des Olympischen Eides lautet: »Im Namen aller Athleten verspreche ich, dass wir an den Olympischen Spielen teilnehmen und dabei die gültigen Regeln respektieren und befolgen und uns dabei einem Sport ohne Doping und ohne Drogen verpflichten, im wahren Geist der Sportlichkeit, für den Ruhm des Sports und die Ehre unserer Mannschaft.«</t></ex></p.col></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>séronégatif</l><pos pos="adj"/></lemma.gr>
-<sense.gr><p><t>HIV-negatif</t></p></sense.gr>
+<sense.gr><p><t><w pos="adj">HIV-negatif</w></t></p></sense.gr>
 </entry>
 
 <entry>
 <lemma.gr><l>séropositif</l><pos pos="adj"/></lemma.gr>
-<sense.gr><p><t>HIV-positif</t><t>HIV-infiziert</t></p></sense.gr>
+<sense.gr><p><t><w pos="adj">HIV-positif</w></t><t><w pos="adj">HIV-infiziert</w></t></p></sense.gr>
 </entry>
 
 <entry>
 <lemma.gr><l>service</l><pos pos="m"/></lemma.gr>
 <sense.gr><p.col><s><tilde>service</tilde> des urgences</s><t><w pos="f">Notfallaufnahme</w></t></p.col><p.col><s><tilde>service</tilde> d'aide médical d'urgence</s><t><w pos="m">Notarzt</w></t></p.col><p.col><s><tilde>service</tilde> d'obstétrique</s><t><w pos="f">Entbindungsstation</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>short-track</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Shorttrack</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -3056,6 +3119,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>ski</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Ski</w></t><t><w pos="m">Schi</w></t></p><p.col><s><tilde>ski</tilde> acrobatique</s><t><w pos="n">Freestyle-Skiing</w></t><t><w pos="m">Schilanglauf</w></t></p.col><p.col><s><tilde>ski</tilde> alpin</s><t><w pos="m">Ski</w> alpin</t><t><w pos="m">Ski</w> alpin</t></p.col><p.col><s><tilde>ski</tilde> de fond</s><t><w pos="m">Skilanglauf</w></t><t><w pos="m">Schilanglauf</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Skopje</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t><w pos="prop">Skopje</w></t></p></sense.gr>
 </entry>
@@ -3063,6 +3131,22 @@
 <entry>
 <lemma.gr><l>slogan</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="m">Slogan</w></t><t><w pos="m">Spruch</w></t></p><p.col><s><tilde>slogan</tilde> publicitaire</s><t><w pos="m">Werbeslogan</w></t><t><w pos="m">Werbespruch</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>snowboard</l><pos pos="m"/></lemma.gr>
+<sense.gr><p n="Sportgerät"><t><w pos="n">Snowboard</w></t></p></sense.gr>
+<sense.gr><p n="Disziplin"><t><w pos="n">Snowboarden</w></t><t><w pos="n">Snowboardfahren</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>snowboardeur</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Snowboarder</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>snowboardeuse</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Snowboarderin</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -3124,6 +3208,11 @@
 <entry>
 <lemma.gr><l>superficie</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="f">Fläche</w></t><t><w pos="f">Oberfläche</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>surf</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>surf</tilde> des neiges</s><t><w pos="n">Snowboarden</w></t><t><w pos="n">Snowboardfahren</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
