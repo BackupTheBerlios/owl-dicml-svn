@@ -53,8 +53,14 @@ public class Main {
               {
                 dir = ChemnitzConverter.TranslationDirection.LEFT_SIDE;
               }
-                      
-              conv.convertChemnitz(args[1], args[2], "", dir);
+              if(args.length >= 5)
+              {
+                conv.convertChemnitz(args[1], args[2], args[4], dir);
+              }
+              else
+              {
+                conv.convertChemnitz(args[1], args[2], "", dir);
+              }
               return;
             }
           }

@@ -74,10 +74,10 @@ public class ChemnitzConverter {
     rplDom.put("gramm.", "ling");
     rplDom.put("jur.", "lega");
     rplDom.put("math.", "math");
-    rplDom.put("med.", "medi");
+    rplDom.put("med.", "medic");
     rplDom.put("mil.", "mili");
     rplDom.put("min.", "mine");
-    rplDom.put("mus.", "musi");
+    rplDom.put("mus.", "music");
     rplDom.put("naut.", "naut");
     rplDom.put("ornith.", "orni");
     rplDom.put("pharm.", "phar");
@@ -107,7 +107,7 @@ public class ChemnitzConverter {
         fileOut = new File(Out);
         writerOut = new OutputStreamWriter(new FileOutputStream(fileOut), "UTF-8");
         info("writing header");
-        writeHeader("");
+        writeHeader(config);
         
         int r;
         char ch;
@@ -414,11 +414,15 @@ public class ChemnitzConverter {
   
   void writeHeader(String conf) throws IOException
   {
-      String buffer = "";
-      buffer += "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
-      buffer += "<!DOCTYPE dicml PUBLIC \"-//gidoo//DTD DICML 1.0 bi//EN\" \"http://www3.gidoo.de/dtd/dicml,1.0,bi.dtd\">\n";
-      buffer += "<dicml xmlns:dicml=\"http://www3.gidoo.de/dtd/dicml/1.0/bi\">\n";
-      buffer += "<head>\n";
+    String buffer = "";
+    buffer += "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
+    buffer += "<!DOCTYPE dicml PUBLIC \"-//gidoo//DTD DICML 1.0 bi//EN\" \"http://www3.gidoo.de/dtd/dicml,1.0,bi.dtd\">\n";
+    buffer += "<dicml xmlns:dicml=\"http://www3.gidoo.de/dtd/dicml/1.0/bi\">\n";
+    buffer += "<head>\n";
+    if(conf == null || conf.equals(""))
+    {      
+      info("using standard-header: please correct it manually afterwards");
+
       buffer += "\t<dic.lang source=\"???\" target=\"???\"/>\n";
       buffer += "\t<dic.creator.gr>\n";
       buffer += "\t\t<dic.creator>\n";
@@ -429,11 +433,27 @@ public class ChemnitzConverter {
       buffer += "\t\t<dic.licence.name>???</dic.licence.name>\n";
       buffer += "\t\t<dic.licence.source>???</dic.licence.name>\n";
       buffer += "\t</dic.licence>\n";
-      buffer += "</head>\n";
-      buffer += "<body>\n";
-      
-      write(buffer);
     }
+    else
+    {
+      info("using header \"" + conf + "\"");
+      FileReader confReader = new FileReader(conf);
+      int c;
+      c = confReader.read();
+      while(c != -1)
+      {
+        char d = (char) c;
+        buffer += d;
+        c = confReader.read();
+      }  
+      confReader.close();
+    }
+    
+    buffer += "</head>\n";
+    buffer += "<body>\n";
+    
+    write(buffer);
+  }
   
   void writeFooter() throws IOException
   {
