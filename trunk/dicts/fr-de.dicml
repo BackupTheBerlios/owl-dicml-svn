@@ -16,7 +16,7 @@
 <dic.title>gidoo-Wörterbuch Französisch - Deutsch</dic.title>
 <dic.lang source="fr" target="de"/>
 <dic.source>http://svn.berlios.de/svnroot/repos/owl-dicml/trunk/dicts/fr-de.dicml</dic.source>
-<dic.date creation="2004-10-10" update="2006-02-02"/>
+<dic.date creation="2004-10-10" update="2006-02-10"/>
 <dic.creator.gr><dic.creator><dic.creator.name>Julius Becker</dic.creator.name><dic.creator.e-mail>julius.becker@gidoo.de</dic.creator.e-mail><dic.creator.website>-</dic.creator.website></dic.creator></dic.creator.gr>
 <dic.licence><dic.licence.name>CREATIVE COMMONS PUBLIC LICENSE 2.0</dic.licence.name><dic.licence.source>http://creativecommons.org/licenses/by-nc-nd/2.0/de/</dic.licence.source></dic.licence>
 </head>
@@ -725,6 +725,11 @@
 <entry>
 <lemma.gr><l>Catalogne</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="n">Katalonien</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>cérémonie</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s><tilde>cérémonie</tilde> de clôture</s><t><w pos="f">Schlussfeier</w></t></p.col><p.col><s><tilde>cérémonie</tilde> d'ouverture</s><t><w pos="f">Eröffnungsfeier</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
