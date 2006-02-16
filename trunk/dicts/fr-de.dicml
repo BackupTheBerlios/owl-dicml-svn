@@ -16,8 +16,8 @@
 <dic.title>gidoo-Wörterbuch Französisch - Deutsch</dic.title>
 <dic.lang source="fr" target="de"/>
 <dic.source>http://svn.berlios.de/svnroot/repos/owl-dicml/trunk/dicts/fr-de.dicml</dic.source>
-<dic.date creation="2004-10-10" update="2006-02-10"/>
-<dic.creator.gr><dic.creator><dic.creator.name>Julius Becker</dic.creator.name><dic.creator.e-mail>julius.becker@gidoo.de</dic.creator.e-mail><dic.creator.website>-</dic.creator.website></dic.creator></dic.creator.gr>
+<dic.date creation="2004-10-10" update="2006-02-16"/>
+<dic.creator.gr><dic.creator><dic.creator.name>Julius Becker</dic.creator.name><dic.creator.e-mail>julius.becker@gidoo.de</dic.creator.e-mail><dic.creator.website>http://koocachoo.de</dic.creator.website></dic.creator></dic.creator.gr>
 <dic.licence><dic.licence.name>CREATIVE COMMONS PUBLIC LICENSE 2.0</dic.licence.name><dic.licence.source>http://creativecommons.org/licenses/by-nc-nd/2.0/de/</dic.licence.source></dic.licence>
 </head>
 
@@ -457,6 +457,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>bain</l><pos pos="m"/></lemma.gr>
+<sense.gr><p.col><s><tilde>bain</tilde> de sang</s><t><w pos="n">Blutbad</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>balançoire</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="f">Schaukel</w></t></p></sense.gr>
 </entry>
@@ -758,6 +763,17 @@
 </entry>
 
 <entry>
+<lemma.gr><l>chat</l><pos pos="m"/></lemma.gr>
+<sense.gr><p n="Gattung"><t><w pos="f">Katze</w></t></p></sense.gr>
+<sense.gr><p n="männliches Tier"><t><w pos="m">Kater</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>chatte</l><pos pos="f"/></lemma.gr>
+<sense.gr><p n="weibliches Tier"><t><w pos="f">Katze</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>chaussure</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="m">Schuh</w></t></p></sense.gr>
 </entry>
@@ -775,6 +791,16 @@
 <entry>
 <lemma.gr><l>cheval</l><pos pos="m"/></lemma.gr>
 <sense.gr><p.col n="nom d'un jeu"><s>les petits chevaux</s><t><w pos="n">Mensch-ärgere-dich-nicht</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>chien</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Hund</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>chienne</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Hündin</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1347,6 +1373,11 @@
 <entry>
 <lemma.gr><l>fièvre</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="n">Fieber</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>filoutage</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Phishing</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -2662,13 +2693,43 @@
 </entry>
 
 <entry>
+<lemma.gr><l>phishing</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Phishing</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>phrase</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="m">Satz</w></t></p></sense.gr>
 </entry>
 
 <entry>
+<lemma.gr><l>Piémont</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Piemont</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Piémontais</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Piemontese</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>piémontais</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">piemontesisch</w></t><t><w pos="adj">piemontisch</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Piémontaise</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Piemontesin</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>piste</l><pos pos="f"/></lemma.gr>
 <sense.gr><p.col><s><tilde>piste</tilde> d'atterrissage</s><t><w pos="f">Landebahn</w></t></p.col><p.col><s><tilde>piste</tilde> de décollage</s><t><w pos="f">Startbahn</w></t></p.col><p.col><s><tilde>piste</tilde> d'envol</s><t><w pos="f">Startbahn</w></t></p.col><p.col><s><tilde>piste</tilde> de départ</s><t><w pos="f">Startbahn</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>plateforme</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s><tilde>plateforme</tilde> de correspondance</s><t><w pos="m">Hub</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -2679,6 +2740,11 @@
 <entry>
 <lemma.gr><l>pois</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="f">Erbse</w></t></p><p.col><s>petits <w pos="mpl"><tilde>pois</tilde></w></s><t>grüne <w pos="fpl">Erbsen</w></t></p.col><p.col><s><w pos="mpl"><tilde>pois</tilde></w> secs jaunes</s><t>gelbe <w pos="fpl">Erbsen</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>pôle</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Hub</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -2765,6 +2831,11 @@
 <entry>
 <lemma.gr><l>printemps</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="m">Frühling</w></t><ex><s>au printemps</s><t>im Frühling</t></ex></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>prise</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s><tilde>prise</tilde> d'otages</s><t><w pos="f">Geiselnahme</w></t></p.col></sense.gr>
 </entry>
 
 <entry>

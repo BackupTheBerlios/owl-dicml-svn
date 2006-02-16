@@ -16,7 +16,7 @@
 <dic.title>gidoo-Wörterbuch Deutsch - Französisch</dic.title>
 <dic.lang source="de" target="fr"/>
 <dic.source>http://svn.berlios.de/svnroot/repos/owl-dicml/trunk/dicts/de-fr.dicml</dic.source>
-<dic.date creation="2004-10-10" update="2006-02-10"/>
+<dic.date creation="2004-10-10" update="2006-02-16"/>
 <dic.creator.gr><dic.creator><dic.creator.name>Julius Becker</dic.creator.name><dic.creator.e-mail>julius.becker@gidoo.de</dic.creator.e-mail><dic.creator.website>http://koocachoo.de</dic.creator.website></dic.creator></dic.creator.gr>
 <dic.licence><dic.licence.name>CREATIVE COMMONS PUBLIC LICENSE 2.0</dic.licence.name><dic.licence.source>http://creativecommons.org/licenses/by-nc-nd/2.0/de/</dic.licence.source></dic.licence>
 </head>
@@ -462,6 +462,11 @@
 <entry>
 <lemma.gr><l>Blutalkoholspiegel</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="f">alcoolémie</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Blutbad</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">bain</w> de sang</t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1315,6 +1320,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Geiselnahme</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">prise</w> d'otages</t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>genetisch</l><pos pos="adj"/></lemma.gr>
 <sense.gr><p><t>génétique</t></p></sense.gr>
 </entry>
@@ -1575,6 +1585,21 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Hub</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">pôle</w></t><t><w pos="f">plateforme</w> de correspondance</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Hund</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">chien</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Hündin</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">chienne</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Hymne</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="m">hymne</w></t><ex><s>Die <tilde>Hymne</tilde> der Union entstammt der »Ode an die Freude« aus der Neunten Symphonie von Ludwig van Beethoven.</s><t>L'hymne de l'Union est tiré de l'«&#160;Ode à la joie&#160;» de la Neuvième symphonie de Ludwig van Beethoven.</t></ex></p></sense.gr>
 </entry>
@@ -1797,6 +1822,17 @@
 <entry>
 <lemma.gr><l>Katastrophe</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="m">sinistre</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Kater</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="m">chat</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Katze</l><pos pos="f"/></lemma.gr>
+<sense.gr><p n="Gattung"><t><w pos="m">chat</w></t></p></sense.gr>
+<sense.gr><p n="weibliches Tier"><t><w pos="f">chatte</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -2840,6 +2876,36 @@
 <entry>
 <lemma.gr><l>Phenylalanin</l><pos pos="n"/></lemma.gr>
 <sense.gr><p><t><w pos="f">phénylalanine</w></t><ex><s>Enthält eine <tilde>Phenylalanin</tilde>quelle.</s><t>Contient une source de phénylalanine.</t></ex></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Phishing</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">phishing</w></t></p><p><t><w pos="m">filoutage</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Piemont</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Piémont</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Piemontese</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="m">Piémontais</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Piemontesin</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Piémontaise</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>piemontesisch</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">piémontais</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>piemontisch</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">piémontais</w></t></p></sense.gr>
 </entry>
 
 <entry>
