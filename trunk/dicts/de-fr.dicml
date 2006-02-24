@@ -16,7 +16,7 @@
 <dic.title>gidoo-Wörterbuch Deutsch - Französisch</dic.title>
 <dic.lang source="de" target="fr"/>
 <dic.source>http://svn.berlios.de/svnroot/repos/owl-dicml/trunk/dicts/de-fr.dicml</dic.source>
-<dic.date creation="2004-10-10" update="2006-02-16"/>
+<dic.date creation="2004-10-10" update="2006-02-24"/>
 <dic.creator.gr><dic.creator><dic.creator.name>Julius Becker</dic.creator.name><dic.creator.e-mail>julius.becker@gidoo.de</dic.creator.e-mail><dic.creator.website>http://koocachoo.de</dic.creator.website></dic.creator></dic.creator.gr>
 <dic.licence><dic.licence.name>CREATIVE COMMONS PUBLIC LICENSE 2.0</dic.licence.name><dic.licence.source>http://creativecommons.org/licenses/by-nc-nd/2.0/de/</dic.licence.source></dic.licence>
 </head>
@@ -354,6 +354,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Baumschule</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">pépinière</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Bayern</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t>Bavière</t></p><p.col><s>Freistaat <tilde>Bayern</tilde></s><t>Etat libre de Bavière</t></p.col></sense.gr>
 </entry>
@@ -531,6 +536,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Buch</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="m">livre</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Bukarest</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t><w pos="prop">Bucarest</w></t></p></sense.gr>
 </entry>
@@ -568,6 +578,11 @@
 <entry>
 <lemma.gr><l>Bundesforschungsanstalt</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="m">centre</w> fédéral de recherche</t></p><p.col><s><tilde>Bundesforschungsanstalt</tilde> für Landwirtschaft</s><t><w pos="m">Centre</w> fédéral de recherche agricole</t></p.col><p.col><s><tilde>Bundesforschungsanstalt</tilde> für Forst- und Holzwirtschaft</s><t><w pos="m">Centre</w> fédéral de recherche sur les forêts et le bois</t></p.col><p><t><w pos="m">institut</w> de recherche fédérale</t></p><p.col><s><tilde>Bundesforschungsanstalt</tilde> für Ernährung und Lebensmittel</s><t><w pos="m">Institut</w> de recherche fédérale de la nutrition</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Bundesgerichtshof</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Cour</w> fédérale de cassation</t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1109,6 +1124,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>EuGH</l><pos pos="m"/></lemma.gr>
+<sense.gr><p n="Europäischer Gerichtshof"><t><w pos="f">CJCE</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Europatag</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="f">journée</w> de l'Europe</t></p></sense.gr>
 </entry>
@@ -1290,6 +1310,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Geflügelfarm</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">ferme</w> avicole</t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Geflügelfleisch</l><pos pos="n"/></lemma.gr>
 <sense.gr><p><t><w pos="f">viande</w> de volaille</t></p></sense.gr>
 </entry>
@@ -1302,6 +1327,11 @@
 <entry>
 <lemma.gr><l>Geflügelpest</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="f">peste</w> aviaire</t><t><w pos="f">grippe</w> aviaire</t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Geflügelzucht-</l><pos pos="prefid"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">avicole</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -1337,6 +1367,11 @@
 <entry>
 <lemma.gr><l>Georgia</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t><w pos="f">Géorgie</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Gerichtshof</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="f">cour</w> de justice</t></p><p.col><s>Europäischer <tilde>Gerichtshof</tilde></s><t><w pos="f">Cour</w> de Justice des Communautés européennes</t></p.col><p.col><s><tilde>Gerichtshof</tilde> der Europäischen Gemeinschaften</s><t><w pos="f">Cour</w> de Justice des Communautés européennes</t></p.col><p.col><s>Europäischer <tilde>Gerichtshof</tilde> für Menschenrechte</s><t><w pos="f">Cour</w> européenne des Droits de l'Homme</t></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -1792,6 +1827,11 @@
 <entry>
 <lemma.gr><l>karikaturistisch</l><pos pos="adj"/></lemma.gr>
 <sense.gr><p><t><w pos="adj">caricatural</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Kassationshof</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Cour</w> de cassation</t></p></sense.gr>
 </entry>
 
 <entry>
@@ -2598,6 +2638,11 @@
 <entry>
 <lemma.gr><l>nichts</l><pos pos="pr-ind"/></lemma.gr>
 <sense.gr><p.col><s>für <tilde>nichts</tilde></s><t>pour à rien</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>nichtsdestoweniger</l><pos pos="adv"/></lemma.gr>
+<sense.gr><p><t><w pos="adv">néanmoins</w></t></p></sense.gr>
 </entry>
 
 <entry>
@@ -3463,6 +3508,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Sorgerecht</l><pos pos="n"/></lemma.gr>
+<sense.gr><p><t><w pos="f">autorité</w> parentale</t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>South Carolina</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t><w pos="f">Caroline</w> du Sud</t></p></sense.gr>
 </entry>
@@ -4036,6 +4086,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>Vogelzucht-</l><pos pos="prefid"/></lemma.gr>
+<sense.gr><p><t><w pos="adj">avicole</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Vorabend</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="f">veille</w></t></p></sense.gr>
 </entry>
@@ -4287,6 +4342,11 @@
 <entry>
 <lemma.gr><l>Zagreb</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t><w pos="prop">Zagreb</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>Zahnbürste</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">brosse</w> à dents</t></p></sense.gr>
 </entry>
 
 <entry>

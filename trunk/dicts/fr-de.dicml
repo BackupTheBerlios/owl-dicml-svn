@@ -16,7 +16,7 @@
 <dic.title>gidoo-Wörterbuch Französisch - Deutsch</dic.title>
 <dic.lang source="fr" target="de"/>
 <dic.source>http://svn.berlios.de/svnroot/repos/owl-dicml/trunk/dicts/fr-de.dicml</dic.source>
-<dic.date creation="2004-10-10" update="2006-02-16"/>
+<dic.date creation="2004-10-10" update="2006-02-24"/>
 <dic.creator.gr><dic.creator><dic.creator.name>Julius Becker</dic.creator.name><dic.creator.e-mail>julius.becker@gidoo.de</dic.creator.e-mail><dic.creator.website>http://koocachoo.de</dic.creator.website></dic.creator></dic.creator.gr>
 <dic.licence><dic.licence.name>CREATIVE COMMONS PUBLIC LICENSE 2.0</dic.licence.name><dic.licence.source>http://creativecommons.org/licenses/by-nc-nd/2.0/de/</dic.licence.source></dic.licence>
 </head>
@@ -427,6 +427,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>autorité</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s><tilde>autorité</tilde> parentale</s><t><w pos="n">Sorgerecht</w></t></p.col></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Autriche</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="prop">Österreich</w></t></p><p.col><s>la République d'<tilde>Autriche</tilde></s><t>die Republik Österreich</t></p.col></sense.gr>
 </entry>
@@ -444,6 +449,11 @@
 <entry>
 <lemma.gr><l>Autrichienne</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="f">Österreicherin</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>avicole</l><pos pos="adj"/></lemma.gr>
+<sense.gr><p><t><w pos="prefid">Geflügelzucht-</w></t><t><w pos="prefid">Vogelzucht-</w></t></p><p.col><s><w pos="f">ferme</w> <tilde>avicole</tilde></s><t><w pos="f">Geflügelfarm</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -600,6 +610,11 @@
 <entry>
 <lemma.gr><l>Brême</l><pos pos="prop"/></lemma.gr>
 <sense.gr><p><t>Bremen</t></p><p.col><s>Ville libre hanséatique de <tilde>Brême</tilde></s><t>Freie Hansestadt Bremen</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>brosse</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s><tilde>brosse</tilde> à dents</s><t><w pos="f">Zahnbürste</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -824,6 +839,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>CJCE</l><pos pos="f"/></lemma.gr>
+<sense.gr><p n="Cour de Justice des Communautés européennes"><t><w pos="m">EuGH</w></t><t>Europäischer <w pos="m">Gerichtshof</w></t><t><w pos="m">Gerichtshof</w> der Europäischen Gemeinschaften</t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>clavier</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="f">Tastatur</w></t></p></sense.gr>
 </entry>
@@ -940,6 +960,11 @@
 <lemma.gr><l>corps-à-corps</l><pos pos="m"/></lemma.gr>
 <sense.gr num="1"><p><t><w pos="n">Handgemenge</w></t></p></sense.gr>
 <sense.gr num="2"><p><t><w pos="m">Einzelkampf</w></t><t><w pos="m">Nahkampf</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>cour</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s><tilde>cour</tilde> de justice</s><t><w pos="m">Gerichtshof</w></t></p.col><p.col><s>Cour de cassation</s><t><w pos="m">Kassationshof</w></t></p.col><p.col><s>Cour fédérale de cassation</s><t><w pos="m">Bundesgerichtshof</w></t></p.col><p.col><s>Cour de Justice des Communautés européennes</s><t>Europäischer <w pos="m">Gerichtshof</w></t><t><w pos="m">Gerichtshof</w> der Europäischen Gemeinschaften</t></p.col><p.col><s>Cour européenne des Droits de l'Homme</s><t>Europäischer <w pos="m">Gerichtshof</w> für Menschenrechte</t></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -1358,6 +1383,11 @@
 <lemma.gr><l>fédération</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="f">Föderation</w></t></p>
 <p.col><s>Fédération internationale des Sociétés de la Croix-Rouge et du Croissant-Rouge</s><t>Internationale <w pos="f">Föderation</w> der Rotkreuz- und Rothalbmondgesellschaften</t></p.col></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>ferme</l><pos pos="f"/></lemma.gr>
+<sense.gr><p.col><s><tilde>ferme</tilde> avicole</s><t><w pos="f">Geflügelfarm</w></t></p.col></sense.gr>
 </entry>
 
 <entry>
@@ -2039,6 +2069,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>livre</l><pos pos="m"/></lemma.gr>
+<sense.gr><p><t><w pos="n">Buch</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>logiciel</l><pos pos="m"/></lemma.gr>
 <sense.gr><p.col><s><tilde>logiciel</tilde> de navigation</s><t><w pos="m">Browser</w></t></p.col></sense.gr>
 </entry>
@@ -2380,6 +2415,11 @@
 </entry>
 
 <entry>
+<lemma.gr><l>néanmoins</l><pos pos="adv"/></lemma.gr>
+<sense.gr><p><t><w pos="adv">nichtsdestoweniger</w></t></p></sense.gr>
+</entry>
+
+<entry>
 <lemma.gr><l>Nebraska</l><pos pos="m"/></lemma.gr>
 <sense.gr><p><t><w pos="prop">Nebraska</w></t></p></sense.gr>
 </entry>
@@ -2653,6 +2693,11 @@
 <entry>
 <lemma.gr><l>Pennsylvanie</l><pos pos="f"/></lemma.gr>
 <sense.gr><p><t><w pos="prop">Pennsylvania</w></t></p></sense.gr>
+</entry>
+
+<entry>
+<lemma.gr><l>pépinière</l><pos pos="f"/></lemma.gr>
+<sense.gr><p><t><w pos="f">Baumschule</w></t></p></sense.gr>
 </entry>
 
 <entry>
