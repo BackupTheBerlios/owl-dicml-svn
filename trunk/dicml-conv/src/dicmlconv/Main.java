@@ -27,7 +27,7 @@ public class Main {
     {
       System.out.print("\ndicml-conv vers. 0.01\n"+
                        "---------------------\n\n" +
-                       "usage: ask me: tkrause@users.berlios.de\n\n");
+                       "usage: read the source or ask me: tkrause@users.berlios.de\n\n");
     }
     
     /**
