@@ -17,7 +17,7 @@ package de.gidoo.owl2.base;
 public interface IDictionaryProvider {
     
     /** 
-     * Imports an given dicML-file.
+     * Imports a given dicML-file.
      * @param path The path to the dicML-file you want to import
      * @param name The name which shall be given to this dictionary. Should be unique,
      *             so the path is recommend.
@@ -26,18 +26,19 @@ public interface IDictionaryProvider {
     public boolean importDictionary(String path, String name);
     
     /**
+     * Delete an imported dictionary.
+     * @param name The name of the dictionary to delete.
+     * @return true if successful, false otherwise.
+     */
+    public boolean deleteDictionary(String name);
+    
+    /**
      * Check if a dictionary is already imported.
      * @param name The name of the dictionary
      * @return true if already imported, false if not.
      */
     public boolean isImported(String name);
-    
-    /**
-     * Open an already imported dictionary for further use.
-     * @param name The name of the dictionary
-     * @return true is successfull, false if not
-     */
-    public boolean openDictionary(String name);
+
     
     /**
      * Gets all dicML-entries for a given lemma.

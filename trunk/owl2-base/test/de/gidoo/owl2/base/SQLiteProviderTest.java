@@ -8,6 +8,12 @@
 package de.gidoo.owl2.base;
 
 import junit.framework.*;
+import java.io.*;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import org.w3c.dom.*;
+import org.xml.sax.SAXException;
 
 /**
  *
@@ -20,6 +26,9 @@ public class SQLiteProviderTest extends TestCase {
   }
 
   protected void setUp() throws Exception {
+    // remove "owl.db" in order to get a clean enviroment
+    File f = new File(SQLiteProvider.DB_NAME);
+    f.delete();
   }
 
   protected void tearDown() throws Exception {
@@ -65,12 +74,22 @@ public class SQLiteProviderTest extends TestCase {
     
     
     // test on real existing file
-    path = "test/test.dicml";
-    name = "test";
+    path = "test/testAB.dicml";
+    name = "AB";
     
     expResult = true;
     result = instance.importDictionary(path, name);
     assertEquals(expResult, result);
+    
+    // check wether import was successfull
+    instance.activateDictionary("AB");
+    String[] r = instance.getEntry("A");
+    if(r.length == 0)
+      fail("the imported lemma \"A\" was not found");
+    
+    r = instance.getEntry("b");
+    if(r.length == 0)
+      fail("the imported lemma \"b\" was not found");
     
   }
 
@@ -80,51 +99,50 @@ public class SQLiteProviderTest extends TestCase {
   public void testIsImported() {
     System.out.println("isImported");
     
-    String name = "";
+    String name = "C";
     SQLiteProvider instance = new SQLiteProvider();
+    
+    instance.importDictionary("test/testC.dicml", name);
     
     boolean expResult = true;
     boolean result = instance.isImported(name);
     assertEquals(expResult, result);
     
-    // TODO review the generated test code and remove the default call to fail.
-    fail("The test case is a prototype.");
-  }
-
-  /**
-   * Test of openDictionary method, of class de.gidoo.owl2.base.SQLiteProvider.
-   */
-  public void testOpenDictionary() {
-    System.out.println("openDictionary");
-    
-    String name = "";
-    SQLiteProvider instance = new SQLiteProvider();
-    
-    boolean expResult = true;
-    boolean result = instance.openDictionary(name);
+    expResult = false;
+    result = instance.isImported("S");
     assertEquals(expResult, result);
-    
-    
-    
-    // TODO review the generated test code and remove the default call to fail.
-    fail("The test case is a prototype.");
+       
   }
 
+  
   /**
    * Test of getEntry method, of class de.gidoo.owl2.base.SQLiteProvider.
    */
   public void testGetEntry() {
     System.out.println("getEntry");
     
-    String lemma = "";
+    String lemma = "Match";
     SQLiteProvider instance = new SQLiteProvider();
     
-    String expResult = "";
-    String result = instance.getEntry(lemma);
-    assertEquals(expResult, result);
+    instance.importDictionary("test/testMatch.dicml", "Get");
+    instance.activateDictionary("Get");
     
-    // TODO review the generated test code and remove the default call to fail.
-    fail("The test case is a prototype.");
+    String[] result = instance.getEntry(lemma);
+    if(result.length != 1)
+      fail("there should be *exactly* one \"Match\"");
+    
+    lemma = "C";
+    result = instance.getEntry(lemma);
+    if(result.length != 0)
+      fail("there should be *no* \"C\"");
+    
+    lemma = "short";
+    String[] expResult = new String[] {"<entry id=\"test-short\"><lemma><l>short</l></lemma></entry>"}; 
+    result = instance.getEntry(lemma);
+    if(result.length != 1)
+      fail("there should be a match for \"short\"");
+    assertEquals(expResult[0], result[0]);
+    
   }
 
   /**
@@ -133,15 +151,178 @@ public class SQLiteProviderTest extends TestCase {
   public void testGetMatchingLemma() {
     System.out.println("getMatchingLemma");
     
-    String name = "";
+    String name = "Ma";
     SQLiteProvider instance = new SQLiteProvider();
     
-    String[] expResult = null;
+    instance.importDictionary("test/testMatch.dicml", "Match");
+    instance.activateDictionary("Match");
+    
     String[] result = instance.getMatchingLemma(name);
+    if(result.length != 1)
+      fail("there should be *exactly* one match for \"Ma\"");
+    
+    name = "Mis";
+    result = instance.getMatchingLemma(name);
+    if(result.length != 1)
+      fail("there should be *exactly* one match for \"Mis\"");
+    
+    name = "Nons";
+    result = instance.getMatchingLemma(name);
+    if(result.length != 0)
+      fail("there should be *no* match for \"Nons\"");
+    
+    name = "short";
+    String[] expResult = new String[] {"<entry id=\"test-short\"><lemma><l>short</l></lemma></entry>"}; 
+    result = instance.getMatchingLemma(name);
+    if(result.length != 1)
+      fail("there should be a match for \"short\"");
+    assertEquals(expResult[0], result[0]);
+
+  }
+
+  /**
+   * Test of finalize method, of class de.gidoo.owl2.base.SQLiteProvider.
+   */
+  public void testFinalize() {
+    System.out.println("finalize");
+    
+    SQLiteProvider instance = new SQLiteProvider();
+    
+    instance.finalize();
+        
+    // nothing to test here (except that no Exception is thrown)
+  }
+
+  /**
+   * Test of getAvailableDictionaries method, of class de.gidoo.owl2.base.SQLiteProvider.
+   */
+  public void testGetAvailableDictionaries() {
+    System.out.println("getAvailableDictionaries");
+    
+    SQLiteProvider instance = new SQLiteProvider();
+        
+    String[] expResult = new String[0];
+    String[] result = instance.getAvailableDictionaries();
+    assertEquals(expResult.length, result.length);
+    
+    instance.importDictionary("test/testC.dicml", "C");
+    
+    expResult = new String[] {"C"};
+    result = instance.getAvailableDictionaries();
+    assertEquals(expResult[0], result[0]);
+  }
+
+  /**
+   * Test of activateDictionary method, of class de.gidoo.owl2.base.SQLiteProvider.
+   */
+  public void testActivateDictionary() {
+    System.out.println("activateDictionary");
+    
+    SQLiteProvider instance = new SQLiteProvider();
+    
+    instance.importDictionary("test/testC.dicml", "C");
+    instance.importDictionary("test/testD.dicml", "D");
+    instance.importDictionary("test/testAB.dicml", "AB");
+    
+    instance.activateDictionary("C");
+    
+    String[] result = instance.getEntry("C");
+    if(result.length == 0)
+      fail("activated \"C\" was not found ");
+    
+    result = instance.getEntry("D");
+    if(result.length != 0)
+      fail("\"C\" was found even if it wasn't activated");
+    
+    instance.activateDictionary("AB");
+    result = instance.getEntry("A");
+    if(result.length == 0)
+      fail("activated \"A\" was not found ");
+
+  }
+
+  /**
+   * Test of deactivateDictionary method, of class de.gidoo.owl2.base.SQLiteProvider.
+   */
+  public void testDeactivateDictionary() {
+    System.out.println("deactivateDictionary");
+    
+
+    SQLiteProvider instance = new SQLiteProvider();
+    
+    instance.importDictionary("test/testC.dicml", "C");
+    instance.importDictionary("test/testD.dicml", "D");
+    instance.importDictionary("test/testAB.dicml", "AB");
+    
+    instance.activateDictionary("C");
+    
+    String[] result = instance.getEntry("A");
+    if(result.length != 0)
+      fail("deactivated \"A\" was found ");
+    
+    instance.deactivateDictionary("C");
+    
+    result = instance.getEntry("C");
+    if(result.length != 0)
+      fail("deactivated \"C\" was found");
+    
+    instance.activateDictionary("AB");
+    result = instance.getEntry("A");
+    if(result.length == 0)
+      fail("activated \"A\" was not found ");
+  }
+
+  /**
+   * Test of deleteDictionary method, of class de.gidoo.owl2.base.SQLiteProvider.
+   */
+  public void testDeleteDictionary() {
+    System.out.println("deleteDictionary");
+    
+    String name = "C";
+    SQLiteProvider instance = new SQLiteProvider();
+    
+    instance.importDictionary("test/testC.dicml", "C");
+    
+    boolean expResult = true;
+    boolean result = instance.deleteDictionary(name);
     assertEquals(expResult, result);
     
-    // TODO review the generated test code and remove the default call to fail.
-    fail("The test case is a prototype.");
+    // additionally test, wether really removed
+    String[] r1 = instance.getEntry("C");
+    if(r1.length != 0)
+      fail("removed \"C\" still exists ");
+    
+    r1 = instance.getAvailableDictionaries();
+    if(r1.length != 0)
+      fail("deleted dic still in list of dictionaries");
+    
+    // I don't trust you
+    instance.importDictionary("test/testC.dicml", "C");
+    instance.importDictionary("test/testD.dicml", "D");
+    instance.activateDictionary("D");
+    
+    expResult = true;
+    result = instance.deleteDictionary(name);
+    assertEquals(expResult, result);
+    
+    expResult = false;
+    result = instance.deleteDictionary("NOTEXISTING");
+    assertEquals(expResult, result);
+    
+    // additionally test, wether really removed
+    r1 = instance.getEntry("C");
+    if(r1.length != 0)
+      fail("removed \"C\" still exists ");
+    
+    r1 = instance.getAvailableDictionaries();
+    if(r1.length != 1)
+      fail("deleted dic still in list of dictionaries");
+    
+    // make sure that the rest is still there
+    r1 = instance.getEntry("D");
+    if(r1.length == 0)
+      fail("\"D\" was accidently removed");
+            
   }
-  
+ 
 }

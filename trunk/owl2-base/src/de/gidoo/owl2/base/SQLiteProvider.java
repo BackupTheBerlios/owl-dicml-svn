@@ -10,6 +10,7 @@ package de.gidoo.owl2.base;
 
 import java.io.*;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.Iterator;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
@@ -45,14 +46,6 @@ public class SQLiteProvider implements IDictionaryProvider {
       
       // if not existing, create a table with a list of all imported dictionaries
       _stm.execute("CREATE TABLE IF NOT EXISTS imported_dics(name TEXT, author TEXT, date INTEGER)");
-//      try
-//      {
-//        _stm.executeQuery("SELECT name FROM imported_dics");
-//      }
-//      catch(Exception ex)
-//      {
-//        _stm.execute("CREATE TABLE imported_dics(name TEXT, author TEXT, date INTEGER)");
-//      }
     }
     catch(Exception ex)
     {
@@ -89,8 +82,6 @@ public class SQLiteProvider implements IDictionaryProvider {
       
       _stm.execute("DROP TABLE IF EXISTS " + lemma);
       _stm.execute("DROP TABLE IF EXISTS " + entry);
-      
-      this.
       
       // create new ones
       _stm.execute("CREATE TABLE " + lemma + "(lemma TEXT, id TEXT)");
@@ -143,8 +134,7 @@ public class SQLiteProvider implements IDictionaryProvider {
       return false;
     }
     
-    // as long as no function implemented...
-    return false;
+    return true;
   }
 
   /** Index a given file */
@@ -281,33 +271,48 @@ public class SQLiteProvider implements IDictionaryProvider {
       return false;
   }
 
-  public boolean openDictionary(String name) {
-    return false;
-  }
-
   public String[] getEntry(String lemma) {
-    return null;
+    ArrayList<String> list = new ArrayList<String>();
+    try {      
+      // ask the database
+      ResultSet res = _stm.executeQuery("SELECT entry FROM dic WHERE dic.lemma = \"" + lemma + "\"");
+      while(res.next())
+      {
+        list.add(res.getString(1));
+      }
+    } 
+    catch (SQLException ex) 
+    {
+      ex.printStackTrace();
+    }
+    
+    String[] a = new String[0];
+    a = list.toArray(a);
+    
+    return a;
   }
 
   public String[] getMatchingLemma(String name) {
-    return new String[0];
+    ArrayList<String> list = new ArrayList<String>();
+    try {      
+      // ask the database
+      ResultSet res = _stm.executeQuery("SELECT entry FROM dic WHERE lemma LIKE \"" + name + "%\"");
+      while(res.next())
+      {
+        list.add(res.getString(1));
+      }
+    } 
+    catch (SQLException ex) 
+    {
+      ex.printStackTrace();
+    }
+    
+    String[] a = new String[0];
+    a = list.toArray(a);
+    
+    return a;
   }
   
-  
-  
-  public static void main(String[] args)
-  {
-    SQLiteProvider p = new SQLiteProvider();
-    p.importDictionary("test/testAB.dicml", "AB");    
-    p.importDictionary("test/testC.dicml", "C");
-    p.importDictionary("test/testD.dicml", "D");
-    
-    p.activateDictionary("AB");
-    p.activateDictionary("C");
-    p.activateDictionary("D");
-    
-  }  
-
   public String[] getAvailableDictionaries() {
     
     java.util.ArrayList<String> list = new java.util.ArrayList<String>();
@@ -316,7 +321,7 @@ public class SQLiteProvider implements IDictionaryProvider {
     {
       
       // query the database
-      ResultSet res = _stm.executeQuery("SELECT name IN imported_dics");
+      ResultSet res = _stm.executeQuery("SELECT name FROM imported_dics");
       while(res.next())
       {
         list.add(res.getString(1));
@@ -330,7 +335,7 @@ public class SQLiteProvider implements IDictionaryProvider {
     {
       ex.printStackTrace();
     }
-    return null;
+    return new String[0];
   }
 
   public void activateDictionary(String dic) 
@@ -377,7 +382,7 @@ public class SQLiteProvider implements IDictionaryProvider {
       try
       {
         _stm.execute("CREATE VIEW dic AS "
-          + "SELECT l.lemma, e.entry, e.id "
+          + "SELECT l.lemma AS lemma, e.entry AS entry, e.id AS id "
           + "FROM allLemma l, allEntry e "
           + "WHERE l.id = e.id");
       }
@@ -394,7 +399,56 @@ public class SQLiteProvider implements IDictionaryProvider {
   
   public void deactivateDictionary(String dic) 
   {
+    if(_activeDics.contains(dic))
+    {
+      _activeDics.remove(dic);
+      rebuildDBView();
+    }
   }
 
+  public boolean deleteDictionary(String name) 
+  {
+    if(isImported(name))
+    {
+      try
+      {
+        // delete the tables
+        _stm.execute("DROP TABLE lemma_" + name);
+        _stm.execute("DROP TABLE entry_" + name);
+        
+        // delete entry from imported_dics
+        _stm.execute("DELETE FROM imported_dics WHERE name = \"" + name + "\"");
+        
+        if(_activeDics.contains(name))
+        {
+          _activeDics.remove(name);
+          rebuildDBView();
+        }
+        
+        return true;        
+      }
+      catch(Exception ex)
+      {
+        ex.printStackTrace();
+      }
+      
+    }
+    
+    return false;
+  }
+    
+  public static void main(String[] args)
+  {
+    String name = "C";
+    SQLiteProvider instance = new SQLiteProvider();
+    
+    instance.importDictionary("test/testC.dicml", "C");
+    
+    boolean expResult = true;
+    boolean result = instance.deleteDictionary(name);
+    int i=0;
+      
+  } 
+  
 }
   
