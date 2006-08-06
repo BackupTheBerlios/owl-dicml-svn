@@ -40,12 +40,12 @@ public interface IDictionaryProvider {
     public boolean openDictionary(String name);
     
     /**
-     * Gets an dicML-entry for a given lemma.
+     * Gets all dicML-entries for a given lemma.
      * @param lemma The lemma.
      * @return If a lemma which matches <b>exactly</b> exist, the corresponding
-     *        entry (in dicML, including the "<entry>"-tag). Otherwise null.
+     *        entries (in dicML, including the "<entry>"-tag). Otherwise null.
      */
-    public String getEntry(String lemma);
+    public String[] getEntry(String lemma);
     
     /**
      * Finds a list of lemma which first characters match a given string.
@@ -53,4 +53,22 @@ public interface IDictionaryProvider {
      * @return All matching lemma (count might be 0).
      */
     public String[] getMatchingLemma(String name);
+    
+    /** Returns a list of available dictionaries that can be (de)activated */
+    public String[] getAvailableDictionaries();
+    
+    /** 
+     * An activated dictionary will be visible when using 
+     * {@link #getEntry} and 
+     * {@link #getMatchingLemma}.
+     */
+    public void activateDictionary(String dic);
+    
+    
+    /** 
+     * An deactivated dictionary will <b>not</b> be visible when using 
+     * {@link #getEntry} and 
+     * {@link #getMatchingLemma}.
+     */
+    public void deactivateDictionary(String dic);
 }
