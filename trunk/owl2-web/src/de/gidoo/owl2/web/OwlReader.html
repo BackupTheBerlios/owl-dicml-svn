@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>  
+    <wicket:head>
+      <style>
+              div.wicket-aa {
+					border-width: 1px;
+					border-color: #cccccc;
+					border-style: solid;
+					padding: 2px;
+					margin: 1px 0 0 0;
+					text-align:left;
+				}
+				div.wicket-aa ul { list-style:none; padding: 2px; margin:0; }
+				div.wicket-aa ul li.selected { background-color: #FFFF00; padding: 2px: margin:0; }
+      </style>
+    </wicket:head>
+    <title>Owl²</title>
+  </head>
+  <body>  
+<form wicket:id="form">        
+    <p>Search for: <input type="text" wicket:id="txtSearch"/><input type="submit" value="please press me"/></p>
+</form>
+       <span style="background-color:red" wicket:id="label">nothing searched yet</span>
+
+  </body>
+</html>

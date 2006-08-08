@@ -11,6 +11,7 @@ import junit.framework.*;
 import java.io.*;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Iterator;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
@@ -50,7 +51,7 @@ public class SQLiteProviderTest extends TestCase {
     // test for a not existing file
     String path = "not existing!!!";
     String name = "";
-    SQLiteProvider instance = new SQLiteProvider();
+    SQLiteProvider instance = new SQLiteProvider("");
     
     boolean expResult = false;
     boolean result = instance.importDictionary(path, name);
@@ -100,7 +101,10 @@ public class SQLiteProviderTest extends TestCase {
     System.out.println("isImported");
     
     String name = "C";
-    SQLiteProvider instance = new SQLiteProvider();
+    SQLiteProvider instance = new SQLiteProvider("");
+    
+    // this should not fail!!!
+    instance.isImported("nonsense");
     
     instance.importDictionary("test/testC.dicml", name);
     
@@ -122,7 +126,7 @@ public class SQLiteProviderTest extends TestCase {
     System.out.println("getEntry");
     
     String lemma = "Match";
-    SQLiteProvider instance = new SQLiteProvider();
+    SQLiteProvider instance = new SQLiteProvider("");
     
     instance.importDictionary("test/testMatch.dicml", "Get");
     instance.activateDictionary("Get");
@@ -152,31 +156,36 @@ public class SQLiteProviderTest extends TestCase {
     System.out.println("getMatchingLemma");
     
     String name = "Ma";
-    SQLiteProvider instance = new SQLiteProvider();
+    SQLiteProvider instance = new SQLiteProvider("");
     
     instance.importDictionary("test/testMatch.dicml", "Match");
     instance.activateDictionary("Match");
     
-    String[] result = instance.getMatchingLemma(name);
-    if(result.length != 1)
+    List<String> result = instance.getMatchingLemma(name);
+    if(result.size() != 1)
       fail("there should be *exactly* one match for \"Ma\"");
     
     name = "Mis";
     result = instance.getMatchingLemma(name);
-    if(result.length != 1)
+    if(result.size() != 1)
       fail("there should be *exactly* one match for \"Mis\"");
+    
+    name = "M";
+    result = instance.getMatchingLemma(name);
+    if(result.size() != 2)
+      fail("there should be *exactly* one match for \"M\"");
     
     name = "Nons";
     result = instance.getMatchingLemma(name);
-    if(result.length != 0)
+    if(result.size() != 0)
       fail("there should be *no* match for \"Nons\"");
     
     name = "short";
-    String[] expResult = new String[] {"<entry id=\"test-short\"><lemma><l>short</l></lemma></entry>"}; 
+    String expResult = "<entry id=\"test-short\"><lemma><l>short</l></lemma></entry>"; 
     result = instance.getMatchingLemma(name);
-    if(result.length != 1)
+    if(result.size() != 1)
       fail("there should be a match for \"short\"");
-    assertEquals(expResult[0], result[0]);
+    assertEquals(expResult, result.get(0));
 
   }
 
@@ -186,7 +195,7 @@ public class SQLiteProviderTest extends TestCase {
   public void testFinalize() {
     System.out.println("finalize");
     
-    SQLiteProvider instance = new SQLiteProvider();
+    SQLiteProvider instance = new SQLiteProvider("");
     
     instance.finalize();
         
@@ -199,7 +208,7 @@ public class SQLiteProviderTest extends TestCase {
   public void testGetAvailableDictionaries() {
     System.out.println("getAvailableDictionaries");
     
-    SQLiteProvider instance = new SQLiteProvider();
+    SQLiteProvider instance = new SQLiteProvider("");
         
     String[] expResult = new String[0];
     String[] result = instance.getAvailableDictionaries();
@@ -218,7 +227,7 @@ public class SQLiteProviderTest extends TestCase {
   public void testActivateDictionary() {
     System.out.println("activateDictionary");
     
-    SQLiteProvider instance = new SQLiteProvider();
+    SQLiteProvider instance = new SQLiteProvider("");
     
     instance.importDictionary("test/testC.dicml", "C");
     instance.importDictionary("test/testD.dicml", "D");
@@ -248,7 +257,7 @@ public class SQLiteProviderTest extends TestCase {
     System.out.println("deactivateDictionary");
     
 
-    SQLiteProvider instance = new SQLiteProvider();
+    SQLiteProvider instance = new SQLiteProvider("");
     
     instance.importDictionary("test/testC.dicml", "C");
     instance.importDictionary("test/testD.dicml", "D");
@@ -279,7 +288,7 @@ public class SQLiteProviderTest extends TestCase {
     System.out.println("deleteDictionary");
     
     String name = "C";
-    SQLiteProvider instance = new SQLiteProvider();
+    SQLiteProvider instance = new SQLiteProvider("");
     
     instance.importDictionary("test/testC.dicml", "C");
     

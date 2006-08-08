@@ -12,12 +12,13 @@ import java.io.*;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 
 /**
  * This class uses an SQLite database to provide the functionality of {@link IDictionaryProvider}.
- * @author thomas
+ * @author <a href="mailto:krause@informatik.hu-berlin.de">Thomas Krause</a>
  */
 public class SQLiteProvider implements IDictionaryProvider {
   
@@ -32,16 +33,16 @@ public class SQLiteProvider implements IDictionaryProvider {
    * Creates a new instance of SQLiteProvider. Will start a connection to 
    * the database.
    */
-  public SQLiteProvider() 
+  public SQLiteProvider(String dir)
   {
     try
     {
       _activeDics = new java.util.ArrayList<String>();
-      
-      Class.forName("org.sqlite.JDBC");
 
+      Class.forName("org.sqlite.JDBC");
+      
       // open connection
-      _conn = DriverManager.getConnection("jdbc:sqlite:" + SQLiteProvider.DB_NAME);
+      _conn = DriverManager.getConnection("jdbc:sqlite:" + dir + SQLiteProvider.DB_NAME);
       _stm = _conn.createStatement();
       
       // if not existing, create a table with a list of all imported dictionaries
@@ -292,7 +293,7 @@ public class SQLiteProvider implements IDictionaryProvider {
     return a;
   }
 
-  public String[] getMatchingLemma(String name) {
+  public List<String> getMatchingLemma(String name) {
     ArrayList<String> list = new ArrayList<String>();
     try {      
       // ask the database
@@ -307,10 +308,7 @@ public class SQLiteProvider implements IDictionaryProvider {
       ex.printStackTrace();
     }
     
-    String[] a = new String[0];
-    a = list.toArray(a);
-    
-    return a;
+    return list;
   }
   
   public String[] getAvailableDictionaries() {
@@ -436,19 +434,6 @@ public class SQLiteProvider implements IDictionaryProvider {
     
     return false;
   }
-    
-  public static void main(String[] args)
-  {
-    String name = "C";
-    SQLiteProvider instance = new SQLiteProvider();
-    
-    instance.importDictionary("test/testC.dicml", "C");
-    
-    boolean expResult = true;
-    boolean result = instance.deleteDictionary(name);
-    int i=0;
-      
-  } 
   
 }
   

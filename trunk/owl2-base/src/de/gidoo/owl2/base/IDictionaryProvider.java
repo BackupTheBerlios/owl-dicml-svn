@@ -8,11 +8,13 @@
 
 package de.gidoo.owl2.base;
 
+import java.util.List;
+
 /**
  * An Interface which represents an abstract handler to provide data from a 
  * dicML-dictionary.
  *
- * @author thomas
+ * @author <a href="mailto:krause@informatik.hu-berlin.de">Thomas Krause</a>
  */
 public interface IDictionaryProvider {
     
@@ -53,7 +55,7 @@ public interface IDictionaryProvider {
      * @param name The string used for matching.
      * @return All matching lemma (count might be 0).
      */
-    public String[] getMatchingLemma(String name);
+    public List<String> getMatchingLemma(String name);
     
     /** Returns a list of available dictionaries that can be (de)activated */
     public String[] getAvailableDictionaries();
