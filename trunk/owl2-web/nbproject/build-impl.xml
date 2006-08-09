@@ -395,11 +395,9 @@ is divided into following sections:
         <copy-ear-war file="${libs.WicketExtensions.classpath}" propname="included.lib.libs.WicketExtensions.classpath.X"/>
         <basename property="included.lib.reference.owl2-base.jar" file="${reference.owl2-base.jar}"/>
         <copy-ear-war file="${reference.owl2-base.jar}" propname="included.lib.reference.owl2-base.jar.X"/>
-        <basename property="included.lib.file.reference.sqlitejdbc.jar" file="${file.reference.sqlitejdbc.jar}"/>
-        <copy-ear-war file="${file.reference.sqlitejdbc.jar}" propname="included.lib.file.reference.sqlitejdbc.jar.X"/>
         <mkdir dir="${build.web.dir.real}/META-INF"/>
         <manifest file="${build.web.dir.real}/META-INF/MANIFEST.MF" mode="update">
-            <attribute name="Class-Path" value="${included.lib.libs.Wicket.classpath} ${included.lib.libs.WicketExtensions.classpath} ${included.lib.reference.owl2-base.jar} ${included.lib.file.reference.sqlitejdbc.jar} "/>
+            <attribute name="Class-Path" value="${included.lib.libs.Wicket.classpath} ${included.lib.libs.WicketExtensions.classpath} ${included.lib.reference.owl2-base.jar} "/>
         </manifest>
         <delete dir="${dist.ear.dir}/temp"/>
     </target>
