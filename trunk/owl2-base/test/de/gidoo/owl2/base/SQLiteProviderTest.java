@@ -18,7 +18,7 @@ import org.xml.sax.SAXException;
 
 /**
  *
- * @author thomas
+ * @author <a href="mailto:krause@informatik.hu-berlin.de">Thomas Krause</a>
  */
 public class SQLiteProviderTest extends TestCase {
   

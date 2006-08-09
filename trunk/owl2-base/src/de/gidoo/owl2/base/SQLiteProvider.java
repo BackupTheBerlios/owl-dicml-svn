@@ -13,8 +13,12 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Random;
 import org.w3c.dom.*;
+import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
+import org.xml.sax.XMLReader;
+import org.xml.sax.helpers.XMLReaderFactory;
 
 /**
  * This class uses an SQLite database to provide the functionality of {@link IDictionaryProvider}.
@@ -27,6 +31,8 @@ public class SQLiteProvider implements IDictionaryProvider {
   private Statement _stm;
   
   private java.util.ArrayList<String> _activeDics;
+  
+  private SaxHandler _saxHandler;
   
   /**
    * Creates a new instance of SQLiteProvider. Will start a connection to 
@@ -88,7 +94,13 @@ public class SQLiteProvider implements IDictionaryProvider {
       _stm.execute("CREATE TABLE " + lemma + "(lemma TEXT, id TEXT)");
       _stm.execute("CREATE TABLE " + entry + "(id TEXT, entry TEXT)");
       
+      // we have to add a lot of data
+      _conn.setAutoCommit(false);
+      
       index(path, name);
+      
+      _conn.commit();
+      _conn.setAutoCommit(true);
       
       // we need some indexes
       _stm.execute("CREATE INDEX IF NOT EXISTS idx_lemma_" + name + " ON lemma_"
@@ -142,8 +154,23 @@ public class SQLiteProvider implements IDictionaryProvider {
   private void index(String path, String name)
   {
     try {
+      
+      // initialisation
       InputStreamReader reader = new InputStreamReader(
         new FileInputStream(path));
+      
+      _saxHandler = new SaxHandler();
+      
+      Random rand = new Random();
+      XMLReader xr = XMLReaderFactory.createXMLReader();
+      xr.setContentHandler(_saxHandler);
+      
+      
+      PreparedStatement ps_entry = _conn.prepareStatement("INSERT INTO entry_" 
+        + name + "(id,entry) VALUES(?,?)");
+      PreparedStatement ps_lemma = _conn.prepareStatement("INSERT INTO lemma_" + name
+                      + "(lemma,id) VALUES(?,?)");
+                    
       
       // search for "<entry"
       int c;
@@ -186,50 +213,36 @@ public class SQLiteProvider implements IDictionaryProvider {
               //parse the xml (only entry)
               try
               {
-                org.w3c.dom.Document doc = 
-                  javax.xml.parsers.DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(
-                  new java.io.ByteArrayInputStream(entry.getBytes()));
+                _saxHandler.lastLemmaInEntry.clear();
+                _saxHandler.lastIdInEntry = null;
+                InputSource src = new InputSource(new java.io.ByteArrayInputStream(entry.getBytes()));
+                xr.parse(src);
                 
-                NodeList entryNodes = doc.getElementsByTagName("entry");
-
-
-                //add it to the database
-                if(entryNodes.getLength() == 1)
+                // add it to the database
+                int size = _saxHandler.lastLemmaInEntry.size();
+                if(size != 0)
                 {
-                  Node id = entryNodes.item(0).getAttributes().getNamedItem("id");
-                  if(id != null)
+                  if(_saxHandler.lastIdInEntry == null)
                   {
-                    // add to entry-table
-                    
-                    PreparedStatement ps = _conn.prepareStatement("INSERT INTO entry_" 
-                      + name + "(id,entry) VALUES(?,?)");
-                    ps.setString(1, id.getNodeValue());
-                    ps.setString(2, entry);
-                    ps.executeUpdate();
-                    ps.close();
-                    
-                    // add available lemma to lemma-table
-                    NodeList lNodes = doc.getElementsByTagName("l");
-                    NodeList lAltNodes = doc.getElementsByTagName("l.alt");
-                    ps = _conn.prepareStatement("INSERT INTO lemma_" + name
-                      + "(lemma,id) VALUES(?,?)");
-                    
-                    for(int i=0; i < lNodes.getLength(); i++)
-                    {
-                      ps.setString(1, lNodes.item(i).getTextContent());
-                      ps.setString(2, id.getTextContent());
-                      ps.executeUpdate();
-                    }
-                    for(int i=0; i < lAltNodes.getLength(); i++)
-                    {
-                      ps.setString(1, lAltNodes.item(i).getTextContent());
-                      ps.setString(2, id.getTextContent());
-                      ps.executeUpdate();
-                    }
-                    
-                    ps.close();
+                    // random number
+                    _saxHandler.lastIdInEntry = name + "-" + rand.nextInt();
                   }
+                  ps_entry.setString(1, _saxHandler.lastIdInEntry);
+                  ps_entry.setString(2, entry);
+                  ps_entry.executeUpdate();
+                  
+                  
+                  Iterator<String> it = _saxHandler.lastLemmaInEntry.iterator();
+                  
+                  while(it.hasNext())
+                  {
+                    ps_lemma.setString(1, it.next());
+                    ps_lemma.setString(2, _saxHandler.lastIdInEntry);
+                    ps_lemma.executeUpdate();
+                  }
+                  
                 }
+                
               }
               catch(SAXException saxEx)
               {
@@ -244,6 +257,9 @@ public class SQLiteProvider implements IDictionaryProvider {
         }
         
       }
+      
+      ps_entry.close();
+      ps_lemma.close();
       
     } catch (Exception ex) {
       ex.printStackTrace();
@@ -433,6 +449,13 @@ public class SQLiteProvider implements IDictionaryProvider {
     }
     
     return false;
+  }
+  
+  public static void main(String[] args)
+  {
+    SQLiteProvider dic = new SQLiteProvider("owl.db");
+    dic.importDictionary("/home/thomas/projekte/owl/dicts/de-en.dicml", "de_en");
+    dic.activateDictionary("de_en");
   }
   
 }
