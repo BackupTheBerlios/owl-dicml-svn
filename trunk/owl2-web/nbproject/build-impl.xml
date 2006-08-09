@@ -407,7 +407,6 @@ is divided into following sections:
         <copy file="${libs.Wicket.classpath}" todir="${build.web.dir.real}/WEB-INF/lib"/>
         <copy file="${libs.WicketExtensions.classpath}" todir="${build.web.dir.real}/WEB-INF/lib"/>
         <copy file="${reference.owl2-base.jar}" todir="${build.web.dir.real}/WEB-INF/lib"/>
-        <copy file="${file.reference.sqlitejdbc.jar}" todir="${build.web.dir.real}/WEB-INF/lib"/>
     </target>
     <target name="do-ear-dist" depends="init,compile,compile-jsps,-pre-dist,library-inclusion-in-manifest">
         <dirname property="dist.jar.dir" file="${dist.ear.war}"/>

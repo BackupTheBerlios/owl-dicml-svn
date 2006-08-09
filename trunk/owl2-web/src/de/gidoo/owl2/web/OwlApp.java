@@ -13,11 +13,19 @@ package de.gidoo.owl2.web;
  * @author <a href="mailto:krause@informatik.hu-berlin.de">Thomas Krause</a>
  */
 public class OwlApp extends wicket.protocol.http.WebApplication {
-    
+  
+    public static String realPathToContext;
+      
     /** Creates a new instance of OwlApp */
     public OwlApp() {
     }
 
+    public void init()
+    {
+      realPathToContext = this.getWicketServlet().getServletContext().getRealPath("/");
+      getDebugSettings().setSerializeSessionAttributes(false); 
+    }
+    
     public Class getHomePage() {
         // start with OwlReader in test-phase
         return OwlReader.class;

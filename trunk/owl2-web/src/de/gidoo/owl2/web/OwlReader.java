@@ -24,7 +24,7 @@ import wicket.extensions.ajax.markup.html.autocomplete.*;
 import de.gidoo.owl2.base.*;
 
 /**
- *  A page to search in and display items of a dictonary
+ * A page to search in and display items of a dictonary
  *
  * @author <a href="mailto:krause@informatik.hu-berlin.de">Thomas Krause</a>
  */
@@ -35,12 +35,10 @@ public class OwlReader extends wicket.markup.html.WebPage {
     /** Creates a new instance of OwlReader */
     public OwlReader() {
      
-      System.out.println("THIS IS THE PATH: ");
-      this.
-      _dic = new SQLiteProvider("");
+      _dic = new SQLiteProvider(OwlApp.realPathToContext + "owl.db");
      
       if(!_dic.isImported("test"))
-        _dic.importDictionary("test.dicml", "test");
+        _dic.importDictionary(OwlApp.realPathToContext + "test.dicml", "test");
       
       _dic.activateDictionary("test");
       
