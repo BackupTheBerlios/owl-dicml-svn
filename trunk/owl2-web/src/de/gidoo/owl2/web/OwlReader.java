@@ -13,13 +13,17 @@ import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.lang.reflect.Array;
 import java.util.*;
+import wicket.extensions.markup.html.tabs.AbstractTab;
 
 import wicket.markup.html.basic.*;
 import wicket.markup.html.form.*;
+import wicket.markup.html.panel.Panel;
 import wicket.model.*;
 import wicket.Component;
 import wicket.markup.html.link.*;
 import wicket.extensions.ajax.markup.html.autocomplete.*;
+import wicket.extensions.ajax.markup.html.tabs.AjaxTabbedPanel;
+import wicket.extensions.markup.html.tabs.AbstractTab;
 
 import de.gidoo.owl2.base.*;
 
@@ -31,35 +35,101 @@ import de.gidoo.owl2.base.*;
 public class OwlReader extends wicket.markup.html.WebPage {
 
     private IDictionaryProvider _dic;
-    
+    private MessageForm mainForm;
+    private AjaxTabbedPanel tabPanel;
+        
     /** Creates a new instance of OwlReader */
     public OwlReader() {
      
       _dic = new SQLiteProvider(OwlApp.realPathToContext + "owl.db");
      
       if(!_dic.isImported("test"))
-        _dic.importDictionary(OwlApp.realPathToContext + "test.dicml", "test");
+        _dic.importDictionary(OwlApp.realPathToContext + "de-en.dicml", "de_en");
       
-      _dic.activateDictionary("test");
+      _dic.activateDictionary("de_en");
+            
+      mainForm = new MessageForm("form");
+      add(mainForm);
       
-      IModel model = new Model();
+      // empty tab-list at begin
+      tabPanel = getAvailableTabs();
+      add(tabPanel);
       
-      add(new MessageForm("form", model));
-      
-      add(new Label("label", model));
-      
-        
     }
     
+    protected void onAttach()
+    {
+      tabPanel = getAvailableTabs();
+      replace(tabPanel);
+    } 
+    
+    public AjaxTabbedPanel getAvailableTabs()
+    {
+      List l = new ArrayList();
+     
+      // get the searched text
+      final String search = mainForm.getSearchedText();  
+      
+      if(search == null || search.equals(""))
+      {
+        l.add(new AbstractTab(new Model("info"))
+          {
+            public Panel getPanel(String panelId) {return new ResultTabPanel(panelId, "", "no search text entered");}
+          }
+        );
+        return new AjaxTabbedPanel("tabs", l);
+      }
+      
+      final String[] results = _dic.getEntry(search);
+      
+      if(results == null || results.length == 0)
+      {
+        l.add(new AbstractTab(new Model("error"))
+          {
+            public Panel getPanel(String panelId) {return new ResultTabPanel(panelId, "", "no entry found");}
+          }
+        );
+        return new AjaxTabbedPanel("tabs", l);
+      }
+      
+      for(int i=0; i < results.length; i++)
+      {
+        l.add(new ResultAbstractTab(new Model("result " + (i+1)), search, results[i]));
+      }
+      
+      return new AjaxTabbedPanel("tabs", l);
+    }
+
+    /******************/
+    /* HELPER CLASSES */
+    /******************/
+    private final class ResultAbstractTab extends AbstractTab
+    {
+      private String title;
+      private String content;
+      
+      public ResultAbstractTab(IModel title, String lemma ,String content)
+      {
+        super(title);
+        this.title = lemma;
+        this.content = content;
+      }
+      
+      public Panel getPanel(String panelId)
+      {
+        return new ResultTabPanel(panelId, title, content);
+      }
+    }
     
     private final class MessageForm extends Form
     {
-      public MessageForm(String id, IModel model)
+      private AutoCompleteTextField searchTextField;
+      
+      public MessageForm(String id)
       {
         super(id);
-        //add(new TextField("txtSearch", model));
         
-        AutoCompleteTextField textField = new AutoCompleteTextField("txtSearch") {
+        searchTextField = new AutoCompleteTextField("txtSearch", new Model()) {
           protected Iterator getChoices(String input) {
             List<String> choices = new ArrayList<String>();
             
@@ -76,12 +146,15 @@ public class OwlReader extends wicket.markup.html.WebPage {
           }
         };
         
-        textField.setModel(model);
         
-        add(textField);
-        
+        add(searchTextField);        
       }
-    }
+      
+      public String getSearchedText()
+      {
+        return searchTextField.getModelObjectAsString();
+      }   
+  }
     
 }
 

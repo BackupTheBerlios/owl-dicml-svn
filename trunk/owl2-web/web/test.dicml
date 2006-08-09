@@ -55,4 +55,8 @@
 
 <entry id="test-short"><lemma><l>short</l></lemma></entry>
 
+<entry id="test-more1"><lemma><l>more</l></lemma><sense>more1</sense></entry>
+<entry id="test-more2"><lemma><l>more</l></lemma><sense>more2</sense></entry>
+<entry id="test-more3"><lemma><l>more</l></lemma><sense>more3</sense></entry>
+
 </body></dicml>
