@@ -28,7 +28,7 @@ public class SQLiteProviderTest extends TestCase {
 
   protected void setUp() throws Exception {
     // remove "owl.db" in order to get a clean enviroment
-    File f = new File(SQLiteProvider.DB_NAME);
+    File f = new File("owl.db");
     f.delete();
   }
 
@@ -51,7 +51,7 @@ public class SQLiteProviderTest extends TestCase {
     // test for a not existing file
     String path = "not existing!!!";
     String name = "";
-    SQLiteProvider instance = new SQLiteProvider("");
+    SQLiteProvider instance = new SQLiteProvider("owl.db");
     
     boolean expResult = false;
     boolean result = instance.importDictionary(path, name);
@@ -101,7 +101,7 @@ public class SQLiteProviderTest extends TestCase {
     System.out.println("isImported");
     
     String name = "C";
-    SQLiteProvider instance = new SQLiteProvider("");
+    SQLiteProvider instance = new SQLiteProvider("owl.db");
     
     // this should not fail!!!
     instance.isImported("nonsense");
@@ -126,7 +126,7 @@ public class SQLiteProviderTest extends TestCase {
     System.out.println("getEntry");
     
     String lemma = "Match";
-    SQLiteProvider instance = new SQLiteProvider("");
+    SQLiteProvider instance = new SQLiteProvider("owl.db");
     
     instance.importDictionary("test/testMatch.dicml", "Get");
     instance.activateDictionary("Get");
@@ -156,7 +156,7 @@ public class SQLiteProviderTest extends TestCase {
     System.out.println("getMatchingLemma");
     
     String name = "Ma";
-    SQLiteProvider instance = new SQLiteProvider("");
+    SQLiteProvider instance = new SQLiteProvider("owl.db");
     
     instance.importDictionary("test/testMatch.dicml", "Match");
     instance.activateDictionary("Match");
@@ -181,7 +181,7 @@ public class SQLiteProviderTest extends TestCase {
       fail("there should be *no* match for \"Nons\"");
     
     name = "short";
-    String expResult = "<entry id=\"test-short\"><lemma><l>short</l></lemma></entry>"; 
+    String expResult = "short"; 
     result = instance.getMatchingLemma(name);
     if(result.size() != 1)
       fail("there should be a match for \"short\"");
@@ -195,7 +195,7 @@ public class SQLiteProviderTest extends TestCase {
   public void testFinalize() {
     System.out.println("finalize");
     
-    SQLiteProvider instance = new SQLiteProvider("");
+    SQLiteProvider instance = new SQLiteProvider("owl.db");
     
     instance.finalize();
         
@@ -208,7 +208,7 @@ public class SQLiteProviderTest extends TestCase {
   public void testGetAvailableDictionaries() {
     System.out.println("getAvailableDictionaries");
     
-    SQLiteProvider instance = new SQLiteProvider("");
+    SQLiteProvider instance = new SQLiteProvider("owl.db");
         
     String[] expResult = new String[0];
     String[] result = instance.getAvailableDictionaries();
@@ -227,7 +227,7 @@ public class SQLiteProviderTest extends TestCase {
   public void testActivateDictionary() {
     System.out.println("activateDictionary");
     
-    SQLiteProvider instance = new SQLiteProvider("");
+    SQLiteProvider instance = new SQLiteProvider("owl.db");
     
     instance.importDictionary("test/testC.dicml", "C");
     instance.importDictionary("test/testD.dicml", "D");
@@ -257,7 +257,7 @@ public class SQLiteProviderTest extends TestCase {
     System.out.println("deactivateDictionary");
     
 
-    SQLiteProvider instance = new SQLiteProvider("");
+    SQLiteProvider instance = new SQLiteProvider("owl.db");
     
     instance.importDictionary("test/testC.dicml", "C");
     instance.importDictionary("test/testD.dicml", "D");
@@ -288,7 +288,7 @@ public class SQLiteProviderTest extends TestCase {
     System.out.println("deleteDictionary");
     
     String name = "C";
-    SQLiteProvider instance = new SQLiteProvider("");
+    SQLiteProvider instance = new SQLiteProvider("owl.db");
     
     instance.importDictionary("test/testC.dicml", "C");
     

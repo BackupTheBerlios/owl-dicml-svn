@@ -22,8 +22,7 @@ import org.xml.sax.SAXException;
  */
 public class SQLiteProvider implements IDictionaryProvider {
   
-  public static final String DB_NAME = "owl.db";
-  
+ 
   private Connection _conn;
   private Statement _stm;
   
@@ -33,16 +32,17 @@ public class SQLiteProvider implements IDictionaryProvider {
    * Creates a new instance of SQLiteProvider. Will start a connection to 
    * the database.
    */
-  public SQLiteProvider(String dir)
+  public SQLiteProvider(String pathToDBFile)
   {
     try
     {
       _activeDics = new java.util.ArrayList<String>();
 
+
       Class.forName("org.sqlite.JDBC");
-      
+            
       // open connection
-      _conn = DriverManager.getConnection("jdbc:sqlite:" + dir + SQLiteProvider.DB_NAME);
+      _conn = DriverManager.getConnection("jdbc:sqlite:" + pathToDBFile);
       _stm = _conn.createStatement();
       
       // if not existing, create a table with a list of all imported dictionaries
@@ -297,7 +297,7 @@ public class SQLiteProvider implements IDictionaryProvider {
     ArrayList<String> list = new ArrayList<String>();
     try {      
       // ask the database
-      ResultSet res = _stm.executeQuery("SELECT entry FROM dic WHERE lemma LIKE \"" + name + "%\"");
+      ResultSet res = _stm.executeQuery("SELECT lemma FROM dic WHERE lemma LIKE \"" + name + "%\"");
       while(res.next())
       {
         list.add(res.getString(1));
