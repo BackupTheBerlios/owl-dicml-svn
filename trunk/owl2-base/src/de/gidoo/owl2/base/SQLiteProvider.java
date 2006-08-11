@@ -91,7 +91,7 @@ public class SQLiteProvider implements IDictionaryProvider {
       _stm.execute("DROP TABLE IF EXISTS " + entry);
       
       // create new ones
-      _stm.execute("CREATE TABLE " + lemma + "(lemma TEXT, id TEXT)");
+      _stm.execute("CREATE TABLE " + lemma + "(lemma TEXT, lemma_lower TEXT, origin TEXT,id TEXT)");
       _stm.execute("CREATE TABLE " + entry + "(id TEXT, entry TEXT)");
       
       // we have to add a lot of data
@@ -169,7 +169,7 @@ public class SQLiteProvider implements IDictionaryProvider {
       PreparedStatement ps_entry = _conn.prepareStatement("INSERT INTO entry_" 
         + name + "(id,entry) VALUES(?,?)");
       PreparedStatement ps_lemma = _conn.prepareStatement("INSERT INTO lemma_" + name
-                      + "(lemma,id) VALUES(?,?)");
+                      + "(lemma,id,origin,lemma_lower) VALUES(?,?,?,?)");
                     
       
       // search for "<entry"
@@ -236,8 +236,11 @@ public class SQLiteProvider implements IDictionaryProvider {
                   
                   while(it.hasNext())
                   {
-                    ps_lemma.setString(1, it.next());
+                    String l = it.next();
+                    ps_lemma.setString(1, l);
                     ps_lemma.setString(2, _saxHandler.lastIdInEntry);
+                    ps_lemma.setString(3, name);
+                    ps_lemma.setString(4, l.toLowerCase()); // neede due comparison bug of SQLite
                     ps_lemma.executeUpdate();
                   }
                   
@@ -288,14 +291,14 @@ public class SQLiteProvider implements IDictionaryProvider {
       return false;
   }
 
-  public String[] getEntry(String lemma) {
-    ArrayList<String> list = new ArrayList<String>();
+  public String[][] getEntry(String lemma) {
+    ArrayList<String[]> list = new ArrayList<String[]>();
     try {      
       // ask the database
-      ResultSet res = _stm.executeQuery("SELECT entry FROM dic WHERE dic.lemma = \"" + lemma + "\"");
+      ResultSet res = _stm.executeQuery("SELECT entry, origin FROM dic WHERE dic.lemma = \"" + lemma + "\"");
       while(res.next())
       {
-        list.add(res.getString(1));
+        list.add(new String[] {res.getString(1), res.getString(2)});
       }
     } 
     catch (SQLException ex) 
@@ -303,20 +306,20 @@ public class SQLiteProvider implements IDictionaryProvider {
       ex.printStackTrace();
     }
     
-    String[] a = new String[0];
+    String[][] a = new String[0][2];
     a = list.toArray(a);
     
     return a;
   }
 
-  public List<String> getMatchingLemma(String name) {
-    ArrayList<String> list = new ArrayList<String>();
+  public List<String[]> getMatchingLemma(String name) {
+    ArrayList<String[]> list = new ArrayList<String[]>();
     try {      
       // ask the database
-      ResultSet res = _stm.executeQuery("SELECT lemma FROM dic WHERE lemma LIKE \"" + name + "%\"");
+      ResultSet res = _stm.executeQuery("SELECT lemma,origin FROM dic WHERE lemma_lower LIKE \"" + name.toLowerCase() + "%\"");
       while(res.next())
       {
-        list.add(res.getString(1));
+        list.add(new String[] {res.getString(1), res.getString(2)});
       }
     } 
     catch (SQLException ex) 
@@ -396,7 +399,7 @@ public class SQLiteProvider implements IDictionaryProvider {
       try
       {
         _stm.execute("CREATE VIEW dic AS "
-          + "SELECT l.lemma AS lemma, e.entry AS entry, e.id AS id "
+          + "SELECT l.lemma AS lemma, e.entry AS entry, e.id AS id, l.origin AS origin, l.lemma_lower AS lemma_lower "
           + "FROM allLemma l, allEntry e "
           + "WHERE l.id = e.id");
       }
@@ -454,8 +457,10 @@ public class SQLiteProvider implements IDictionaryProvider {
   public static void main(String[] args)
   {
     SQLiteProvider dic = new SQLiteProvider("owl.db");
-    dic.importDictionary("/home/thomas/projekte/owl/dicts/de-en.dicml", "de_en");
+    //dic.importDictionary("/home/thomas/projekte/owl/dicts/de-en.dicml", "de_en");
+    dic.importDictionary("test/testMatch.dicml", "de_en");
     dic.activateDictionary("de_en");
+    dic.getMatchingLemma("sönder");
   }
   
 }

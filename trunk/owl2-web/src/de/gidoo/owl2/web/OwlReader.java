@@ -43,7 +43,7 @@ public class OwlReader extends wicket.markup.html.WebPage {
      
       _dic = new SQLiteProvider(OwlApp.realPathToContext + "owl.db");
      
-      if(!_dic.isImported("test"))
+      if(!_dic.isImported("de_en"))
         _dic.importDictionary(OwlApp.realPathToContext + "de-en.dicml", "de_en");
       
       _dic.activateDictionary("de_en");
@@ -80,7 +80,7 @@ public class OwlReader extends wicket.markup.html.WebPage {
         return new AjaxTabbedPanel("tabs", l);
       }
       
-      final String[] results = _dic.getEntry(search);
+      final String[][] results = _dic.getEntry(search);
       
       if(results == null || results.length == 0)
       {
@@ -94,7 +94,7 @@ public class OwlReader extends wicket.markup.html.WebPage {
       
       for(int i=0; i < results.length; i++)
       {
-        l.add(new ResultAbstractTab(new Model("result " + (i+1)), search, results[i]));
+        l.add(new ResultAbstractTab(new Model("" + (i+1) + " (" + results[i][1] + ")"), search, results[i][0]));
       }
       
       return new AjaxTabbedPanel("tabs", l);
@@ -138,9 +138,16 @@ public class OwlReader extends wicket.markup.html.WebPage {
               return choices.iterator();
             }
             
-            List<String> matches = _dic.getMatchingLemma(input);
+            List<String[]> matches = _dic.getMatchingLemma(input);
             
-            choices = matches;
+            //choices = matches;
+            int i=0;
+            Iterator<String[]> it = matches.iterator();
+            while(it.hasNext() && i < 25)
+            {
+              choices.add(it.next()[0]);
+              i++;
+            }
             
             return choices.iterator();
           }

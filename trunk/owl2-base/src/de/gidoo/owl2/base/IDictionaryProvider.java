@@ -46,16 +46,23 @@ public interface IDictionaryProvider {
      * Gets all dicML-entries for a given lemma.
      * @param lemma The lemma.
      * @return If a lemma which matches <b>exactly</b> exist, the corresponding
-     *        entries (in dicML, including the "<entry>"-tag). Otherwise null.
+     *        entries (in dicML, including the "&ltentry&gt"-tag). Otherwise null.<br>
+     *        Each array-entry is an array by itself with the following meaning:
+     *        0 - the markup-text of the entry <br>
+     *        1 - the dictionary where it comes from<br>
+     *        
      */
-    public String[] getEntry(String lemma);
+    public String[][] getEntry(String lemma);
     
     /**
      * Finds a list of lemma which first characters match a given string.
      * @param name The string used for matching.
-     * @return All matching lemma (count might be 0).
+     * @return An list with one-dimensional arrays:<br>
+     *         0 - the matching lemma <br>
+     *         1 - the dictionary where it comes from<br>
+     *         Count might be 0.
      */
-    public List<String> getMatchingLemma(String name);
+    public List<String[]> getMatchingLemma(String name);
     
     /** Returns a list of available dictionaries that can be (de)activated */
     public String[] getAvailableDictionaries();

@@ -84,7 +84,7 @@ public class SQLiteProviderTest extends TestCase {
     
     // check wether import was successfull
     instance.activateDictionary("AB");
-    String[] r = instance.getEntry("A");
+    String[][] r = instance.getEntry("A");
     if(r.length == 0)
       fail("the imported lemma \"A\" was not found");
     
@@ -131,7 +131,7 @@ public class SQLiteProviderTest extends TestCase {
     instance.importDictionary("test/testMatch.dicml", "Get");
     instance.activateDictionary("Get");
     
-    String[] result = instance.getEntry(lemma);
+    String[][] result = instance.getEntry(lemma);
     if(result.length != 1)
       fail("there should be *exactly* one \"Match\"");
     
@@ -140,13 +140,27 @@ public class SQLiteProviderTest extends TestCase {
     if(result.length != 0)
       fail("there should be *no* \"C\"");
     
+    lemma = "match";
+    result = instance.getEntry(lemma);
+    if(result.length != 0)
+      fail("there should be *no* \"match\"");
+    
+    
     lemma = "short";
-    String[] expResult = new String[] {"<entry id=\"test-short\"><lemma><l>short</l></lemma></entry>"}; 
+    String expResult = "<entry id=\"test-short\"><lemma><l>short</l></lemma></entry>"; 
     result = instance.getEntry(lemma);
     if(result.length != 1)
       fail("there should be a match for \"short\"");
-    assertEquals(expResult[0], result[0]);
+    assertEquals(expResult, result[0][0]);
     
+    instance.importDictionary("test/testC.dicml", "Set");
+    instance.activateDictionary("Set");
+    
+    result = instance.getEntry("C");
+    assertEquals("Set", result[0][1]);
+    
+    result = instance.getEntry("short");
+    assertEquals("Get", result[0][1]);
   }
 
   /**
@@ -161,7 +175,7 @@ public class SQLiteProviderTest extends TestCase {
     instance.importDictionary("test/testMatch.dicml", "Match");
     instance.activateDictionary("Match");
     
-    List<String> result = instance.getMatchingLemma(name);
+    List<String[]> result = instance.getMatchingLemma(name);
     if(result.size() != 1)
       fail("there should be *exactly* one match for \"Ma\"");
     
@@ -173,7 +187,23 @@ public class SQLiteProviderTest extends TestCase {
     name = "M";
     result = instance.getMatchingLemma(name);
     if(result.size() != 2)
-      fail("there should be *exactly* one match for \"M\"");
+      fail("there should be *exactly* two matches for \"M\"");
+
+    name = "sönder";
+    result = instance.getMatchingLemma(name);
+    if(result.size() != 1)
+      fail("there should be *exactly* one match for \"sönder\"");
+
+    name = "SÖNDER";
+    result = instance.getMatchingLemma(name);
+    if(result.size() != 1)
+      fail("there should be *exactly* one match for \"SÖNDER\"");
+    
+    name = "Sönderzeichen";
+    result = instance.getMatchingLemma(name);
+    if(result.size() != 1)
+      fail("there should be *exactly* one match for \"Sönderzeichen\"");
+    
     
     name = "Nons";
     result = instance.getMatchingLemma(name);
@@ -185,8 +215,17 @@ public class SQLiteProviderTest extends TestCase {
     result = instance.getMatchingLemma(name);
     if(result.size() != 1)
       fail("there should be a match for \"short\"");
-    assertEquals(expResult, result.get(0));
-
+    assertEquals(expResult, result.get(0)[0]);
+    
+    instance.importDictionary("test/testC.dicml", "NewDic");
+    instance.activateDictionary("NewDic");
+    
+    result = instance.getMatchingLemma("C");
+    assertEquals("NewDic", result.get(0)[1]);
+    
+    result = instance.getMatchingLemma("MisMAtch");
+    assertEquals("Match", result.get(0)[1]);
+    
   }
 
   /**
@@ -235,7 +274,7 @@ public class SQLiteProviderTest extends TestCase {
     
     instance.activateDictionary("C");
     
-    String[] result = instance.getEntry("C");
+    String[][] result = instance.getEntry("C");
     if(result.length == 0)
       fail("activated \"C\" was not found ");
     
@@ -265,7 +304,7 @@ public class SQLiteProviderTest extends TestCase {
     
     instance.activateDictionary("C");
     
-    String[] result = instance.getEntry("A");
+    String[][] result = instance.getEntry("A");
     if(result.length != 0)
       fail("deactivated \"A\" was found ");
     
@@ -297,12 +336,13 @@ public class SQLiteProviderTest extends TestCase {
     assertEquals(expResult, result);
     
     // additionally test, wether really removed
-    String[] r1 = instance.getEntry("C");
+    String[][] r1 = instance.getEntry("C");
     if(r1.length != 0)
       fail("removed \"C\" still exists ");
     
-    r1 = instance.getAvailableDictionaries();
-    if(r1.length != 0)
+    String[] r2;
+    r2 = instance.getAvailableDictionaries();
+    if(r2.length != 0)
       fail("deleted dic still in list of dictionaries");
     
     // I don't trust you
@@ -323,8 +363,8 @@ public class SQLiteProviderTest extends TestCase {
     if(r1.length != 0)
       fail("removed \"C\" still exists ");
     
-    r1 = instance.getAvailableDictionaries();
-    if(r1.length != 1)
+    r2 = instance.getAvailableDictionaries();
+    if(r2.length != 1)
       fail("deleted dic still in list of dictionaries");
     
     // make sure that the rest is still there
