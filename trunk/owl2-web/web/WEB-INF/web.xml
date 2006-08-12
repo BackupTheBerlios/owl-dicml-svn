@@ -7,7 +7,7 @@
         <servlet-class>wicket.protocol.http.WicketServlet</servlet-class>
         <init-param>
           <param-name>applicationClassName</param-name>
-          <param-value>de.gidoo.owl2.web.OwlApp</param-value>
+          <param-value>de.gidoo.owl2.web.reader.OwlApp</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>

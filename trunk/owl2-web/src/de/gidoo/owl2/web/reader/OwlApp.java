@@ -6,7 +6,7 @@
  * See Licence.txt for more information according to this file.
  */
 
-package de.gidoo.owl2.web;
+package de.gidoo.owl2.web.reader;
 
 /**
  * The application class for owl2

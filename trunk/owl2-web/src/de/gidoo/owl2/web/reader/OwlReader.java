@@ -6,7 +6,7 @@
  * See Licence.txt for more information according to this file.
  */
 
-package de.gidoo.owl2.web;
+package de.gidoo.owl2.web.reader;
 
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
@@ -43,10 +43,10 @@ public class OwlReader extends wicket.markup.html.WebPage {
      
       _dic = new SQLiteProvider(OwlApp.realPathToContext + "owl.db");
      
-      if(!_dic.isImported("de_en"))
-        _dic.importDictionary(OwlApp.realPathToContext + "de-en.dicml", "de_en");
+//      if(!_dic.isImported("de_en"))
+//        _dic.importDictionary(OwlApp.realPathToContext + "de-en.dicml", "de_en");
       
-      _dic.activateDictionary("de_en");
+      //_dic.activateDictionary("de_en");
             
       mainForm = new MessageForm("form");
       add(mainForm);
@@ -54,6 +54,7 @@ public class OwlReader extends wicket.markup.html.WebPage {
       // empty tab-list at begin
       tabPanel = getAvailableTabs();
       add(tabPanel);
+      
       
     }
     
@@ -72,11 +73,12 @@ public class OwlReader extends wicket.markup.html.WebPage {
       
       if(search == null || search.equals(""))
       {
-        l.add(new AbstractTab(new Model("info"))
+        l.add(new AbstractTab(new Model(getString("info")))
           {
-            public Panel getPanel(String panelId) {return new ResultTabPanel(panelId, "", "no search text entered");}
+            public Panel getPanel(String panelId) {return new ResultTabPanel(panelId, "", getString("noSearchText"));}
           }
         );
+        
         return new AjaxTabbedPanel("tabs", l);
       }
       
@@ -84,9 +86,9 @@ public class OwlReader extends wicket.markup.html.WebPage {
       
       if(results == null || results.length == 0)
       {
-        l.add(new AbstractTab(new Model("error"))
+        l.add(new AbstractTab(new Model(getString("error")))
           {
-            public Panel getPanel(String panelId) {return new ResultTabPanel(panelId, "", "no entry found");}
+            public Panel getPanel(String panelId) {return new ResultTabPanel(panelId, "", getString("nothingFound"));}
           }
         );
         return new AjaxTabbedPanel("tabs", l);
@@ -153,8 +155,9 @@ public class OwlReader extends wicket.markup.html.WebPage {
           }
         };
         
-        
-        add(searchTextField);        
+        add(searchTextField);     
+        add(new Label("lblSearchFor", getString("lblSearchFor")));
+        add(new Button("btSubmit", new Model(getString("btSubmit"))));
       }
       
       public String getSearchedText()

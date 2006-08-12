@@ -6,13 +6,13 @@
  * See Licence.txt for more information according to this file.
  */
 
-package de.gidoo.owl2.web;
+package de.gidoo.owl2.web.reader;
 
 import wicket.markup.html.basic.*;
 import wicket.model.*;
 
 /**
- *
+ * A simple "template" for a panel inside a tab with a label
  * @author <a href="mailto:krause@informatik.hu-berlin.de">Thomas Krause</a>
  */
 public class ResultTabPanel extends wicket.markup.html.panel.Panel {
