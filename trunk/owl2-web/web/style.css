@@ -1,0 +1,43 @@
+div.wicket-aa {
+  border-width: 1px;
+  border-color: #cccccc;
+  border-style: solid;
+  padding: 2px;
+  margin: 1px 0 0 0;
+  text-align:left;
+}
+
+div.wicket-aa ul { list-style:none; padding: 2px; margin:0; background-color: #FFFFFF}
+div.wicket-aa ul li.selected { background-color: #8888AA; padding: 2px: margin:0; }
+                                
+/** Tabs */
+div.tabpanel div.tab-row{
+float:left;
+width:100%;
+margin:0px;
+text-align:left;
+}
+
+div.tabpanel div.tab-row a{
+text-decoration:none;
+}
+
+div.tabpanel div.tab-row ul {
+list-style-type:none;
+margin:0px;
+padding:0px;
+}
+
+div.tabpanel div.tab-row li {
+float:left;
+margin-right:10px;
+margin-left:0px;
+}
+
+div.tabpanel div.tab-row li.selected {
+background-color:lightgray;
+}
+
+div.tabpanel span.tab-panel {
+background-color:lightgray;
+}
