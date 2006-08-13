@@ -8,6 +8,10 @@
 
 package de.gidoo.owl2.web.reader;
 
+import wicket.Session;
+import wicket.markup.html.basic.*;
+import wicket.markup.html.link.Link;
+
 /**
  *
  * @author <a href="mailto:krause@informatik.hu-berlin.de">Thomas Krause</a>
@@ -15,7 +19,18 @@ package de.gidoo.owl2.web.reader;
 public class Admin extends PageWithAdminRightsNeeded {
   
   /** Creates a new instance of Admin */
-  public Admin() {
+  public Admin() 
+  {
+    add(new Label("lblTitle", getString("lblTitle")));
+    
+    add(new Link("lnkLogout") 
+    {
+      public void onClick() 
+      {
+        ((SignInSession) Session.get()).logout();
+        setResponsePage(OwlReader.class);
+      }
+    });
   }
   
 }

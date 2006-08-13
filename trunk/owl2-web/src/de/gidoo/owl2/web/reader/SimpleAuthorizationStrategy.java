@@ -40,7 +40,7 @@ public class SimpleAuthorizationStrategy implements IAuthorizationStrategy {
       }
       
       // force login
-      //throw new RestartResponseAtInterceptPageException(Login.class);
+      throw new RestartResponseAtInterceptPageException(Login.class);
         
     }
     return true ;

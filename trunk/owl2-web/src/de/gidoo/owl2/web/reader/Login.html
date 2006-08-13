@@ -1,0 +1,24 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?> -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title wicket:id="lblTitle">[title]</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h1>Login page</h1>
+        <p>            
+            <div wicket:id="feedback">
+              [feedback]
+            </div>
+            <div>
+              <form wicket:id="formMain">
+                <span wicket:id="lblUser">[lblUser]</span> <input type="text" wicket:id="txtUser"/><br/>
+                <span wicket:id="lblPass">[lblPass]</span> <input type="password" wicket:id="txtPassword"/><br/>
+                <input type="submit" wicket:id="btLogin"/>
+                <input type="reset" wicket:id="btReset"/>
+              </form>
+            </div>
+        </p>
+    </body>
+</html>

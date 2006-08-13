@@ -13,6 +13,8 @@ import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.lang.reflect.Array;
 import java.util.*;
+import wicket.PageParameters;
+import wicket.Session;
 import wicket.extensions.markup.html.tabs.AbstractTab;
 
 import wicket.markup.html.basic.*;
@@ -40,7 +42,7 @@ public class OwlReader extends wicket.markup.html.WebPage {
         
     /** Creates a new instance of OwlReader */
     public OwlReader() {
-     
+      
       _dic = new SQLiteProvider(OwlApp.realPathToContext + "owl.db");
      
 //      if(!_dic.isImported("de_en"))
@@ -51,10 +53,24 @@ public class OwlReader extends wicket.markup.html.WebPage {
       mainForm = new MessageForm("form");
       add(mainForm);
       
+      
       // empty tab-list at begin
       tabPanel = getAvailableTabs();
       add(tabPanel);
       
+      add(new Label("lblTitle", getString("lblTitle")));
+      
+      Link lnkAdmin = new Link("lnkAdmin") 
+      {
+        public void onClick() 
+        {
+          setResponsePage(Admin.class);
+        }
+      };
+      
+      lnkAdmin.add(new Label("lblLinkAdmin", getString("lblLinkAdmin")));
+      
+      add(lnkAdmin);
       
     }
     

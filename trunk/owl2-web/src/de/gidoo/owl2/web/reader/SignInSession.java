@@ -9,6 +9,7 @@
 package de.gidoo.owl2.web.reader;
 
 import java.io.IOException;
+import java.security.MessageDigest;
 import javax.xml.parsers.ParserConfigurationException;
 import org.apache.naming.java.javaURLContextFactory;
 import org.w3c.dom.*;
@@ -46,13 +47,19 @@ public class SignInSession extends WebSession {
         try 
         {
           // prepare password
-          String hashVal = new String(
-            java.security.MessageDigest.getInstance("MD5").digest(
-            pwd.getBytes()));
+          MessageDigest md = MessageDigest.getInstance("MD5");
+          md.update(pwd.getBytes("UTF-8"));
+          byte[] digest = md.digest();
+          
+          String hashVal = "";
+          for(byte b : digest)
+          {
+            hashVal += String.format("%02x", b);
+          }
           
           // read in user.xml          
           db = javax.xml.parsers.DocumentBuilderFactory.newInstance().newDocumentBuilder();
-          org.w3c.dom.Document doc = db.parse("WEB-INF/loginData/users.xml");
+          org.w3c.dom.Document doc = db.parse(OwlApp.realPathToContext + "WEB-INF/loginData/users.xml");
           
           // get all users and check wether username and hash-value of password are equal
           NodeList nodeList = doc.getElementsByTagName("user");
@@ -60,14 +67,18 @@ public class SignInSession extends WebSession {
           while(nodeList.item(i) != null)
           {
             NamedNodeMap atts = nodeList.item(i).getAttributes();
-            if(username.equals(atts.getNamedItem("user").getNodeValue())
-              && hashVal.equals(atts.getNamedItem("password").getNodeValue()))
+            Node nUser = atts.getNamedItem("name");
+            Node nPwd = atts.getNamedItem("password");
+            if(nUser != null && nPwd != null)
             {
-              // everything is correct
-              _currentUserName = username;              
-              return true;
-            }
-            
+              if(username.equals(nUser.getNodeValue())
+                && hashVal.equals(nPwd.getNodeValue()))
+              {
+                // everything is correct
+                _currentUserName = username;              
+                return true;
+              }
+            }            
             i++;
           }
           
@@ -75,7 +86,6 @@ public class SignInSession extends WebSession {
         catch (Exception ex)
         {
           ex.printStackTrace();
-          error(ex.toString());
           return false;
         }
         
