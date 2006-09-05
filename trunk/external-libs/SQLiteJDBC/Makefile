@@ -32,7 +32,7 @@ endif
 
 Default_CC        := gcc
 Default_STRIP     := strip
-Default_CCFLAGS   := -I$(JAVA_HOME)/include -I$(jni_include) -O
+Default_CCFLAGS   := -I$(JAVA_HOME)/include -I$(jni_include) -O -fPIC
 Default_LINKFLAGS := -shared
 Default_LIBNAME   := libsqlitejdbc.so
 
@@ -46,7 +46,7 @@ endif
 
 Linux_CC         := gcc
 Linux_STRIP      := strip
-Linux_CCFLAGS    := -Isrc/jni/Linux -O
+Linux_CCFLAGS    := -Isrc/jni/Linux -O -fPIC
 Linux_LINKFLAGS  := -shared
 Linux_LIBNAME    := libsqlitejdbc.so
 
@@ -70,6 +70,7 @@ java_classes := $(java_sources:src/%.java=build/%.class)
 
 target    := $(os)-$(arch)
 VERSION   := $(shell cat VERSION)
+PNAME     := sqlitejdbc-v$(VERSION)
 LIPO      := powerpc-apple-darwin-lipo
 CC        := $($(os)_CC)
 STRIP     := $($(os)_STRIP)
@@ -82,7 +83,7 @@ default: test
 
 build/%.class: src/%.java
 	@mkdir -p build
-	javac -sourcepath src -d build $<
+	javac -source 1.2 -target 1.2 -sourcepath src -d build $<
 
 compile: work/sqlite/$(target)/main.o $(java_classes)
 	@mkdir -p build/$(target)
@@ -95,29 +96,39 @@ compile: work/sqlite/$(target)/main.o $(java_classes)
 
 dist: compile
 	@mkdir -p dist
-	tar cfz dist/sqlitejdbc-v$(VERSION)-$(target).tgz README \
+	tar cfz dist/$(PNAME)-$(target).tgz README \
 	    -C build sqlitejdbc.jar -C $(target) $(LIBNAME)
 
-all:
+all: src-tgz
+	@mkdir -p src/jni/Linux src/jni/Darwin src/jni/Win
 	@make os=Linux arch=i386 dist
 	@make os=Win arch=i586 dist
 	@make os=Darwin arch=powerpc compile
-	@make os=Darwin arch=i386 compile
+	#@make os=Darwin arch=i386 compile
 	@mkdir -p build/Darwin-lipo
 	$(LIPO) -create \
 	    build/Darwin-powerpc/libsqlitejdbc.jnilib \
 	    build/Darwin-i386/libsqlitejdbc.jnilib \
 	    -output build/Darwin-lipo/libsqlitejdbc.jnilib
-	tar cfz dist/sqlitejdbc-v$(VERSION)-Mac.tgz README \
+	tar cfz dist/$(PNAME)-Mac.tgz README \
 	    -C build sqlitejdbc.jar -C Darwin-lipo libsqlitejdbc.jnilib
-	tar cfz dist/sqlitejdbc-v$(VERSION)-src.tgz \
-		Makefile README LICENSE VERSION src/org src/test
 	jar cfm dist/sqlitejdbc-test.jar src/test/manifest \
 	    -C build org -C build test
 
+src-tgz:
+	@mkdir -p dist
+	@mkdir -p work/$(PNAME)/src
+	cp Makefile work/$(PNAME)/.
+	cp README work/$(PNAME)/.
+	cp LICENSE work/$(PNAME)/.
+	cp VERSION work/$(PNAME)/.
+	cp -R src/org work/$(PNAME)/src/.
+	cp -R src/test work/$(PNAME)/src/.
+	cd work && tar cfz ../dist/$(PNAME)-src.tgz $(PNAME)
+
 work/sqlite-src.zip:
 	@mkdir -p work
-	wget -O work/sqlite-src.zip http://www.sqlite.org/sqlite-source-3_3_6.zip
+	wget -O work/sqlite-src.zip http://www.sqlite.org/sqlite-source-3_3_7.zip
 
 work/sqlite/%/main.o: work/sqlite-src.zip
 	mkdir -p work/sqlite/$*
@@ -125,7 +136,13 @@ work/sqlite/%/main.o: work/sqlite-src.zip
 	          unzip -qo ../../sqlite-src.zip; \
 	          mv shell.c shell.c.old; \
 	          mv tclsqlite.c tclsqlite.c.not; \
-	          $(CC) -c -O -DSQLITE_ENABLE_COLUMN_METADATA *.c)
+	          $(CC) -c -O \
+	              -DSQLITE_ENABLE_COLUMN_METADATA \
+	              -DSQLITE_OMIT_LOAD_EXTENSION *.c)
+
+doc:
+	mkdir -p build/doc
+	javadoc -notree -d build/doc src/org/sqlite/*.java
 
 build/test/test.db:
 	mkdir -p build/test
@@ -133,6 +150,12 @@ build/test/test.db:
 
 test: compile build/test/test.db
 	java -Djava.library.path=build/$(target) -cp build test.Test
+
+speed: compile build/test/test.db
+	java -Djava.library.path=build/$(target) -cp build test.Speed
+
+speedfull: compile build/test/test.db
+	java -Djava.library.path=build/$(target) -cp build test.Speed full
 
 clean:
 	rm -rf build

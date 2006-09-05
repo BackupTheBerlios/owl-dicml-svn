@@ -30,7 +30,9 @@ and the C library in the librarypath. E.g.
 
 Alternatively, if you wish to load the native library at runtime,
 set the system property "org.sqlite.lib.path" to the directory
-containing the library.
+containing the library. For bundling several binaries, the property
+"org.sqlite.lib.name" can be used if the path property is set. This
+is used as the name of the native library to load.
 
 For a memory database, use a URL without a file name:
     Connection conn = DriverManager.getConnection("jdbc:sqlite:");
@@ -40,8 +42,6 @@ For a memory database, use a URL without a file name:
 Most aspects of JDBC that are unsupported are done so because SQLite
 doesn't lend itself that way, or I haven't got around to it yet.
 
-- user-defined functions: JDBC has no support for adding these,
-  though an external interface is planned.
 - getBlob() / setBlob(): these functions require constantly creating
   instances of java.sql.Blob, which I do not like. The features of
   these functions, such as Stream access cannot be implemented
@@ -65,13 +65,15 @@ doesn't lend itself that way, or I haven't got around to it yet.
 
 
 -- COMPILING --------------------------------------------------------
-Install gcc, gnu make, set your $JAVA_HOME and type:
+Install gcc, gnu make, a JDK, set your $JAVA_HOME and type:
     $ make
 
 On a Unix system, this should compile the driver for your
 architecture and run the test suite. On cygwin you may be lucky and
 only have to rename libsqlitejdbc.so to sqlitejdbc.dll, or other
 problems may appear.
+
+To pass the tests an sqlite binary is needed on the path.
 
 
 -- COMPILING WITH MSVC ----------------------------------------------
