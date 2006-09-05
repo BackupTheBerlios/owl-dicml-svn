@@ -26,7 +26,9 @@ public class SaxHandler extends DefaultHandler {
   private boolean _record;
   private String _buffer;
   
-  /** Creates a new instance of SaxHandler */
+  /**
+   * Creates a new instance of SaxHandler
+   */
   public SaxHandler() 
   {
     lastLemmaInEntry = new ArrayList<String>();

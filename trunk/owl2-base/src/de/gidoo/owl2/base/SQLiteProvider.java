@@ -11,9 +11,11 @@ package de.gidoo.owl2.base;
 import java.io.*;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Dictionary;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
+import javax.xml.transform.Result;
 import org.w3c.dom.*;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -52,7 +54,8 @@ public class SQLiteProvider implements IDictionaryProvider {
       _stm = _conn.createStatement();
       
       // if not existing, create a table with a list of all imported dictionaries
-      _stm.execute("CREATE TABLE IF NOT EXISTS imported_dics(name TEXT, author TEXT, date INTEGER)");
+      _stm.execute("CREATE TABLE IF NOT EXISTS imported_dics(name TEXT, srcLanguage TEXT, " +
+        "destLanguage TEXT, author TEXT, date INTEGER)");
     }
     catch(Exception ex)
     {
@@ -98,6 +101,7 @@ public class SQLiteProvider implements IDictionaryProvider {
       _conn.setAutoCommit(false);
       
       index(path, name);
+      DictionaryHead head = parseHead(path);
       
       _conn.commit();
       _conn.setAutoCommit(true);
@@ -114,7 +118,9 @@ public class SQLiteProvider implements IDictionaryProvider {
         _stm.execute("UPDATE imported_dics "
           + "SET "
           + "name=\"" + name + "\", "
-          + "author=\"unknown\", "
+          + "srcLanguage=\"" + head.srcLanguage + "\", "
+          + "destLanguage=\"" + head.destLanguage + "\", "
+          + "author=\"" + head.authorName + "\", "
           + "date=\"" + new java.util.Date().getTime() + "\" "
           + "WHERE name=\"" + name + "\"");
       }
@@ -150,10 +156,51 @@ public class SQLiteProvider implements IDictionaryProvider {
     return true;
   }
 
+  /** Parse head-part of a dictionary and return all needed information */
+  private DictionaryHead parseHead(String path)
+  {
+    DictionaryHead result = new DictionaryHead();
+    try
+    {
+      InputStreamReader reader = new InputStreamReader(
+        new FileInputStream(path));
+      
+      String head;
+      byte[] piLeft = new byte[] {0,0,0,0,0};
+      byte[] piRight = new byte[] {0,0,0,0,0,0}; 
+      while((head = getInnerText(reader, "<head", piLeft, "</head", piRight)) != null)
+      {
+        head = head + ">";
+        org.w3c.dom.Document doc = 
+          javax.xml.parsers.DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(head);
+        
+        // get the language
+        NodeList langList = doc.getElementsByTagName("lang");
+        Node langNode = langList.item(0);
+        if(langNode != null)
+        {
+          result.srcLanguage = langNode.getAttributes().getNamedItem("source").getNodeValue();
+          result.destLanguage = langNode.getAttributes().getNamedItem("target").getNodeValue();
+          // TODO: something more senseful
+          result.authorName = "";
+        }
+        
+      }
+        
+      reader.close();
+    }
+    catch(Exception ex)
+    {
+      ex.printStackTrace();
+    }
+    return result;
+  }
+  
   /** Index a given file */
   private void index(String path, String name)
   {
-    try {
+    try 
+    {
       
       // initialisation
       InputStreamReader reader = new InputStreamReader(
@@ -170,103 +217,233 @@ public class SQLiteProvider implements IDictionaryProvider {
         + name + "(id,entry) VALUES(?,?)");
       PreparedStatement ps_lemma = _conn.prepareStatement("INSERT INTO lemma_" + name
                       + "(lemma,id,origin,lemma_lower) VALUES(?,?,?,?)");
-                    
-      
-      // search for "<entry"
-      int c;
-      int q1 = 0; // count of already read in characters of "<entry" (KMP)
-      char[] P1 = new char[] {'<','e','n','t','r','y'};
-      byte[] J1 = new byte[] {0,0,0,0,0,0};
-      while((c = reader.read()) > -1)
+      String entry;
+
+      byte[] piLeft = new byte[] {0,0,0,0,0,0};
+      byte[] piRight = new byte[] {0,0,0,0,0,0,0};
+      while((entry = getInnerText(reader, "<entry", piLeft, "</entry", piRight)) != null)
       {
-        while(q1 > 0 && P1[q1] != (char) c)
-          q1 = J1[q1-1];
-        
-        if(P1[q1] == (char) c)
-          q1++;
-        
-        if(q1 == P1.length)
+        entry = entry + ">";
+        //parse the xml (only entry)
+        try
         {
-          q1 = 0;
-          
-          // found, now find the end ("</entry" and add it to the database
-          String entry = "<entry";
-          int q2 = 0; // again KMP
-          char[] P2 = new char[] {'<', '/', 'e', 'n', 't', 'r', 'y'};
-          byte[] J2 = new byte[] {0,0,0,0,0,0,0};
-          boolean found = false;
-          while(!found && (c = reader.read()) > -1)
+          _saxHandler.lastLemmaInEntry.clear();
+          _saxHandler.lastIdInEntry = null;
+          InputSource src = new InputSource(new java.io.ByteArrayInputStream(entry.getBytes()));
+          xr.parse(src);
+
+          // add it to the database
+          int size = _saxHandler.lastLemmaInEntry.size();
+          if(size != 0)
           {
-           
-            while(q2 > 0 && P2[q2] != (char) c)
-              q2 = J2[q2-1];
-            
-            if(P2[q2] == (char) c)
-              q2++;
-            
-            if(q2 == P2.length)
+            if(_saxHandler.lastIdInEntry == null)
             {
-              found = true;
-              q2 = 0;
-              entry = entry + "y>";
-              
-              //parse the xml (only entry)
-              try
-              {
-                _saxHandler.lastLemmaInEntry.clear();
-                _saxHandler.lastIdInEntry = null;
-                InputSource src = new InputSource(new java.io.ByteArrayInputStream(entry.getBytes()));
-                xr.parse(src);
-                
-                // add it to the database
-                int size = _saxHandler.lastLemmaInEntry.size();
-                if(size != 0)
-                {
-                  if(_saxHandler.lastIdInEntry == null)
-                  {
-                    // random number
-                    _saxHandler.lastIdInEntry = name + "-" + rand.nextInt();
-                  }
-                  ps_entry.setString(1, _saxHandler.lastIdInEntry);
-                  ps_entry.setString(2, entry);
-                  ps_entry.executeUpdate();
-                  
-                  
-                  Iterator<String> it = _saxHandler.lastLemmaInEntry.iterator();
-                  
-                  while(it.hasNext())
-                  {
-                    String l = it.next();
-                    ps_lemma.setString(1, l);
-                    ps_lemma.setString(2, _saxHandler.lastIdInEntry);
-                    ps_lemma.setString(3, name);
-                    ps_lemma.setString(4, l.toLowerCase()); // neede due comparison bug of SQLite
-                    ps_lemma.executeUpdate();
-                  }
-                  
-                }
-                
-              }
-              catch(SAXException saxEx)
-              {
-                saxEx.printStackTrace();
-              }
+              // random number
+              _saxHandler.lastIdInEntry = name + "-" + rand.nextInt();
             }
-            else
+            ps_entry.setString(1, _saxHandler.lastIdInEntry);
+            ps_entry.setString(2, entry);
+            ps_entry.executeUpdate();
+
+
+            Iterator<String> it = _saxHandler.lastLemmaInEntry.iterator();
+
+            while(it.hasNext())
             {
-              entry = entry + (char) c;
+              String l = it.next();
+              ps_lemma.setString(1, l);
+              ps_lemma.setString(2, _saxHandler.lastIdInEntry);
+              ps_lemma.setString(3, name);
+              ps_lemma.setString(4, l.toLowerCase()); // needed due comparison bug of SQLite
+              ps_lemma.executeUpdate();
             }
+
           }
+
         }
-        
+        catch(SAXException saxEx)
+        {
+          saxEx.printStackTrace();
+        }
       }
+      
+//      // search for "<entry"
+//      int c;
+//      int q1 = 0; // count of already read in characters of "<entry" (KMP)
+//      char[] P1 = new char[] {'<','e','n','t','r','y'};
+//      byte[] J1 = new byte[] {0,0,0,0,0,0};
+//      while((c = reader.read()) > -1)
+//      {
+//        while(q1 > 0 && P1[q1] != (char) c)
+//          q1 = J1[q1-1];
+//        
+//        if(P1[q1] == (char) c)
+//          q1++;
+//        
+//        if(q1 == P1.length)
+//        {
+//          q1 = J1[q1-1];
+//          
+//          // found, now find the end ("</entry" and add it to the database
+//          String entry = "<entry";
+//          int q2 = 0; // again KMP
+//          char[] P2 = new char[] {'<', '/', 'e', 'n', 't', 'r', 'y'};
+//          byte[] J2 = new byte[] {0,0,0,0,0,0,0};
+//          boolean found = false;
+//          while(!found && (c = reader.read()) > -1)
+//          {
+//           
+//            while(q2 > 0 && P2[q2] != (char) c)
+//              q2 = J2[q2-1];
+//            
+//            if(P2[q2] == (char) c)
+//              q2++;
+//            
+//            if(q2 == P2.length)
+//            {
+//              found = true;
+//              q2 = J2[q2-1];
+//              entry = entry + "y>";
+//              
+//              //parse the xml (only entry)
+//              try
+//              {
+//                _saxHandler.lastLemmaInEntry.clear();
+//                _saxHandler.lastIdInEntry = null;
+//                InputSource src = new InputSource(new java.io.ByteArrayInputStream(entry.getBytes()));
+//                xr.parse(src);
+//                
+//                // add it to the database
+//                int size = _saxHandler.lastLemmaInEntry.size();
+//                if(size != 0)
+//                {
+//                  if(_saxHandler.lastIdInEntry == null)
+//                  {
+//                    // random number
+//                    _saxHandler.lastIdInEntry = name + "-" + rand.nextInt();
+//                  }
+//                  ps_entry.setString(1, _saxHandler.lastIdInEntry);
+//                  ps_entry.setString(2, entry);
+//                  ps_entry.executeUpdate();
+//                  
+//                  
+//                  Iterator<String> it = _saxHandler.lastLemmaInEntry.iterator();
+//                  
+//                  while(it.hasNext())
+//                  {
+//                    String l = it.next();
+//                    ps_lemma.setString(1, l);
+//                    ps_lemma.setString(2, _saxHandler.lastIdInEntry);
+//                    ps_lemma.setString(3, name);
+//                    ps_lemma.setString(4, l.toLowerCase()); // needed due comparison bug of SQLite
+//                    ps_lemma.executeUpdate();
+//                  }
+//                  
+//                }
+//                
+//              }
+//              catch(SAXException saxEx)
+//              {
+//                saxEx.printStackTrace();
+//              }
+//            }
+//            else
+//            {
+//              entry = entry + (char) c;
+//            }
+//          }
+//        }
+//        
+//      }
       
       ps_entry.close();
       ps_lemma.close();
       
+      reader.close();
+      
     } catch (Exception ex) {
       ex.printStackTrace();
     }
+    
+  }
+  
+  /**
+   * Retreive the text between two given search texts using KMP-algorithm.
+   * @param searchLeft The left search term
+   * @param piLeft  KMP uses the so called PI-function (at least I learned this name).
+   *                You have to provide this function by yourself by using the byte-array.
+   *                piLeft is the PI-function for the left search term
+   * @param searchRight The right search term
+   * @param piRight See explanation for piLeft 
+   * @return  null if nothing was found or parameter were incorrect and the text between two given search texts
+   *          including these ones.     
+   */
+  private String getInnerText(Reader reader, String searchLeft, byte[] piLeft, String searchRight, byte[] piRight)
+    throws java.io.IOException
+  {
+    String result = null;
+
+    if(reader == null || searchLeft == null || searchRight == null)
+      return null;
+    
+    int c;
+    int q1 = 0;
+    char[] P1 = searchLeft.toCharArray();    
+    byte[] J1 = piLeft;
+    
+    if(P1.length != J1.length)
+      return null;
+    
+    while((c = reader.read()) > -1)
+    {
+      while(q1 > 0 && P1[q1] != (char) c)
+        q1 = J1[q1-1];
+
+      if(P1[q1] == (char) c)
+        q1++;
+
+      if(q1 == P1.length)
+      {
+        q1 = J1[q1-1];
+
+        result = searchLeft;
+
+        int q2 = 0; // again KMP
+
+        char[] P2 = searchRight.toCharArray();
+        byte[] J2 = piRight;
+
+        if(P2.length != J2.length)
+          return null;
+
+        while((c = reader.read()) > -1)
+        {
+
+          while(q2 > 0 && P2[q2] != (char) c)
+            q2 = J2[q2-1];
+
+          if(P2[q2] == (char) c)
+            q2++;
+
+          if(q2 == P2.length)
+          {
+            // we found something and will stop searching until we are called again
+            q2 = J2[q2-1];
+
+            result = result + (char) c;
+            
+            return result;
+            
+          }
+          else
+          {
+            result = result + (char) c;
+          }
+        }
+      }
+    }
+    
+    return null;
     
   }
   
@@ -461,6 +638,14 @@ public class SQLiteProvider implements IDictionaryProvider {
     dic.importDictionary("test/testMatch.dicml", "de_en");
     dic.activateDictionary("de_en");
     dic.getMatchingLemma("sönder");
+  }
+  
+  /** A data structure that holds general information about a dictionary. */
+  private class DictionaryHead
+  {
+    public String srcLanguage;
+    public String destLanguage;
+    public String authorName;
   }
   
 }
