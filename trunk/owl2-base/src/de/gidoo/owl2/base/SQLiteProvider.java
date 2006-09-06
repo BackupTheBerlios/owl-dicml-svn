@@ -500,11 +500,7 @@ public class SQLiteProvider implements IDictionaryProvider {
         res = _stm.executeQuery("SELECT entry, origin FROM dic WHERE dic.lemma = \"" + lemma + "\"");
       }
       else if(_activeDics.contains(from))
-      {
-        String query = "SELECT e.entry, l.origin FROM entry_" + from + " e, "
-          + "lemma_" + from + " l "
-          + "WHERE l.lemma = \"" + lemma + "\" AND l.id = e.id";
-        
+      {        
         res = _stm.executeQuery("SELECT e.entry, l.origin FROM entry_" + from + " e, "
           + "lemma_" + from + " l "
           + "WHERE l.lemma = \"" + lemma + "\" AND l.id = e.id");
@@ -531,13 +527,24 @@ public class SQLiteProvider implements IDictionaryProvider {
     return getMatchingLemma(name, null);
   }
   
-  public List<String[]> getMatchingLemma(String name, String from) 
+  public List<String[]> getMatchingLemma(String text, String from) 
   {
     ArrayList<String[]> list = new ArrayList<String[]>();
     try {      
       // ask the database
-      ResultSet res = _stm.executeQuery("SELECT lemma,origin FROM dic WHERE lemma_lower LIKE \"" + name.toLowerCase() + "%\"");
-      while(res.next())
+      ResultSet res = null;
+      if(from == null)
+      {
+        res = _stm.executeQuery("SELECT lemma,origin FROM dic WHERE lemma_lower LIKE \"" + text.toLowerCase() + "%\"");
+      }
+      else if(_activeDics.contains(from))
+      {
+        res = _stm.executeQuery("SELECT e.entry, l.origin FROM entry_" + from + " e, "
+          + "lemma_" + from + " l "
+          + "WHERE l.lemma LIKE \"" + text.toLowerCase() + "%\" AND l.id = e.id");
+      }
+      
+      while(res != null && res.next())
       {
         list.add(new String[] {res.getString(1), res.getString(2)});
       }

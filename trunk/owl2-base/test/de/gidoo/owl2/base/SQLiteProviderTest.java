@@ -173,6 +173,8 @@ public class SQLiteProviderTest extends TestCase {
     result = instance.getEntry(lemma, null);
     assertEquals(expResult, result[0][0]);
     
+    instance.importDictionary("test/testD.dicml", "D1");
+    instance.activateDictionary("D1");
     instance.importDictionary("test/testD2.dicml", "D2");
     
     result = instance.getEntry("D", "D2");
@@ -182,8 +184,7 @@ public class SQLiteProviderTest extends TestCase {
     result = instance.getEntry("D", "D2");
     if(result.length != 1)
       fail("there should be *exactly* one match for \"D\" in D2 - found " + result.length);
-    assertEquals("D2", result[0][1]);
-    
+    assertEquals("D2", result[0][1]);    
     
   }
 
@@ -241,6 +242,13 @@ public class SQLiteProviderTest extends TestCase {
       fail("there should be a match for \"short\"");
     assertEquals(expResult, result.get(0)[0]);
     
+    name = "short";
+    expResult = "short"; 
+    result = instance.getMatchingLemma(name, null);
+    if(result.size() != 1)
+      fail("there should be a match for \"short\"");
+    assertEquals(expResult, result.get(0)[0]);
+    
     instance.importDictionary("test/testC.dicml", "NewDic");
     instance.activateDictionary("NewDic");
     
@@ -249,6 +257,20 @@ public class SQLiteProviderTest extends TestCase {
     
     result = instance.getMatchingLemma("MisMAtch");
     assertEquals("Match", result.get(0)[1]);
+        
+    instance.importDictionary("test/testD.dicml", "D1");
+    instance.activateDictionary("D1");
+    instance.importDictionary("test/testD2.dicml", "D2");
+    
+    result = instance.getMatchingLemma("D", "D2");
+    assertEquals(0, result.size());
+    
+    instance.activateDictionary("D2");
+    result = instance.getMatchingLemma("D", "D2");
+    if(result.size() != 2)
+      fail("there should be *exactly* two matches for \"D\" in D2 - found " + result.size());
+    assertEquals("D2", result.get(0)[1]);
+    
     
   }
 
