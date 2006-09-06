@@ -12,26 +12,16 @@
 <dic.date creation="2004-10-10" update="2006-04-12"/>
 <dic.creator.gr><dic.creator><dic.creator.name>Julius Becker</dic.creator.name><dic.creator.e-mail>julius.becker@gidoo.de</dic.creator.e-mail><dic.creator.website>http://koocachoo.de</dic.creator.website></dic.creator></dic.creator.gr>
 <dic.licence><dic.licence.name>CREATIVE COMMONS PUBLIC LICENSE 2.0</dic.licence.name><dic.licence.source>http://creativecommons.org/licenses/by-nc-nd/2.0/de/</dic.licence.source></dic.licence>
-<head>
+</head>
 
 <body>
 
-<entry id="test-A">
+<entry id="test-D">
 <lemma>
-	<l>A</l><l.alt>a</l.alt><pos pos="n"/>
+	<l>D</l><l.alt>d</l.alt><pos pos="n"/>
 </lemma>
 <sense>
 <p>ganz viel Unsinn</p>
-</sense>
-
-</entry>
-
-<entry id="test-B">
-<lemma>
-	<l>B</l><l.alt>b</l.alt><pos pos="n"/>
-</lemma>
-<sense>
-	<p n="Buchstabe">noch mehr unsinn</p>
 </sense>
 
 </entry>

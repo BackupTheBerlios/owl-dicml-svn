@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE dicml PUBLIC "-//gidoo//DTD DICML 2.0 bi//EN"
+     "http://www3.gidoo.de/dtd/dicml,2.0,bi.dtd">
+
+<dicml xmlns:dicml="http://www3.gidoo.de/dtd/dicml/20.0/bi">
+
+<meta:head>
+  <meta:title>German -> English</meta:title>
+  <meta:lang source="de" target="en" />
+  <!-- TODO: add more -->
+</meta:head>
+
+<body>
+
+<entry id="test-A">
+<lemma>
+	<l>A</l><l.alt>a</l.alt><pos pos="n"/>
+</lemma>
+<sense>
+<p>ganz viel Unsinn</p>
+</sense>
+
+</entry>
+
+<entry id="test-B">
+<lemma>
+	<l>B</l><l.alt>b</l.alt><pos pos="n"/>
+</lemma>
+<sense>
+	<p n="Buchstabe">noch mehr unsinn</p>
+</sense>
+
+</entry>
+
+
+</body></dicml>

@@ -15,6 +15,7 @@ import java.util.Dictionary;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
+import javax.xml.parsers.DocumentBuilder;
 import javax.xml.transform.Result;
 import org.w3c.dom.*;
 import org.xml.sax.InputSource;
@@ -54,7 +55,7 @@ public class SQLiteProvider implements IDictionaryProvider {
       _stm = _conn.createStatement();
       
       // if not existing, create a table with a list of all imported dictionaries
-      _stm.execute("CREATE TABLE IF NOT EXISTS imported_dics(name TEXT, srcLanguage TEXT, " +
+      _stm.execute("CREATE TABLE IF NOT EXISTS imported_dics(name TEXT, title TEXT,srcLanguage TEXT, " +
         "destLanguage TEXT, author TEXT, date INTEGER)");
     }
     catch(Exception ex)
@@ -118,6 +119,7 @@ public class SQLiteProvider implements IDictionaryProvider {
         _stm.execute("UPDATE imported_dics "
           + "SET "
           + "name=\"" + name + "\", "
+          + "title=\"" + head.title + "\", "
           + "srcLanguage=\"" + head.srcLanguage + "\", "
           + "destLanguage=\"" + head.destLanguage + "\", "
           + "author=\"" + head.authorName + "\", "
@@ -126,8 +128,13 @@ public class SQLiteProvider implements IDictionaryProvider {
       }
       else
       {
-        _stm.execute("INSERT INTO imported_dics (name,author,date) VALUES(\"" 
-          + name + "\",\"unknown\"" + ","
+        _stm.execute("INSERT INTO imported_dics (name, title, srcLanguage, destLanguage, author, date)" +
+          " VALUES(\"" 
+          + name +  "\", \""
+          + head.title + "\", \""
+          + head.srcLanguage + "\", \""
+          + head.destLanguage + "\", \""
+          + head.authorName + "\", " 
           + new java.util.Date().getTime() + ")");        
       }
 //      //ATTENTION: SQLite specific
@@ -166,24 +173,33 @@ public class SQLiteProvider implements IDictionaryProvider {
         new FileInputStream(path));
       
       String head;
-      byte[] piLeft = new byte[] {0,0,0,0,0};
-      byte[] piRight = new byte[] {0,0,0,0,0,0}; 
-      while((head = getInnerText(reader, "<head", piLeft, "</head", piRight)) != null)
+      byte[] piLeft = new byte[] {0,0,0,0,0,0,0,0,0,0};
+      byte[] piRight = new byte[] {0,0,0,0,0,0,0,0,0,0,0}; 
+      while((head = getInnerText(reader, "<meta:head", piLeft, "</meta:head", piRight)) != null)
       {
         head = head + ">";
-        org.w3c.dom.Document doc = 
-          javax.xml.parsers.DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(head);
+        DocumentBuilder docBuilder = 
+          javax.xml.parsers.DocumentBuilderFactory.newInstance().newDocumentBuilder();
+        InputSource inputSrc = new InputSource(new java.io.ByteArrayInputStream(head.getBytes()));
+        org.w3c.dom.Document doc = docBuilder.parse(inputSrc);
         
         // get the language
-        NodeList langList = doc.getElementsByTagName("lang");
+        NodeList langList = doc.getElementsByTagName("meta:lang");
         Node langNode = langList.item(0);
         if(langNode != null)
         {
           result.srcLanguage = langNode.getAttributes().getNamedItem("source").getNodeValue();
           result.destLanguage = langNode.getAttributes().getNamedItem("target").getNodeValue();
-          // TODO: something more senseful
-          result.authorName = "";
         }
+        
+        Node titleNode = doc.getElementsByTagName("meta:title").item(0);
+        if(titleNode != null)
+        {
+          result.title = titleNode.getTextContent();
+        }
+        
+        // TODO: something more senseful
+        result.authorName = "";
         
       }
         
@@ -468,12 +484,33 @@ public class SQLiteProvider implements IDictionaryProvider {
       return false;
   }
 
-  public String[][] getEntry(String lemma) {
+  public String[][] getEntry(String lemma) 
+  {
+    return getEntry(lemma, null);
+  }
+
+  public String[][] getEntry(String lemma, String from)
+  {
     ArrayList<String[]> list = new ArrayList<String[]>();
     try {      
       // ask the database
-      ResultSet res = _stm.executeQuery("SELECT entry, origin FROM dic WHERE dic.lemma = \"" + lemma + "\"");
-      while(res.next())
+      ResultSet res = null;
+      if(from == null)
+      {
+        res = _stm.executeQuery("SELECT entry, origin FROM dic WHERE dic.lemma = \"" + lemma + "\"");
+      }
+      else if(_activeDics.contains(from))
+      {
+        String query = "SELECT e.entry, l.origin FROM entry_" + from + " e, "
+          + "lemma_" + from + " l "
+          + "WHERE l.lemma = \"" + lemma + "\" AND l.id = e.id";
+        
+        res = _stm.executeQuery("SELECT e.entry, l.origin FROM entry_" + from + " e, "
+          + "lemma_" + from + " l "
+          + "WHERE l.lemma = \"" + lemma + "\" AND l.id = e.id");
+      }
+      
+      while(res != null && res.next())
       {
         list.add(new String[] {res.getString(1), res.getString(2)});
       }
@@ -488,8 +525,14 @@ public class SQLiteProvider implements IDictionaryProvider {
     
     return a;
   }
-
-  public List<String[]> getMatchingLemma(String name) {
+  
+  public List<String[]> getMatchingLemma(String name)
+  {
+    return getMatchingLemma(name, null);
+  }
+  
+  public List<String[]> getMatchingLemma(String name, String from) 
+  {
     ArrayList<String[]> list = new ArrayList<String[]>();
     try {      
       // ask the database
@@ -531,6 +574,31 @@ public class SQLiteProvider implements IDictionaryProvider {
     }
     return new String[0];
   }
+
+  public String getTitle(String name)
+  {
+    String result = null;
+    
+    if(isImported(name))
+    {
+      try 
+      {
+        ResultSet res = _stm.executeQuery("SELECT title FROM imported_dics WHERE name=\"" + name + "\"");
+        // we should have only one unique entry for this name
+        if(res.next())
+        {
+          result = res.getString(1);
+        }
+      } 
+      catch (SQLException ex) 
+      {
+        ex.printStackTrace();
+      }
+    }
+    
+    return result;
+  } 
+
 
   public void activateDictionary(String dic) 
   {
@@ -633,11 +701,16 @@ public class SQLiteProvider implements IDictionaryProvider {
   
   public static void main(String[] args)
   {
-    SQLiteProvider dic = new SQLiteProvider("owl.db");
-    //dic.importDictionary("/home/thomas/projekte/owl/dicts/de-en.dicml", "de_en");
-    dic.importDictionary("test/testMatch.dicml", "de_en");
-    dic.activateDictionary("de_en");
-    dic.getMatchingLemma("sönder");
+    String name = "";
+    SQLiteProvider instance = new SQLiteProvider("owl.db");
+
+    instance.importDictionary("test/testD2.dicml", "D2");
+    
+    String[][] result = instance.getEntry("D", "D2");
+    
+    instance.activateDictionary("D2");
+    result = instance.getEntry("D", "D2");
+    
   }
   
   /** A data structure that holds general information about a dictionary. */
@@ -646,6 +719,7 @@ public class SQLiteProvider implements IDictionaryProvider {
     public String srcLanguage;
     public String destLanguage;
     public String authorName;
+    public String title;
   }
   
 }

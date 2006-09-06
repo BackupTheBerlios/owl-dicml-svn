@@ -15,6 +15,13 @@ import java.util.List;
 import java.util.Iterator;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
+import java.util.Dictionary;
+import java.util.Random;
+import javax.xml.transform.Result;
+import org.xml.sax.InputSource;
+import org.xml.sax.XMLReader;
+import org.xml.sax.helpers.XMLReaderFactory;
+import javax.xml.parsers.DocumentBuilder;
 
 /**
  *
@@ -150,7 +157,7 @@ public class SQLiteProviderTest extends TestCase {
     String expResult = "<entry id=\"test-short\"><lemma><l>short</l></lemma></entry>"; 
     result = instance.getEntry(lemma);
     if(result.length != 1)
-      fail("there should be a match for \"short\"");
+      fail("there should be *exactly* one match for \"short\"");
     assertEquals(expResult, result[0][0]);
     
     instance.importDictionary("test/testC.dicml", "Set");
@@ -161,6 +168,23 @@ public class SQLiteProviderTest extends TestCase {
     
     result = instance.getEntry("short");
     assertEquals("Get", result[0][1]);
+    
+    // now try some stuff with the second get entry
+    result = instance.getEntry(lemma, null);
+    assertEquals(expResult, result[0][0]);
+    
+    instance.importDictionary("test/testD2.dicml", "D2");
+    
+    result = instance.getEntry("D", "D2");
+    assertEquals(0, result.length);
+    
+    instance.activateDictionary("D2");
+    result = instance.getEntry("D", "D2");
+    if(result.length != 1)
+      fail("there should be *exactly* one match for \"D\" in D2 - found " + result.length);
+    assertEquals("D2", result[0][1]);
+    
+    
   }
 
   /**
@@ -372,6 +396,70 @@ public class SQLiteProviderTest extends TestCase {
     if(r1.length == 0)
       fail("\"D\" was accidently removed");
             
+  }
+
+  /**
+   * Test of getTitle method, of class de.gidoo.owl2.base.SQLiteProvider.
+   */
+  public void testGetTitle() {
+    System.out.println("getTitle");
+    
+    String name = "";
+    SQLiteProvider instance = new SQLiteProvider("owl.db");
+
+    // test without any dictionary imported;
+    String expResult = null;
+    String result = instance.getTitle(name);
+    assertEquals(expResult, result);
+
+    // "normal test"
+    instance.importDictionary("test/testMeta1.dicml", "meta1");
+    expResult = "German -> English";
+    name = "meta1";
+    result = instance.getTitle(name);
+    assertEquals(expResult, result);
+    
+    // try again
+    instance.importDictionary("test/testMeta1.dicml", "meta1");
+    expResult = "German -> English";
+    name = "meta1";
+    result = instance.getTitle(name);
+    assertEquals(expResult, result);
+    
+    // and now some activation
+    instance.activateDictionary("meta1");
+    expResult = "German -> English";
+    name = "meta1";
+    result = instance.getTitle(name);
+    assertEquals(expResult, result);
+    
+    instance.deactivateDictionary("meta1");
+    expResult = "German -> English";
+    name = "meta1";
+    result = instance.getTitle(name);
+    assertEquals(expResult, result);
+    
+    // deleting should work as well
+    instance.deleteDictionary("meta1");
+    expResult = null;
+    name = "meta1";
+    result = instance.getTitle(name);
+    assertEquals(expResult, result);
+    
+    
+  }
+
+  /**
+   * Test of main method, of class de.gidoo.owl2.base.SQLiteProvider.
+   */
+  public void testMain() {
+    System.out.println("main");
+    
+    String[] args = null;
+    
+    SQLiteProvider.main(args);
+    
+    // as long as main does not produce any unpredictable exceptions we don't need to test it.
   }
  
 }
