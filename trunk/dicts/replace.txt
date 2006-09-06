@@ -1,1 +1,12 @@
-1,$s/\([{,(]\)\(\w*\);\(\w*\)/\1\2,\3/g
+In Shell benutzen:
+
+sed -e '1,$s/\([{,(]\)\(\w*\);\(\w*\)/\1\2,\3/g' de-en.txt > neue_datei
+
+Damit wird aus Aufzählungen mit ";" innerhalb von normalen oder geschweiften Klammern ein "," (zur Eindeutigkeit von ";")
+
+* -e bedeutet "execute"
+* mit 1,$ zeigt man, dass man von der 1. bis zur letzten Zeile ($) suchen und ersetzen
+* s/suchtext/ersetzen mit/flags
+* s == substitute
+* g == alle Vorkommen im Text
+* \1,\2 usw. referenzieren die Unterausdrücke im Suchtext
