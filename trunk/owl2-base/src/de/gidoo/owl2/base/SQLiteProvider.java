@@ -8,13 +8,11 @@
 
 package de.gidoo.owl2.base;
 
+import com.sun.org.apache.bcel.internal.classfile.JavaClass;
+import com.sun.org.apache.xerces.internal.parsers.JAXPConfiguration;
 import java.io.*;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.Dictionary;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.transform.Result;
 import org.w3c.dom.*;
@@ -708,15 +706,18 @@ public class SQLiteProvider implements IDictionaryProvider {
   
   public static void main(String[] args)
   {
-    String name = "";
+    // do some time measurements
+    java.util.Date dBefore = new java.util.Date();
     SQLiteProvider instance = new SQLiteProvider("owl.db");
 
-    instance.importDictionary("test/testD2.dicml", "D2");
+    System.out.println("started indexing at " + dBefore.toString());
     
-    String[][] result = instance.getEntry("D", "D2");
+    instance.importDictionary("../dicts/de-en.dicml", "de_en");
+    instance.activateDictionary("de_en");
     
-    instance.activateDictionary("D2");
-    result = instance.getEntry("D", "D2");
+    java.util.Date dAfter = new java.util.Date();
+    
+    System.out.println("stopped indexing at " + dAfter.toString());
     
   }
   
