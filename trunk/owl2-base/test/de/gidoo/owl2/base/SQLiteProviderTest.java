@@ -178,7 +178,10 @@ public class SQLiteProviderTest extends TestCase {
     instance.importDictionary("test/testD2.dicml", "D2");
     
     result = instance.getEntry("D", "D2");
-    assertEquals(0, result.length);
+    if(result.length != 1)
+      fail("there should be *exactly* one match for \"D\" in D2 - found " + result.length);
+    assertEquals("D2", result[0][1]);    
+    
     
     instance.activateDictionary("D2");
     result = instance.getEntry("D", "D2");
@@ -263,7 +266,10 @@ public class SQLiteProviderTest extends TestCase {
     instance.importDictionary("test/testD2.dicml", "D2");
     
     result = instance.getMatchingLemma("D", "D2");
-    assertEquals(0, result.size());
+    if(result.size() != 2)
+      fail("there should be *exactly* two matches for \"D\" in D2 - found " + result.size());
+    assertEquals("D2", result.get(0)[1]);
+    
     
     instance.activateDictionary("D2");
     result = instance.getMatchingLemma("D", "D2");
@@ -314,6 +320,10 @@ public class SQLiteProviderTest extends TestCase {
     
     SQLiteProvider instance = new SQLiteProvider("owl.db");
     
+    // don't exit with exceptions here and don't disturb the following tests
+    instance.activateDictionary("NonSense");
+    instance.activateDictionary("C");
+    
     instance.importDictionary("test/testC.dicml", "C");
     instance.importDictionary("test/testD.dicml", "D");
     instance.importDictionary("test/testAB.dicml", "AB");
@@ -343,6 +353,10 @@ public class SQLiteProviderTest extends TestCase {
     
 
     SQLiteProvider instance = new SQLiteProvider("owl.db");
+    
+    // don't exit with exceptions here and don't disturb the following tests
+    instance.deactivateDictionary("NonSense");
+    instance.deactivateDictionary("C");
     
     instance.importDictionary("test/testC.dicml", "C");
     instance.importDictionary("test/testD.dicml", "D");

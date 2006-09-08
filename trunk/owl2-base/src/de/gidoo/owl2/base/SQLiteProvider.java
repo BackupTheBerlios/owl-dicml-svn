@@ -497,7 +497,7 @@ public class SQLiteProvider implements IDictionaryProvider {
       {
         res = _stm.executeQuery("SELECT entry, origin FROM dic WHERE dic.lemma = \"" + lemma + "\"");
       }
-      else if(_activeDics.contains(from))
+      else
       {        
         res = _stm.executeQuery("SELECT e.entry, l.origin FROM entry_" + from + " e, "
           + "lemma_" + from + " l "
@@ -535,7 +535,7 @@ public class SQLiteProvider implements IDictionaryProvider {
       {
         res = _stm.executeQuery("SELECT lemma,origin FROM dic WHERE lemma_lower LIKE \"" + text.toLowerCase() + "%\"");
       }
-      else if(_activeDics.contains(from))
+      else
       {
         res = _stm.executeQuery("SELECT e.entry, l.origin FROM entry_" + from + " e, "
           + "lemma_" + from + " l "
@@ -608,7 +608,7 @@ public class SQLiteProvider implements IDictionaryProvider {
   public void activateDictionary(String dic) 
   {
     // check wether already active (don't do anything in that case)
-    if(!_activeDics.contains(dic))
+    if(isImported(dic) && !_activeDics.contains(dic))
     {
       _activeDics.add(dic);
       
@@ -666,7 +666,7 @@ public class SQLiteProvider implements IDictionaryProvider {
   
   public void deactivateDictionary(String dic) 
   {
-    if(_activeDics.contains(dic))
+    if(isImported(dic) && _activeDics.contains(dic))
     {
       _activeDics.remove(dic);
       rebuildDBView();
@@ -706,18 +706,22 @@ public class SQLiteProvider implements IDictionaryProvider {
   
   public static void main(String[] args)
   {
-    // do some time measurements
-    java.util.Date dBefore = new java.util.Date();
-    SQLiteProvider instance = new SQLiteProvider("owl.db");
-
-    System.out.println("started indexing at " + dBefore.toString());
+     SQLiteProvider instance = new SQLiteProvider("owl.db");
     
-    instance.importDictionary("../dicts/de-en.dicml", "de_en");
-    instance.activateDictionary("de_en");
+    // don't exit with exceptions here
+    instance.activateDictionary("NonSense");
     
-    java.util.Date dAfter = new java.util.Date();
+    instance.importDictionary("test/testC.dicml", "C");
+    instance.importDictionary("test/testD.dicml", "D");
+    instance.importDictionary("test/testAB.dicml", "AB");
     
-    System.out.println("stopped indexing at " + dAfter.toString());
+    instance.activateDictionary("C");
+    
+    String[][] result = instance.getEntry("C");
+    if(result.length == 0)
+    {
+      //fail("activated \"C\" was not found ");
+    }
     
   }
   

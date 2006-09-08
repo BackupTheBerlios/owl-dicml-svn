@@ -46,10 +46,10 @@ public interface IDictionaryProvider {
      * Gets all dicML-entries for a given lemma from all activated dictionaries.
      * @param lemma The lemma.
      * @return If a lemma which matches <b>exactly</b> exist, the corresponding
-     *        entries (in dicML, including the "&ltentry&gt"-tag). Otherwise null.<br>
-     *        Each array-entry is an array by itself with the following meaning:
+     *        entries (in dicML, including the "&lt;entry&gt"-tag). Otherwise null.<br>
+     *        Each array-entry is an array by itself with the following meaning:<br>
      *        0 - the markup-text of the entry <br>
-     *        1 - the dictionary where it comes from<br>
+     *        1 - the dictionary where it comes from
      *        
      */
     public String[][] getEntry(String lemma);
@@ -67,12 +67,12 @@ public interface IDictionaryProvider {
         /**
      * Gets all dicML-entries for a given lemma.
      * @param lemma The lemma.
-     * @param from From which activated dictionary the entries can come from. null means any.
+     * @param from From which dictionary the entries can come from. null means any activated.
      * @return If a lemma which matches <b>exactly</b> exist, the corresponding
-     *        entries (in dicML, including the "&ltentry&gt"-tag). Otherwise null.<br>
-     *        Each array-entry is an array by itself with the following meaning:
+     *        entries (in dicML, including the "&lt;entry&gt"-tag). Otherwise null.<br>
+     *        Each array-entry is an array by itself with the following meaning:<br>
      *        0 - the markup-text of the entry <br>
-     *        1 - the dictionary where it comes from<br>
+     *        1 - the dictionary where it comes from
      *        
      */
     public String[][] getEntry(String lemma, String from);
@@ -80,7 +80,7 @@ public interface IDictionaryProvider {
     /**
      * Finds a list of lemma which first characters match a given string.
      * @param text The string used for matching.
-     * @param from From which activated dictionary the entries can come from. null means any.
+     * @param from From which dictionary the entries can come from. null means any activated.
      * @return An list with one-dimensional arrays:<br>
      *         0 - the matching lemma <br>
      *         1 - the dictionary where it comes from<br>
