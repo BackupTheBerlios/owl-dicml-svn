@@ -1,43 +1,68 @@
+/* autocomplete */
 div.wicket-aa {
   border-width: 1px;
   border-color: #cccccc;
   border-style: solid;
   padding: 2px;
   margin: 1px 0 0 0;
-  text-align:left;
+  text-align: left;
 }
 
-div.wicket-aa ul { list-style:none; padding: 2px; margin:0; background-color: #FFFFFF}
-div.wicket-aa ul li.selected { background-color: #8888AA; padding: 2px: margin:0; }
+div.wicket-aa ul { list-style: none; padding: 2px; margin: 0; background-color: #FFFFFF}
+div.wicket-aa ul li.selected { background-color: #8888AA; padding: 2px: margin: 0; }
                                 
-/** Tabs */
-div.tabpanel div.tab-row{
-float:left;
-width:100%;
-margin:0px;
-text-align:left;
+/* Tabs */
+
+.tabpanel
+{
+  background-color: white;
+  width:100%;
 }
 
-div.tabpanel div.tab-row a{
-text-decoration:none;
+.tabpanel .tab-row
+{
+  width: 100%;
+  text-align: left;
 }
 
-div.tabpanel div.tab-row ul {
-list-style-type:none;
-margin:0px;
-padding:0px;
+.tabpanel .tab-row ul
+{
+  list-style-type: none;
+  list-style-position: inside;
+  margin: 0px 0px 2px 0px;
+  padding: 0px;
 }
 
-div.tabpanel div.tab-row li {
-float:left;
-margin-right:10px;
-margin-left:0px;
+.tabpanel .tab-row li
+{
+  display: inline;
+  margin: 0px 5px 0px 0px;
+  padding: 2px;
+  border-style: solid;
+  border-width: 1px 1px 0px 1px;
+  border-color: black;
+  text-align: left;
 }
 
-div.tabpanel div.tab-row li.selected {
-background-color:lightgray;
+.tabpanel .tab-row li.selected
+{
+  border-bottom-color: white;
+  border-width: 1px;
 }
 
-div.tabpanel span.tab-panel {
-background-color:lightgray;
+.tabpanel .tab-row a
+{
+  text-decoration: none;
+  color: black;
 }
+
+
+.tabpanel span.tab-panel
+{
+  display:block;
+  width: 100%;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+

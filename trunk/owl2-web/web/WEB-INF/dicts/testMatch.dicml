@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE dicml PUBLIC "-//gidoo//DTD DICML 1.0 bi//EN"
+     "http://www3.gidoo.de/dtd/dicml,1.0,bi.dtd">
+
+<dicml xmlns:dicml="http://www3.gidoo.de/dtd/dicml/1.0/bi">
+
+<head>
+<dic.title>gidoo-Wörterbuch Deutsch - Französisch</dic.title>
+<dic.lang source="de" target="fr"/>
+<dic.source>http://svn.berlios.de/svnroot/repos/owl-dicml/trunk/dicts/de-fr.dicml</dic.source>
+<dic.date creation="2004-10-10" update="2006-04-12"/>
+<dic.creator.gr><dic.creator><dic.creator.name>Julius Becker</dic.creator.name><dic.creator.e-mail>julius.becker@gidoo.de</dic.creator.e-mail><dic.creator.website>http://koocachoo.de</dic.creator.website></dic.creator></dic.creator.gr>
+<dic.licence><dic.licence.name>CREATIVE COMMONS PUBLIC LICENSE 2.0</dic.licence.name><dic.licence.source>http://creativecommons.org/licenses/by-nc-nd/2.0/de/</dic.licence.source></dic.licence>
+</head>
+
+<body>
+
+<entry id="test-Match">
+<lemma>
+	<l>Match</l>
+</lemma>
+<sense>
+<p>ganz viel Unsinn</p>
+</sense>
+
+</entry>
+
+<entry id="test-mismatch">
+<lemma>
+	<l>No match</l>
+	<l.alt>Mismatch</l.alt>
+</lemma>
+<sense><p>Quatsch</p></sense>
+</entry>
+
+<entry id="test-short"><lemma><l>short</l></lemma></entry>
+
+<entry id="test-soenderzeichen"><lemma><l>Sönderzeichen</l></lemma></entry>
+
+
+</body></dicml>
