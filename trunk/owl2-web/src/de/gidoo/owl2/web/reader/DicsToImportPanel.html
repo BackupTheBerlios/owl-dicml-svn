@@ -5,9 +5,26 @@
     </head>
     <body>
       <wicket:panel>
-        <span wicket:id="listView">
-          <span wicket:id="lblFileName">[lblFileName]</span> | <a wicket:id="lnkImport">Import</a><br/>          
-        </span>
+        <p>
+          <div wicket:id="feedback">[feedback]</div> 
+          <div><span wicket:id="lblProgress">[progress]</span> <a wicket:id="lnkAbort">Abort</a></div>
+        </p>        
+        <form wicket:id="formImport">
+        <p>
+          Insert the name for the imported dic here: <input type="text" wicket:id="txtName"/>
+        </p>
+        <p>
+          Choose dictionary to import:<br/>
+          <span wicket:id="rgFile">
+          <span wicket:id="listView">
+            <input type="radio" wicket:id="radFileName" value="[radFileName]"/> <span wicket:id="lblFileName">[lblFileName]</span><br/>      
+          </span>
+          </span>
+        </p>
+        <p>
+          <input wicket:id="btImport" type="submit"/ value="[btImport]">
+        </p>
+        </form>
       </wicket:panel>
     </body>
 </html>

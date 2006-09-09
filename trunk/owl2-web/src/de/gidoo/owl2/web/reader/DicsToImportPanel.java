@@ -8,15 +8,26 @@
 
 package de.gidoo.owl2.web.reader;
 
+import de.gidoo.owl2.base.IDictionaryProvider;
+import de.gidoo.owl2.base.SQLiteProvider;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
+import wicket.ajax.AjaxSelfUpdatingTimerBehavior;
+import wicket.markup.html.form.Button;
+import wicket.markup.html.form.Form;
+import wicket.markup.html.form.Radio;
+import wicket.markup.html.form.RadioGroup;
+import wicket.markup.html.form.SubmitLink;
+import wicket.markup.html.form.TextField;
+import wicket.markup.html.panel.FeedbackPanel;
 import wicket.model.*;
 import wicket.markup.html.basic.*;
 import wicket.markup.html.link.Link;
 import wicket.markup.html.list.ListItem;
 import wicket.markup.html.list.ListView;
+import wicket.util.time.Duration;
 
 /**
  * Presents a list of all dicML files inside a special folder of the server
@@ -25,8 +36,21 @@ import wicket.markup.html.list.ListView;
  */
 public class DicsToImportPanel extends wicket.markup.html.panel.Panel {
   
-  private static final List _dictList = new Vector();
-  private final ListView lstDicts;
+  
+  private static int _importDone = 0;
+  
+  private Label _lblProgress;
+  
+  private WorkerThread _worker;
+  private Thread _thread;
+  
+  private TextField _txtName;      
+  private RadioGroup _fileGroup;
+  private Link _lnkAbort;
+  private final List _dictList = new Vector();
+  private final ListView _lstDicts;
+
+  private static int count = 0;
   
   /**
    * Creates a new instance of DicsToImportPanel
@@ -38,24 +62,53 @@ public class DicsToImportPanel extends wicket.markup.html.panel.Panel {
     _dictList.clear();
     
     updateDicList();
-        
-    lstDicts = new ListView("listView", _dictList) 
+    
+    Form form = new InputForm("formImport");
+    add(form);
+    
+    _fileGroup = new RadioGroup("rgFile");
+    _fileGroup.setModel(new Model());
+    
+    _lstDicts = new ListView("listView", _dictList) 
     {
       protected void populateItem(ListItem item) 
       {
         final File f = (File) item.getModelObject();
+        item.add(new Radio("radFileName", new Model(f.getName())));
         item.add(new Label("lblFileName", new Model(f.getName())));
-        item.add(new Link("lnkImport") {
-          public void onClick() 
-          {
-            importDict(f.getAbsolutePath());
-          }
-        });
+        
       }
     };
+       
+    _fileGroup.add(_lstDicts);
+    form.add(_fileGroup);
     
-    add(lstDicts);
+    add(new FeedbackPanel("feedback"));
     
+    _lblProgress = new Label("lblProgress", new PropertyModel(this, "progress"));
+    _lblProgress.setVisible(false);
+    add(_lblProgress);
+    _lblProgress.add(new AjaxSelfUpdatingTimerBehavior(Duration.seconds(1)));
+    
+    _txtName = new TextField("txtName");
+    _txtName.setModel(new Model(""));
+    form.add(_txtName);
+    
+    form.add(new Button("btImport", new Model("Import")));
+    
+    _lnkAbort = new Link("lnkAbort") {
+      public void onClick() 
+      {
+        if(_thread != null && _thread.isAlive())
+        {
+          _lnkAbort.setVisible(false);
+          _lblProgress.setVisible(false);
+          _worker.setStopImporting(true);
+        }
+      }
+    };
+    _lnkAbort.setVisible(false);
+    add(_lnkAbort);
   }
   
   private void updateDicList()
@@ -80,9 +133,110 @@ public class DicsToImportPanel extends wicket.markup.html.panel.Panel {
     }
   }
   
-  private final void importDict(String path)
+  private final void importDict()
   {
-    // do something usefull
+    String name = _txtName.getModelObjectAsString();
+    String file = _fileGroup.getModelObjectAsString();
+    
+    boolean e = false;
+    if(name == null || "".equals(name))
+    {
+      error("You have to insert a name for the dictionary.");
+      e = true;
+    }
+    
+    
+    if(file == null || "".equals(file))
+    {
+      error("You have to select one of the dictionaries.");
+      e = true;
+    }
+    
+    if(e)
+    {
+       _lnkAbort.setVisible(false);
+       _lblProgress.setVisible(false);
+      return;
+    }
+    
+
+    _lnkAbort.setVisible(true);
+    _lblProgress.setVisible(true);
+     
+    _worker = new WorkerThread(OwlApp.realPathToContext + "owl.db", 
+      OwlApp.realPathToContext + "WEB-INF/dicts/" + file, name);
+    
+    _thread = new Thread(_worker);
+    _thread.start();
+  }
+  
+  public String getProgress()
+  {
+    double p;
+    if(_worker != null && _thread.isAlive())
+    {
+      p = _worker.getImportingProgress();
+      if(p > -1)
+      {
+        return "progress: " + String.format("%.2f", p) + "%";
+      }
+    }
+    else if(_worker != null)
+    {
+      _lnkAbort.setVisible(false);
+      _lblProgress.setVisible(false);
+    }
+    return "";
+  }
+
+  
+  
+  private class InputForm extends Form
+  {
+  
+    public InputForm(String id)
+    {
+      super(id);                
+    }    
+    
+
+    protected void onSubmit() 
+    {
+      if(_thread != null && _thread.isAlive())
+      {
+        error("You have to wait until the import-process is ready or abort it.");
+        _lnkAbort.setVisible(false);
+       _lblProgress.setVisible(false);
+      }
+      else
+      {
+        importDict();
+      }
+    }
+    
+    
+  }
+  
+  
+  private class WorkerThread extends SQLiteProvider implements Runnable
+  {
+    String _path;
+    String _name;
+    
+    public WorkerThread(String pathToDBFile, String pathDicToImport, String name)
+    {
+      super(pathToDBFile);
+      _path = pathDicToImport;
+      _name = name;
+    }
+    
+    public void run() 
+    {
+      importDictionary(_path, _name);
+     
+    }
+    
+
   }
   
 }

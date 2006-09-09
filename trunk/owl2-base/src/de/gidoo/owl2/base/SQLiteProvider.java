@@ -35,6 +35,10 @@ public class SQLiteProvider implements IDictionaryProvider {
   
   private SaxHandler _saxHandler;
   
+  private double _importProgress = -1;
+  private boolean _shallStop = false;
+  private long _bytesRead;
+  
   /**
    * Creates a new instance of SQLiteProvider. Will start a connection to 
    * the database.
@@ -85,6 +89,9 @@ public class SQLiteProvider implements IDictionaryProvider {
     try
     {
      
+      _importProgress = 0;
+      _shallStop = false;
+      
       // delete if necessary
       String lemma = "lemma_" + name;
       String entry = "entry_" + name;
@@ -155,9 +162,11 @@ public class SQLiteProvider implements IDictionaryProvider {
     catch(Exception ex)
     {
       ex.printStackTrace();
+      _importProgress = -1;
       return false;
     }
     
+    _importProgress = -1;
     return true;
   }
 
@@ -173,7 +182,7 @@ public class SQLiteProvider implements IDictionaryProvider {
       String head;
       byte[] piLeft = new byte[] {0,0,0,0,0,0,0,0,0,0};
       byte[] piRight = new byte[] {0,0,0,0,0,0,0,0,0,0,0}; 
-      while((head = getInnerText(reader, "<meta:head", piLeft, "</meta:head", piRight)) != null)
+      while(!_shallStop && (head = getInnerText(reader, "<meta:head", piLeft, "</meta:head", piRight)) != null)
       {
         head = head + ">";
         DocumentBuilder docBuilder = 
@@ -197,8 +206,7 @@ public class SQLiteProvider implements IDictionaryProvider {
         }
         
         // TODO: something more senseful
-        result.authorName = "";
-        
+        result.authorName = "";        
       }
         
       reader.close();
@@ -215,6 +223,9 @@ public class SQLiteProvider implements IDictionaryProvider {
   {
     try 
     {
+     
+      long fileSize = new File(path).length();
+      _bytesRead = 0;
       
       // initialisation
       InputStreamReader reader = new InputStreamReader(
@@ -235,7 +246,8 @@ public class SQLiteProvider implements IDictionaryProvider {
 
       byte[] piLeft = new byte[] {0,0,0,0,0,0};
       byte[] piRight = new byte[] {0,0,0,0,0,0,0};
-      while((entry = getInnerText(reader, "<entry", piLeft, "</entry", piRight)) != null)
+      
+      while(!_shallStop && (entry = getInnerText(reader, "<entry", piLeft, "</entry", piRight)) != null)
       {
         entry = entry + ">";
         //parse the xml (only entry)
@@ -279,6 +291,8 @@ public class SQLiteProvider implements IDictionaryProvider {
         {
           saxEx.printStackTrace();
         }
+        
+        _importProgress = (((double) _bytesRead / (double) fileSize)*100);
       }
       
 //      // search for "<entry"
@@ -410,6 +424,7 @@ public class SQLiteProvider implements IDictionaryProvider {
     
     while((c = reader.read()) > -1)
     {
+      _bytesRead++;
       while(q1 > 0 && P1[q1] != (char) c)
         q1 = J1[q1-1];
 
@@ -432,7 +447,7 @@ public class SQLiteProvider implements IDictionaryProvider {
 
         while((c = reader.read()) > -1)
         {
-
+          _bytesRead++;
           while(q2 > 0 && P2[q2] != (char) c)
             q2 = J2[q2-1];
 
@@ -704,6 +719,12 @@ public class SQLiteProvider implements IDictionaryProvider {
     return false;
   }
   
+  public double getImportingProgress() 
+  {
+    return _importProgress;
+  }
+  
+  
   public static void main(String[] args)
   {
      SQLiteProvider instance = new SQLiteProvider("owl.db");
@@ -724,6 +745,12 @@ public class SQLiteProvider implements IDictionaryProvider {
     }
     
   }
+
+  public void setStopImporting(boolean stop) 
+  {
+    _shallStop = stop;
+  }  
+
   
   /** A data structure that holds general information about a dictionary. */
   private class DictionaryHead

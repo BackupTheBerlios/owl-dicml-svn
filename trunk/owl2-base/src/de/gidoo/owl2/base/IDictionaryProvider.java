@@ -113,4 +113,15 @@ public interface IDictionaryProvider {
      * {@link #getMatchingLemma}.
      */
     public void deactivateDictionary(String dic);
+    
+    /**
+     * Get information about the progress of importing a dictionary.
+     * @return How much of the importing process is done in percent or -1 if nothing is done right now;
+     */
+    public double getImportingProgress();
+    
+    /**
+     * Wether to stop importing process at the next possible point
+     */
+    public void setStopImporting(boolean stop);
 }
