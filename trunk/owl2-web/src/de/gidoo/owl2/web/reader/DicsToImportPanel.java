@@ -163,7 +163,7 @@ public class DicsToImportPanel extends wicket.markup.html.panel.Panel {
     _lnkAbort.setVisible(true);
     _lblProgress.setVisible(true);
      
-    _worker = new WorkerThread(OwlApp.realPathToContext + "owl.db", 
+    _worker = new WorkerThread(OwlApp.realPathToContext + "WEB-INF/owl.db", 
       OwlApp.realPathToContext + "WEB-INF/dicts/" + file, name);
     
     _thread = new Thread(_worker);
@@ -181,15 +181,24 @@ public class DicsToImportPanel extends wicket.markup.html.panel.Panel {
         return "progress: " + String.format("%.2f", p) + "%";
       }
     }
-    else if(_worker != null)
+    else if(_worker != null && isHeadRendered())
     {
       _lnkAbort.setVisible(false);
       _lblProgress.setVisible(false);
     }
-    return "";
+    return "finishing, please wait...";
   }
 
+
+  protected void finalize()
+  {
+      // abort if necessary
+    if(_thread != null && _thread.isAlive() && _worker != null)
+    {
+      _worker.setStopImporting(true);
+    }
   
+  }
   
   private class InputForm extends Form
   {
@@ -232,8 +241,8 @@ public class DicsToImportPanel extends wicket.markup.html.panel.Panel {
     
     public void run() 
     {
+      setStopImporting(false);
       importDictionary(_path, _name);
-     
     }
     
 

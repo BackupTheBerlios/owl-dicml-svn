@@ -22,7 +22,8 @@ public interface IDictionaryProvider {
      * Imports a given dicML-file.
      * @param path The path to the dicML-file you want to import
      * @param name The name which shall be given to this dictionary. Should be unique,
-     *             so the path is recommend.
+     *             so the path is recommend. Do not use any of the following characters
+     *             (will return false): "
      * @return true if import was successfull, false if not.
      */        
     public boolean importDictionary(String path, String name);

@@ -93,8 +93,8 @@ public class SQLiteProvider implements IDictionaryProvider {
       _shallStop = false;
       
       // delete if necessary
-      String lemma = "lemma_" + name;
-      String entry = "entry_" + name;
+      String lemma = "\"lemma_" + name + "\"";
+      String entry = "\"entry_" + name + "\"";
       
       _stm.execute("DROP TABLE IF EXISTS " + lemma);
       _stm.execute("DROP TABLE IF EXISTS " + entry);
@@ -113,10 +113,10 @@ public class SQLiteProvider implements IDictionaryProvider {
       _conn.setAutoCommit(true);
       
       // we need some indexes
-      _stm.execute("CREATE INDEX IF NOT EXISTS idx_lemma_" + name + " ON lemma_"
-        + name + " (lemma)"); 
-      _stm.execute("CREATE INDEX IF NOT EXISTS idx_entry_" + name + " ON entry_"
-        + name + " (id)");
+      _stm.execute("CREATE INDEX IF NOT EXISTS \"idx_lemma_" + name + "\" ON "
+        + lemma + " (lemma)"); 
+      _stm.execute("CREATE INDEX IF NOT EXISTS \"idx_entry_" + name + "\" ON "
+        + entry + " (id)");
       
       // new entry in list of dics (or update if existing)
       if(isImported(name))
@@ -238,10 +238,10 @@ public class SQLiteProvider implements IDictionaryProvider {
       xr.setContentHandler(_saxHandler);
       
       
-      PreparedStatement ps_entry = _conn.prepareStatement("INSERT INTO entry_" 
-        + name + "(id,entry) VALUES(?,?)");
-      PreparedStatement ps_lemma = _conn.prepareStatement("INSERT INTO lemma_" + name
-                      + "(lemma,id,origin,lemma_lower) VALUES(?,?,?,?)");
+      PreparedStatement ps_entry = _conn.prepareStatement("INSERT INTO \"entry_" 
+        + name + "\"(id,entry) VALUES(?,?)");
+      PreparedStatement ps_lemma = _conn.prepareStatement("INSERT INTO \"lemma_" + name
+                      + "\"(lemma,id,origin,lemma_lower) VALUES(?,?,?,?)");
       String entry;
 
       byte[] piLeft = new byte[] {0,0,0,0,0,0};
@@ -514,8 +514,8 @@ public class SQLiteProvider implements IDictionaryProvider {
       }
       else
       {        
-        res = _stm.executeQuery("SELECT e.entry, l.origin FROM entry_" + from + " e, "
-          + "lemma_" + from + " l "
+        res = _stm.executeQuery("SELECT e.entry, l.origin FROM \"entry_" + from + "\" e, "
+          + "\"lemma_" + from + "\" l "
           + "WHERE l.lemma = \"" + lemma + "\" AND l.id = e.id");
       }
       
@@ -552,8 +552,8 @@ public class SQLiteProvider implements IDictionaryProvider {
       }
       else
       {
-        res = _stm.executeQuery("SELECT e.entry, l.origin FROM entry_" + from + " e, "
-          + "lemma_" + from + " l "
+        res = _stm.executeQuery("SELECT e.entry, l.origin FROM \"entry_" + from + "\" e, "
+          + "\"lemma_" + from + "\" l "
           + "WHERE l.lemma LIKE \"" + text.toLowerCase() + "%\" AND l.id = e.id");
       }
       
@@ -637,8 +637,15 @@ public class SQLiteProvider implements IDictionaryProvider {
   {
     try
     {
+      
       _stm.execute("DROP VIEW IF EXISTS allEntry");
       _stm.execute("DROP VIEW IF EXISTS allLemma");
+
+      if(_activeDics.size() == 0)
+      {
+        return;
+      }
+      
       // union all lemma_* and entry_*
       String statementLemma = "CREATE VIEW allLemma AS ";
       String statementEntry = "CREATE VIEW allEntry AS ";
@@ -646,8 +653,8 @@ public class SQLiteProvider implements IDictionaryProvider {
       while(it.hasNext())
       {
         String dic = it.next();
-        statementLemma += "SELECT * FROM lemma_" + dic;
-        statementEntry += "SELECT * FROM entry_" + dic;
+        statementLemma += "SELECT * FROM \"lemma_" + dic + "\"";
+        statementEntry += "SELECT * FROM \"entry_" + dic + "\"";
         
         if(it.hasNext())
         {
@@ -695,8 +702,8 @@ public class SQLiteProvider implements IDictionaryProvider {
       try
       {
         // delete the tables
-        _stm.execute("DROP TABLE lemma_" + name);
-        _stm.execute("DROP TABLE entry_" + name);
+        _stm.execute("DROP TABLE \"lemma_" + name + "\"");
+        _stm.execute("DROP TABLE \"entry_" + name + "\"");
         
         // delete entry from imported_dics
         _stm.execute("DELETE FROM imported_dics WHERE name = \"" + name + "\"");

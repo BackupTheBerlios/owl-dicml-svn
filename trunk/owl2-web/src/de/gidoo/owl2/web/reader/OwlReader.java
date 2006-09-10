@@ -43,7 +43,7 @@ public class OwlReader extends wicket.markup.html.WebPage {
     /** Creates a new instance of OwlReader */
     public OwlReader() {
       
-      _dic = new SQLiteProvider(OwlApp.realPathToContext + "owl.db");
+      _dic = new SQLiteProvider(OwlApp.realPathToContext + "WEB-INF/owl.db");
      
 //      if(!_dic.isImported("de_en"))
 //        _dic.importDictionary(OwlApp.realPathToContext + "de-en.dicml", "de_en");

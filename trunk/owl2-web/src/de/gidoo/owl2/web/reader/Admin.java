@@ -60,6 +60,4 @@ public class Admin extends PageWithAdminRightsNeeded
     add(tabPanelDics);
   }
   
-  
-  
 }

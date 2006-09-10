@@ -29,6 +29,8 @@ import javax.xml.parsers.DocumentBuilder;
  */
 public class SQLiteProviderTest extends TestCase {
   
+  private final String SPECIAL_CHARS = " %&:ä?ß/$!";
+  
   public SQLiteProviderTest(String testName) {
     super(testName);
   }
@@ -98,6 +100,24 @@ public class SQLiteProviderTest extends TestCase {
     r = instance.getEntry("b");
     if(r.length == 0)
       fail("the imported lemma \"b\" was not found");
+    
+    // test with a little bit more complicated names
+    name = "S" + SPECIAL_CHARS;
+    path = "test/testC.dicml";
+    expResult = true;
+    result = instance.importDictionary(path, name);
+    assertEquals(expResult, result);
+    
+    instance.activateDictionary(name);
+    r = instance.getEntry("C");
+    if(r.length == 0)
+      fail("the imported lemma \"C\" was not found");
+    
+    // this should fail
+    name = "Sön\"derberg";
+    expResult = false;
+    result = instance.importDictionary(path, name);
+    assertEquals(expResult, result);
     
   }
 
@@ -173,8 +193,8 @@ public class SQLiteProviderTest extends TestCase {
     result = instance.getEntry(lemma, null);
     assertEquals(expResult, result[0][0]);
     
-    instance.importDictionary("test/testD.dicml", "D1");
-    instance.activateDictionary("D1");
+    instance.importDictionary("test/testD.dicml", "D1" + SPECIAL_CHARS);
+    instance.activateDictionary("D1" + SPECIAL_CHARS);
     instance.importDictionary("test/testD2.dicml", "D2");
     
     result = instance.getEntry("D", "D2");
@@ -261,8 +281,8 @@ public class SQLiteProviderTest extends TestCase {
     result = instance.getMatchingLemma("MisMAtch");
     assertEquals("Match", result.get(0)[1]);
         
-    instance.importDictionary("test/testD.dicml", "D1");
-    instance.activateDictionary("D1");
+    instance.importDictionary("test/testD.dicml", "D1" + SPECIAL_CHARS);
+    instance.activateDictionary("D1" + SPECIAL_CHARS);
     instance.importDictionary("test/testD2.dicml", "D2");
     
     result = instance.getMatchingLemma("D", "D2");
@@ -324,11 +344,11 @@ public class SQLiteProviderTest extends TestCase {
     instance.activateDictionary("NonSense");
     instance.activateDictionary("C");
     
-    instance.importDictionary("test/testC.dicml", "C");
+    instance.importDictionary("test/testC.dicml", "C" + SPECIAL_CHARS);
     instance.importDictionary("test/testD.dicml", "D");
     instance.importDictionary("test/testAB.dicml", "AB");
     
-    instance.activateDictionary("C");
+    instance.activateDictionary("C" + SPECIAL_CHARS);
     
     String[][] result = instance.getEntry("C");
     if(result.length == 0)
@@ -360,7 +380,7 @@ public class SQLiteProviderTest extends TestCase {
     
     instance.importDictionary("test/testC.dicml", "C");
     instance.importDictionary("test/testD.dicml", "D");
-    instance.importDictionary("test/testAB.dicml", "AB");
+    instance.importDictionary("test/testAB.dicml", "AB" + SPECIAL_CHARS);
     
     instance.activateDictionary("C");
     
@@ -374,7 +394,7 @@ public class SQLiteProviderTest extends TestCase {
     if(result.length != 0)
       fail("deactivated \"C\" was found");
     
-    instance.activateDictionary("AB");
+    instance.activateDictionary("AB" + SPECIAL_CHARS);
     result = instance.getEntry("A");
     if(result.length == 0)
       fail("activated \"A\" was not found ");
@@ -386,10 +406,10 @@ public class SQLiteProviderTest extends TestCase {
   public void testDeleteDictionary() {
     System.out.println("deleteDictionary");
     
-    String name = "C";
+    String name = "C" + SPECIAL_CHARS;
     SQLiteProvider instance = new SQLiteProvider("owl.db");
     
-    instance.importDictionary("test/testC.dicml", "C");
+    instance.importDictionary("test/testC.dicml", name);
     
     boolean expResult = true;
     boolean result = instance.deleteDictionary(name);
@@ -406,7 +426,7 @@ public class SQLiteProviderTest extends TestCase {
       fail("deleted dic still in list of dictionaries");
     
     // I don't trust you
-    instance.importDictionary("test/testC.dicml", "C");
+    instance.importDictionary("test/testC.dicml", name);
     instance.importDictionary("test/testD.dicml", "D");
     instance.activateDictionary("D");
     
