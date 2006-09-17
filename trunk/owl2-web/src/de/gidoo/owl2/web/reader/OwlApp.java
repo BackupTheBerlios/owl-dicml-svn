@@ -8,6 +8,8 @@
 
 package de.gidoo.owl2.web.reader;
 
+import de.gidoo.owl2.base.IDictionaryProvider;
+import de.gidoo.owl2.base.SQLiteProvider;
 import wicket.ISessionFactory;
 import wicket.Session;
 import wicket.authorization.IAuthorizationStrategy;
@@ -19,10 +21,12 @@ import wicket.protocol.http.WebApplication;
  */
 public class OwlApp extends wicket.protocol.http.WebApplication {
   
-    public static String realPathToContext;
+    protected static String realPathToContext;
+    private static IDictionaryProvider dic;
       
     /** Creates a new instance of OwlApp */
-    public OwlApp() {
+    public OwlApp() 
+    {
     }
 
     public void init()
@@ -31,7 +35,16 @@ public class OwlApp extends wicket.protocol.http.WebApplication {
       getDebugSettings().setSerializeSessionAttributes(false); 
       
       getSecuritySettings().setAuthorizationStrategy(new SimpleAuthorizationStrategy());
-      
+     
+      if(dic == null)
+      {
+        OwlApp.dic = new SQLiteProvider(realPathToContext + "WEB-INF/owl.db");
+      }
+    }
+    
+    public static IDictionaryProvider getDicProvider() 
+    {
+      return dic;
     }
     
     public Class getHomePage() {

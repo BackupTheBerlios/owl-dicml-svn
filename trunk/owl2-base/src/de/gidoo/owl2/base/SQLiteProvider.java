@@ -142,6 +142,7 @@ public class SQLiteProvider implements IDictionaryProvider {
           + head.authorName + "\", " 
           + new java.util.Date().getTime() + ")");        
       }
+      
 //      //ATTENTION: SQLite specific
 //      ResultSet result = stm.executeQuery("SELECT name FROM sqlite_master");
 //      while(result.next())

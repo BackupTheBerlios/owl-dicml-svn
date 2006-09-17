@@ -103,7 +103,7 @@ public class DicsToImportPanel extends wicket.markup.html.panel.Panel {
         {
           _lnkAbort.setVisible(false);
           _lblProgress.setVisible(false);
-          _worker.setStopImporting(true);
+          _worker.getDictionaryProvider().setStopImporting(true);
         }
       }
     };
@@ -163,7 +163,7 @@ public class DicsToImportPanel extends wicket.markup.html.panel.Panel {
     _lnkAbort.setVisible(true);
     _lblProgress.setVisible(true);
      
-    _worker = new WorkerThread(OwlApp.realPathToContext + "WEB-INF/owl.db", 
+    _worker = new WorkerThread(OwlApp.getDicProvider(), 
       OwlApp.realPathToContext + "WEB-INF/dicts/" + file, name);
     
     _thread = new Thread(_worker);
@@ -175,7 +175,7 @@ public class DicsToImportPanel extends wicket.markup.html.panel.Panel {
     double p;
     if(_worker != null && _thread.isAlive())
     {
-      p = _worker.getImportingProgress();
+      p = _worker.getDictionaryProvider().getImportingProgress();
       if(p > -1)
       {
         return "progress: " + String.format("%.2f", p) + "%";
@@ -195,7 +195,7 @@ public class DicsToImportPanel extends wicket.markup.html.panel.Panel {
       // abort if necessary
     if(_thread != null && _thread.isAlive() && _worker != null)
     {
-      _worker.setStopImporting(true);
+      _worker.getDictionaryProvider().setStopImporting(true);
     }
   
   }
@@ -227,24 +227,29 @@ public class DicsToImportPanel extends wicket.markup.html.panel.Panel {
   }
   
   
-  private class WorkerThread extends SQLiteProvider implements Runnable
+  private class WorkerThread implements Runnable
   {
     String _path;
     String _name;
+    IDictionaryProvider _dic;
     
-    public WorkerThread(String pathToDBFile, String pathDicToImport, String name)
+    public WorkerThread(IDictionaryProvider dicProvider, String pathDicToImport, String name)
     {
-      super(pathToDBFile);
       _path = pathDicToImport;
       _name = name;
+      _dic = dicProvider;
     }
     
     public void run() 
     {
-      setStopImporting(false);
-      importDictionary(_path, _name);
+      _dic.setStopImporting(false);
+      _dic.importDictionary(_path, _name);
     }
     
+    public IDictionaryProvider getDictionaryProvider()
+    {
+      return _dic;
+    }
 
   }
   

@@ -35,7 +35,7 @@ public class ImportedDicPanel extends wicket.markup.html.panel.Panel {
   {
     super(id);
     
-    _dic = new SQLiteProvider(OwlApp.realPathToContext + "WEB-INF/owl.db");
+    _dic = OwlApp.getDicProvider();
     
     _lblNothingFound = new Label("lblNothingFound", new Model("Nothing imported"));
     _lblNothingFound.setVisible(false);

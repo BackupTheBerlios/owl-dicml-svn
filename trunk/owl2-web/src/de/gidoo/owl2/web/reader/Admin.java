@@ -32,7 +32,7 @@ public class Admin extends PageWithAdminRightsNeeded
   /** Creates a new instance of Admin */
   public Admin() 
   {
-   
+    
     Link lnkLogout = new Link("lnkLogout") 
     {
       public void onClick() 
@@ -58,6 +58,8 @@ public class Admin extends PageWithAdminRightsNeeded
     
     tabPanelDics = new AjaxTabbedPanel("tabPanel", panels);
     add(tabPanelDics);
+    
+    add(new FeedbackPanel("feedback"));
   }
   
 }
