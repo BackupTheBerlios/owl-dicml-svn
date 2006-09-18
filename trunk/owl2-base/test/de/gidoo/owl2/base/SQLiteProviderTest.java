@@ -289,7 +289,7 @@ public class SQLiteProviderTest extends TestCase {
     if(result.size() != 2)
       fail("there should be *exactly* two matches for \"D\" in D2 - found " + result.size());
     assertEquals("D2", result.get(0)[1]);
-    
+    assertEquals("D", result.get(0)[0]);
     
     instance.activateDictionary("D2");
     result = instance.getMatchingLemma("D", "D2");

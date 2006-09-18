@@ -553,7 +553,7 @@ public class SQLiteProvider implements IDictionaryProvider {
       }
       else
       {
-        res = _stm.executeQuery("SELECT e.entry, l.origin FROM \"entry_" + from + "\" e, "
+        res = _stm.executeQuery("SELECT l.lemma, l.origin FROM \"entry_" + from + "\" e, "
           + "\"lemma_" + from + "\" l "
           + "WHERE l.lemma LIKE \"" + text.toLowerCase() + "%\" AND l.id = e.id");
       }
