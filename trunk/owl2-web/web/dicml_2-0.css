@@ -1,0 +1,113 @@
+
+body {
+  font-family: Sans-serif;
+  margin: 20px;
+}
+
+div.ex {
+  color: #999999;
+  font-size: 90%;
+  margin: 0 0 0 1.5em;
+  text-indent: -0.7em;
+}
+
+div.ex span.s {
+  font-style: italic;
+  font-weight: normal;
+}
+
+div.antgr, div.syngr {
+  font-size: 90%;
+  margin: 0 0 0 2.8em;
+  text-indent: -2em;
+}
+
+div.antgr abbr, div.syngr abbr {
+  color: #0000FF;
+  font-weight: bold;
+}
+
+p {
+  margin: 0;
+}
+
+p.lemma {
+  font-size: 135%;
+  margin: 0;
+}
+
+p.phon {
+
+}
+
+
+span.altgr:hover {
+  text-decoration: underline;
+}
+
+span.high {
+  background-color: #FFFFB2;
+}
+
+span.hyphsep {
+  color: #999999;
+}
+
+span.l {
+  color: #0000FF;
+  font-weight:bold;
+}
+
+span.lalt {
+  color: #0000FF;
+}
+
+span.lalt-group {
+  margin: 0 0 0 0;
+}
+
+span.l span.hyphsep, span.lalt span.hyphsep {
+  display: none;
+}
+
+span.l:hover span.hyphsep, span.lalt:hover span.hyphsep {
+  display: inline;
+}
+
+span.phon {
+  font-family: Gentium;
+}
+
+span.pos {
+  color: #FF0000;
+  font-style: italic;
+  font-weight: normal;
+  margin: 0 0 0 5px;
+}
+
+span.s {
+  font-weight: bold;
+  margin: 0 5px 0 0;
+}
+
+span.t {
+
+}
+
+
+
+ul#sense {
+  list-style-type:decimal;
+  margin: 20px 0 0 0;
+  padding: 0 20px;
+}
+
+ul#sense li {
+  margin: 0;
+  padding: 0;
+}
+
+ul#sense li + li {
+  margin: 10px 0 0 0;
+}
+

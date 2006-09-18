@@ -180,6 +180,10 @@ public class DicsToImportPanel extends wicket.markup.html.panel.Panel {
       {
         return "progress: " + String.format("%.2f", p) + "%";
       }
+      else
+      {
+        return "preparing...";
+      }
     }
     else if(_worker != null && isHeadRendered())
     {

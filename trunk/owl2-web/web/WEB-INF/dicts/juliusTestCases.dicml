@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE dicml PUBLIC "-//gidoo//DTD DICML 2.0 bi//EN"
+     "http://www3.gidoo.de/dtd/dicml,2.0,bi.dtd">
+
+<dicml xmlns:dicml="http://www3.gidoo.de/dtd/dicml/20.0/bi">
+
+<meta:head>
+  <meta:title>Beispielwörterbuch von Julius</meta:title>
+  <meta:lang source="de" target="en" />
+  <!-- TODO: add more -->
+</meta:head>
+
+<body>
+
+<entry id="test-A">
+<lemma>
+	<l>A</l><l.alt>a</l.alt><pos pos="n"/>
+</lemma>
+<sense>
+<p>ganz viel Unsinn</p>
+</sense>
+
+<entry id="en_price_noun">
+
+  <lemma>
+    <l.gr>
+      <l>price</l>
+    </l.gr>
+    <pos.gr>
+      <pos pos="noun"/>
+
+    </pos.gr>
+    <phon.gr>
+      <phon>pra&#x026A;s</phon>
+    </phon.gr>
+  </lemma>
+
+  <sense>
+    <p.gr>
+
+      <p>
+        <d>an amount of money for which <en.sth/> may be bought or sold</d>
+        <ex><s>a wollen sweater, <high>price</high> $29.95</s></ex>
+        <ex><s><high>Prices</high> are <alt.gr><alt>rising</alt><alt>going up</alt><alt>shooting up</alt></alt.gr>.</s></ex>
+
+	<ex><s><high>Prices</high> are <alt.gr><alt>falling</alt><alt>going down</alt><alt>plummeting</alt></alt.gr>.</s></ex>
+        <ex><s>He sold the house <alt.gr><alt>at</alt><alt>for</alt></alt.gr> a good <high>price</high>.</s></ex>
+
+        <ex><s>Ask the builder to give you a <high>price</high> for work.</s><d>Ask the builder to say how much he will charge for the work.</d></ex>
+        <ex><s>The <high>price</high> of cigarettes is set to rise again</s></ex>
+      </p>
+            
+      <p.idm>
+
+        <s>at a <high>price</high></s>
+        <d>at a high price</d>
+	<ex><s>Fresh strawberries are now available - at a <high>price</high>!</s></ex>	
+      </p.idm>
+      
+      <p.idm>
+        <s>beyond <high>price</high></s>
+
+        <d>extremely valuable</d><d>so valuable that it cannot be bought</d>
+      </p.idm>
+      
+      
+      
+      
+      
+      
+      
+    </p.gr>
+
+    <p.gr>
+      <p>
+        <d>what must be done, given or experienced in order to get or keep <en.sth/>.</d>
+
+        <ex><s>Loss of independence was a high <high>price</high> to pay for peace.</s></ex>
+        <ex><s>Being recognized wherever you go is the <high>price</high> you pay for being famous.</s></ex>
+        <ex><s>No <high>price</high> is too high for winning their support.</s></ex>
+
+      </p>
+      
+      <p.idm>
+        <s>at any <high>price</high></s>
+	<d>whatever it may cost</d>
+	<ex><s>The people want peace at any <high>price</high>.</s></ex>
+      
+      </p.idm>
+
+      
+      
+      
+    </p.gr>
+
+    <p.gr>
+      <p>
+        <d>the odds in betting</d>
+        <ex><s>Six to one is a good <high>price</high> for that horse.</s></ex>
+      </p>
+
+    </p.gr>
+
+  </sense>
+</entry>
+
+
+<entry id="en_sale_noun">
+
+  <lemma>
+    <l.gr>
+      <l>sale</l>
+    </l.gr>
+    <pos.gr>
+      <pos pos="noun"/>
+
+    </pos.gr>
+    <phon.gr>
+      <phon>seɪl</phon>
+    </phon.gr>
+  </lemma>
+
+  <sense>
+    <p.gr>
+      <p>
+
+        <t><w pos="f">venda</w></t>
+      </p>
+            
+      <p.idm>
+        <s>for <high>sale</high></s>
+        <t>en <w pos="f">venda</w></t>
+      </p.idm>
+
+    </p.gr>
+
+  </sense>
+</entry>
+
+<entry id="fr_patineur_m">
+
+  <lemma>
+    <l.gr>
+      <l>patineur</l>
+    </l.gr>
+    <pos.gr>
+      <pos pos="m"/>
+
+    </pos.gr>
+    <phon.gr>
+      <phon>patin&#x0153;&#x0280;</phon>
+    </phon.gr>
+  </lemma>
+
+  <sense>
+    <p.gr>
+      <p>
+
+        <t><w pos="m">Schlittschuhläufer</w></t>
+        <t><w pos="m">Eisläufer</w></t>
+      </p>
+      <p.col>
+        <s><high>patineur</high> artistique</s>
+        <t><w pos="m">Eiskunstläufer</w></t>
+
+      </p.col>
+      <p.col>
+        <s><high>patineur</high> de vitesse</s>
+        <t><w pos="m">Eisschnellläufer</w></t>
+      </p.col>
+      <p.col>
+        <s><w pos="m">pas</w> de <high>patineur</high></s>
+
+        <t><w pos="m">Schlittschuhschritt</w></t>
+      </p.col>
+    </p.gr>
+    <p.gr>
+      <p.col>
+        <s><high>patineur</high> <opt>à roulettes</opt></s>
+        <t><w pos="m">Rollschuhläufer</w></t>
+
+      </p.col>
+    </p.gr>
+    <p.gr>
+      <p.col>
+        <s><high>patineur</high> d'eau</s>
+        <t><w pos="m">Wasserläufer</w></t>
+      </p.col>
+
+    </p.gr>
+
+  </sense>
+</entry>
+
+<entry id="de_anordnen_v-tr">
+
+  <lemma>
+    <l.gr>
+      <l>an<sep/>ord<hyph/>nen</l>
+    </l.gr>
+    <pos.gr>
+
+      <pos pos="v-tr"/>
+    </pos.gr>
+    <phon.gr>
+      <phon>&#x02C8;an&#x02C0;&#x0254;rdn&#x0259;n</phon>
+    </phon.gr>
+  </lemma>
+
+  <sense>
+
+    <p.gr>
+      <p>
+        <d>bestimmen, dass <de.etw/> <alt.gr><alt>durchgeführt</alt><alt>gemacht</alt></alt.gr> werden soll</d>
+	<ex>
+	  <s>eine Untersuchung <high>anordnen</high></s>
+
+	</ex>
+	<ex>
+	  <s>der Chef <high>ordnete</high> Überstunden <high>an</high></s>
+	</ex>
+      </p>
+      
+    </p.gr>
+
+    
+    <p.gr>
+      <p>
+        <d>in eine bestimmte Folge bringen</d>
+	<d>nach einem bestimmten Plan zusammenstellen</d>
+	<ex>
+	  <s>die Bücher neu <high>anordnen</high></s>
+	</ex>
+
+	<ex>
+	  <s>auf dem Tisch war alles sehr hübsch <high>angeordnet</high></s>
+	</ex>
+      </p>
+      
+    </p.gr>
+  </sense>
+</entry>
+
+<entry id="de_Hypertonie_f">
+
+  <lemma>
+    <l.gr>
+      <l>Hy<hyph/>per<hyph/>to<hyph/>nie</l>
+    </l.gr>
+
+    <pos.gr>
+      <pos pos="f"/>
+    </pos.gr>
+    <phon.gr>
+      <phon>hyp&#x0250;to&#x02C8;ni&#x02D0;</phon>
+    </phon.gr>
+  </lemma>
+
+  <sense>
+    <p.gr>
+      <p>
+        <d>chronisch erhöhter Blutdruck</d>
+	<ant.gr><ant>Hypotonie</ant></ant.gr>
+	<syn.gr><syn>Bluthochdruck</syn></syn.gr>
+      </p>
+
+      
+    </p.gr>
+  </sense>
+</entry>
+
+</body></dicml>

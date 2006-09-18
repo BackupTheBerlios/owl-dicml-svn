@@ -81,6 +81,7 @@ public class OwlReader extends wicket.markup.html.WebPage {
     
     _feedback = new FeedbackPanel("feedback");
     add(_feedback);
+    
 
   }
 
@@ -99,7 +100,7 @@ public class OwlReader extends wicket.markup.html.WebPage {
 
     public Panel getPanel(String panelId)
     {
-      return new ResultTabPanel(panelId, title, content);
+      return new ResultTabPanel(panelId, title, content, true);
     }
   }
 
@@ -109,7 +110,7 @@ public class OwlReader extends wicket.markup.html.WebPage {
     public MessageForm(String id)
     {
       super(id);
-
+     
       List dics = new ArrayList();
       String[] s = _dic.getAvailableDictionaries();
       for(int i=0; i<s.length; i++)
@@ -119,7 +120,11 @@ public class OwlReader extends wicket.markup.html.WebPage {
       
       _dropDic = new DropDownChoice("dropDic", new PropertyModel(this, "selectedDic", AbstractDic.class), dics);
       _dropDic.setNullValid(false);
-
+      if(s.length > 0)
+      {
+        _dropDic.setModelObject(dics.get(0));
+      }
+      
       _txtSearch = new AutoCompleteTextField("txtSearch", new Model()) {
         protected Iterator getChoices(String input) {
           List<String> choices = new ArrayList<String>();
@@ -155,7 +160,7 @@ public class OwlReader extends wicket.markup.html.WebPage {
       add(_txtSearch);     
       add(new Label("lblSearchFor", getString("lblSearchFor")));
       add(_btSearch);
-            
+          
     } 
 
     /** Do initialisations and checks which have to be done after the Form was added to a page*/
@@ -195,7 +200,7 @@ public class OwlReader extends wicket.markup.html.WebPage {
       {
         l.add(new AbstractTab(new Model(getString("info")))
           {
-            public Panel getPanel(String panelId) {return new ResultTabPanel(panelId, "", getString("noSearchText"));}
+            public Panel getPanel(String panelId) {return new ResultTabPanel(panelId, "", getString("noSearchText"), false);}
           }
         );
         
@@ -208,7 +213,7 @@ public class OwlReader extends wicket.markup.html.WebPage {
       {
         l.add(new AbstractTab(new Model(getString("error")))
           {
-            public Panel getPanel(String panelId) {return new ResultTabPanel(panelId, "", getString("nothingFound"));}
+            public Panel getPanel(String panelId) {return new ResultTabPanel(panelId, "", getString("nothingFound"), false);}
           }
         );
         return new AjaxTabbedPanel("tabs", l);
@@ -216,7 +221,7 @@ public class OwlReader extends wicket.markup.html.WebPage {
       
       for(int i=0; i < results.length; i++)
       {
-        l.add(new ResultAbstractTab(new Model("" + (i+1) + " (" + results[i][1] + ")"), search, results[i][0]));
+        l.add(new ResultAbstractTab(new Model("" + (i+1)), search, results[i][0]));
       }
       
       return new AjaxTabbedPanel("tabs", l);
@@ -237,7 +242,8 @@ public class OwlReader extends wicket.markup.html.WebPage {
         if(d.length > 0)
         {
           AbstractDic dic = new AbstractDic(d[0]);
-          return dic;
+          _curDictionary = dic;
+          return _curDictionary;
         }
         else
         {
@@ -255,10 +261,10 @@ public class OwlReader extends wicket.markup.html.WebPage {
   public class AbstractDic
   {
     
-    public AbstractDic()
-    {
-      shortName = "";
-    }
+//    public AbstractDic()
+//    {
+//      shortName = "";
+//    }
     
     public AbstractDic(String shortName)
     {
