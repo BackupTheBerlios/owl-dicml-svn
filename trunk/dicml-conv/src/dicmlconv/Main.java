@@ -61,8 +61,18 @@ public class Main {
               {
                 conv.convertChemnitz(args[1], args[2], "", dir);
               }
+            }
+          }
+          else if(args[0].equals("-tei"))
+          {
+            TEIConverter conv = new TEIConverter();
+            
+            if(args.length == 3)
+            {
+              conv.convertTEI(args[1], args[2]);
               return;
             }
+            
           }
           else if(args[0].equals(("-toASCII")))
           {
