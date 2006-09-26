@@ -5,11 +5,11 @@
 
 <dicml xmlns:dicml="http://www3.gidoo.de/dtd/dicml/20.0/bi">
 
-<meta:head>
-  <meta:title>Beispielwörterbuch von Julius</meta:title>
-  <meta:lang source="de" target="en" />
+<head>
+  <title>Beispielwörterbuch von Julius</title>
+  <lang source="de" target="en" />
   <!-- TODO: add more -->
-</meta:head>
+</head>
 
 <body>
 

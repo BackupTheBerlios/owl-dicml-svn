@@ -16,14 +16,17 @@ import java.lang.reflect.Array;
 import java.util.*;
 import wicket.PageParameters;
 import wicket.Session;
+import wicket.ajax.AjaxEventBehavior;
 import wicket.ajax.AjaxRequestTarget;
-import wicket.ajax.form.AjaxFormComponentUpdatingBehavior;
+import wicket.ajax.form.AjaxFormSubmitBehavior;
+import wicket.extensions.ajax.markup.html.WicketAjaxIndicatorAppender;
 import wicket.extensions.markup.html.tabs.AbstractTab;
 
 import wicket.markup.html.basic.*;
 import wicket.markup.html.form.*;
 import wicket.markup.html.panel.FeedbackPanel;
 import wicket.markup.html.panel.Panel;
+import wicket.markup.html.resources.JavaScriptReference;
 import wicket.model.*;
 import wicket.Component;
 import wicket.markup.html.link.*;
@@ -53,7 +56,7 @@ public class OwlReader extends wicket.markup.html.WebPage {
 
   /** Creates a new instance of OwlReader */
   public OwlReader() {
-
+  
     _dic = OwlApp.getDicProvider();
 
 //      if(!_dic.isImported("de_en"))
@@ -118,6 +121,8 @@ public class OwlReader extends wicket.markup.html.WebPage {
         dics.add(new AbstractDic(s[i]));
       }
       
+      
+      
       _dropDic = new DropDownChoice("dropDic", new PropertyModel(this, "selectedDic", AbstractDic.class), dics);
       _dropDic.setNullValid(false);
       if(s.length > 0)
@@ -125,7 +130,18 @@ public class OwlReader extends wicket.markup.html.WebPage {
         _dropDic.setModelObject(dics.get(0));
       }
       
-      _txtSearch = new AutoCompleteTextField("txtSearch", new Model()) {
+      _dropDic.add(new AjaxFormSubmitBehavior(this, "onchange") 
+      {
+        protected void onSubmit(AjaxRequestTarget target) 
+        {
+          _txtSearch.setModelValue("");
+          target.addComponent(_txtSearch);
+        }
+      });
+      
+      _txtSearch = new AutoCompleteTextField("txtSearch", new Model(""))
+     
+      {
         protected Iterator getChoices(String input) {
           List<String> choices = new ArrayList<String>();
 
@@ -134,7 +150,7 @@ public class OwlReader extends wicket.markup.html.WebPage {
             return choices.iterator();
           }
 
-          List<String[]> matches = _dic.getMatchingLemma(input);
+          List<String[]> matches = _dic.getMatchingLemma(input, _curDictionary.shortName);
 
           //choices = matches;
           int i=0;
@@ -148,7 +164,7 @@ public class OwlReader extends wicket.markup.html.WebPage {
           return choices.iterator();
         }
       };
-
+      
       _btSearch = new Button("btSubmit", new Model(getString("btSubmit")));
       
 
