@@ -1,16 +1,5 @@
-        <dic.lang source="de" target="en"/>
-	<dic.creator.gr>
-		<dic.creator>
-			<dic.creator.name>Frank Richter</dic.creator.name>
-			<dic.creator.website>http://dict.tu-chemnitz.de</dic.creator.website>
-		</dic.creator>
-		<dic.creator>
-			<dic.creator.name>Thomas Krause (converted dictionary to dicML)</dic.creator.name>
-			<dic.creator.website>http://owl.gidoo.de</dic.creator.website>
-		</dic.creator>
-
-	</dic.creator.gr>
-	<dic.licence>
-		<dic.licence.name>GPL 2.0</dic.licence.name>
-		<dic.licence.source>http://www.gnu.org/copyleft/gpl.html</dic.licence.source>
-	</dic.licence>	
+        <meta:head>
+	  <meta:title>Deutsch -> Englisch</meta:title>
+	  <meta:lang source="de" target="en" />
+	<!-- TODO: add more -->
+      </meta:head>
