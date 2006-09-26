@@ -181,9 +181,9 @@ public class SQLiteProvider implements IDictionaryProvider {
         new FileInputStream(path));
       
       String head;
-      byte[] piLeft = new byte[] {0,0,0,0,0,0,0,0,0,0};
-      byte[] piRight = new byte[] {0,0,0,0,0,0,0,0,0,0,0}; 
-      while(!_shallStop && (head = getInnerText(reader, "<meta:head", piLeft, "</meta:head", piRight)) != null)
+      byte[] piLeft = new byte[] {0,0,0,0,0};
+      byte[] piRight = new byte[] {0,0,0,0,0,0}; 
+      while(!_shallStop && (head = getInnerText(reader, "<head", piLeft, "</head", piRight)) != null)
       {
         head = head + ">";
         DocumentBuilder docBuilder = 
@@ -192,7 +192,7 @@ public class SQLiteProvider implements IDictionaryProvider {
         org.w3c.dom.Document doc = docBuilder.parse(inputSrc);
         
         // get the language
-        NodeList langList = doc.getElementsByTagName("meta:lang");
+        NodeList langList = doc.getElementsByTagName("lang");
         Node langNode = langList.item(0);
         if(langNode != null)
         {
@@ -200,7 +200,7 @@ public class SQLiteProvider implements IDictionaryProvider {
           result.destLanguage = langNode.getAttributes().getNamedItem("target").getNodeValue();
         }
         
-        Node titleNode = doc.getElementsByTagName("meta:title").item(0);
+        Node titleNode = doc.getElementsByTagName("title").item(0);
         if(titleNode != null)
         {
           result.title = titleNode.getTextContent();
@@ -553,9 +553,9 @@ public class SQLiteProvider implements IDictionaryProvider {
       }
       else
       {
-        res = _stm.executeQuery("SELECT l.lemma, l.origin FROM \"entry_" + from + "\" e, "
-          + "\"lemma_" + from + "\" l "
-          + "WHERE l.lemma LIKE \"" + text.toLowerCase() + "%\" AND l.id = e.id");
+        res = _stm.executeQuery("SELECT lemma, origin FROM "
+          + "\"lemma_" + from + "\""
+          +  "WHERE lemma_lower LIKE \"" + text.toLowerCase() + "%\"");
       }
       
       while(res != null && res.next())
