@@ -165,6 +165,33 @@
   </sense>
 </entry>
 
+<entry id="en_sale_noun3">
+
+  <lemma>
+    <l.gr>
+      <l>sale</l>
+    </l.gr>
+    <pos.gr>
+      <pos pos="noun"/>
+
+    </pos.gr>
+    <phon.gr>
+      <phon>seɪl</phon>
+    </phon.gr>
+  </lemma>
+
+  <sense>
+    <p.gr>
+      <p>
+
+        <t><w pos="f">noch eine Alternative</w></t>
+      </p>
+
+    </p.gr>
+
+  </sense>
+</entry>
+
 <entry id="fr_patineur_m">
 
   <lemma>

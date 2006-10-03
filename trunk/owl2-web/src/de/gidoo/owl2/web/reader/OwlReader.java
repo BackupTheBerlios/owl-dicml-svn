@@ -107,7 +107,7 @@ public class OwlReader extends wicket.markup.html.WebPage {
     _feedback = new FeedbackPanel("feedback");
     add(_feedback);
     
-
+    add(new Label("lblHeadline", new Model(getString("lblHeadline"))));
   }
 
 
@@ -254,15 +254,16 @@ public class OwlReader extends wicket.markup.html.WebPage {
             public Panel getPanel(String panelId) {return new ResultTabPanel(panelId, "", getString("nothingFound"), false);}
           }
         );
+        
         return new AjaxTabbedPanel("tabs", l);
       }
       
       for(int i=0; i < results.length; i++)
       {
-        l.add(new ResultAbstractTab(new Model("" + (i+1)), search, results[i][0]));
+        l.add(new ResultAbstractTab(new Model("" + (i+1) + ""), search, results[i][0]));
       }
-      
-      return new AjaxTabbedPanel("tabs", l);
+      AjaxTabbedPanel p = new AjaxTabbedPanel("tabs", l);
+      return  p;
     }
 
 

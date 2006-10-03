@@ -1,15 +1,38 @@
 /* normal layout elements */
 
-#content {
+.content {
   position: absolute;
   left: 50%;
   font-family: Verdana, sans serif;
   font-size: 10pt;
   width: 600px;
   margin-left: -300px; /* always -(width/2) !!! */
+  background-color: #EEEEEE;
+  color: #444444;
+  padding: 4px 6px 4px 4px;
+}
+
+.content a {
+  font-weight: bold;
+  color: #666666;
+  text-decoration: none;
+}
+
+.content a:hover {
+  color: #FF6600;
+}
+
+.content h1, h2, h3
+{
+  margin: 4pt;
+}
+
+.content h1 {
+  font-size: 18pt;
 }
 
 .bottom {
+  margin-top: 5px;
   width: 100%;
 }
 
@@ -20,9 +43,20 @@
 
 .bottom_right {
   position: absolute;
-  width: 50%;
-  left: 50%;
+  width: 300px;
+  left: 300px;
   text-align: right;
+}
+
+/* form elements */
+input 
+{
+  font-size: 10pt;
+}
+
+select
+{
+  font-size: 10pt;
 }
 
 /* autocomplete */
@@ -33,17 +67,18 @@ div.wicket-aa {
   padding: 2px;
   margin: 1px 0 0 0;
   text-align: left;
+  background-color: white;
+  font-size: 10pt;
 }
-
+40 110 230
 div.wicket-aa ul { list-style: none; padding: 2px; margin: 0; background-color: #FFFFFF}
 div.wicket-aa ul li.selected { background-color: #8888AA; padding: 2px; margin: 0; }
-                                
+          
+                     
 /* Tabs */
-
 .tabpanel
 {
-  background-color: white;
-  width:100%;
+  background-color: #EEEEEE;
 }
 
 .tabpanel .tab-row
@@ -62,35 +97,54 @@ div.wicket-aa ul li.selected { background-color: #8888AA; padding: 2px; margin: 
 
 .tabpanel .tab-row li
 {
-  display: inline;
-  margin: 0px 5px 0px 0px;
+  white-space: nowrap;
+  background-color: white;
+  margin: 0px 5px 2px 0px;
   padding: 2px;
   border-style: solid;
-  border-width: 1px 1px 0px 1px;
-  border-color: black;
+  border-width: 1px 1px 1px 1px;
   text-align: left;
+  float: left;
+  min-width: 30px;
+
+  border-left-color: white;
+  border-top-color: white;
+  border-bottom-color: #AAAAAA;
+  border-right-color: #AAAAAA;
+  
 }
 
 .tabpanel .tab-row li.selected
 {
+  padding-top: 4px;
+  margin: 0px 5px -1px 0px;
   border-bottom-color: white;
   border-width: 1px;
 }
 
-.tabpanel .tab-row a
+.tabpanel .tab-row li a
 {
+  display: block;
   text-decoration: none;
   color: black;
+  width: 100%;
+  font-weight: normal;
 }
 
 
 .tabpanel span.tab-panel
 {
+  clear: both;
   display:block;
   width: 100%;
   border-style: solid;
-  border-color: black;
   border-width: 1px;
-  padding: 2px;
+  background-color: white;
+  
+  border-left-color: white;
+  border-top-color: white;
+  border-bottom-color: #AAAAAA;
+  border-right-color: #AAAAAA;
+
 }
 

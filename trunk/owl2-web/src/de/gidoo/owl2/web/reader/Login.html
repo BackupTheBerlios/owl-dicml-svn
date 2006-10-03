@@ -6,6 +6,7 @@
         <link rel="stylesheet" type="text/css" href="style/owl_all.css">
     </head>
     <body>
+      <div class="content">
         <h1>Login page</h1>
         <p>            
             <div wicket:id="feedback">
@@ -15,10 +16,11 @@
               <form wicket:id="formMain">
                 <span wicket:id="lblUser">[lblUser]</span> <input type="text" wicket:id="txtUser"/><br/>
                 <span wicket:id="lblPass">[lblPass]</span> <input type="password" wicket:id="txtPassword"/><br/>
-                <input type="submit" wicket:id="btLogin"/>
+                <input type="submit" wicket:id="btLogin" value="Login!"/>
                 <input type="reset" wicket:id="btReset"/>
               </form>
             </div>
         </p>
+      </div>
     </body>
 </html>
