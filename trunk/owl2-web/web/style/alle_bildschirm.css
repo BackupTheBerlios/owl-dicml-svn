@@ -1,0 +1,43 @@
+/* gidoo-Leiste */
+
+#gidooleiste {
+  background: transparent url(bg_gidooleiste.bmp) repeat;
+  height: 30px;
+  position: relative;
+}
+
+#gidooleiste div {
+  position: absolute;
+  top: 0;
+  width: 400px;
+}
+
+#gidooleiste ul {
+  background: url(bg_gidooleiste-break.bmp) repeat-x;
+  padding: 0 1px;
+  position:absolute;
+  right: 0;
+  top: 0; 
+}
+
+#gidooleiste li {
+  background: url(bg_gidooleiste.bmp) repeat-x;
+  float: left;
+  font-weight: bold;
+  height: 30px;
+}
+
+#gidooleiste li + li {
+  margin-left: 1px;
+}
+
+#gidooleiste li a {
+  color:#666666;
+  display:block;
+  padding:10px 10px 7px 10px;
+  text-decoration:none;
+}
+
+#gidooleiste li a:hover, #gidooleiste li a:focus {
+  text-decoration:underline;
+}

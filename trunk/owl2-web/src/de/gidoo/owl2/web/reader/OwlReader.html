@@ -5,25 +5,36 @@
 
   <head>  
    <title wicket:id="lblTitle">[title]</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" media="all" href="style/alle_alle.css" />  
+    <link rel="stylesheet" type="text/css" media="screen" href="style/alle_bildschirm.css" />  
+    <link rel="stylesheet" type="text/css" href="style/owl_all.css" />
   </head>
   <body>
     <!-- We need this as long as the wicket team needs to fix the issue about AutoComplete -->
      <script type="text/javascript" src="/owl2-web/owlreader/resources/wicket.extensions.ajax.markup.html.autocomplete.AutoCompleteBehavior/wicket-autocomplete.js"></script>
     
-    <p wicket:id="feedback">[feedback panel]</p>
-    <form wicket:id="form">
-        <p>
-          <select wicket:id="dropDic">[dropDic]</select>
-          <span wicket:id="lblSearchFor"></span> <input type="text" autocomplete="off" wicket:id="txtSearch"/>
-          <input wicket:id="btSubmit" type="submit"/>
-        </p>
-      <div style="width:100%; border-style:none;">
-        <div class="tabpanel" wicket:id="tabs">[tabs]</div>
-      </div>  
-    </form>
-    <p>
-      <a wicket:id="lnkAdmin"><span wicket:id="lblLinkAdmin">[a link to admin]</span></a>
-    </p>
+    <!-- gidooleiste -->
+    <div id="gidooleiste"><a href="http://gidoo.de"><img src="style/gidoo-logo.bmp" alt="gidoo.de-Logo" /></a>
+    <div><ul><li><a href="http://start.gidoo.de/">gidoo start</a></li></ul></div></div>
+    <!-- // gidooleiste -->
+    
+    <br />  
+    <div id="content">
+      <p wicket:id="feedback">[feedback panel]</p>
+      <form wicket:id="form">
+          <p>
+            <select wicket:id="dropDic">[dropDic]</select>
+            <span wicket:id="lblSearchFor"></span> <input type="text" autocomplete="off" wicket:id="txtSearch"/>
+            <input wicket:id="btSubmit" type="submit"/>
+          </p><br />
+        <p style="width:100%; border-style:none;">
+          <div class="tabpanel" wicket:id="tabs">[tabs]</div>
+        </p>  
+      </form>
+      <p class="bottom">
+        <span class="bottom_left"><a wicket:id="lnkAdmin"><span wicket:id="lblLinkAdmin">[a link to admin]</span></a></span>
+        <span class="bottom_right"><a wicket:id="lnkEnglish">English</a> | <a wicket:id="lnkDeutsch">Deutsch</a></span>
+      </p>
+    </div>
   </body>
 </html>

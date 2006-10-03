@@ -106,7 +106,7 @@
 </entry>
 
 
-<entry id="en_sale_noun">
+<entry id="en_sale_noun1">
 
   <lemma>
     <l.gr>
@@ -132,6 +132,33 @@
         <s>for <high>sale</high></s>
         <t>en <w pos="f">venda</w></t>
       </p.idm>
+
+    </p.gr>
+
+  </sense>
+</entry>
+
+<entry id="en_sale_noun2">
+
+  <lemma>
+    <l.gr>
+      <l>sale</l>
+    </l.gr>
+    <pos.gr>
+      <pos pos="noun"/>
+
+    </pos.gr>
+    <phon.gr>
+      <phon>seɪl</phon>
+    </phon.gr>
+  </lemma>
+
+  <sense>
+    <p.gr>
+      <p>
+
+        <t><w pos="f">Alternative</w></t>
+      </p>
 
     </p.gr>
 

@@ -14,6 +14,7 @@ import java.io.LineNumberReader;
 import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.util.*;
+import org.omg.PortableInterceptor.LOCATION_FORWARD;
 import wicket.PageParameters;
 import wicket.Session;
 import wicket.ajax.AjaxEventBehavior;
@@ -82,6 +83,27 @@ public class OwlReader extends wicket.markup.html.WebPage {
 
     add(lnkAdmin);
     
+    Link lnkEnglish = new Link("lnkEnglish")
+    {
+      public void onClick()
+      {
+        getSession().setLocale(Locale.ENGLISH);
+        setResponsePage(OwlReader.class);
+      }
+    };
+    
+    add(lnkEnglish);
+    
+    Link lnkDeutsch = new Link("lnkDeutsch")
+    {
+      public void onClick()
+      {
+        getSession().setLocale(Locale.GERMAN);
+        setResponsePage(OwlReader.class);
+      }
+    };
+    
+    add(lnkDeutsch);
     _feedback = new FeedbackPanel("feedback");
     add(_feedback);
     

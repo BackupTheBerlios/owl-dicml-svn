@@ -6,7 +6,7 @@
   <head>
   <title>example of use - entry id "<xsl:value-of select="@id"/>"</title>
   
-  <link rel="stylesheet" media="all" href="dicml_2-0.css"/>
+  <link rel="stylesheet" media="all" href="style/dicml_2-0.css"/>
   
   </head>
 
