@@ -38,6 +38,7 @@ public class SQLiteProvider implements IDictionaryProvider {
   private double _importProgress = -1;
   private boolean _shallStop = false;
   private long _bytesRead;
+  private String _pathToDBFile;
   
   /**
    * Creates a new instance of SQLiteProvider. Will start a connection to 
@@ -47,18 +48,13 @@ public class SQLiteProvider implements IDictionaryProvider {
   {
     try
     {
+      _pathToDBFile = pathToDBFile;
+        
       _activeDics = new java.util.ArrayList<String>();
 
 
       Class.forName("org.sqlite.JDBC");
             
-      // open connection
-      _conn = DriverManager.getConnection("jdbc:sqlite:" + pathToDBFile);
-      _stm = _conn.createStatement();
-      
-      // if not existing, create a table with a list of all imported dictionaries
-      _stm.execute("CREATE TABLE IF NOT EXISTS imported_dics(name TEXT, title TEXT,srcLanguage TEXT, " +
-        "destLanguage TEXT, author TEXT, date INTEGER)");
     }
     catch(Exception ex)
     {
@@ -89,6 +85,8 @@ public class SQLiteProvider implements IDictionaryProvider {
     try
     {
      
+      checkIfDictionaryOpened();
+      
       _importProgress = 0;
       _shallStop = false;
       
@@ -480,6 +478,8 @@ public class SQLiteProvider implements IDictionaryProvider {
   public boolean isImported(String name) {
       try
       {
+        checkIfDictionaryOpened();
+        
         ResultSet result = _stm.executeQuery("SELECT name FROM imported_dics"
           + " WHERE name=\"" + name + "\"");
         boolean wasFound = false;
@@ -506,6 +506,9 @@ public class SQLiteProvider implements IDictionaryProvider {
   public String[][] getEntry(String lemma, String from)
   {
     ArrayList<String[]> list = new ArrayList<String[]>();
+    
+    checkIfDictionaryOpened();
+    
     try {      
       // ask the database
       ResultSet res = null;
@@ -543,7 +546,10 @@ public class SQLiteProvider implements IDictionaryProvider {
   
   public List<String[]> getMatchingLemma(String text, String from) 
   {
+    checkIfDictionaryOpened();
+    
     ArrayList<String[]> list = new ArrayList<String[]>();
+        
     try {      
       // ask the database
       ResultSet res = null;
@@ -573,6 +579,8 @@ public class SQLiteProvider implements IDictionaryProvider {
   
   public String[] getAvailableDictionaries() {
     
+    checkIfDictionaryOpened();
+    
     java.util.ArrayList<String> list = new java.util.ArrayList<String>();
     
     try
@@ -599,6 +607,8 @@ public class SQLiteProvider implements IDictionaryProvider {
   public String getTitle(String name)
   {
     String result = null;
+   
+    checkIfDictionaryOpened();
     
     if(isImported(name))
     {
@@ -636,6 +646,8 @@ public class SQLiteProvider implements IDictionaryProvider {
   /** Create a view inside a database which make it easy to access all importent features */
   private void rebuildDBView()
   {
+    checkIfDictionaryOpened();
+    
     try
     {
       
@@ -698,6 +710,8 @@ public class SQLiteProvider implements IDictionaryProvider {
 
   public boolean deleteDictionary(String name) 
   {
+    checkIfDictionaryOpened();
+    
     if(isImported(name))
     {
       try
@@ -732,6 +746,26 @@ public class SQLiteProvider implements IDictionaryProvider {
     return _importProgress;
   }
   
+  private void checkIfDictionaryOpened()
+  {
+    try
+    {
+      if(_conn == null || _stm == null)
+      {
+        // try to open connection
+        _conn = DriverManager.getConnection("jdbc:sqlite:" + _pathToDBFile);
+        _stm = _conn.createStatement();
+
+        // if not existing, create a table with a list of all imported dictionaries
+        _stm.execute("CREATE TABLE IF NOT EXISTS imported_dics(name TEXT, title TEXT,srcLanguage TEXT, " +
+          "destLanguage TEXT, author TEXT, date INTEGER)");
+      }
+    }
+    catch(Exception ex)
+    {
+      ex.printStackTrace();
+    }
+  }
   
   public static void main(String[] args)
   {
