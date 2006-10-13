@@ -52,7 +52,7 @@ Linux_LIBNAME    := libsqlitejdbc.so
 
 Darwin_CC        := $(arch)-apple-darwin-gcc
 Darwin_STRIP     := $(arch)-apple-darwin-strip -x
-Darwin_CCFLAGS   := -Isrc/jni/Darwin -O
+Darwin_CCFLAGS   := -DNDEBUG -Isrc/jni/Darwin -O
 Darwin_LINKFLAGS := -dynamiclib
 Darwin_LIBNAME   := libsqlitejdbc.jnilib
 
@@ -128,7 +128,7 @@ src-tgz:
 
 work/sqlite-src.zip:
 	@mkdir -p work
-	wget -O work/sqlite-src.zip http://www.sqlite.org/sqlite-source-3_3_7.zip
+	wget -O work/sqlite-src.zip http://www.sqlite.org/sqlite-source-3_3_8.zip
 
 work/sqlite/%/main.o: work/sqlite-src.zip
 	mkdir -p work/sqlite/$*
@@ -136,8 +136,11 @@ work/sqlite/%/main.o: work/sqlite-src.zip
 	          unzip -qo ../../sqlite-src.zip; \
 	          mv shell.c shell.c.old; \
 	          mv tclsqlite.c tclsqlite.c.not; \
-	          $(CC) -c -O \
+	          perl -pi -e "s/sqlite3_api;/sqlite3_api = 0;/g" sqlite3ext.h; \
+	          $(CC) -c $(CCFLAGS) \
 	              -DSQLITE_ENABLE_COLUMN_METADATA \
+	              -DSQLITE_CORE \
+	              -DSQLITE_ENABLE_FTS1 \
 	              -DSQLITE_OMIT_LOAD_EXTENSION *.c)
 
 doc:
@@ -164,3 +167,31 @@ clean:
 
 distclean: clean
 	rm -rf work
+
+
+changes:
+	echo '<html><head>' > changes.html
+	echo '<link rel="stylesheet" type="text/css" href="/content.css" />' \
+		>> changes.html
+	echo '<title>SQLiteJDBC - Changelog</title></head><body>' >> changes.html
+	cat web/ad.inc >> changes.html
+	echo '<div class="content">' >> changes.html
+	echo '<h1>Changelog</h1>' >> changes.html
+	cat web/nav.inc >> changes.html
+	echo '<h3>HEAD</h3><ul>' >> changes.html
+	darcs changes --from-patch="version 008" | grep \* >> changes.html
+	perl -pi -e \
+		"s/^  \* version ([0-9]+)\$$/<\/ul><h3>Version \$$1<\/h3><ul>/g" \
+		changes.html
+	perl -pi -e "s/^  \* (.*)$$/<li>\$$1<\/li>/g" changes.html
+	echo '</ul></div></body></html>' >> changes.html
+
+### only useful on the author's web server
+release:
+	make changes
+	cp dist/sqlitejdbc-v$(VERSION)-*.tgz \
+		/var/www/zentus.com/www/sqlitejdbc/dist/
+	cd /var/www/zentus.com/www/sqlitejdbc/src && darcs pull -a
+	mv changes.html /var/www/zentus.com/www/sqlitejdbc/
+	cp web/*.html web/*.css /var/www/zentus.com/www/sqlitejdbc/
+	rm build/Darwin-i386/libsqlitejdbc.jnilib
