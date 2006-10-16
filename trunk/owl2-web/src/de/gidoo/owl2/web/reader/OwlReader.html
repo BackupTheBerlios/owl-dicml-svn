@@ -11,7 +11,7 @@
   </head>
   <body>
     <!-- We need this as long as the wicket team needs to fix the issue about AutoComplete -->
-     <script type="text/javascript" src="/owl2-web/owlreader/resources/wicket.extensions.ajax.markup.html.autocomplete.AutoCompleteBehavior/wicket-autocomplete.js"></script>
+     <script type="text/javascript" src="/owl2-web/wicket-autocomplete.js"></script>
     
     <!-- gidooleiste -->
     <div id="gidooleiste"><a href="http://gidoo.de"><img src="style/gidoo-logo.bmp" alt="gidoo.de-Logo" /></a>
@@ -22,17 +22,19 @@
     <div class="content">
       <h1 wicket:id="lblHeadline">[lblHeadline]</h1>
       <p>
-        <div wicket:id="feedback">[feedback panel]</div>
+        <p wicket:id="feedback">[feedback panel]</p>
+        <p>
         <form wicket:id="form">
             <p>
               <select wicket:id="dropDic">[dropDic]</select>
               <span wicket:id="lblSearchFor"></span> <input type="text" autocomplete="off" wicket:id="txtSearch"/>
-              <input wicket:id="btSubmit" type="submit"/>
+              <input wicket:id="btSearch" type="button" />
             </p><br />
           <p style="width:100%; border-style:none;">
             <div class="tabpanel" wicket:id="tabs">[tabs]</div>
           </p>  
         </form>
+        </p>
       </p>
       <p class="bottom">
         <span class="bottom_left"><a wicket:id="lnkAdmin"><span wicket:id="lblLinkAdmin">[a link to admin]</span></a></span>

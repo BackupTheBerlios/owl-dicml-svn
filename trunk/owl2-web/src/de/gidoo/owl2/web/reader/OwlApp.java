@@ -10,6 +10,8 @@ package de.gidoo.owl2.web.reader;
 
 import de.gidoo.owl2.base.IDictionaryProvider;
 import de.gidoo.owl2.base.SQLiteProvider;
+import javax.security.auth.login.AppConfigurationEntry;
+import wicket.Application;
 import wicket.ISessionFactory;
 import wicket.Session;
 import wicket.authorization.IAuthorizationStrategy;
@@ -27,15 +29,18 @@ public class OwlApp extends wicket.protocol.http.WebApplication {
     /** Creates a new instance of OwlApp */
     public OwlApp() 
     {
+     
     }
 
     public void init()
-    {
+    {            
       realPathToContext = this.getWicketServlet().getServletContext().getRealPath("/");
       getDebugSettings().setSerializeSessionAttributes(false); 
       
       getSecuritySettings().setAuthorizationStrategy(new SimpleAuthorizationStrategy());
-     
+    
+      getRequestCycleSettings().setGatherExtendedBrowserInfo(true);
+      
       if(dic == null)
       {
         OwlApp.dic = new SQLiteProvider(realPathToContext + "WEB-INF/owl.db");

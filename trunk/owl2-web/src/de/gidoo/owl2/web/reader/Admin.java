@@ -59,7 +59,6 @@ public class Admin extends PageWithAdminRightsNeeded
     tabPanelDics = new AjaxTabbedPanel("tabPanel", panels);
     add(tabPanelDics);
     
-    add(new FeedbackPanel("feedback"));
   }
   
 }

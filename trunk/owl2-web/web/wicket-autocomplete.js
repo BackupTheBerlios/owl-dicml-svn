@@ -61,8 +61,13 @@ Wicket.Ajax.AutoComplete=function(elementId,callbackUrl){
 	                if(selected>-1){
     	                obj.value=getSelectedValue();
         	            hideAutoComplete();
+                                obj.onload();
 	                	return killEvent(event);
-            	    }
+                    }
+                    else
+                    {
+                      obj.onload();
+                    }
             	    return true;
                 break;
                 default:
@@ -198,6 +203,8 @@ Wicket.Ajax.AutoComplete=function(elementId,callbackUrl){
        	
 				node.onclick = function(event){
 					wicketGet(elementId).value=getSelectedValue();
+                                        var obj=wicketGet(elementId);
+                                        obj.onload();
 					hideAutoComplete();
        			}
 

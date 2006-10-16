@@ -14,12 +14,12 @@ import java.io.LineNumberReader;
 import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.util.*;
-import org.omg.PortableInterceptor.LOCATION_FORWARD;
 import wicket.PageParameters;
 import wicket.Session;
 import wicket.ajax.AjaxEventBehavior;
 import wicket.ajax.AjaxRequestTarget;
 import wicket.ajax.form.AjaxFormSubmitBehavior;
+import wicket.ajax.markup.html.form.AjaxSubmitButton;
 import wicket.extensions.ajax.markup.html.WicketAjaxIndicatorAppender;
 import wicket.extensions.markup.html.tabs.AbstractTab;
 
@@ -36,6 +36,10 @@ import wicket.extensions.ajax.markup.html.tabs.AjaxTabbedPanel;
 import wicket.extensions.markup.html.tabs.AbstractTab;
 
 import de.gidoo.owl2.base.*;
+import wicket.protocol.http.ClientProperties;
+import wicket.protocol.http.request.WebClientInfo;
+import wicket.request.ClientInfo;
+import wicket.util.time.Duration;
 
 /**
  * A page to search in and display items of a dictonary
@@ -59,11 +63,6 @@ public class OwlReader extends wicket.markup.html.WebPage {
   public OwlReader() {
   
     _dic = OwlApp.getDicProvider();
-
-//      if(!_dic.isImported("de_en"))
-//        _dic.importDictionary(OwlApp.realPathToContext + "de-en.dicml", "de_en");
-
-    //_dic.activateDictionary("de_en");
 
     _mainForm = new MessageForm("form");
     add(_mainForm);
@@ -108,9 +107,17 @@ public class OwlReader extends wicket.markup.html.WebPage {
     add(_feedback);
     
     add(new Label("lblHeadline", new Model(getString("lblHeadline"))));
+    
+    ClientProperties clientProp = ((WebClientInfo) getRequestCycle().getClientInfo()).getProperties();
+    if("false".equals(clientProp.get(ClientProperties.NAVIGATOR_JAVA_ENABLED).toString()))
+    {
+      error(getString("errorJavaScriptNeeded"));
+    }
+
+    warn("pre-beta modus, not for public use!");
   }
 
-
+  
   private final class ResultAbstractTab extends AbstractTab
   {
     private String title;
@@ -152,7 +159,7 @@ public class OwlReader extends wicket.markup.html.WebPage {
         _dropDic.setModelObject(dics.get(0));
       }
       
-      _dropDic.add(new AjaxFormSubmitBehavior(this, "onchange") 
+      _dropDic.add(new AjaxFormSubmitBehavior(this, "onchange")
       {
         protected void onSubmit(AjaxRequestTarget target) 
         {
@@ -160,9 +167,9 @@ public class OwlReader extends wicket.markup.html.WebPage {
           target.addComponent(_txtSearch);
         }
       });
+                  
       
       _txtSearch = new AutoCompleteTextField("txtSearch", new Model(""))
-     
       {
         protected Iterator getChoices(String input) {
           List<String> choices = new ArrayList<String>();
@@ -182,14 +189,31 @@ public class OwlReader extends wicket.markup.html.WebPage {
             choices.add(it.next()[0]);
             i++;
           }
+          
 
           return choices.iterator();
         }
       };
       
-      _btSearch = new Button("btSubmit", new Model(getString("btSubmit")));
+      _txtSearch.add(new AjaxFormSubmitBehavior(this, "onload") 
+      {
+        protected void onSubmit(AjaxRequestTarget target) 
+        {
+          updateResults(target);
+        }
+      });
       
-
+      _btSearch = new Button("btSearch", new Model(getString("btSearch")));
+      
+      _btSearch.add(new AjaxFormSubmitBehavior(this, "onclick")        
+      {
+        protected void onSubmit(AjaxRequestTarget target)
+        {
+          updateResults(target);
+        }
+      });
+      
+   
       // empty tab-list at begin
       _tabPanel = getAvailableTabs();
       add(_tabPanel);
@@ -198,7 +222,6 @@ public class OwlReader extends wicket.markup.html.WebPage {
       add(_txtSearch);     
       add(new Label("lblSearchFor", getString("lblSearchFor")));
       add(_btSearch);
-          
     } 
 
     /** Do initialisations and checks which have to be done after the Form was added to a page*/
@@ -211,21 +234,14 @@ public class OwlReader extends wicket.markup.html.WebPage {
         error(getString("errorNoDicAvailable"));
       }
     }
-    
-    protected void onAttach() 
+
+    private void updateResults(AjaxRequestTarget target)
     {
       _tabPanel = getAvailableTabs();
-      replace(_tabPanel);      
-      
+      replace(_tabPanel);
+
+      target.addComponent(_tabPanel);
     }
-
-
-    
-//    protected void onSubmit() 
-//    {
-//      _tabPanel = getAvailableTabs();
-//      replace(_tabPanel);
-//    } 
     
     public AjaxTabbedPanel getAvailableTabs()
     {      

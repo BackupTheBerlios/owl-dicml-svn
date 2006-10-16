@@ -12,6 +12,12 @@
   padding: 4px 6px 4px 4px;
 }
 
+.content ul 
+{
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
 .content a {
   font-weight: bold;
   color: #666666;
@@ -70,10 +76,20 @@ div.wicket-aa {
   background-color: white;
   font-size: 10pt;
 }
-40 110 230
+
 div.wicket-aa ul { list-style: none; padding: 2px; margin: 0; background-color: #FFFFFF}
 div.wicket-aa ul li.selected { background-color: #8888AA; padding: 2px; margin: 0; }
-          
+
+/* FeedbackPanel */
+.feedbackPanelERROR
+{
+  color: red;
+}        
+
+.feedbackPanelWARNING
+{
+  color: #FF6600;
+}  
                      
 /* Tabs */
 .tabpanel
