@@ -184,7 +184,7 @@ public class OwlReader extends wicket.markup.html.WebPage {
           //choices = matches;
           int i=0;
           Iterator<String[]> it = matches.iterator();
-          while(it.hasNext() && i < 25)
+          while(it.hasNext() && i < 30)
           {
             choices.add(it.next()[0]);
             i++;
