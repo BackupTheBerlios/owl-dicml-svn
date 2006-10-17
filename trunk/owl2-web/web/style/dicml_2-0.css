@@ -1,112 +1,108 @@
-
-body {
+.dicml {
   font-family: Sans-serif;
+  margin: 20px;
+  font-size: 12pt;
 }
 
-div.ex {
+.dicml 
+
+.dicml div.ex {
   color: #999999;
   font-size: 90%;
   margin: 0 0 0 1.5em;
   text-indent: -0.7em;
 }
 
-div.ex span.s {
+.dicml div.ex span.s {
   font-style: italic;
   font-weight: normal;
 }
 
-div.antgr, div.syngr {
+.dicml div.antgr, div.syngr {
   font-size: 90%;
   margin: 0 0 0 2.8em;
   text-indent: -2em;
 }
 
-div.antgr abbr, div.syngr abbr {
+.dicml div.antgr abbr, div.syngr abbr {
   color: #0000FF;
   font-weight: bold;
 }
 
-p {
+.dicml p {
   margin: 0;
 }
 
-p.lemma {
+.dicml p.orth {
   font-size: 135%;
   margin: 0;
 }
 
-p.phon {
+.dicml p.phon {
 
 }
 
 
-span.altgr:hover {
+.dicml span.altgr:hover {
   text-decoration: underline;
 }
 
-span.high {
+.dicml span.high {
   background-color: #FFFFB2;
 }
 
-span.hyphsep {
+.dicml span.hyphsep {
   color: #999999;
 }
 
-span.l {
+.dicml span.orth {
   color: #0000FF;
   font-weight:bold;
 }
 
-span.lalt {
+.dicml span.orthalt {
   color: #0000FF;
 }
 
-span.lalt-group {
+.dicml span.orthalt-group {
   margin: 0 0 0 0;
 }
 
-span.l span.hyphsep, span.lalt span.hyphsep {
+.dicml span.orth span.hyphsep, span.orthalt span.hyphsep {
   display: none;
 }
 
-span.l:hover span.hyphsep, span.lalt:hover span.hyphsep {
+.dicml span.orth:hover span.hyphsep, span.orthalt:hover span.hyphsep {
   display: inline;
 }
 
-span.phon {
+.dicml span.phon {
   font-family: Gentium;
 }
 
-span.pos {
+.dicml span.pos {
   color: #FF0000;
   font-style: italic;
   font-weight: normal;
   margin: 0 0 0 5px;
 }
 
-span.s {
+.dicml span.pos abbr {
+  border: 0;
+}
+
+.dicml span.s {
   font-weight: bold;
   margin: 0 5px 0 0;
 }
 
-span.t {
+.dicml span.t {
 
 }
 
+.dicml span.w:hover {
+  border-bottom: 1px dotted;
 
-
-ul#sense {
-  list-style-type:decimal;
-  margin: 20px 0 0 0;
-  padding: 0 20px;
 }
 
-ul#sense li {
-  margin: 0;
-  padding: 0;
-}
-
-ul#sense li + li {
-  margin: 10px 0 0 0;
-}
 

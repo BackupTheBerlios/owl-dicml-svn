@@ -174,7 +174,7 @@ public class SQLiteProviderTest extends TestCase {
     
     
     lemma = "short";
-    String expResult = "<entry id=\"test-short\"><lemma><l>short</l></lemma></entry>"; 
+    String expResult = "<entry id=\"test-short\"><form><orth>short</orth></form></entry>"; 
     result = instance.getEntry(lemma);
     if(result.length != 1)
       fail("there should be *exactly* one match for \"short\"");

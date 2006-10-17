@@ -13,33 +13,59 @@
 
 <body>
 
-<entry id="test-A">
-<lemma>
-	<l>A</l><l.alt>a</l.alt><pos pos="n"/>
-</lemma>
-<sense>
-<p>ganz viel Unsinn</p>
-</sense>
+  <entry id="da_avis_n">
 
-<entry id="en_price_noun">
+  <form>
+    <orth.gr>
+      <orth>avis</orth>
+    </orth.gr>
+  </form>
 
-  <lemma>
-    <l.gr>
-      <l>price</l>
-    </l.gr>
-    <pos.gr>
-      <pos pos="noun"/>
-
-    </pos.gr>
-    <phon.gr>
-      <phon>pra&#x026A;s</phon>
-    </phon.gr>
-  </lemma>
+  <grammar>
+    <pos pos="n"/>
+    <gen.gr>
+      <gen gen="u"/>
+    </gen.gr>
+  </grammar>
 
   <sense>
     <p.gr>
 
       <p>
+        <t><w pos="n" gen="f">Zeitung</w></t>
+      </p>
+      
+      <p.col>
+        <s>bringe <w pos="n" gen="u" num="pl"><high>aviser</high></w> ud</s>
+	<t><w pos="n" gen="f" num="pl">Zeitungen</w> austragen</t>
+
+      </p.col>
+      
+    </p.gr>
+ 
+  </sense>
+</entry>
+
+  <entry id="en_price_n">
+
+  <form>
+    <orth.gr>
+      <orth>price</orth>
+    </orth.gr>
+    <phon.gr>
+      <phon>pra&#x026A;s</phon>
+
+    </phon.gr>
+  </form>
+  
+  <grammar>
+    <pos pos="n"/>
+  </grammar>
+
+  <sense>
+    <p.gr>
+      <p>
+
         <d>an amount of money for which <en.sth/> may be bought or sold</d>
         <ex><s>a wollen sweater, <high>price</high> $29.95</s></ex>
         <ex><s><high>Prices</high> are <alt.gr><alt>rising</alt><alt>going up</alt><alt>shooting up</alt></alt.gr>.</s></ex>
@@ -50,7 +76,7 @@
         <ex><s>Ask the builder to give you a <high>price</high> for work.</s><d>Ask the builder to say how much he will charge for the work.</d></ex>
         <ex><s>The <high>price</high> of cigarettes is set to rise again</s></ex>
       </p>
-            
+      
       <p.idm>
 
         <s>at a <high>price</high></s>
@@ -63,12 +89,6 @@
 
         <d>extremely valuable</d><d>so valuable that it cannot be bought</d>
       </p.idm>
-      
-      
-      
-      
-      
-      
       
     </p.gr>
 
@@ -105,32 +125,32 @@
   </sense>
 </entry>
 
+<entry id="en_sale_n">
 
-<entry id="en_sale_noun1">
-
-  <lemma>
-    <l.gr>
-      <l>sale</l>
-    </l.gr>
-    <pos.gr>
-      <pos pos="noun"/>
-
-    </pos.gr>
+  <form>
+    <orth.gr>
+      <orth>sale</orth>
+    </orth.gr>
     <phon.gr>
       <phon>seɪl</phon>
+
     </phon.gr>
-  </lemma>
+  </form>
+  
+  <grammar>
+    <pos pos="n" />
+  </grammar>
 
   <sense>
     <p.gr>
       <p>
 
-        <t><w pos="f">venda</w></t>
+        <t><w pos="n" gen="f">venda</w></t>
       </p>
             
       <p.idm>
         <s>for <high>sale</high></s>
-        <t>en <w pos="f">venda</w></t>
+        <t>en <w pos="n" gen="f">venda</w></t>
       </p.idm>
 
     </p.gr>
@@ -138,129 +158,80 @@
   </sense>
 </entry>
 
-<entry id="en_sale_noun2">
+<entry id="fr_patineur_n">
 
-  <lemma>
-    <l.gr>
-      <l>sale</l>
-    </l.gr>
-    <pos.gr>
-      <pos pos="noun"/>
-
-    </pos.gr>
-    <phon.gr>
-      <phon>seɪl</phon>
-    </phon.gr>
-  </lemma>
-
-  <sense>
-    <p.gr>
-      <p>
-
-        <t><w pos="f">Alternative</w></t>
-      </p>
-
-    </p.gr>
-
-  </sense>
-</entry>
-
-<entry id="en_sale_noun3">
-
-  <lemma>
-    <l.gr>
-      <l>sale</l>
-    </l.gr>
-    <pos.gr>
-      <pos pos="noun"/>
-
-    </pos.gr>
-    <phon.gr>
-      <phon>seɪl</phon>
-    </phon.gr>
-  </lemma>
-
-  <sense>
-    <p.gr>
-      <p>
-
-        <t><w pos="f">noch eine Alternative</w></t>
-      </p>
-
-    </p.gr>
-
-  </sense>
-</entry>
-
-<entry id="fr_patineur_m">
-
-  <lemma>
-    <l.gr>
-      <l>patineur</l>
-    </l.gr>
-    <pos.gr>
-      <pos pos="m"/>
-
-    </pos.gr>
+  <form>
+    <orth.gr>
+      <orth>patineur</orth>
+    </orth.gr>
     <phon.gr>
       <phon>patin&#x0153;&#x0280;</phon>
+
     </phon.gr>
-  </lemma>
+  </form>
+  
+  <grammar>
+    <pos pos="n" />
+    <gen.gr>
+      <gen gen="m" />
+    </gen.gr>
+  </grammar>
 
   <sense>
     <p.gr>
       <p>
-
-        <t><w pos="m">Schlittschuhläufer</w></t>
-        <t><w pos="m">Eisläufer</w></t>
+        <t><w pos="n" gen="m">Schlittschuhläufer</w></t>
+        <t><w pos="n" gen="m">Eisläufer</w></t>
       </p>
       <p.col>
         <s><high>patineur</high> artistique</s>
-        <t><w pos="m">Eiskunstläufer</w></t>
 
+        <t><w pos="n" gen="m">Eiskunstläufer</w></t>
       </p.col>
       <p.col>
         <s><high>patineur</high> de vitesse</s>
-        <t><w pos="m">Eisschnellläufer</w></t>
+        <t><w pos="n" gen="m">Eisschnellläufer</w></t>
       </p.col>
-      <p.col>
-        <s><w pos="m">pas</w> de <high>patineur</high></s>
 
-        <t><w pos="m">Schlittschuhschritt</w></t>
+      <p.col>
+        <s><w pos="n" gen="m">pas</w> de <high>patineur</high></s>
+        <t><w pos="n" gen="m">Schlittschuhschritt</w></t>
       </p.col>
     </p.gr>
     <p.gr>
+
       <p.col>
         <s><high>patineur</high> <opt>à roulettes</opt></s>
-        <t><w pos="m">Rollschuhläufer</w></t>
-
+        <t><w pos="n" gen="m">Rollschuhläufer</w></t>
       </p.col>
     </p.gr>
     <p.gr>
       <p.col>
-        <s><high>patineur</high> d'eau</s>
-        <t><w pos="m">Wasserläufer</w></t>
-      </p.col>
 
+        <s><high>patineur</high> d'eau</s>
+        <t><w pos="n" gen="m">Wasserläufer</w></t>
+      </p.col>
     </p.gr>
 
   </sense>
 </entry>
 
-<entry id="de_anordnen_v-tr">
 
-  <lemma>
-    <l.gr>
-      <l>an<sep/>ord<hyph/>nen</l>
-    </l.gr>
-    <pos.gr>
+<entry id="de_anordnen_v">
 
-      <pos pos="v-tr"/>
-    </pos.gr>
+  <form>
+    <orth.gr>
+      <orth>an<sep/>ord<hyph/>nen</orth>
+    </orth.gr>
     <phon.gr>
+
       <phon>&#x02C8;an&#x02C0;&#x0254;rdn&#x0259;n</phon>
     </phon.gr>
-  </lemma>
+  </form>
+  
+  <grammar>
+    <pos pos="v"/>
+  </grammar>
 
   <sense>
 
@@ -296,31 +267,68 @@
   </sense>
 </entry>
 
-<entry id="de_Hypertonie_f">
+<entry id="de_Hypertonie_n">
 
-  <lemma>
-    <l.gr>
-      <l>Hy<hyph/>per<hyph/>to<hyph/>nie</l>
-    </l.gr>
+  <form>
+    <orth.gr>
+      <orth>Hy<hyph />per<hyph />to<hyph />nie</orth>
+    </orth.gr>
 
-    <pos.gr>
-      <pos pos="f"/>
-    </pos.gr>
     <phon.gr>
       <phon>hyp&#x0250;to&#x02C8;ni&#x02D0;</phon>
     </phon.gr>
-  </lemma>
+  </form>
+  
+  <grammar>
+    <pos pos="n" />
+    <gen.gr>
+
+      <gen gen="f" />
+    </gen.gr>
+  </grammar>
 
   <sense>
     <p.gr>
       <p>
         <d>chronisch erhöhter Blutdruck</d>
 	<ant.gr><ant>Hypotonie</ant></ant.gr>
+
 	<syn.gr><syn>Bluthochdruck</syn></syn.gr>
       </p>
-
       
     </p.gr>
+  </sense>
+</entry>
+
+<entry id="de_Eisschnellläufer_n">
+
+  <form>
+    <orth.gr>
+      <orth>Eis<hyph/>schnell<hyph/>läu<hyph/>fer</orth>
+      <orth.alt>Eis<hyph/>schnell-Läu<hyph/>fer</orth.alt>
+
+    </orth.gr>
+    <phon.gr>
+      <phon>&#x02C8;ais&#x0283;n&#x025B;ll&#x0254;yf&#x0250;</phon>
+    </phon.gr>
+  </form>
+  
+  <grammar>
+    <pos pos="n"/>
+
+    <gen.gr>
+      <gen gen="m" />
+    </gen.gr>
+  </grammar>
+
+  <sense>
+    <p.gr>
+      <p>
+        <t><w pos="n">speed skater</w></t>
+
+      </p>
+    </p.gr>
+
   </sense>
 </entry>
 

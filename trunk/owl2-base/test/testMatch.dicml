@@ -17,9 +17,9 @@
 <body>
 
 <entry id="test-Match">
-<lemma>
-	<l>Match</l>
-</lemma>
+<form>
+	<orth>Match</orth>
+</form>
 <sense>
 <p>ganz viel Unsinn</p>
 </sense>
@@ -27,16 +27,16 @@
 </entry>
 
 <entry id="test-mismatch">
-<lemma>
-	<l>No match</l>
-	<l.alt>Mismatch</l.alt>
-</lemma>
+<form>
+	<orth>No match</orth>
+	<orth.alt>Mismatch</orth.alt>
+</form>
 <sense><p>Quatsch</p></sense>
 </entry>
 
-<entry id="test-short"><lemma><l>short</l></lemma></entry>
+<entry id="test-short"><form><orth>short</orth></form></entry>
 
-<entry id="test-soenderzeichen"><lemma><l>Sönderzeichen</l></lemma></entry>
+<entry id="test-soenderzeichen"><form><orth>Sönderzeichen</orth></form></entry>
 
 
 </body></dicml>

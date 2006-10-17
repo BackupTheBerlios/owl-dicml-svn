@@ -17,9 +17,9 @@
 <body>
 
 <entry id="test-C">
-<lemma>
-	<l>C</l><l.alt>c</l.alt><pos pos="n"/>
-</lemma>
+<form>
+	<orth>C</orth><orth.alt>c</orth.alt><pos pos="n"/>
+</form>
 <sense>
 <p>ganz viel Unsinn</p>
 </sense>

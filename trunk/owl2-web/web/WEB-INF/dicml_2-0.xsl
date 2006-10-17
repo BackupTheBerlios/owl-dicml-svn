@@ -1,43 +1,69 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="entry">
-<html>
-  <head>
-  <title>example of use - entry id "<xsl:value-of select="@id"/>"</title>
-  
-  <link rel="stylesheet" media="all" href="style/dicml_2-0.css"/>
-  
-  </head>
-
-  <body>
-   <span class="lemma">
-   <p class="lemma">
-     <span class="l"><xsl:for-each select="lemma/l.gr/l"><xsl:call-template name="l"/></xsl:for-each></span>
-     <span class="pos"><xsl:value-of select="lemma/pos.gr/pos/@pos"/></span>
+  <span class="dicml">  
+  <span class="form">
+   <p class="form">
+     <span class="orth"><xsl:for-each select="form/orth.gr/orth"><xsl:call-template name="orth"/></xsl:for-each></span>
+     <span class="pos">
+       <xsl:choose>
+       <xsl:when test="grammar/pos/@pos = 'n'">
+         <xsl:choose>
+	   <xsl:when test="grammar/gen.gr/gen/@gen = 'f'"><xsl:call-template name="pos_n-f" /></xsl:when>
+	   <xsl:when test="grammar/gen.gr/gen/@gen = 'fm'"><xsl:call-template name="pos_n-fm" /></xsl:when>
+	   <xsl:when test="grammar/gen.gr/gen/@gen = 'fn'"><xsl:call-template name="pos_n-fn" /></xsl:when>
+	   <xsl:when test="grammar/gen.gr/gen/@gen = 'm'"><xsl:call-template name="pos_n-m" /></xsl:when>
+	   <xsl:when test="grammar/gen.gr/gen/@gen = 'mn'"><xsl:call-template name="pos_n-mn" /></xsl:when>
+	   <xsl:when test="grammar/gen.gr/gen/@gen = 'n'"><xsl:call-template name="pos_n-n" /></xsl:when>
+	   <xsl:when test="grammar/gen.gr/gen/@gen = 'u'"><xsl:call-template name="pos_n-u" /></xsl:when>
+	   <xsl:otherwise>noun</xsl:otherwise>
+	 </xsl:choose>
+       </xsl:when>
+       <xsl:when test="form/pos/@pos = 'v'"><abbr title="verb">v</abbr></xsl:when>
+       <xsl:otherwise />
+     </xsl:choose>
+   </span>
+   
    </p>
-   <p class="lemmaalt">
-     <xsl:if test="lemma/l.gr/l.alt"><span class="lalt-group"><xsl:for-each select="lemma/l.gr/l.alt"><span class="lalt"><xsl:call-template name="lalt"/></span></xsl:for-each></span></xsl:if>
+   <p class="orthalt">
+     <xsl:if test="form/orth.gr/orth.alt"><span class="orthalt-group"><xsl:for-each select="form/orth.gr/orth.alt"><span class="orthalt"><xsl:call-template name="orthalt"/></span></xsl:for-each></span></xsl:if>
    </p>
-  <xsl:if test="lemma/phon.gr/phon">
+  <xsl:if test="form/phon.gr/phon">
   <p class="phon">
-  [<span class="phon"><xsl:value-of select="lemma/phon.gr/phon"/></span>]
+  [<span class="phon"><xsl:value-of select="form/phon.gr/phon" /></span>]
   </p>
   </xsl:if>
   </span>
   
-  <ul id="sense">
-  <xsl:for-each select="sense/p.gr"><li><xsl:call-template name="p.gr"/></li></xsl:for-each></ul>
+  <ol id="sense">
+  <xsl:variable name="PGRANZAHL" select="count(//sense/p.gr)" />
+  <xsl:variable name="PGRPGRANZAHL" select="count(//sense/p.gr/p.gr)" />
+  <xsl:choose>
+    <xsl:when test="$PGRANZAHL = 1"><xsl:attribute name="class">simple</xsl:attribute></xsl:when>
+    <xsl:otherwise />
+  </xsl:choose>
+    <xsl:choose>
+    <xsl:when test="$PGRPGRANZAHL != 0"><xsl:attribute name="class">deep</xsl:attribute></xsl:when>
+    <xsl:otherwise />
+  </xsl:choose>
   
- </body></html>
+  
+  
+  <xsl:for-each select="sense/p.gr"><li><xsl:call-template name="p.gr" /></li></xsl:for-each></ol>
+  </span>  
 </xsl:template>
 
 
-<xsl:template name="l">
+
+
+
+
+<xsl:template name="orth">
  <xsl:apply-templates/>
 </xsl:template>
 
-<xsl:template name="lalt">
+<xsl:template name="orthalt">
  <xsl:apply-templates/>
 </xsl:template>
 
@@ -88,7 +114,8 @@
       <xsl:for-each select="syn.gr"><xsl:call-template name="p-syn.gr"/></xsl:for-each>
       </p></xsl:for-each>
     
-    <xsl:for-each select="p.gr"><ul><li><xsl:call-template name="p.gr"/></li></ul></xsl:for-each>
+    <xsl:if test="boolean(p.gr)"><ul><xsl:for-each select="p.gr"><li><xsl:call-template name="p.gr" /></li></xsl:for-each></ul>
+    </xsl:if>
 </xsl:template>
 
 
@@ -104,7 +131,7 @@
 </xsl:template>
 
 <xsl:template name="s">
-  <span class="s"><xsl:apply-templates/></span>
+  <span class="s"><xsl:apply-templates /></span>
 </xsl:template>
 
 <xsl:template name="t">
@@ -130,11 +157,41 @@
 
 
 <xsl:template match="high">
-  <span class="high"><xsl:apply-templates/></span>
+  <span class="high"><xsl:apply-templates /></span>
 </xsl:template>
 
 <xsl:template match="w">
-  <xsl:value-of select="."/><span class="pos"><xsl:value-of select="@pos"/></span>
+  <span class="w"><xsl:value-of select="." />
+  
+  <span class="pos">
+    <xsl:choose>
+      <xsl:when test="@pos = 'n'">
+        <xsl:choose>
+          <xsl:when test="@gen = 'f'">
+	    <xsl:choose>
+	       <xsl:when test="@num = 'pl'"><xsl:call-template name="pos_n-f-pl" /></xsl:when>
+	       <xsl:otherwise><xsl:call-template name="pos_n-f" /></xsl:otherwise>
+	     </xsl:choose>
+	  </xsl:when>
+          <xsl:when test="@gen = 'fm'"><xsl:call-template name="pos_n-fm" /></xsl:when>
+          <xsl:when test="@gen = 'fn'"><xsl:call-template name="pos_n-fn" /></xsl:when>
+          <xsl:when test="@gen = 'm'"><xsl:call-template name="pos_n-m" /></xsl:when>
+          <xsl:when test="@gen = 'mn'"><xsl:call-template name="pos_n-mn" /></xsl:when>
+          <xsl:when test="@gen = 'n'"><xsl:call-template name="pos_n-n" /></xsl:when>
+          <xsl:when test="@gen = 'u'">
+	    <xsl:choose>
+	       <xsl:when test="@num = 'pl'"><xsl:call-template name="pos_n-u-pl" /></xsl:when>
+	       <xsl:otherwise><xsl:call-template name="pos_n-u" /></xsl:otherwise>
+	     </xsl:choose>
+	  </xsl:when>
+          <xsl:otherwise>noun</xsl:otherwise>
+        </xsl:choose>
+      </xsl:when>
+    </xsl:choose>
+  </span>
+  
+  
+  </span>
 </xsl:template>
 
 <xsl:template match="alt.gr">
@@ -142,8 +199,23 @@
 </xsl:template>
 
 
-<xsl:template match="de.etw"><abbr title="etwas">etw.</abbr></xsl:template>
+<xsl:template match="de.etw"><abbr title="etwas">etw</abbr></xsl:template>
 <xsl:template match="en.sth"><abbr title="something">sth</abbr></xsl:template>
+
+
+
+<xsl:template name="pos_n-f"><abbr title="feminine noun">f</abbr></xsl:template>
+<xsl:template name="pos_n-f-pl"><abbr title="feminine noun - plural">f/pl</abbr></xsl:template>
+<xsl:template name="pos_n-fm"><abbr title="feminine or masculine noun">f/m</abbr></xsl:template>
+<xsl:template name="pos_n-fn"><abbr title="feminine or neuter noun">f/n</abbr></xsl:template>
+<xsl:template name="pos_n-m"><abbr title="masculine noun">m</abbr></xsl:template>
+<xsl:template name="pos_n-mn"><abbr title="masculine or neuter noun">m/n</abbr></xsl:template>
+<xsl:template name="pos_n-n"><abbr title="neuter noun">n</abbr></xsl:template>
+<xsl:template name="pos_n-u"><abbr title="utrum noun (common gender)">u</abbr></xsl:template>
+<xsl:template name="pos_n-u-pl"><abbr title="utrum noun (common gender) - plural">u/pl</abbr></xsl:template>
+
+
+
 
 
 </xsl:stylesheet>

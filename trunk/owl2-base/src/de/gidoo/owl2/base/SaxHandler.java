@@ -44,7 +44,7 @@ public class SaxHandler extends DefaultHandler {
   {
     if(!_record)
     {
-      if(name.equals("l") || name.equals("l.alt"))
+      if(name.equals("orth") || name.equals("orth.alt"))
       {
         _record = true;
         _buffer = "";
@@ -61,7 +61,7 @@ public class SaxHandler extends DefaultHandler {
   {
     if(_record)
     {
-      if(name.equals("l") || name.equals("l.alt"))
+      if(name.equals("orth") || name.equals("orth.alt"))
       {
         _record = false;
         lastLemmaInEntry.add(_buffer);
