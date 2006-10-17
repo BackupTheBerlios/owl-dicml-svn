@@ -19,10 +19,14 @@
           <body>
             <xsl:for-each select="/TEI.2/text/body/entry">
               <entry>
-                <lemma>
+                <form>
                   <xsl:apply-templates select="form" />
-                  <xsl:apply-templates select="gramGrp" />
-                </lemma>
+		</form>
+		<xsl:if test="gramGrp">
+		  <grammar>
+		    <xsl:apply-templates select="gramGrp" />
+		  </grammar>
+		</xsl:if>
                 <sense>
                   <xsl:apply-templates select="trans" />
                 </sense>
@@ -33,25 +37,29 @@
     </xsl:template>
     
     
-    <xsl:template name="gen" match="gramGrp/gen">
-      <pos.gr><pos><xsl:attribute name="pos"><xsl:value-of select="." /></xsl:attribute></pos></pos.gr>
+    <xsl:template name="pos" match="gramGrp/pos">
+      <pos><xsl:attribute name="pos"><xsl:value-of select="." /></xsl:attribute></pos>
     </xsl:template>
     
-    <!-- leave empty -->
-    <xsl:template name="pos" match="gramGrp/pos"></xsl:template>
+    <xsl:template name="gen" match="gramGrp/gen">
+      <gen.gr><gen><xsl:attribute name="gen"><xsl:value-of select="." /></xsl:attribute></gen></gen.gr>
+    </xsl:template>
+      <num><xsl:attribute name="num"><xsl:value-of select="." /></xsl:attribute></num>
     <xsl:template name="num" match="gramGrp/num"></xsl:template>
     
     <xsl:template name="form" match="form">
-      <l.gr>
+      <orth.gr>
         <xsl:apply-templates select="orth" />
-      </l.gr>      
+      </orth.gr>      
         <xsl:apply-templates select="pron" />
     </xsl:template>
     
     <xsl:template match="orth">
-      <l><xsl:value-of select="." /></l>
+      <orth><xsl:value-of select="." /></orth>
     </xsl:template>
 
+
+    
     <xsl:template match="pron">      
       <phon.gr><phon><xsl:value-of select="." /></phon></phon.gr>
     </xsl:template>
