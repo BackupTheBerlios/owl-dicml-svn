@@ -35,7 +35,7 @@ public class OwlApp extends wicket.protocol.http.WebApplication {
     public void init()
     {            
       realPathToContext = this.getWicketServlet().getServletContext().getRealPath("/");
-      getDebugSettings().setSerializeSessionAttributes(false); 
+      //getDebugSettings().setSerializeSessionAttributes(false); 
       
       getSecuritySettings().setAuthorizationStrategy(new SimpleAuthorizationStrategy());
     
