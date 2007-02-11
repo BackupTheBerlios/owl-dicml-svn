@@ -25,7 +25,7 @@ import org.xml.sax.helpers.XMLReaderFactory;
  * This class uses an SQLite database to provide the functionality of {@link IDictionaryProvider}.
  * @author <a href="mailto:krause@informatik.hu-berlin.de">Thomas Krause</a>
  */
-public class SQLiteProvider implements IDictionaryProvider {
+public class SQLiteProvider implements IDictionaryProvider, Serializable {
   
  
   private Connection _conn;
@@ -784,6 +784,11 @@ public class SQLiteProvider implements IDictionaryProvider {
     if(result.length == 0)
     {
       //fail("activated \"C\" was not found ");
+      System.out.println("simple testcase failed.");
+    }
+    else
+    {
+      System.out.println("simple testcase succeeded.");
     }
     
   }
