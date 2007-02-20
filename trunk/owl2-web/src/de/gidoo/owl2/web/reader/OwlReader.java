@@ -14,13 +14,18 @@ import java.io.LineNumberReader;
 import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.util.*;
+import org.apache.tools.ant.Target;
 import wicket.PageParameters;
 import wicket.Session;
+import wicket.ajax.AbstractAjaxTimerBehavior;
 import wicket.ajax.AjaxEventBehavior;
 import wicket.ajax.AjaxRequestTarget;
+import wicket.ajax.AjaxSelfUpdatingTimerBehavior;
+import wicket.ajax.calldecorator.AjaxCallDecorator;
+import wicket.ajax.form.AjaxFormComponentUpdatingBehavior;
 import wicket.ajax.form.AjaxFormSubmitBehavior;
+import wicket.ajax.form.AjaxFormValidatingBehavior;
 import wicket.ajax.markup.html.form.AjaxSubmitButton;
-import wicket.extensions.ajax.markup.html.WicketAjaxIndicatorAppender;
 import wicket.extensions.markup.html.tabs.AbstractTab;
 
 import wicket.markup.html.basic.*;
@@ -167,8 +172,7 @@ public class OwlReader extends wicket.markup.html.WebPage {
           target.addComponent(_txtSearch);
         }
       });
-                  
-      
+             
       _txtSearch = new AutoCompleteTextField("txtSearch", new Model(""))
       {
         protected Iterator getChoices(String input) {
@@ -190,20 +194,43 @@ public class OwlReader extends wicket.markup.html.WebPage {
             i++;
           }
           
-
+          
           return choices.iterator();
         }
       };
+         
+//      _txtSearch.add(new AjaxFormSubmitBehavior(this, "onkeydown") 
+//      {
+//        protected void onSubmit(AjaxRequestTarget target) 
+//        {
+//          updateResults(target);
+//        }
+//      });
       
-      _txtSearch.add(new AjaxFormSubmitBehavior(this, "onload") 
+      
+      _btSearch = new Button("btSearch", new Model(getString("btSearch")));
+                 
+   
+      // empty tab-list at begin
+      _tabPanel = getAvailableTabs();
+      add(_tabPanel);
+       
+      add(_dropDic);
+      add(_txtSearch);     
+      add(new Label("lblSearchFor", getString("lblSearchFor")));
+      add(_btSearch);
+     
+      AjaxFormSubmitBehavior b = new AjaxFormSubmitBehavior(this, "onkeyup")
       {
-        protected void onSubmit(AjaxRequestTarget target) 
+        protected void onSubmit(AjaxRequestTarget target)
         {
           updateResults(target);
         }
-      });
+      };
       
-      _btSearch = new Button("btSearch", new Model(getString("btSearch")));
+      b.setThrottleDelay(Duration.seconds(1));
+      
+      this.add(b);
       
       _btSearch.add(new AjaxFormSubmitBehavior(this, "onclick")        
       {
@@ -212,16 +239,6 @@ public class OwlReader extends wicket.markup.html.WebPage {
           updateResults(target);
         }
       });
-      
-   
-      // empty tab-list at begin
-      _tabPanel = getAvailableTabs();
-      add(_tabPanel);
-      
-      add(_dropDic);
-      add(_txtSearch);     
-      add(new Label("lblSearchFor", getString("lblSearchFor")));
-      add(_btSearch);
     } 
 
     /** Do initialisations and checks which have to be done after the Form was added to a page*/
@@ -235,13 +252,14 @@ public class OwlReader extends wicket.markup.html.WebPage {
       }
     }
 
-    private void updateResults(AjaxRequestTarget target)
+    public void updateResults(AjaxRequestTarget target)
     {
       _tabPanel = getAvailableTabs();
       replace(_tabPanel);
 
       target.addComponent(_tabPanel);
     }
+    
     
     public AjaxTabbedPanel getAvailableTabs()
     {      
